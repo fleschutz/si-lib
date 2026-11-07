@@ -26,7 +26,7 @@ const moon_details moons[] {               // NOTE: 00=empty or unknown field
 {"Jupiter","Io",5959.916_km³_per_s²,1821.6_km,3.528_kg_per_m³,5.02f,0.63f},
 {"Jupiter","Europa",3202.739_km³_per_s²,1560.8_km,3.013_kg_per_m³,5.29f,0.67f},
 {"Jupiter","Ganymede",9887.834_km³_per_s²,2631.2_km,1.942_kg_per_m³,4.61f,0.43f},
-{"Jupiter","Callisto",7179.289_km³_per_s²,2410.3_km,1.834_kg_per_m³,5.65f,0.17f},
+{"Jupiter","Callisto",7179.289_km³_per_s²,2410.3_km,1834_kg_per_m³,5.65f,0.17f},
 {"Jupiter","Amalthea",0.138_km³_per_s²,83.45_km,0.849_kg_per_m³,14.1f,0.09f},
 {"Jupiter","Himalia",0.45_km³_per_s²,85_km,2.6_kg_per_m³,14.2f,0.04f},
 {"Jupiter","Elara",0.058_km³_per_s²,43_km,2.6_kg_per_m³,16.f,0.04f},
