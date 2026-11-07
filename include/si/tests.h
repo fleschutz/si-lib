@@ -61,13 +61,16 @@ namespace si {
 	static_assert(1_Gm == 1000_Mm);
 	static_assert(1_Mm == 1000_km);
 	static_assert(1_km == 1000_m);
+	static_assert(1_km == kilometers(1));
 	static_assert(1_m  == 10_dm);
 	static_assert(1_m  == 100_cm);
+	static_assert(1_m  == meters(1));
 	static_assert(1_m  == 1000_mm);
 	static_assert(1_m  == 0.001_km);
 	static_assert(1_dm == 0.1_m);
 	static_assert(1_cm == 0.01_m);
 	static_assert(1_mm == 0.001_m);
+	static_assert(1_mm == millimeters(1));
 	static_assert(1_um == 0.001_mm);
 	static_assert(1_nm == 0.001_um);
 	// time in...
@@ -75,6 +78,7 @@ namespace si {
 	static_assert(1_h   == 60_min);
 	static_assert(1_min == 60_s);
 	static_assert(1_s   == 1000_ms);
+	static_assert(1_s   == seconds(1));
 	static_assert(1_ms  == 0.001_s);
 	static_assert(1_us  == 0.001_ms);
 	static_assert(1_ns  == 0.001_us);
@@ -84,6 +88,7 @@ namespace si {
 	static_assert(1_kt == 1000_t);
 	static_assert(1_t  == 1000_kg);
 	static_assert(1_kg == 1000_g);
+	static_assert(1_kg == kilograms(1));
 	static_assert(1_g  == 0.001_kg);
 	static_assert(1_mg == 0.001_g);
 	static_assert(1_ug == 0.001_mg);
@@ -99,6 +104,7 @@ namespace si {
 	static_assert(1_MA == 1000_kA);
 	static_assert(1_kA == 1000_A);
 	static_assert(1_A  == 1000_mA);
+	static_assert(1_A  == amperes(1));
 	static_assert(1_mA == 0.001_A);
 	static_assert(1_uA == 0.001_mA);
 	static_assert(1_nA == 0.001_uA);
@@ -107,12 +113,14 @@ namespace si {
 	static_assert(1_Mmol == 1000_kmol);
 	static_assert(1_kmol == 1000_mol);
 	static_assert(1_mol  == 0.001_kmol);
+	static_assert(1_mol  == moles(1));
 	static_assert(1_mmol == 0.001_mol);
 	static_assert(1_umol == 0.001_mmol);
 	static_assert(1_nmol == 0.001_umol);
 	// luminous intensity in...
 	static_assert(1_kcd == 1000_cd);
 	static_assert(1_cd == 0.001_kcd);
+	static_assert(1_cd == candelas(1));
   }
 
   inline void check_SI_derived_units() {
@@ -151,6 +159,7 @@ namespace si {
 	static_assert(1_MHz == 1000_kHz);
 	static_assert(1_kHz == 1000_Hz);
 	static_assert(1_Hz  == 0.001_kHz);
+	static_assert(1_Hz  == hertz(1));
 	static_assert(1_Hz  == 0.000001_MHz);
 	static_assert(1_Hz  == 0.000000001_GHz);
 	static_assert(1_mHz == 0.001_Hz);
@@ -171,12 +180,14 @@ namespace si {
 	static_assert(1_MV == 1000_kV);
 	static_assert(1_kV == 1000_V);
 	static_assert(1_V  == 1000_mV);
+	static_assert(1_V  == volts(1));
 	static_assert(1_mV == 1000_uV);
 	// electric resistance (R) in...
 	static_assert(1_GOhm == 1000_MOhm);
 	static_assert(1_MOhm == 1000_kOhm);
 	static_assert(1_kOhm == 1000_Ohm);
 	static_assert(1_Ohm  == 1000_mOhm);
+	static_assert(1_Ohm  == ohms(1));
 	static_assert(1_mOhm == 1000_uOhm);
 	// electric conductance (G) in...
 	static_assert(1_MS == 1000_kS);
@@ -215,17 +226,20 @@ namespace si {
 	static_assert(1_MW == 1000_kW);
 	static_assert(1_kW == 1000_W);
 	static_assert(1_W  == 1000_mW);
+	static_assert(1_W  == watts(1));
 	static_assert(1_mW == 1000_uW);
 	// pressure (p) in...
 	static_assert(1_MPa == 1000_kPa);
 	static_assert(1_kPa == 1000_Pa);
 	static_assert(1_Pa  == 1000_mPa);
+	static_assert(1_Pa  == pascals(1));
 	static_assert(1_mPa == 1000_uPa);
 	// force (F) in...
 	static_assert(1_GN == 1000_MN);
 	static_assert(1_MN == 1000_kN);
 	static_assert(1_kN == 1000_N);
 	static_assert(1_N  == 1000_mN);
+	static_assert(1_N  == newtons(1));
 	static_assert(1_mN == 1000_uN);
 	// luminous flux per area in...
 	static_assert(1_klx == 1000_lx);
@@ -242,6 +256,7 @@ namespace si {
   inline void check_Imperial_units() {
 	static_assert(1_nmi == 10_cable);
 	static_assert(1_nmi == 1852_m);
+	static_assert(1_nmi == nautical_miles(1));
 	static_assert(1_mi  == 1760_yd);
 	static_assert(1_mi  == 80_ch);
 	//static_assert(1_ft  == 12_in);
@@ -252,6 +267,7 @@ namespace si {
   inline void check_digital_units() {
 	// bits...
 	static_assert(1_bit  == 0.001_kBit);
+	static_assert(1_bit  == bits(1));
 	static_assert(1_kBit == 1000_bits);
 	static_assert(1_MBit == 1000_kBit);
 	static_assert(1_GBit == 1000_MBit);
@@ -262,6 +278,7 @@ namespace si {
 	static_assert(1_Mbps == 1000_Kbps);
 	// bytes... (metric prefixes)
 	static_assert(1_byte == 8_bits);
+	static_assert(1_byte == bytes(1));
 	static_assert(1_kB   == 1000_bytes);
 	static_assert(1_MB   == 1000_kB);
 	static_assert(1_GB   == 1000_MB);
