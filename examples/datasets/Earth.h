@@ -1,4 +1,4 @@
-/// @file     datasets/Earth.h
+/// @file     examples/datasets/Earth.h
 /// @brief    Contains data of our Earth, e.g. Earth.mass
 /// @details  Categories are: orbital characteristics, physical characteristics, atmosphere, and various.
 
