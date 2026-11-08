@@ -9,5 +9,5 @@ var searchData=
   ['speed_5fof_5fsound_5fin_5ffresh_5fwater_6',['speed_of_sound_in_fresh_water',['../namespacesi.html#a9d017e8dde68209282b826192ff501e7',1,'si']]],
   ['speed_5fof_5fsound_5fin_5firon_7',['speed_of_sound_in_iron',['../namespacesi.html#aecf122bf582cf2d835bc2489d74bf7b9',1,'si']]],
   ['ssp_8',['ssp',['../namespacesi.html#a3044eb827357237ad400ca3a1504cb31',1,'si']]],
-  ['substance_9',['substance',['../structsi_1_1detail_1_1dimension.html#a9573cc5c6fa15f5a149e05b09bbe2bb5',1,'si::detail::dimension']]]
+  ['substance_9',['substance',['../structsi_1_1detail_1_1dimension.html#aaf09f40342fe39517732573d2cd55bfa',1,'si::detail::dimension']]]
 ];

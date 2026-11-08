@@ -18,7 +18,7 @@ var annotated_dup =
         [ "quantity", "structsi_1_1detail_1_1quantity.html", "structsi_1_1detail_1_1quantity" ],
         [ "unit", "structsi_1_1detail_1_1unit.html", "structsi_1_1detail_1_1unit" ],
         [ "dimension_of", "structsi_1_1detail_1_1dimension__of.html", "structsi_1_1detail_1_1dimension__of" ],
-        [ "dimension_of&lt; dimension&lt; Length, Mass, Time, Temperature, Current, Substance, Intensity &gt; &gt;", "structsi_1_1detail_1_1dimension__of_3_01dimension_3_01Length_00_01Mass_00_01Time_00_01Temperatur7f23a1a757a6c1f9036dc56c7df586cf.html", "structsi_1_1detail_1_1dimension__of_3_01dimension_3_01Length_00_01Mass_00_01Time_00_01Temperatur7f23a1a757a6c1f9036dc56c7df586cf" ],
+        [ "dimension_of&lt; dimension&lt; Length, Mass, Time, Temperature, Current, Substance, Intensity, Digital &gt; &gt;", "structsi_1_1detail_1_1dimension__of_3_01dimension_3_01Length_00_01Mass_00_01Time_00_01Temperature380af53f34f9b2bc390914a050a72fe.html", "structsi_1_1detail_1_1dimension__of_3_01dimension_3_01Length_00_01Mass_00_01Time_00_01Temperature380af53f34f9b2bc390914a050a72fe" ],
         [ "dimension_of&lt; quantity&lt; Dimension, T &gt; &gt;", "structsi_1_1detail_1_1dimension__of_3_01quantity_3_01Dimension_00_01T_01_4_01_4.html", "structsi_1_1detail_1_1dimension__of_3_01quantity_3_01Dimension_00_01T_01_4_01_4" ],
         [ "dimension_of&lt; unit&lt; Dimension, Ratio &gt; &gt;", "structsi_1_1detail_1_1dimension__of_3_01unit_3_01Dimension_00_01Ratio_01_4_01_4.html", "structsi_1_1detail_1_1dimension__of_3_01unit_3_01Dimension_00_01Ratio_01_4_01_4" ],
         [ "zero_t", "structsi_1_1detail_1_1zero__t.html", null ],

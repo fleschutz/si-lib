@@ -34,6 +34,6 @@ var searchData=
   ['sqrt_31',['sqrt',['../namespacesi_1_1detail.html#a18cb73202ac834d54f52467b376b9d19',1,'si::detail::sqrt()'],['../namespacesi.html#af49db48df7ac090e024a9311f54a9519',1,'si::sqrt(const angle a)'],['../namespacesi.html#a18cb73202ac834d54f52467b376b9d19',1,'si::sqrt(const quantity&lt; Dimension, T &gt; &amp;x)']]],
   ['square_32',['square',['../namespacesi.html#a1768db81d530a219476d5bc80166f07b',1,'si']]],
   ['ssp_33',['ssp',['../namespacesi.html#a3044eb827357237ad400ca3a1504cb31',1,'si']]],
-  ['substance_34',['substance',['../structsi_1_1detail_1_1dimension.html#a9573cc5c6fa15f5a149e05b09bbe2bb5',1,'si::detail::dimension']]],
+  ['substance_34',['substance',['../structsi_1_1detail_1_1dimension.html#aaf09f40342fe39517732573d2cd55bfa',1,'si::detail::dimension']]],
   ['sum_5fof_5farray_35',['sum_of_array',['../namespacesi.html#a2bfc3a7b4036257a5043bf185432447d',1,'si']]]
 ];

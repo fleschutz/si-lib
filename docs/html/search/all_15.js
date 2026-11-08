@@ -2,7 +2,7 @@ var searchData=
 [
   ['value_0',['value',['../classsi_1_1detail_1_1quantity__storage.html#adaa6da895dea4aea5390d1b5c3f32fc7',1,'si::detail::quantity_storage::value(const quantity_storage &amp;x)'],['../classsi_1_1detail_1_1quantity__storage.html#a2c64da0852cbf598f7f6cec098283691',1,'si::detail::quantity_storage::value(quantity_storage &amp;x)'],['../namespacesi_1_1detail.html#a4dc69106a0c3891f267dde39000bf363',1,'si::detail::value(const T &amp;x)'],['../namespacesi_1_1detail.html#a824aa57e5b65aca97c95177e47bdfc55',1,'si::detail::value(zero_t)']]],
   ['value2_1',['value2',['../namespacesi_1_1detail.html#a0a00f7753c2074ad381075fefa37e6df',1,'si::detail::value2(T &amp;&amp;x, U)'],['../namespacesi_1_1detail.html#a96be1015317b09d672ba367ce6c2abf5',1,'si::detail::value2(zero_t, const U &amp;other)']]],
-  ['value_5fdimension_2',['value_dimension',['../namespacesi_1_1detail.html#af0a021ae27edda322b8a34ef04b09c6e',1,'si::detail']]],
+  ['value_5fdimension_2',['value_dimension',['../namespacesi_1_1detail.html#ab1b8507f142416dadbdf8b5d7265a930',1,'si::detail']]],
   ['value_5ftype_3',['value_type',['../structsi_1_1detail_1_1quantity.html#adf1551c8c2d2a687d719fc91198d1f79',1,'si::detail::quantity']]],
   ['various_2ecpp_4',['various.cpp',['../various_8cpp.html',1,'']]],
   ['various_5fexamples_5',['various_examples',['../main_8cpp.html#aa5dc28e9eea055cfd5e3684282974aac',1,'various_examples():&#160;various.cpp'],['../various_8cpp.html#aa5dc28e9eea055cfd5e3684282974aac',1,'various_examples():&#160;various.cpp']]],

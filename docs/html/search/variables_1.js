@@ -5,5 +5,5 @@ var searchData=
   ['centi_2',['centi',['../namespacesi.html#aeba08646202490865610cb8f6f6a176a',1,'si']]],
   ['codata_3',['CODATA',['../namespacesi.html#a1d21dc01a6420a2dfcce8e2520c26e16',1,'si']]],
   ['const_4',['Const',['../namespacesi.html#a98b66eee9b3573cb9156e8be5e45933f',1,'si']]],
-  ['current_5',['current',['../structsi_1_1detail_1_1dimension.html#a9ccae08a895b94745a5e1ba04c117169',1,'si::detail::dimension']]]
+  ['current_5',['current',['../structsi_1_1detail_1_1dimension.html#abd0845be0b2f347788dc04827bd489a4',1,'si::detail::dimension']]]
 ];
