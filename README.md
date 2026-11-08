@@ -39,7 +39,7 @@ int main() {   using namespace si;
 | Conversions           | *to_equivalent()*                         | [<si/conversions.h>](include/si/conversions.h) |
 | Unit tests            | *static_assert(1_kg == 1000_g);*          | [<si/tests.h>](include/si/tests.h)             | 
 | Examples              | [console output](examples/console_output.txt) | 📂[examples](examples/)                    |
-| Datasets              | *Earth.mass*                              | 📂[datasets](include/datasets/)                |
+| Datasets              | *Earth.mass*                              | 📂[examples/datasets](examples/datasets/)      |
 | Documentation         |                                           | 📓 [reference manual](https://fleschutz.github.io/si-lib/docs/html/) |
 
 
