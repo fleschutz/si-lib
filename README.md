@@ -5,10 +5,11 @@
 *si-lib* is an open-source library to apply math in C++ correct, precise, and convenient. Top features are: 
 
 - **Type-safety** for datatypes, constants, formulas, literals, etc. (e.g. mass + length = error).
-- **Test-safety** by 200+ unit tests (executed at compile-time and on each commit).
+- **Test-safety** by 300+ unit tests (executed at compile-time and on each commit).
 - **Precision** by 64-bit floating point, calculations on SI base units, and CODATA constants.
 - **Full speed:** no runtime overhead and implicit compile-time conversions whenever possible.
 - **Support** for SI/Imperial/US/digital/astronomical units, and a lot more.
+- **Excellent** readability with bundled constants, formulas, and datasets (optional).
 - **Modern C++ 17:** header-only, own namespace, light-weight, no external dependencies.
 - **Cross-platform** support for Linux (clang/gcc, x86/arm) and Windows (VS2017-VS2026) with [CMake support](docs/CMake_support.md).
 
@@ -20,7 +21,7 @@
 int main() {   using namespace si;
     mass m   = 1_kg;
     energy E = m * square(CODATA.c);
-    std::cout << "The potential energy of a single kilogram is: " << E << std::endl;
+    std::cout << "The potential energy per kilogram is: " << E << std::endl;
 }
 ```
 

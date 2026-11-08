@@ -1,5 +1,5 @@
 /// @file      si/tests.h
-/// @brief     Contains 270+ unit tests, executed at compile-time
+/// @brief     Contains 300+ unit tests (executed at compile-time and on each commit by GitHub actions)
 /// @details   Categories are: features, C datatypes, SI datatypes, base units, derived units, astronomical units,
 ///                            Imperial units, digital units, various units, functions and templates.
 
@@ -76,7 +76,9 @@ namespace si {
 	// time in...
 	static_assert(1_d   == 24_h);
 	static_assert(1_h   == 60_min);
+	static_assert(1_h   == hours(1));
 	static_assert(1_min == 60_s);
+	static_assert(1_min == minutes(1));
 	static_assert(1_s   == 1000_ms);
 	static_assert(1_s   == seconds(1));
 	static_assert(1_ms  == 0.001_s);
@@ -125,20 +127,24 @@ namespace si {
 
   inline void check_SI_derived_units() {
 	// area in...
-	static_assert(1_km² == 100_hm²);
-	static_assert(1_hm² == 10000_m²);
-	static_assert(1_m²  == 10000_cm²);
-	static_assert(1_cm² == 0.0001_m²);
 	static_assert(1_km² == 1_km * 1_km);
+	static_assert(1_km² == 100_hm²);
+	static_assert(1_hm² == 10'000_m²);
 	static_assert(1_hm² == 100_m * 100_m);
+	static_assert(1_m²  == 10'000_cm²);
+	static_assert(1_m²  == meters2(1));
+	static_assert(1_cm² == 0.0001_m²);
 	static_assert(1_m²  == 1_m * 1_m);
 	static_assert(1_cm² == 1_cm * 1_cm);
 	static_assert(1_mm² == 1_mm * 1_mm);
 	// volume in...
-	static_assert(1_m³  == 1'000'000_cm³);
-	static_assert(1_cm³ == 0.000'001_m³);
 	static_assert(1_km³ == 1_km * 1_km * 1_km);
+	static_assert(1_km³ == 1e9_m³);
 	static_assert(1_m³  == 1_m * 1_m * 1_m);
+	static_assert(1_m³  == meters3(1));
+	static_assert(1_m³  == 1e6_cm³);
+	static_assert(1_cm³ == 0.000'001_m³);
+	// static_assert(1_cm³ == 1_cm * 1_cm * 1_cm);
 	// velocity in...
 	static_assert(1_km_per_s == 1000_m_per_s);
 	static_assert(3.6_km_per_h == 1_m_per_s);
@@ -212,6 +218,7 @@ namespace si {
 	static_assert(1_mH  == 1000_uH);
 	// magnetic field (B) in...
 	static_assert(1_T  == 1000_mT);
+	static_assert(1_T  == teslas(1));
 	static_assert(1_mT == 1000_uT);
 	// energy (E) in...
 	static_assert(1_PJ == 1000_TJ);
@@ -220,6 +227,7 @@ namespace si {
 	static_assert(1_MJ == 1000_kJ);
 	static_assert(1_kJ == 1000_J);
 	static_assert(1_J  == 1000_mJ);
+	static_assert(1_J  == joules(1));
 	// active power (P) in...
 	static_assert(1_TW == 1000_GW);
 	static_assert(1_GW == 1000_MW);
@@ -244,6 +252,7 @@ namespace si {
 	// luminous flux per area in...
 	static_assert(1_klx == 1000_lx);
 	static_assert(1_lx  == 1000_mlx);
+	static_assert(1_lx  == lux(1));
 	static_assert(1_mlx == 1000_ulx);
   }
 
@@ -259,9 +268,12 @@ namespace si {
 	static_assert(1_nmi == nautical_miles(1));
 	static_assert(1_mi  == 1760_yd);
 	static_assert(1_mi  == 80_ch);
-	//static_assert(1_ft  == 12_in);
+	static_assert(1_mi  == statute_miles(1));
+	static_assert(1_mph == miles_per_hour(1));
+	static_assert(1_ft  == feet(1));
+	static_assert(1_in  == inches(1));
 	static_assert(1_lb  == 16_oz);
-	//static_assert(32_degF == 273.15_K);
+	static_assert(1_degF== fahrenheit(1));
   }
 
   inline void check_digital_units() {
@@ -276,6 +288,7 @@ namespace si {
 	static_assert(1_Tbps == 1000_Gbps);
 	static_assert(1_Gbps == 1000_Mbps);
 	static_assert(1_Mbps == 1000_Kbps);
+	static_assert(1_Kbps == bits_per_second(1000));
 	// bytes... (metric prefixes)
 	static_assert(1_byte == 8_bits);
 	static_assert(1_byte == bytes(1));
@@ -293,6 +306,7 @@ namespace si {
 	static_assert(1_TiB == 1024_GiB);
 	// bytes per second... (metric prefixes)
 	static_assert(1_KBps == 1000_bytes_per_s);
+	static_assert(1_KBps == bytes_per_second(1000));
 	static_assert(1_MBps == 1000_KBps);
 	static_assert(1_GBps == 1000_MBps);
 	static_assert(1_TBps == 1000_GBps);

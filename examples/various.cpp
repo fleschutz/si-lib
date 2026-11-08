@@ -11,7 +11,7 @@ void various_examples() {
     cout << "    === VARIOUS EXAMPLES ===" << endl;
     mass m   = 1_kg;
     energy E = m * square(CODATA.c);
-    cout << " 1. The potential energy of a single kilogram is: " << E << endl;
+    cout << " 1. The potential energy per kilogram is: " << E << endl;
 
 
     cout << " 2. The kinetic energy of a mid-size 5000lb SUV at 30mph is... ";
