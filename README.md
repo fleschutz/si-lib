@@ -9,7 +9,7 @@
 - **Precision** by 64-bit floating point, calculations on SI base units, and CODATA constants.
 - **Full speed:** no runtime overhead and implicit compile-time conversions whenever possible.
 - **Support** for SI/Imperial/US/digital/astronomical units, and a lot more.
-- **Excellent** readability with bundled constants, formulas, and datasets (optional).
+- **Excellent** readability with bundled literals, constants, formulas, and datasets (optional).
 - **Modern C++ 17:** header-only, own namespace, light-weight, no external dependencies.
 - **Cross-platform** support for Linux (clang/gcc, x86/arm) and Windows (VS2017-VS2026) with [CMake support](docs/CMake_support.md).
 
