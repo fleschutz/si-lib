@@ -1,4 +1,4 @@
-/// @file   datasets/astronomy.h
+/// @file   examples/datasets/astronomy.h
 /// @brief  Includes the header files of all astronomy datasets (for convenience).
 
 #pragma once
