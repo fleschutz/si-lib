@@ -1,7 +1,6 @@
 /// @file     datasets/Earth.h
 /// @brief    Contains data of our Earth, e.g. Earth.mass
-/// @details  Source: https://en.wikipedia.org/wiki/Earth (as of 2026)
-///           Categories are: Orbital characteristics, Physical characteristics, Atmosphere, and Various.
+/// @details  Categories are: orbital characteristics, physical characteristics, atmosphere, and various.
 
 #pragma once
 #include <si/literals.h>
@@ -11,7 +10,8 @@ namespace {
 
   constexpr struct {
 
-    // Orbital characteristics
+    // Orbital Characteristics 
+    // ----------------------- (source: https://en.wikipedia.org/wiki/Earth as of 2026)
     length        aphelion =        152'097'597_km;
     length        perihelion =      147'098'450_km;
     length        semi_major_axis = 149'598'023_km;
@@ -21,7 +21,8 @@ namespace {
     velocity      average_orbital_speed =    29.7827_km_per_s;
     angle         mean_anomaly =            358.617_deg;
 
-    // Physical characteristics
+    // Physical Characteristics 
+    // ------------------------ (source: https://en.wikipedia.org/wiki/Earth as of 2026)
     length        mean_radius =           6'371.0_km;
     length        equatorial_radius = 6'378.137_km;
     length        polar_radius =      6'356.752_km;
@@ -48,6 +49,7 @@ namespace {
     temperature   max_surface_temperature =  56.7_degC;
 
     // Atmosphere
+    // ---------- (source: https://en.wikipedia.org/wiki/Earth as of 2026)
     pressure      surface_pressure =    101.325_kPa; ///< at sea level
     dimensionless nitrogen =             78.08_percent;  ///< dry air
     dimensionless oxygen =               20.95_percent;    ///< dry air
@@ -60,8 +62,9 @@ namespace {
     dimensionless krypton =               0.00011_percent;
     dimensionless hydrogen =              0.00006_percent;
 
-    // Various
-    dimensionless population =            8.2e9;
+    // Various 
+    // ------- (source: https://worldpopulationreview.com as of 2026)
+    dimensionless population = 8'298'979'488;
 
   } Earth;
 
