@@ -13,8 +13,8 @@ namespace si {
   // SI Base Units
   // -------------
 
-  // SYMBOL FACTOR  BASE UNIT             EXAMPLE (sorted from big units to small one)
-  // -------------------------------------------------------------
+  // SYMBOL FACTOR  BASE UNIT             EXAMPLE (sorting: big to small quantitiy)
+  // ------------------------------------------------------------------------------
   // length in...
   UDL(_Pm,    1e15, meters);              // 1_Pm (petameter)
   UDL(_Tm,    1e12, meters);              // 1_Tm (terameter)
