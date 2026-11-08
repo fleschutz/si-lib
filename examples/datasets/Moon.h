@@ -1,6 +1,6 @@
-/// @file     datasets/Moon.h
+/// @file     examples/datasets/Moon.h
 /// @brief    Contains data of our Moon, e.g. Moon.mass
-/// @details  Source: https://en.wikipedia.org/wiki/Moon (as of 2026)
+/// @details  Categories are: orbital characteristics, physical characteristics, and atmosphere.
 
 #pragma once
 #include <si/literals.h>
@@ -10,7 +10,8 @@ namespace {
 
   constexpr struct {
 
-    // Orbital characteristics
+    // Orbital Characteristics
+    // ----------------------- (source: https://en.wikipedia.org/wiki/Moon as of 2026)
     length        average_perigee =            362'600_km;
     length        average_apogee =             405'400_km;
     length        semi_major_axis =            384'399_km;
@@ -21,7 +22,8 @@ namespace {
     velocity      average_orbital_speed =        1.022_km_per_s;
     angle         inclination =                  5.145_deg; // to the ecliptic
 
-    // Physical characteristics
+    // Physical Characteristics
+    // ------------------------ (source: https://en.wikipedia.org/wiki/Moon as of 2026)
     length        mean_radius =                1'737.4_km;
     length        equatorial_radius =          1'738.1_km;
     length        polar_radius =               1'736.0_km;
@@ -37,6 +39,7 @@ namespace {
     dimensionless albedo =                           0.136;
 
     // Atmosphere
+    // ---------- (source: https://en.wikipedia.org/wiki/Moon as of 2026)
     pressure      surface_pressure_day  =         1e-7_Pa;
     pressure      surface_pressure_night  =      1e-10_Pa;
 
