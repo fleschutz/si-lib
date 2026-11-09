@@ -1,5 +1,5 @@
-How to use *si-lib* in Your Project
-===================================
+Using *si-lib* in Your Project
+==============================
 
 
 Option 1: Using `FetchContent` in CMake
