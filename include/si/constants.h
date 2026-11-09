@@ -105,7 +105,7 @@ namespace si {
   // -----------------
   constexpr struct {
     temperature T0 =                      kelvins(0); // absolute zero (0K, the lowest possible temperature)
-    length Marathon_distance =        meters(42'195);
+    length marathon_distance =        meters(42'195);
     length quarter_mile =             meters(402.34);
     velocity speed_of_sound  = meters_per_second(343); // speed of sound in dry air at 20°C (68°F)
     velocity speed_of_sound_in_fresh_water = meters_per_second(1481); // at 20°C (68°F)
