@@ -21,6 +21,7 @@ namespace {
     si::time      synodic_orbital_period =  29.530'589_days;
     velocity      average_orbital_speed =        1.022_km_per_s;
     angle         inclination =                  5.145_deg; // to the ecliptic
+    length        mean_distance_to_Earth =     384'399_km;
 
     // Physical Characteristics
     // ------------------------ (source: https://en.wikipedia.org/wiki/Moon as of 2026)

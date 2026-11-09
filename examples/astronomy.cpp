@@ -10,26 +10,23 @@ void astronomy_examples() {
 
     cout << "    === ASTRONOMY EXAMPLES ===" << endl;
     cout << " 1. The travel time of sun light to Earth is... ";
-    cout << (Earth.mean_distance_to_Sun / CODATA.speed_of_light_in_vacuum) << endl;
+    cout << (Earth.mean_distance_to_Sun / CODATA.c) << endl;
 
 
     cout << " 2. The travel time to Alpha Centauri at 10% the speed of light takes... ";
     auto distance_to_Alpha_Centauri = 4.37_ly;
-    auto travel_speed               = 10_percent * CODATA.speed_of_light_in_vacuum;
+    auto travel_speed               = 10_percent * CODATA.c;
     auto travel_time                = distance_to_Alpha_Centauri / travel_speed;
     cout << travel_time << endl;
 
 
     cout << " 3. The attractive force between Sun and Earth is... ";
     auto Sun_mass    = 1.988416E30_kg;
-    auto Earth_mass  = 5.9722E24_kg;
-    cout << gravitational_attractive_force_formula(Sun_mass, Earth_mass, Earth.mean_distance_to_Sun) << endl;
+    cout << gravitational_attractive_force_formula(Sun_mass, Earth.mass, Earth.mean_distance_to_Sun) << endl;
 
 
     cout << " 4. The attractive force between Earth and Moon is... ";
-    auto Moon_mass              = 7.346E22_kg;
-    auto Earth_to_Moon_distance = 384'399_km;
-    cout << gravitational_attractive_force_formula(Earth_mass, Moon_mass, Earth_to_Moon_distance) << endl;
+    cout << gravitational_attractive_force_formula(Earth.mass, Moon.mass, Moon.mean_distance_to_Earth) << endl;
 
 
     cout << " 5. The impact energy of a 50m asteroid at 50,000km/h is... ";
