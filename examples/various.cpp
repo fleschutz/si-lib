@@ -71,7 +71,7 @@ void various_examples() {
     auto distance_on_final = 10_nmi;
     auto height_on_final   = 3000_ft;
     auto glide_path        = glide_path_formula(distance_on_final, height_on_final);
-    cout << glide_path << endl;
+    cout << si::to_string(glide_path) << endl;
 
 
     cout << "11. The windchill temperature of 5°C air temperature at 55km/h wind is... ";

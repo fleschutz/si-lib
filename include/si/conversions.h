@@ -9,8 +9,8 @@
 #include <si/literals.h>
 #define FUNC [[nodiscard]] inline
 
-namespace si
-{
+namespace si {
+
 	// Default Format Strings (Configurable)
 	// -------------------------------------
 	inline auto to_string_format     = "%.2Lf %s"; ///< SI standard formatting by default
@@ -20,8 +20,7 @@ namespace si
 	// from_string() Function Overloading
 	// ----------------------------------
 	/// @brief The from_string() function
-	FUNC bool from_string(const std::string& str, length& result)
-	{
+	FUNC bool from_string(const std::string& str, length& result) {
 		double value = 0.0;
 		char unit[100] = "";
 		if (std::sscanf(str.c_str(), "%lf%99s", &value, unit) != 2)
@@ -43,8 +42,7 @@ namespace si
 		return true;
 	}
 
-	FUNC bool from_string(const std::string& str, time& result)
-	{
+	FUNC bool from_string(const std::string& str, time& result) {
 		double value = 0.0;
 		char unit[100] = "";
 		if (std::sscanf(str.c_str(), "%lf%99s", &value, unit) != 2)
@@ -64,8 +62,7 @@ namespace si
 		return true;
 	}
 
-	FUNC bool from_string(const std::string& str, mass& result)
-	{
+	FUNC bool from_string(const std::string& str, mass& result) {
 		double value = 0.0;
 		char unit[100] = "";
 		if (std::sscanf(str.c_str(), "%lf%99s", &value, unit) != 2)
@@ -87,8 +84,7 @@ namespace si
 	}
 
 	/// @brief Internal function to format quantity and unit into a string by using a format string.
-	FUNC std::string _fmt(long double quantity, const char* unit, const char* formatString)
-	{
+	FUNC std::string _fmt(long double quantity, const char* unit, const char* formatString) {
 		char buf[256] = "";
 		std::snprintf(buf, sizeof(buf), formatString, quantity, unit);
 		return std::string(buf);
@@ -98,8 +94,7 @@ namespace si
 	// --------------------------------
 
 	/// @brief Returns the given length as string using SI units.
-	FUNC std::string to_string(length d, const char* fmtStr = to_string_format)
-	{
+	FUNC std::string to_string(length d, const char* fmtStr = to_string_format) {
 		if (d <= -1_Gpc || d >= 1_Gpc)         return _fmt(d / 1_Gpc, "Gpc", fmtStr); // gigaparsec
 		if (d <= -1_Mpc || d >= 1_Mpc)         return _fmt(d / 1_Mpc, "Mpc", fmtStr); // megaparsec
 		if (d <= -1_kpc || d >= 1_kpc)         return _fmt(d / 1_kpc, "kpc", fmtStr); // kiloparsec
@@ -115,14 +110,12 @@ namespace si
 		return _fmt(d / 1_pm, "pm", fmtStr);
 	}
 
-	FUNC std::ostream& operator<<(std::ostream& os, length d)
-	{
+	inline std::ostream& operator<<(std::ostream& os, length d) {
 		return (os << to_string(d));
 	}
 
 	/// @brief Returns the given time as string using SI units.
-	FUNC std::string to_string(time t, const char* fmtStr = to_string_format)
-	{
+	FUNC std::string to_string(time t, const char* fmtStr = to_string_format) {
 		if (t <= -365.25_d || t >= 365.25_d)   return _fmt(t / 365.25_d, "y", fmtStr);
 		if (t <= -1_w || t >= 1_w)             return _fmt(t / 1_w, "w", fmtStr);
 		if (t <= -2_d || t >= 2_d)             return _fmt(t / 1_d, "d", fmtStr);
@@ -135,14 +128,12 @@ namespace si
 		return _fmt(t / 1_ps, "ps", fmtStr);
 	}
 
-	FUNC std::ostream& operator<<(std::ostream& os, time t)
-	{
+	inline std::ostream& operator<<(std::ostream& os, time t) {
 		return (os << to_string(t));
 	}
 
 	/// @brief Returns the given mass as string using SI units.
-	FUNC std::string to_string(mass m, const char* fmtStr = to_string_format)
-	{
+	FUNC std::string to_string(mass m, const char* fmtStr = to_string_format) {
 		if (m <= -1_Pt || m >= 1_Pt)              return _fmt(m / 1_Pt, "Pt", fmtStr);
 		if (m <= -1_Tt || m >= 1_Tt)              return _fmt(m / 1_Tt, "Tt", fmtStr);
 		if (m <= -1_Gt || m >= 1_Gt)              return _fmt(m / 1_Gt, "Gt", fmtStr);
@@ -156,14 +147,12 @@ namespace si
 		return _fmt(m / 1_ng, "ng", fmtStr);
 	}
 
-	FUNC std::ostream& operator<<(std::ostream& os, mass m)
-	{
+	inline std::ostream& operator<<(std::ostream& os, mass m) {
 		return (os << to_string(m));
 	}
 
 	/// @brief Returns the given temperature as string using SI units.
-	FUNC std::string to_string(temperature T, const char* fmtStr = to_string_format)
-	{
+	FUNC std::string to_string(temperature T, const char* fmtStr = to_string_format) {
 		if (T >= 1_GK)                       return _fmt(T / 1_GK, "GK", fmtStr);
 		if (T >= 1_MK)                       return _fmt(T / 1_MK, "MK", fmtStr);
 		if (T >= -150_degC && T <= 150_degC) return _fmt(celsius(T), "°C", fmtStr); // human temperature range
@@ -173,14 +162,12 @@ namespace si
 		return _fmt(T / 1_nK, "nK", fmtStr);
 	}
 
-	FUNC std::ostream& operator<<(std::ostream& os, temperature T)
-	{
+	inline std::ostream& operator<<(std::ostream& os, temperature T) {
 		return (os << to_string(T));
 	}
 
 	/// @brief Returns the electric current as string using SI units.
-	inline std::string to_string(current I, const char* fmtStr = to_string_format)
-	{
+	inline std::string to_string(current I, const char* fmtStr = to_string_format) {
 		if (I <= -1_GA || I >= 1_GA)           return _fmt(I / 1_GA, "GA", fmtStr);
 		if (I <= -1_MA || I >= 1_MA)           return _fmt(I / 1_MA, "MA", fmtStr);
 		if (I <= -1_kA || I >= 1_kA)           return _fmt(I / 1_kA, "kA", fmtStr);
@@ -191,16 +178,14 @@ namespace si
 		return _fmt(I / 1_pA, "pA", fmtStr);
 	}
 
-	FUNC std::ostream& operator<<(std::ostream& os, current I)
-	{
+	inline std::ostream& operator<<(std::ostream& os, current I) {
 		return (os << to_string(I));
 	}
 
-	// Convert the 22 derived SI units:
+	// Convert the derived SI units:
 
 	/// @brief Returns the given area as string using SI units.
-	FUNC std::string to_string(area a, const char* fmtStr = to_string_format)
-	{
+	FUNC std::string to_string(area a, const char* fmtStr = to_string_format) {
 		if (a <= -1_km² || a >= 1_km²)            return _fmt(a / 1_km², "km²", fmtStr);
 		if (a <= -1_hm² || a >= 1_hm²)            return _fmt(a / 1_hm², "hm²", fmtStr);
 		if (a <= -1_m² || a >= 1_m² || a == 0_m²) return _fmt(a / 1_m², "m²", fmtStr);
@@ -209,14 +194,12 @@ namespace si
 		return _fmt(a / 1_um², "µm²", fmtStr);
 	}
 
-	FUNC std::ostream& operator<<(std::ostream& os, area a)
-	{
+	inline std::ostream& operator<<(std::ostream& os, area a) {
 		return (os << to_string(a));
 	}
 
 	/// @brief Returns the per area as string using SI units.
-	FUNC std::string to_string(per_area a, const char* fmtStr = to_string_format)
-	{
+	FUNC std::string to_string(per_area a, const char* fmtStr = to_string_format) {
 		if (a <= -1_per_km² || a >= 1_per_km²)                return _fmt(a / 1_per_km², "/km²", fmtStr);
 		if (a <= -1_per_hm² || a >= 1_per_hm²)                return _fmt(a / 1_per_hm², "/hm²", fmtStr);
 		if (a <= -1_per_m² || a >= 1_per_m² || a == 0_per_m²) return _fmt(a / 1_per_m², "/m²", fmtStr);
@@ -225,14 +208,12 @@ namespace si
 		return _fmt(a / 1_per_μm², "/μm²", fmtStr);
 	}
 
-	FUNC std::ostream& operator<<(std::ostream& os, per_area a)
-	{
+	inline std::ostream& operator<<(std::ostream& os, per_area a) {
 		return (os << to_string(a));
 	}
 
 	/// @brief Returns the given volume as string using SI units.
-	FUNC std::string to_string(volume v, const char* fmtStr = to_string_format)
-	{
+	FUNC std::string to_string(volume v, const char* fmtStr = to_string_format) {
 		if (v <= -1_km³ || v >= 1_km³)         return _fmt(v / 1_km³, "km³", fmtStr);
 		if (v <= -1_m³ || v >= 1_m³)           return _fmt(v / 1_m³, "m³", fmtStr);
 		if (v <= -1_l || v >= 1_l || v == 0_l) return _fmt(v / 1_l, "l", fmtStr);
@@ -242,40 +223,34 @@ namespace si
 		return _fmt(v / 1_pl, "pl", fmtStr);
 	}
 
-	FUNC std::ostream& operator<<(std::ostream& os, volume v)
-	{
+	inline std::ostream& operator<<(std::ostream& os, volume v) {
 		return (os << to_string(v));
 	}
 
 	/// @brief Returns velocity as string using SI units.
-	FUNC std::string to_string(velocity v, const char* fmtStr = to_string_format)
-	{
+	FUNC std::string to_string(velocity v, const char* fmtStr = to_string_format) {
 		if (v <= -1_km_per_s || v >= 1_km_per_s)                 return _fmt(v / 1_km_per_s, "km/s", fmtStr);
 		if (v <= -1_km_per_h || v >= 1_km_per_h)                 return _fmt(v / 1_km_per_h, "km/h", fmtStr);
 		if (v <= -1_m_per_s || v >= 1_m_per_s || v == 0_m_per_s) return _fmt(v / 1_m_per_s, "m/s", fmtStr);
 		return _fmt(v / 1_mm_per_h, "mm/h", fmtStr);
 	}
 
-	FUNC std::ostream& operator<<(std::ostream& os, velocity v)
-	{
+	inline std::ostream& operator<<(std::ostream& os, velocity v) {
 		return (os << to_string(v));
 	}
 
 	/// @brief Returns the acceleration as string using SI units.
-	FUNC std::string to_string(acceleration a, const char* fmtStr = to_string_format)
-	{
+	FUNC std::string to_string(acceleration a, const char* fmtStr = to_string_format) {
 		if (a <= -1_km_per_s² || a >= 1_km_per_s²) return _fmt(a / 1_km_per_s², "km/s²", fmtStr);
 		return _fmt(a / 1_m_per_s², "m/s²", fmtStr);
 	}
 
-	FUNC std::ostream& operator<<(std::ostream& os, acceleration a)
-	{
+	inline std::ostream& operator<<(std::ostream& os, acceleration a) {
 		return (os << to_string(a));
 	}
 
 	/// @brief Returns the frequency as string using SI units.
-	FUNC std::string to_string(frequency f, const char* fmtStr = to_string_format)
-	{
+	FUNC std::string to_string(frequency f, const char* fmtStr = to_string_format) {
 		if (f <= -1_THz || f >= 1_THz)            return _fmt(f / 1_THz, "THz", fmtStr);
 		if (f <= -1_GHz || f >= 1_GHz)            return _fmt(f / 1_GHz, "GHz", fmtStr);
 		if (f <= -1_MHz || f >= 1_MHz)            return _fmt(f / 1_MHz, "MHz", fmtStr);
@@ -285,14 +260,12 @@ namespace si
 		return _fmt(f / 1_uHz, "µHz", fmtStr);
 	}
 
-	FUNC std::ostream& operator<<(std::ostream& os, frequency f)
-	{
+	inline std::ostream& operator<<(std::ostream& os, frequency f) {
 		return (os << to_string(f));
 	}
 
 	/// @brief Returns the force as string using SI units.
-	FUNC std::string to_string(force F, const char* fmtStr = to_string_format)
-	{
+	FUNC std::string to_string(force F, const char* fmtStr = to_string_format) {
 		if (F <= -1_ZN || F >= 1_ZN)           return _fmt(F / 1_ZN, "ZN", fmtStr);
 		if (F <= -1_EN || F >= 1_EN)           return _fmt(F / 1_EN, "EN", fmtStr);
 		if (F <= -1_PN || F >= 1_PN)           return _fmt(F / 1_PN, "PN", fmtStr);
@@ -307,14 +280,12 @@ namespace si
 		return _fmt(F / 1_pN, "pN", fmtStr);
 	}
 
-	FUNC std::ostream& operator<<(std::ostream& os, force F)
-	{
+	inline std::ostream& operator<<(std::ostream& os, force F) {
 		return (os << to_string(F));
 	}
 
 	/// @brief Returns the energy as string using SI units.
-	FUNC std::string to_string(energy E, const char* fmtStr = to_string_format)
-	{
+	FUNC std::string to_string(energy E, const char* fmtStr = to_string_format) {
 		if (E <= -1_PJ || E >= 1_PJ)           return _fmt(E / 1_PJ, "PJ", fmtStr);
 		if (E <= -1_TJ || E >= 1_TJ)           return _fmt(E / 1_TJ, "TJ", fmtStr);
 		if (E <= -1_GJ || E >= 1_GJ)           return _fmt(E / 1_GJ, "GJ", fmtStr);
@@ -324,14 +295,12 @@ namespace si
 		return _fmt(E / 1_mJ, "mJ", fmtStr);
 	}
 
-	FUNC std::ostream& operator<<(std::ostream& os, energy E)
-	{
+	inline std::ostream& operator<<(std::ostream& os, energy E) {
 		return (os << to_string(E));
 	}
 
 	/// @brief Returns the power as string using SI units.
-	FUNC std::string to_string(power P, const char* fmtStr = to_string_format)
-	{
+	FUNC std::string to_string(power P, const char* fmtStr = to_string_format) {
 		if (P <= -1_TW || P >= 1_TW)           return _fmt(P / 1_TW, "TW", fmtStr);
 		if (P <= -1_GW || P >= 1_GW)           return _fmt(P / 1_GW, "GW", fmtStr);
 		if (P <= -1_MW || P >= 1_MW)           return _fmt(P / 1_MW, "MW", fmtStr);
@@ -341,28 +310,24 @@ namespace si
 		return _fmt(P / 1_uW, "µW", fmtStr);
 	}
 
-	FUNC std::ostream& operator<<(std::ostream& os, power P)
-	{
+	inline std::ostream& operator<<(std::ostream& os, power P) {
 		return (os << to_string(P));
 	}
 
 	/// @brief Returns the power intensity as string using SI units.
-	FUNC std::string to_string(power_intensity I, const char* fmtStr = to_string_format)
-	{
+	FUNC std::string to_string(power_intensity I, const char* fmtStr = to_string_format) {
 		if (I <= -1_MW_per_m² || I >= 1_MW_per_m²)                  return _fmt(I / 1_MW_per_m², "MW/m²", fmtStr);
 		if (I <= -1_kW_per_m² || I >= 1_kW_per_m²)                  return _fmt(I / 1_kW_per_m², "kW/m²", fmtStr);
 		if (I <= -1_W_per_m² || I >= 1_W_per_m² || I == 0_W_per_m²) return _fmt(I / 1_W_per_m², "W/m²", fmtStr);
 		return _fmt(I / 1_mW_per_m², "mW/m²", fmtStr);
 	}
 
-	FUNC std::ostream& operator<<(std::ostream& os, const power_intensity I)
-	{
+	inline std::ostream& operator<<(std::ostream& os, const power_intensity I) {
 		return (os << to_string(I));
 	}
 
 	/// @brief Returns the pressure as string using SI units.
-	FUNC std::string to_string(pressure p, const char* fmtStr = to_string_format)
-	{
+	FUNC std::string to_string(pressure p, const char* fmtStr = to_string_format) {
 		if (p <= -1_MPa || p >= 1_MPa)            return _fmt(p / 1_MPa, "MPa", fmtStr);
 		if (p <= -1_kPa || p >= 1_kPa)            return _fmt(p / 1_kPa, "kPa", fmtStr);
 		if (p <= -1_hPa || p >= 1_hPa)            return _fmt(p / 1_hPa, "hPa", fmtStr);
@@ -371,14 +336,12 @@ namespace si
 		return _fmt(p / 1_uPa, "µPa", fmtStr);
 	}
 
-	FUNC std::ostream& operator<<(std::ostream& os, pressure p)
-	{
+	inline std::ostream& operator<<(std::ostream& os, pressure p) {
 		return (os << to_string(p));
 	}
 
 	/// @brief Returns the electric potential as string using SI units.
-	FUNC std::string to_string(electric_potential U, const char* fmtStr = to_string_format)
-	{
+	FUNC std::string to_string(electric_potential U, const char* fmtStr = to_string_format) {
 		if (U <= -1_GV || U >= 1_GV)           return _fmt(U / 1_GV, "GV", fmtStr);
 		if (U <= -1_MV || U >= 1_MV)           return _fmt(U / 1_MV, "MV", fmtStr);
 		if (U <= -1_kV || U >= 1_kV)           return _fmt(U / 1_kV, "kV", fmtStr);
@@ -389,14 +352,12 @@ namespace si
 		return _fmt(U / 1_pV, "pV", fmtStr);
 	}
 
-	FUNC std::ostream& operator<<(std::ostream& os, electric_potential U)
-	{
+	inline std::ostream& operator<<(std::ostream& os, electric_potential U) {
 		return (os << to_string(U));
 	}
 
 	/// @brief Returns the electric charge as string using SI units.
-	FUNC std::string to_string(electric_charge Q, const char* fmtStr = to_string_format)
-	{
+	FUNC std::string to_string(electric_charge Q, const char* fmtStr = to_string_format) {
 		if (Q <= -1_GAh || Q >= 1_GAh)            return _fmt(Q / 1_GAh, "GAh", fmtStr);
 		if (Q <= -1_MAh || Q >= 1_MAh)            return _fmt(Q / 1_MAh, "MAh", fmtStr);
 		if (Q <= -1_kAh || Q >= 1_kAh)            return _fmt(Q / 1_kAh, "kAh", fmtStr);
@@ -405,50 +366,42 @@ namespace si
 		return _fmt(Q / 1_uAh, "µAh", fmtStr);
 	}
 
-	FUNC std::ostream& operator<<(std::ostream& os, electric_charge Q)
-	{
+	inline std::ostream& operator<<(std::ostream& os, electric_charge Q) {
 		return (os << to_string(Q));
 	}
 
 	/// @brief Returns the mass per area as string using SI units.
-	FUNC std::string to_string(mass_per_area m, const char* fmtStr = to_string_format)
-	{
+	FUNC std::string to_string(mass_per_area m, const char* fmtStr = to_string_format) {
 		if (m <= -1_t_per_m² || m >= 1_t_per_m²) return _fmt(m / 1_t_per_m², "t/m²", fmtStr);
 		return _fmt(m / 1_kg_per_m², "kg/m²", fmtStr);
 	}
 
-	FUNC std::ostream& operator<<(std::ostream& os, mass_per_area m)
-	{
+	inline std::ostream& operator<<(std::ostream& os, mass_per_area m) {
 		return (os << to_string(m));
 	}
 
 	/// @brief Returns the mass per power as string using SI units.
-	FUNC std::string to_string(mass_per_power m, const char* fmtStr = to_string_format)
-	{
+	FUNC std::string to_string(mass_per_power m, const char* fmtStr = to_string_format) {
 		if (m <= -1_kg_per_kW || m >= 1_kg_per_kW) return _fmt(m / 1_kg_per_kW, "kg/kW", fmtStr);
 		return _fmt(m / 1_kg_per_W, "kg/W", fmtStr);
 	}
 
-	FUNC std::ostream& operator<<(std::ostream& os, mass_per_power m)
-	{
+	inline std::ostream& operator<<(std::ostream& os, mass_per_power m) {
 		return (os << to_string(m));
 	}
 
 	/// @brief Returns density as string using SI units.
-	FUNC std::string to_string(density d, const char* fmtStr = to_string_format)
-	{
+	FUNC std::string to_string(density d, const char* fmtStr = to_string_format) {
 		if (d <= -1_t_per_m³ || d >= 1_t_per_m³) return _fmt(d / 1_t_per_m³, "t/m³", fmtStr);
 		return _fmt(d / 1_kg_per_m³, "kg/m³", fmtStr);
 	}
 
-	FUNC std::ostream& operator<<(std::ostream& os, density d)
-	{
+	inline std::ostream& operator<<(std::ostream& os, density d) {
 		return (os << to_string(d));
 	}
 
 	/// @brief Returns the digital size as string in bits and bytes.
-	FUNC std::string to_string(digital_size n, const char* fmtStr = to_string_format)
-	{
+	FUNC std::string to_string(digital_size n, const char* fmtStr = to_string_format) {
 		if (n >= 1_EB)  return _fmt(n / 1_EB, "EB", fmtStr);
 		if (n >= 1_PB)  return _fmt(n / 1_PB, "PB", fmtStr);
 		if (n >= 1_TB)  return _fmt(n / 1_TB, "TB", fmtStr);
@@ -460,14 +413,12 @@ namespace si
 		return _fmt(n / 1_bit, "bit", fmtStr);
 	}
 
-	FUNC std::ostream& operator<<(std::ostream& os, digital_size n)
-	{
+	inline std::ostream& operator<<(std::ostream& os, digital_size n) {
 		return (os << to_string(n));
 	}
 
 	/// @brief Returns the angle as string in degree.
-	FUNC std::string to_string(const angle a, const char* fmtStr = to_string_format)
-	{
+	FUNC std::string to_string(angle a, const char* fmtStr = to_string_format) {
 		return _fmt(a / 1_deg, "°", fmtStr);
 	}
 
@@ -475,8 +426,7 @@ namespace si
 	// ------------------------------------
 
 	/// @brief Returns a length equivalent as string, e.g. in Imperial units.
-	FUNC std::string to_equivalent(length d, const char* fmtStr = to_equivalent_format)
-	{
+	FUNC std::string to_equivalent(length d, const char* fmtStr = to_equivalent_format) {
 		if (d <= -1_ly || d >= 1_ly) return _fmt(d / 1_ly, "light-years", fmtStr);
 		if (d <= -1_ls || d >= 1_ls) return _fmt(d / 1_ls, "light-seconds", fmtStr);
 		if (d <= -1_mi || d >= 1_mi) return _fmt(d / 1_mi, "mi", fmtStr);
@@ -486,8 +436,7 @@ namespace si
 	}
 
 	/// @brief Returns a mass equivalent as string, e.g. in Imperial units.
-	FUNC std::string to_equivalent(mass m, const char* fmtStr = to_equivalent_format)
-	{
+	FUNC std::string to_equivalent(mass m, const char* fmtStr = to_equivalent_format) {
 		if (m <= -1_Msun || m >= 1_Msun)     return _fmt(m / 1_Msun, "solar masses", fmtStr);
 		if (m <= -1_Mjup || m >= 1_Mjup)     return _fmt(m / 1_Mjup, "Jupiter masses", fmtStr);
 		if (m <= -1_Mearth || m >= 1_Mearth) return _fmt(m / 1_Mearth, "Earth masses", fmtStr);
@@ -497,27 +446,23 @@ namespace si
 	}
 
 	/// @brief Returns a temperature equivalent as string, e.g. in Fahrenheit.
-	FUNC std::string to_equivalent(temperature T, const char* fmtStr = to_equivalent_format)
-	{
+	FUNC std::string to_equivalent(temperature T, const char* fmtStr = to_equivalent_format) {
 		return _fmt(fahrenheit(T), "°F", fmtStr);
 	}
 
 	/// @brief Returns a velocity equivalent as string, e.g. in Imperial units.
-	FUNC std::string to_equivalent(velocity V, const char* fmtStr = to_equivalent_format)
-	{
+	FUNC std::string to_equivalent(velocity V, const char* fmtStr = to_equivalent_format) {
 		if (V <= -1_Mach || V >= 1_Mach) return _fmt(V / 1_Mach, "Mach", fmtStr);
 		return _fmt(V / 1_mph, "mph", fmtStr);
 	}
 
 	/// @brief Returns a power intensity equivalent as string, e.g. in dB.
-	FUNC std::string to_equivalent(power_intensity I, const char* fmtStr = to_equivalent_format)
-	{
+	FUNC std::string to_equivalent(power_intensity I, const char* fmtStr = to_equivalent_format) {
 		return _fmt(10.0 * std::log10((I / 1_W_per_m²) / 1e-12), "dB", fmtStr);
 	}
 
 	/// @brief Returns an energy equivalent as string, e.g. kg TNT.
-	FUNC std::string to_equivalent(energy E, const char* fmtStr = to_equivalent_format)
-	{
+	FUNC std::string to_equivalent(energy E, const char* fmtStr = to_equivalent_format) {
 		constexpr auto Hiroshima_bomb = 62_TJ; // (explosion energy of the Hiroshima bomb)
 		if (E >= Hiroshima_bomb)
 			return _fmt(E / Hiroshima_bomb, "Hiroshima bombs", fmtStr);
@@ -531,8 +476,7 @@ namespace si
 	}
 
 	/// @brief Returns a data size equivalent as string.
-	FUNC std::string to_equivalent(digital_size n, const char* fmtStr = to_equivalent_format)
-	{
+	FUNC std::string to_equivalent(digital_size n, const char* fmtStr = to_equivalent_format) {
 		if (n >= 1_PiB)  return _fmt(n / 1_PiB, "PiB", fmtStr);
 		if (n >= 1_TiB)  return _fmt(n / 1_TiB, "TiB", fmtStr);
 		if (n >= 1_GiB)  return _fmt(n / 1_GiB, "GiB", fmtStr);
@@ -547,26 +491,22 @@ namespace si
 	// ------------------------------------
 
 	/// @brief Returns the percentage as string, e.g. "50.0%"
-	FUNC std::string to_percentage(length part, length total, const char* fmtStr = to_percentage_format)
-	{
+	FUNC std::string to_percentage(length part, length total, const char* fmtStr = to_percentage_format) {
 		return _fmt((part / total) * 100.0, "%", fmtStr);
 	}
 
 	/// @brief Returns the percentage as string, e.g. "50.0%"
-	FUNC std::string to_percentage(mass part, mass total, const char* fmtStr = to_percentage_format)
-	{
+	FUNC std::string to_percentage(mass part, mass total, const char* fmtStr = to_percentage_format) {
 		return _fmt((part / total) * 100.0, "%", fmtStr);
 	}
 
 	/// @brief Returns the percentage as string, e.g. "50.0%"
-	FUNC std::string to_percentage(velocity part, velocity total, const char* fmtStr = to_percentage_format)
-	{
+	FUNC std::string to_percentage(velocity part, velocity total, const char* fmtStr = to_percentage_format) {
 		return _fmt((part / total) * 100.0, "%", fmtStr);
 	}
 
 	/// @brief Returns the percentage as string, e.g. "50.0%"
-	FUNC std::string to_percentage(digital_size part, digital_size total, const char* fmtStr = to_percentage_format)
-	{
+	FUNC std::string to_percentage(digital_size part, digital_size total, const char* fmtStr = to_percentage_format) {
 		return _fmt((part / total) * 100.0, "%", fmtStr);
 	}
 
