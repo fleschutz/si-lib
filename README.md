@@ -11,7 +11,7 @@
 - **Support** for SI/Imperial/US/digital/astronomical units, and a lot more.
 - **Excellent** readability with bundled literals, constants, formulas, and datasets (optional).
 - **Modern C++ 17:** header-only, own namespace, light-weight, no external dependencies.
-- **Cross-platform** support for Linux (clang/gcc, x86/arm) and Windows (VS2017-VS2026) with [CMake support](docs/CMake_support.md).
+- **Cross-platform** support for Linux (clang/gcc, x86/arm) and Windows (VS2017-VS2026).
 
 🔎 Example
 -----------
