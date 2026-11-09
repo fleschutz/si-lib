@@ -13,8 +13,8 @@ namespace si {
   // SI Base Units
   // -------------
 
-  // SYMBOL FACTOR  BASE UNIT             EXAMPLE (sorting: big to small quantitiy)
-  // ------------------------------------------------------------------------------
+  // SYMBOL FACTOR  BASE UNIT             EXAMPLE (sorting: big to small quantity)
+  // -----------------------------------------------------------------------------
   // length in...
   UDL(_Pm,    1e15, meters);              // 1_Pm (petameter)
   UDL(_Tm,    1e12, meters);              // 1_Tm (terameter)
@@ -263,7 +263,7 @@ namespace si {
   // power intensity in...
   UDL(_MW_per_m²,1e6, watts_per_meter2);  // 1_MW_per_m² (kilowatt per square metre)
   UDL(_kW_per_m²,1e3, watts_per_meter2);  // 1_kW_per_m² (kilowatt per square metre)
-  UDL(_W_per_m², 1, watts_per_meter2);    // 1_W_per_m² (watt per square metre)
+  UDL(_W_per_m², 1, watts_per_meter2);    // 1_W_per_m²  (watt per square metre)
   UDL(_mW_per_m²,1e-3, watts_per_meter2); // 1_mW_per_m² (milliwatt per square metre)
   UDL(_uW_per_m²,1e-6, watts_per_meter2); // 1_uW_per_m² (milliwatt per square metre)
   // pressure in...
