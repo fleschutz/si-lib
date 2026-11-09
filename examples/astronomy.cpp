@@ -10,8 +10,7 @@ void astronomy_examples() {
 
     cout << "    === ASTRONOMY EXAMPLES ===" << endl;
     cout << " 1. The travel time of sun light to Earth is... ";
-    auto Earth_to_Sun_distance = 149'597'870'691_m;
-    cout << (Earth_to_Sun_distance / CODATA.speed_of_light_in_vacuum) << endl;
+    cout << (Earth.mean_distance_to_Sun / CODATA.speed_of_light_in_vacuum) << endl;
 
 
     cout << " 2. The travel time to Alpha Centauri at 10% the speed of light takes... ";
@@ -24,7 +23,7 @@ void astronomy_examples() {
     cout << " 3. The attractive force between Sun and Earth is... ";
     auto Sun_mass    = 1.988416E30_kg;
     auto Earth_mass  = 5.9722E24_kg;
-    cout << gravitational_attractive_force_formula(Sun_mass, Earth_mass, Earth_to_Sun_distance) << endl;
+    cout << gravitational_attractive_force_formula(Sun_mass, Earth_mass, Earth.mean_distance_to_Sun) << endl;
 
 
     cout << " 4. The attractive force between Earth and Moon is... ";
@@ -45,7 +44,7 @@ void astronomy_examples() {
 
     cout << " 6. The wavelength of hydrogen (H2) in vacuum is... ";
     auto H2_frequency  = 1420.4057517682_MHz;
-    auto H2_wavelength = wavelength_formula(CODATA.speed_of_light_in_vacuum, H2_frequency);
+    auto H2_wavelength = wavelength_formula(CODATA.c, H2_frequency);
     cout << H2_wavelength << " or " << to_equivalent(H2_wavelength) << endl;
 
 
@@ -81,7 +80,7 @@ void astronomy_examples() {
 
 
     cout << "10. The estimated total distance the Earth has travelled is... ";
-    auto distance_per_year     = circumference_of_circle_formula(Earth.avg_distance_to_Sun);
+    auto distance_per_year     = circumference_of_circle_formula(Earth.mean_distance_to_Sun);
     auto Earth_year            = 365.25_days;
     auto Earth_age             = Earth_year * 4.5e12;
     auto distance_total        = distance_per_year * (Earth_age / Earth_year);
