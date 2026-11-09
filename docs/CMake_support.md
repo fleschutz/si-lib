@@ -1,9 +1,9 @@
-Using *si-lib* in Your Project with CMake
-=========================================
+How to use *si-lib* in Your Project
+===================================
 
 
-Option 1: Using `FetchContent` 
---------------------------------
+Option 1: Using `FetchContent` in CMake
+---------------------------------------
 Pull it at configure time — no vendored copy in your tree:
 
 ```cmake
@@ -17,8 +17,8 @@ target_link_libraries(myapp PRIVATE si-lib::si-lib)
 ```
 
 
-Option 2: Using `add_subdirectory`
-----------------------------------
+Option 2: Using `add_subdirectory` in CMake
+-------------------------------------------
 Vendor the project (a submodule or a copy) and add it:
 
 ```cmake
@@ -29,8 +29,8 @@ target_link_libraries(myapp PRIVATE si-lib::si-lib)
 Linking the target propagates the include directory, so you do not set either yourself.
 
 
-Option 3: Using `find_package`
-------------------------------
+Option 3: Using `find_package` in CMake
+---------------------------------------
 
 If `si-lib` is installed (via `cmake --install`, or a Linux package), consume it with `find_package`:
 
