@@ -15,7 +15,7 @@ void speed_examples() {
     cout << Sabastians_average << " or " << to_equivalent(Sabastians_average) << endl;
 
 
-    cout << " 2. Which average speed is needed to travel around the Earth in 80 days? ";
+    cout << " 2. Which average speed is needed to travel around the World in 80 days? ";
     auto equatorial_circumference = 40'075.017_km;
     auto travel_time              = 80_days;
     auto avg_travel_speed         = equatorial_circumference / travel_time;
