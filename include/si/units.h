@@ -135,45 +135,43 @@ namespace si {
   // Basic Functions and Templates
   // -----------------------------
   /// @brief Calculates the sinus of an angle (a).
-  [[nodiscard]] inline angle sin(angle a)
-  {
-      return std::sin(a);
+  [[nodiscard]] inline angle sin(angle a) {
+      return std::sinl(a);
   }
 
   /// @brief Calculates the cosinus of an angle (a).
-  [[nodiscard]] inline angle cos(angle a)
-  {
-      return std::cos(a);
+  [[nodiscard]] inline angle cos(angle a) {
+      return std::cosl(a);
   }
 
   /// @brief Calculates the tangens of an angle (a).
   [[nodiscard]] inline angle tan(angle a)
   {
-      return std::tan(a);
+      return std::tanl(a);
   }
 
   /// @brief Calculates the square root of an angle (a).
   [[nodiscard]] inline angle sqrt(angle a)
   {
-      return std::sqrt(a);
+      return std::sqrtl(a);
   }
 
   /// @brief Calculates sin²x
   [[nodiscard]] inline angle sin2(angle x)
   {
-      return 0.5 * (1. - std::cos(2. * x));
+      return 0.5 * (1. - std::cosl(2. * x));
   }
 
   /// @brief Calculates cos²x
   [[nodiscard]] inline angle cos2(angle x)
   {
-      return 0.5 * (1. + std::cos(2. * x));
+      return 0.5 * (1. + std::cosl(2. * x));
   }
 
   /// @brief Calculates the atangens of two angles.
   [[nodiscard]] inline angle atan2(angle y, angle x)
   {
-      return std::atan2(radians(y), radians(x));
+      return std::atan2l(y, x);
   }
 
   /// @brief Calculates the angle between the positive x-axis and a point (x, y).
