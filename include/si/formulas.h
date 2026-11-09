@@ -1,6 +1,6 @@
 /// @file     si/formulas.h
 /// @brief    Defines 70+ formulas, e.g. si::area_of_circle().
-/// @details  Categories are: 2D, 3D, Moving Objects, Vehicle, Aircraft, Gravitation, Various, and References.
+/// @details  Categories are: 2D, 3D, moving objects, vehicle, aircraft, gravitation, various, and references.
 
 #pragma once
 #include <si/constants.h>
@@ -375,6 +375,12 @@ namespace si {
 		double adiabatic_index = 1.4; // for air
 		auto M = 0.0289645_kg_per_mol; // molar mass of the gas
 		return sqrt((adiabatic_index * constant::R * T) / M);
+	}
+
+	/// @brief Calculates the fluid pressure from density (p) in depth (h) and gravity (g).
+	FUNC pressure fluid_pressure_formula(density p, length h, acceleration g)
+	{
+		return p * h * g;
 	}
 
 	/// @brief Calculates the drag force based on mass density of the fluid (p), flow velocity (u), drag coefficient (cd) and reference area (A).
