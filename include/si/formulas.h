@@ -161,7 +161,7 @@ namespace si {
 	/// @brief Calculates the area of a sphere from radius (r).
 	FUNC area area_of_sphere_formula(length r)
 	{
-		return 4. * Math.pi * square(r);
+		return 2. * Math.tau * square(r);
 	}
 
 	/// @brief Calculates the volume of a sphere from radius (r).
@@ -231,6 +231,12 @@ namespace si {
 	FUNC velocity final_velocity_formula(velocity i, acceleration a, si::time t)
 	{
 		return i + a * t;
+	}
+
+	/// @brief Calculates a pendulum's swing time based on its length (L) and local gravity (g).
+	FUNC time pendulum_period_formula(length L, acceleration g)
+	{
+		return Math.tau * sqrt(L/g);
 	}
 
 	// Formulas for Vehicles
@@ -453,7 +459,7 @@ namespace si {
 	/// @brief Calculates the sound intensity of a sound source from a distance.
 	FUNC auto sound_intensity_formula(power power_of_sound_source, length distance_from_sound_source)
 	{
-		return power_of_sound_source / (4.0 * Math.pi * square(distance_from_sound_source));
+		return power_of_sound_source / (2. * Math.tau * square(distance_from_sound_source));
 	}
 
 	/// @brief Calculates the max height of a bullet (without force of drag, wind, etc.), based on:
