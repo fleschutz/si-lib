@@ -135,8 +135,8 @@ void various_examples() {
 
 
     cout << "18. The sum of 1m + 1km + 1nmi + 1ft + 1in is... ";
-    auto length_sum = 1_m + 1_km + 1_nmi + 1_ft + 1_in;
-    cout << length_sum << endl;
+    auto total_length = 1_m + 1_km + 1_nmi + 1_ft + 1_in;
+    cout << total_length << endl;
 
 
     cout << "19. The sum of 1 byte + 1kB + 1MB + ... + 1QB is... ";
@@ -216,7 +216,7 @@ void various_examples() {
     auto force_applied  = 500_N;
     auto lever_arm      = 20_cm;
     auto angle_of_force = 90_deg;
-    auto torque        = lever_arm * force_applied * si::sin(angle_of_force);
+    auto torque         = lever_arm * force_applied * si::sin(angle_of_force);
     cout << torque << " of torque" << endl;
 
 
