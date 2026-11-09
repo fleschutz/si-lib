@@ -9,11 +9,11 @@ using namespace si;
 void speed_examples() {
 
     cout << "    === SPEED EXAMPLES ===" << endl;
-    cout << " 1. What was the average speed of Kelvin Kiptum's Marathon world record? ";
-    auto Marathon_distance  = 42.195_km;
-    auto Kelvins_duration   = 2_h + 35_s;
-    auto Kelvins_average    = Marathon_distance / Kelvins_duration;
-    cout << Kelvins_average << " or " << to_equivalent(Kelvins_average) << endl;
+    cout << " 1. What was the average speed of Sabastian Sawe's marathon world record? ";
+    auto marathon_distance     = 42.195_km;
+    auto Sabastians_duration   = 1_h + 59_min + 30_s;
+    auto Sabastians_average    = marathon_distance / Sabastians_duration;
+    cout << Sabastians_average << " or " << to_equivalent(Sabastians_average) << endl;
 
 
     cout << " 2. Which average speed is needed to travel around the Earth in 80 days? ";
