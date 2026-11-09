@@ -184,15 +184,15 @@ namespace si {
   }
   /// @brief Raise any number <x> to power of 2 (x² or x*x).
   template <typename T>
-  [[nodiscard]] SI_INLINE_CONSTEXPR auto square(T x) { return x * x; }
+  [[nodiscard]] constexpr inline auto square(T x) { return x * x; }
 
   /// @brief Raise any number <x> to power of 3 (x³ or x*x*x).
   template <typename T>
-  [[nodiscard]] SI_INLINE_CONSTEXPR auto cube(T x) { return x * x * x; }
+  [[nodiscard]] constexpr inline auto cube(T x) { return x * x * x; }
 
   /// @brief Clamp any number <x> between <min> and <max> value.
   template <typename T>
-  [[nodiscard]] SI_INLINE_CONSTEXPR auto clamp(T x, T min, T max) {
+  [[nodiscard]] constexpr inline auto clamp(T x, T min, T max) {
       if (x < min) return min;
       if (x > max) return max;
       return x;
@@ -205,5 +205,3 @@ namespace si {
 } // end of namespace
 
 #undef UNIT
-#undef SI_RETURN_QUANTITY
-#undef SI_INLINE_CONSTEXPR

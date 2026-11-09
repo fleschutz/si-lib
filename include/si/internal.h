@@ -730,4 +730,7 @@ namespace si {
 	using detail::deangle;
 	using detail::is_si;
 	using detail::is_si_v;
-} // end of namespace SI
+} // end of namespace
+
+#undef SI_RETURN_QUANTITY
+#undef SI_INLINE_CONSTEXPR
