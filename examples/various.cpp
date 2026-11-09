@@ -213,10 +213,10 @@ void various_examples() {
 
 
     cout << "28. Applying a perpendicular force of 500N to a 20cm long lever results in... ";
-    auto force_applied = 500_N;
-    auto lever_arm     = 20_cm;
-    auto angle         = 90_deg;
-    auto torque        = lever_arm * force_applied * si::sin(angle);
+    auto force_applied  = 500_N;
+    auto lever_arm      = 20_cm;
+    auto angle_of_force = 90_deg;
+    auto torque        = lever_arm * force_applied * si::sin(angle_of_force);
     cout << torque << " of torque" << endl;
 
 

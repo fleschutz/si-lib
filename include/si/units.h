@@ -137,19 +137,25 @@ namespace si {
   /// @brief Calculates the sinus of an angle (a).
   [[nodiscard]] inline angle sin(angle a)
   {
-      return std::sin(radians(a));
+      return std::sin(a);
   }
 
   /// @brief Calculates the cosinus of an angle (a).
   [[nodiscard]] inline angle cos(angle a)
   {
-      return std::cos(radians(a));
+      return std::cos(a);
   }
 
   /// @brief Calculates the tangens of an angle (a).
   [[nodiscard]] inline angle tan(angle a)
   {
-      return std::tan(radians(a));
+      return std::tan(a);
+  }
+
+  /// @brief Calculates the square root of an angle (a).
+  [[nodiscard]] inline angle sqrt(angle a)
+  {
+      return std::sqrt(a);
   }
 
   /// @brief Calculates sin²x
@@ -162,12 +168,6 @@ namespace si {
   [[nodiscard]] inline angle cos2(angle x)
   {
       return 0.5 * (1. + std::cos(2. * x));
-  }
-
-  /// @brief Calculates the square root of an angle (a).
-  [[nodiscard]] inline angle sqrt(angle a)
-  {
-      return std::sqrt(radians(a));
   }
 
   /// @brief Calculates the atangens of two angles.
