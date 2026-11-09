@@ -30,7 +30,7 @@ int main() {   using namespace si;
 
 |                       | Example                                   | Location                                       |
 | --------------------- | ----------------------------------------- | ---------------------------------------------- |
-| Namespace             | *si*                                      | (in any si/ header file)                       |
+| Namespace             | *si*                                      | (in si/*.h header files)                       |
 | Datatypes             | *mass*                                    | [<si/datatypes.h>](include/si/datatypes.h)     |
 | Units                 | *kilograms*                               | [<si/units.h>](include/si/units.h)             |
 | User-defined literals | *1_kg*                                    | [<si/literals.h>](include/si/literals.h)       |
