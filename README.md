@@ -53,11 +53,13 @@ int main() {   using namespace si;
 
 **What are use-cases of *si-lib*?** Applied math in simulations, simulators, scientific calculations, games, etc.
 
-**What are numbers like 1.2e23?** It's the scientific notation in C/C++ for 1.2 x 10²³, the letter 'e' or 'E' represents the 'times 10 to the power of' part.
+**How to use *si-lib* in my project?** Follow the instructions in [CMake support](docs/CMake_support.md), please.
 
 **Which #include to use?** Use the convenient *#include <si/core.h>* to include the 6 core header files (datatypes.h, units.h, literals.h, constants.h, formulas.h, conversions.h), otherwise pick the necessary ones only.
 
 **How to import/export numbers and strings?** See the code examples in [examples/conversions.cpp](examples/conversions.cpp).
+
+**What are numbers like 1.2e23?** It's the scientific notation in C/C++ for 1.2 x 10²³, the letter 'e' or 'E' represents the 'times 10 to the power of' part.
 
 **Where are the list of references?** References are always listed at the end of each source code file.
 
