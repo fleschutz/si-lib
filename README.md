@@ -53,7 +53,7 @@ int main() {   using namespace si;
 
 **What are use-cases of *si-lib*?** Applied math in simulations, simulators, scientific calculations, games, etc.
 
-**How to use *si-lib* in my project?** Follow the [integration instructions](docs/CMake_support.md), please.
+**How to use *si-lib* in my project?** Follow the [integration instructions](docs/integration.md), please.
 
 **Which #include to use?** Use the convenient *#include <si/core.h>* to include the 6 core header files (datatypes.h, units.h, literals.h, constants.h, formulas.h, conversions.h), otherwise pick the necessary ones only.
 
