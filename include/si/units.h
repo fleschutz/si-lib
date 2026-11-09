@@ -90,9 +90,7 @@ namespace si {
   UNIT(teslas)        = kilograms / (amperes * seconds * seconds);
   UNIT(joules_per_tesla) = joules / teslas;
 
-  typedef angle radians;
   UNIT(steradians)    = unit<detail::dimensionless>();
-
   UNIT(lumens)        = candelas * steradians;
   UNIT(lumenseconds)  = lumens * seconds;
   UNIT(lumens_per_watt) = lumens / watts;
@@ -132,67 +130,69 @@ namespace si {
   // Various Units
   // -------------
   UNIT(celsius)          = detail::unit<detail::temperature_dimension, detail::tag_celsius>();
+  typedef angle radians;
 
   // Basic Functions and Templates
   // -----------------------------
   /// @brief Calculates the sinus of an angle (a).
-  [[nodiscard]] inline angle sin(const angle a)
+  [[nodiscard]] inline angle sin(angle a)
   {
       return std::sin(radians(a));
   }
 
   /// @brief Calculates the cosinus of an angle (a).
-  [[nodiscard]] inline angle cos(const angle a)
+  [[nodiscard]] inline angle cos(angle a)
   {
       return std::cos(radians(a));
   }
 
   /// @brief Calculates the tangens of an angle (a).
-  [[nodiscard]] inline angle tan(const angle a)
+  [[nodiscard]] inline angle tan(angle a)
   {
       return std::tan(radians(a));
   }
 
   /// @brief Calculates sin²x
-  [[nodiscard]] inline angle sin2(const angle x)
+  [[nodiscard]] inline angle sin2(angle x)
   {
       return 0.5 * (1. - std::cos(2. * x));
   }
 
   /// @brief Calculates cos²x
-  [[nodiscard]] inline angle cos2(const angle x)
+  [[nodiscard]] inline angle cos2(angle x)
   {
       return 0.5 * (1. + std::cos(2. * x));
   }
 
   /// @brief Calculates the square root of an angle (a).
-  [[nodiscard]] inline angle sqrt(const angle a)
+  [[nodiscard]] inline angle sqrt(angle a)
   {
       return std::sqrt(radians(a));
   }
 
   /// @brief Calculates the atangens of two angles.
-  [[nodiscard]] inline angle atan2(const angle y, const angle x)
+  [[nodiscard]] inline angle atan2(angle y, angle x)
   {
       return std::atan2(radians(y), radians(x));
   }
 
   /// @brief Calculates the angle between the positive x-axis and a point (x, y).
-  [[nodiscard]] inline angle atan2(const length y, const length x)
+  [[nodiscard]] inline angle atan2(length y, length x)
   {
       return std::atan2(meters(y), meters(x));
   }
+
   /// @brief Raise any number <x> to power of 2 (x² or x*x).
   template <typename T>
-  [[nodiscard]] constexpr inline auto square(T x) { return x * x; }
+  [[nodiscard]] inline constexpr auto square(T x) { return x * x; }
 
   /// @brief Raise any number <x> to power of 3 (x³ or x*x*x).
   template <typename T>
-  [[nodiscard]] constexpr inline auto cube(T x) { return x * x * x; }
+  [[nodiscard]] inline constexpr auto cube(T x) { return x * x * x; }
 
   /// @brief Clamp any number <x> between <min> and <max> value.
   template <typename T>
-  [[nodiscard]] constexpr inline auto clamp(T x, T min, T max) {
+  [[nodiscard]] inline constexpr auto clamp(T x, T min, T max) {
       if (x < min) return min;
       if (x > max) return max;
       return x;
