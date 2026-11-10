@@ -45,7 +45,7 @@ void astronomy_examples() {
     cout << H2_wavelength << " or " << to_equivalent(H2_wavelength) << endl;
 
 
-    cout << " 7. Bigger moons than Earth's moon are... ";
+    cout << " 7. Moons bigger than our Earth's moon are... ";
     for (auto& moon : moons) {
         if (moon.mean_radius > 1737.5_km)
             cout << moon.planet << "'s " << moon.name << " (ø=" << moon.mean_radius * 2. << "), ";
