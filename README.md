@@ -2,7 +2,7 @@
 =============================================
 [![CMake on multiple platforms](https://github.com/fleschutz/si-lib/actions/workflows/cmake-multi-platform.yml/badge.svg)](https://github.com/fleschutz/si-lib/actions/workflows/cmake-multi-platform.yml)
 
-Include *si-lib* to apply math in C++ correct, precise, and convenient. **Features** are: 
+Include *si-lib* to apply math in C++ correct, precise, and convenient. **Features are:** 
 
 - **Type-safety** for datatypes, constants, formulas, literals, etc. (e.g. mass + length = error).
 - **Test-safety** by 300+ unit tests (executed at compile-time and on each commit).
