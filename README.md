@@ -2,12 +2,12 @@
 =============================================
 [![CMake on multiple platforms](https://github.com/fleschutz/si-lib/actions/workflows/cmake-multi-platform.yml/badge.svg)](https://github.com/fleschutz/si-lib/actions/workflows/cmake-multi-platform.yml)
 
-*si-lib* is an open-source library to apply math in C++ correct, precise, and convenient. Top features are: 
+Include *si-lib* to apply math in C++ correct, precise, and convenient. **Features** are: 
 
 - **Type-safety** for datatypes, constants, formulas, literals, etc. (e.g. mass + length = error).
 - **Test-safety** by 300+ unit tests (executed at compile-time and on each commit).
 - **Precision** by 64-bit floating point, calculations on SI base units, and CODATA constants.
-- **Full speed:** no runtime overhead and implicit compile-time conversions whenever possible.
+- **Top speed:** no runtime overhead and implicit compile-time conversions whenever possible.
 - **Support** for SI/Imperial/US/digital/astronomical units, and a lot more.
 - **Excellent** readability with bundled literals, constants, formulas, and datasets (optional).
 - **Modern C++ 17:** header-only, own namespace, light-weight, no external dependencies.
