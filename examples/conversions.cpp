@@ -1,17 +1,16 @@
 /// @file   examples/conversions.cpp
 /// @brief  Contains 4 import and 5 export examples using libSI.
 
-#include <iostream>
 #include <si/core.h> 
+using namespace si;
 
 void conversion_examples() {
-    using namespace si;
 
     // Import Options
     // --------------
-    length distance = 42_m;   // <- use a user-defined literal
+    length distance = 42_m;   // <- user-defined literal (UDL)
 
-    distance = meters(42.0);  // <- cast a dimensionless number
+    distance = meters(42.0);  // <- construct with a dimensionless number
     
     double x = 42;
     distance = x * 1_m;       // <- multiply a dimensionless number - doesn't work for celsius/fahrenheit due to the offset!
