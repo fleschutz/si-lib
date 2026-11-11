@@ -16,17 +16,17 @@ void speed_examples() {
     cout << average_speed << " or " << to_equivalent(average_speed) << endl;
 
 
-    cout << " 2. Which average speed is needed to travel around the World in 80 days? ";
+    cout << " 2. What's the free-fall time from Burj Khalifa tower (2716ft)? ";
+    auto tower_height  = 2716_ft;
+    auto fall_time     = free_fall_time_formula(tower_height, CODATA.g_n);
+    cout << fall_time << endl;
+
+
+    cout << " 3. Which average speed is needed to travel around the World in 80 days? ";
     auto equatorial_circumference = 40'075.017_km;
     auto travel_time              = 80_days;
     auto avg_travel_speed         = equatorial_circumference / travel_time;
     cout << avg_travel_speed << " or " << to_equivalent(avg_travel_speed) << endl;
-
-
-    cout << " 3. What's the free fall time from Burj Khalifa tower (828m or 2716ft)? ";
-    auto tower_height    = 828_m;
-    auto free_fall_time  = free_fall_time_formula(tower_height, CODATA.g_n);
-    cout << free_fall_time << endl;
 
 
     cout << " 4. A flight non-stop around the Earth at Mach 1 would take... ";
