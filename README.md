@@ -38,9 +38,9 @@ int main() {   using namespace si;
 | Formulas              | *kinetic_energy_formula()*                | [<si/formulas.h>](include/si/formulas.h)       |
 | Conversions           | *to_equivalent()*                         | [<si/conversions.h>](include/si/conversions.h) |
 | Unit tests            | *static_assert(1_kg == 1000_g);*          | [<si/tests.h>](include/si/tests.h)             | 
-| Examples              | [console output](examples/console_output.txt) | 📂[examples](examples/)                    |
+| Examples              | [speeds.cpp](examples/speeds.cpp) & [program output](examples/program_output.txt) | 📂[examples](examples/)                    |
 | Datasets              | *Earth.mass*                              | 📂[examples/datasets](examples/datasets/)      |
-| Documentation         |                                           | 📓 [reference manual](https://fleschutz.github.io/si-lib/docs/html/) |
+| Documentation         | 📓 [reference manual](https://fleschutz.github.io/si-lib/docs/html/) | 📂[docs](docs/)     |
 
 
 💡 Q & A
