@@ -1,5 +1,5 @@
 /// @file   examples/speeds.cpp
-/// @brief  Contains 10 speed examples
+/// @brief  Contains 10 speed examples using 'si-lib'
 
 #include <iostream>
 #include <si/core.h> 
@@ -11,9 +11,9 @@ void speed_examples() {
     cout << "    === SPEED EXAMPLES ===" << endl;
 
     cout << " 1. What was the average speed of Sabastian Sawe's marathon world record? ";
-    auto Sabastians_duration   = 1_h + 59_min + 30_s;
-    auto Sabastians_average    = Const.marathon_distance / Sabastians_duration;
-    cout << Sabastians_average << " or " << to_equivalent(Sabastians_average) << endl;
+    auto Sabastians_time  = 1_h + 59_min + 30_s;
+    auto average_speed    = Const.marathon_distance / Sabastians_time;
+    cout << average_speed << " or " << to_equivalent(average_speed) << endl;
 
 
     cout << " 2. Which average speed is needed to travel around the World in 80 days? ";
