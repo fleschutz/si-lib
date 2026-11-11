@@ -9,6 +9,7 @@ using namespace si;
 void speed_examples() {
 
     cout << "    === SPEED EXAMPLES ===" << endl;
+
     cout << " 1. What was the average speed of Sabastian Sawe's marathon world record? ";
     auto Sabastians_duration   = 1_h + 59_min + 30_s;
     auto Sabastians_average    = Const.marathon_distance / Sabastians_duration;

@@ -17,7 +17,7 @@
  4. The attractive force between Earth and Moon is... 198.2 EN
  5. The impact energy of a 50m asteroid at 50,000km/h is... 15.8 PJ or 254.5 Hiroshima bombs
  6. The wavelength of hydrogen (H2) in vacuum is... 21.1 cm or 8.3 in
- 7. Bigger moons than Earth's moon are... Jupiter's Io (ø=3643.2 km), Jupiter's Ganymede (ø=5262.4 km), Jupiter's Callisto (ø=4820.6 km), Saturn's Titan (ø=5149.5 km), 
+ 7. Moons bigger than our Earth's moon are... Jupiter's Io (ø=3643.2 km), Jupiter's Ganymede (ø=5262.4 km), Jupiter's Callisto (ø=4820.6 km), Saturn's Titan (ø=5149.5 km), 
  8. The min speed required to escape from the planets are... Mercury=0.0 mm/h or 0.0 mph, Venus=0.0 mm/h or 0.0 mph, Earth=0.0 mm/h or 0.0 mph, Mars=0.0 mm/h or 0.0 mph, Jupiter=0.2 mm/h or 0.0 mph, Saturn=0.1 mm/h or 0.0 mph, Uranus=0.1 mm/h or 0.0 mph, Neptune=0.1 mm/h or 0.0 mph, Pluto=0.0 mm/h or 0.0 mph, 
  9. Exoplanets that are life-friendly and quite near are... 'Proxima Cen b' @ Proxima Cen in 1.3 pc, 'Proxima Cen b' @ Proxima Cen in 1.3 pc, 'Proxima Cen d' @ Proxima Cen in 1.3 pc, 
 10. The estimated total distance the Earth has travelled is... 137.1 Mpc
@@ -35,7 +35,7 @@
  7. The population density on Earth (people per km² of land area) is... 55.1 /km²
  8. How much land area would be available for each person on Earth? 1.8 hm²
  9. Which radioactive chemical elements melt above 2500K? Technetium at 2703.2 K, Rutherfordium at 2673.2 K, 
-10. An aircraft glide path on final at 10NM distance in 3000ft height is... 0.0493336
+10. An aircraft glide path on final at 10NM distance in 3000ft height is... 2.8 °
 11. The windchill temperature of 5°C air temperature at 55km/h wind is... -1.6 °C or 29.1 °F
 12. The surface area and volume of a 30cm x 1cm pizza is... 706.9 cm² and 706.9 ml
 13. The filament length of a 750g PLA roll with 2.85mm diameter is... 94.8 m or 103.7 yd
