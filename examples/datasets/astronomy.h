@@ -3,6 +3,7 @@
 
 #pragma once
 #include <si/core.h> 
+#include "Sun.h"
 #include "Earth.h"
 #include "Moon.h"
 #include "planets.h"
