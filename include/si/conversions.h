@@ -402,14 +402,17 @@ namespace si {
 
 	/// @brief Returns the digital size as string in bits and bytes.
 	FUNC std::string to_string(digital_size n, const char* fmtStr = to_string_format) {
-		if (n >= 1_EB)  return _fmt(n / 1_EB, "EB", fmtStr);
-		if (n >= 1_PB)  return _fmt(n / 1_PB, "PB", fmtStr);
-		if (n >= 1_TB)  return _fmt(n / 1_TB, "TB", fmtStr);
-		if (n >= 1_GB)  return _fmt(n / 1_GB, "GB", fmtStr);
-		if (n >= 1_MB)  return _fmt(n / 1_MB, "MB", fmtStr);
-		if (n >= 1_kB)  return _fmt(n / 1_kB, "kB", fmtStr);
-		if (n >= 8_bit) return _fmt(n / 8_bit, "bytes", fmtStr);
-		if (n > 1_bit)  return _fmt(n / 1_bit, "bits", fmtStr);
+		if (n <= -1_QB || n >= 1_QB)        return _fmt(n / 1_QB, "QB", fmtStr);
+		if (n <= -1_RB || n >= 1_RB)        return _fmt(n / 1_RB, "RB", fmtStr);
+		if (n <= -1_YB || n >= 1_YB)        return _fmt(n / 1_YB, "YB", fmtStr);
+		if (n <= -1_ZB || n >= 1_ZB)        return _fmt(n / 1_ZB, "ZB", fmtStr);
+		if (n <= -1_EB || n >= 1_EB)        return _fmt(n / 1_EB, "EB", fmtStr);
+		if (n <= -1_PB || n >= 1_PB)        return _fmt(n / 1_PB, "PB", fmtStr);
+		if (n <= -1_TB || n >= 1_TB)        return _fmt(n / 1_TB, "TB", fmtStr);
+		if (n <= -1_GB || n >= 1_GB)        return _fmt(n / 1_GB, "GB", fmtStr);
+		if (n <= -1_MB || n >= 1_MB)        return _fmt(n / 1_MB, "MB", fmtStr);
+		if (n <= -1_kB || n >= 1_kB)        return _fmt(n / 1_kB, "kB", fmtStr);
+		if (n <= -8_bit|| n >= 8_bit || !n) return _fmt(n / 8_bit, "bytes", fmtStr);
 		return _fmt(n / 1_bit, "bit", fmtStr);
 	}
 
@@ -477,13 +480,13 @@ namespace si {
 
 	/// @brief Returns a data size equivalent as string.
 	FUNC std::string to_equivalent(digital_size n, const char* fmtStr = to_equivalent_format) {
-		if (n >= 1_PiB)  return _fmt(n / 1_PiB, "PiB", fmtStr);
-		if (n >= 1_TiB)  return _fmt(n / 1_TiB, "TiB", fmtStr);
-		if (n >= 1_GiB)  return _fmt(n / 1_GiB, "GiB", fmtStr);
-		if (n >= 1_MiB)  return _fmt(n / 1_MiB, "MiB", fmtStr);
-		if (n >= 1_KiB)  return _fmt(n / 1_KiB, "KiB", fmtStr);
-		if (n >= 8_bit)  return _fmt(n / 8_bit, "bytes", fmtStr);
-		if (n > 1_bit)   return _fmt(n / 1_bit, "bits", fmtStr);
+		if (n <= -1_PiB || n >= 1_PiB) return _fmt(n / 1_PiB, "PiB", fmtStr);
+		if (n <= -1_TiB || n >= 1_TiB) return _fmt(n / 1_TiB, "TiB", fmtStr);
+		if (n <= -1_GiB || n >= 1_GiB) return _fmt(n / 1_GiB, "GiB", fmtStr);
+		if (n <= -1_MiB || n >= 1_MiB) return _fmt(n / 1_MiB, "MiB", fmtStr);
+		if (n <= -1_KiB || n >= 1_KiB) return _fmt(n / 1_KiB, "KiB", fmtStr);
+		if (n <= -8_bit || n >= 8_bit) return _fmt(n / 8_bit, "bytes", fmtStr);
+		if (n < -1_bit  || n > 1_bit)  return _fmt(n / 1_bit, "bits", fmtStr);
 		return _fmt(n / 1_bit, "bit", fmtStr);
 	}
 

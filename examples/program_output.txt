@@ -44,7 +44,7 @@
 16. The sound intensity of a 1W loudspeaker in 1m distance is... 79.6 mW/m² or 109.0 dB
 17. The max diving time in salt water in 10m depth using a 10l bottle is... 37.0 min
 18. The sum of 1m + 1km + 1nmi + 1ft + 1in is... 2.9 km
-19. The sum of 1 byte + 1kB + 1MB + ... + 1QB is... 1001001001001.0 EB
+19. The sum of 1 byte + 1kB + 1MB + ... + 1QB is... 1.0 QB
 20. The radar's geometrical horizon from 30ft height is... 10.8 km or 6.7 mi
 21. The details of a 10m x 1m oak timber log are... 33.0 m² area, 7.9 m³ volume, 5.6 t weight, 84.3 GW
 22. The min cable wire size for 100m copper, 230V, 30A max are... 10.3 mm²

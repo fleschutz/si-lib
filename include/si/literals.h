@@ -367,48 +367,49 @@ namespace si {
 
   // Digital Units
   // -------------
-  // bits...
-  UDL(_bit,                            1, bits);   // 1_bit
-  UDL(_bits,                           1, bits);   // 2_bits
-  UDL(_kBit,                         1e3, bits);   // 1_kBit (kilobit)
-  UDL(_MBit,                         1e6, bits);   // 1_MBit (megabit)
-  UDL(_GBit,                         1e9, bits);   // 1_GBit (gigabit)
-  UDL(_TBit,                        1e12, bits);   // 1_TBit (terabit)
-  // bits per second...
-  UDL(_Kbps,                         1e3, bits_per_second); // 1_Kbps (kilobit/sec)
-  UDL(_Mbps,                         1e6, bits_per_second); // 1_Mbps (megabit/sec)
-  UDL(_Gbps,                         1e9, bits_per_second); // 1_Gbps (gigabit/sec)
+  // in bits...
+  UDL(_PBit,                        1e15, bits); // 1_PBit (petabit)
+  UDL(_TBit,                        1e12, bits); // 1_TBit (terabit)
+  UDL(_GBit,                         1e9, bits); // 1_GBit (gigabit)
+  UDL(_MBit,                         1e6, bits); // 1_MBit (megabit)
+  UDL(_kBit,                         1e3, bits); // 1_kBit (kilobit)
+  UDL(_bits,                           1, bits); // 2_bits
+  UDL(_bit,                            1, bits); // 1_bit
+  // in bits per second...
   UDL(_Tbps,                        1e12, bits_per_second); // 1_Tbps (terabit/sec)
-  // bytes in metric prefixes...
-  UDL(_byte,                           1, bytes);   // 1_byte
-  UDL(_bytes,                          1, bytes);   // 2_bytes
-  UDL(_kB,                           1e3, bytes);   // 1_kB  (kilobyte)
-  UDL(_MB,                           1e6, bytes);   // 1_MB  (megabyte)
-  UDL(_GB,                           1e9, bytes);   // 1_GB  (gigabyte)
-  UDL(_TB,                          1e12, bytes);   // 1_TB  (terabyte)
-  UDL(_PB,                          1e15, bytes);   // 1_PB  (petabyte)
-  UDL(_EB,                          1e18, bytes);   // 1_EB  (exabyte)
-  UDL(_ZB,                          1e21, bytes);   // 1_ZB  (zettabyte)
-  UDL(_YB,                          1e24, bytes);   // 1_ZY  (yottabyte)
-  UDL(_RB,                          1e27, bytes);   // 1_RY  (ronnabyte)
-  UDL(_QB,                          1e30, bytes);   // 1_QY  (quettabyte)
-  // bytes in binary prefixes...
-  UDL(_KiB,                         1024, bytes);   // 1_KiB (kibibyte)
-  UDL(_MiB,                    1'048'576, bytes);   // 1_MiB (mibibyte)
-  UDL(_GiB,                1'073'741'824, bytes);   // 1_GiB (gibibyte)
-  UDL(_TiB,            1'099'511'627'776, bytes);   // 1_TiB (tebibyte)
-  UDL(_PiB,        1'125'899'906'842'624, bytes);   // 1_PiB (pebibyte)
-  // bytes per second...
-  UDL(_bytes_per_s,                    1, bytes_per_second); // 1_bytes_per_s
-  UDL(_KBps,                         1e3, bytes_per_second); // 1_KBps  (kilobyte/sec)
-  UDL(_KiBps,                       1024, bytes_per_second); // 1_KiBps (kibibyte/sec)
-  UDL(_MBps,                         1e6, bytes_per_second); // 1_MBps  (megabyte/sec)
-  UDL(_MiBps,                  1'048'576, bytes_per_second); // 1_MiBps (mibibyte/sec)
-  UDL(_GBps,                         1e9, bytes_per_second); // 1_GBps  (gigabyte/sec)
-  UDL(_GiBps,              1'073'741'824, bytes_per_second); // 1_GiBps (gibibyte/sec)
-  UDL(_TBps,                        1e12, bytes_per_second); // 1_TBps  (terabyte/sec)
-  UDL(_TiBps,          1'099'511'627'776, bytes_per_second); // 1_TiBps (tebibyte/sec)
+  UDL(_Gbps,                         1e9, bits_per_second); // 1_Gbps (gigabit/sec)
+  UDL(_Mbps,                         1e6, bits_per_second); // 1_Mbps (megabit/sec)
+  UDL(_Kbps,                         1e3, bits_per_second); // 1_Kbps (kilobit/sec)
+  // in bytes with metric prefixes...
+  UDL(_QB,                          1e30, bytes); // 1_QB  (quettabyte)
+  UDL(_RB,                          1e27, bytes); // 1_RB  (ronnabyte)
+  UDL(_YB,                          1e24, bytes); // 1_YB  (yottabyte)
+  UDL(_ZB,                          1e21, bytes); // 1_ZB  (zettabyte)
+  UDL(_EB,                          1e18, bytes); // 1_EB  (exabyte)
+  UDL(_PB,                          1e15, bytes); // 1_PB  (petabyte)
+  UDL(_TB,                          1e12, bytes); // 1_TB  (terabyte)
+  UDL(_GB,                           1e9, bytes); // 1_GB  (gigabyte)
+  UDL(_MB,                           1e6, bytes); // 1_MB  (megabyte)
+  UDL(_kB,                           1e3, bytes); // 1_kB  (kilobyte)
+  UDL(_bytes,                          1, bytes); // 2_bytes
+  UDL(_byte,                           1, bytes); // 1_byte
+  // in bytes with binary prefixes...
+  UDL(_PiB,        1'125'899'906'842'624, bytes); // 1_PiB (pebibyte)
+  UDL(_TiB,            1'099'511'627'776, bytes); // 1_TiB (tebibyte)
+  UDL(_GiB,                1'073'741'824, bytes); // 1_GiB (gibibyte)
+  UDL(_MiB,                    1'048'576, bytes); // 1_MiB (mibibyte)
+  UDL(_KiB,                         1024, bytes); // 1_KiB (kibibyte)
+  // in bytes per second...
   UDL(_PBps,                        1e15, bytes_per_second); // 1_PBps  (petabyte/sec)
+  UDL(_TiBps,          1'099'511'627'776, bytes_per_second); // 1_TiBps (tebibyte/sec)
+  UDL(_TBps,                        1e12, bytes_per_second); // 1_TBps  (terabyte/sec)
+  UDL(_GiBps,              1'073'741'824, bytes_per_second); // 1_GiBps (gibibyte/sec)
+  UDL(_GBps,                         1e9, bytes_per_second); // 1_GBps  (gigabyte/sec)
+  UDL(_MiBps,                  1'048'576, bytes_per_second); // 1_MiBps (mibibyte/sec)
+  UDL(_MBps,                         1e6, bytes_per_second); // 1_MBps  (megabyte/sec)
+  UDL(_KiBps,                       1024, bytes_per_second); // 1_KiBps (kibibyte/sec)
+  UDL(_KBps,                         1e3, bytes_per_second); // 1_KBps  (kilobyte/sec)
+  UDL(_bytes_per_s,                    1, bytes_per_second); // 1_bytes_per_s
 
   // Various Units
   // -------------
