@@ -11,14 +11,14 @@ void various_examples() {
     cout << "    === VARIOUS EXAMPLES ===" << endl;
 
     mass m   = 1_kg;
-    energy E = m * pow<2>(CODATA.c);
+    energy E = m * square(constant::c);
     cout << " 1. The potential energy per kilogram is: " << E << endl;
 
 
     cout << " 2. How long is the hypotenuse in a 3m x 4m right triangle? ";
     length a = 3_m;
     length b = 4_m;
-    length c = sqrt(pow<2>(a) + pow<2>(b));
+    length c = sqrt(square(a) + square(b));
     cout << c << endl;
 
 

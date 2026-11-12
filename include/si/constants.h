@@ -1,13 +1,29 @@
 /// @file     si/constants.h
 /// @brief    Defines 78 type-safe constants
-/// @details  Categories are: defined constants, universal constants, electromagnetic constants,
-///                           atomic & nuclear constants, physico-chemical constants, physical constants,
-///                           mathematical constants, astronomical constants, various constants, and references.
+/// @details  Categories are: defined constants, universal constants, electromagnetic constants, atomic & nuclear constants, physico-chemical constants, physical constants, mathematical constants, astronomical constants, various constants, and references.
 
 #pragma once
 #include <si/units.h>
+#define SET(_name, _quantity, _unit) inline constexpr auto _name = _unit(_quantity)
 
 namespace si { 
+
+  namespace constant {
+
+    // Defined Constants
+    // -----------------
+    SET(c,                     299'792'458.0, meters_per_second); // the speed of light in vacuum (symbol: c)
+
+    // Universal Constants
+    // -------------------
+    SET(G,                       6.67430e-11, meters3_per_kilogram_per_second2); // Newtonian constant of gravitation
+
+    // Physico-chemical Constants
+    // --------------------------
+    SET(R,                     8.314'462'618, joules_per_kelvin_per_mol); // molar gas constant
+    SET(R_dry_air,              287.050'0676, joules_per_kilogram_per_kelvin); // specific gas constant for dry air
+
+  } // end of namespace
 
   constexpr struct { // CODATA 2022 constants
 
@@ -79,7 +95,7 @@ namespace si {
   } CODATA;
 
   // Mathematical Constants 
-  // ----------------------
+  // ----------------------   (source: https://en.wikipedia.org/wiki/Mathematical_constant as of 2026)
   constexpr struct { 
     dimensionless root_2 =     1.41421356237309504880; // Pythagoras' constant (square root of 2)
     dimensionless tau =        6.28318530717958647692; // 2π (symbol: τ)
@@ -91,7 +107,7 @@ namespace si {
   } Math;
 
   // Astronomical Constants
-  // ----------------------
+  // ----------------------   (source: https://en.wikipedia.org/wiki/Astronomical_constant as of 2026)
   constexpr struct { 
     length AU =              meters(149'597'870'700); // one astronomical unit (symbol: au, IAU 2009)
     length parsec   = meters(30'856'775'814'913'673); // one Parsec (symbol: pc, IAU 2015)
@@ -113,24 +129,12 @@ namespace si {
     velocity speed_of_sound_in_diamonds = meters_per_second(12'000);
     // TBD:gravitational_constant,6.6743015e-11, meters3_per_kilogram_per_second2);
   } Const;
-
-  // Obsolete
-  // --------
-#define SET(_name, _quantity, _unit) inline constexpr auto _name = _unit(_quantity)
-  namespace constant {
-  // Universal Constants
-  SET(G,                       6.67430e-11, meters3_per_kilogram_per_second2); // Newtonian constant of gravitation
-  // Physico-chemical Constants
-  SET(R,                     8.314'462'618, joules_per_kelvin_per_mol); // molar gas constant
-  SET(R_dry_air,              287.050'0676, joules_per_kilogram_per_kelvin); // specific gas constant for dry air
-  }
-#undef SET
  
   // References
   // ----------
   // 1. https://codata.org - CODATA: the committee on data of the International Science Council (ISC)
   // 2. https://en.wikipedia.org/wiki/List_of_physical_constants
-  // 3. https://en.wikipedia.org/wiki/Mathematical_constant
-  // 4. https://en.wikipedia.org/wiki/Astronomical_constant
 
 } // end of namespace
+
+#undef SET
