@@ -12,7 +12,7 @@ void speed_examples() {
 
     cout << " 1. What was the average speed of Sabastian Sawe's marathon world record? ";
     auto Sabastians_time  = 1_h + 59_min + 30_s;
-    auto average_speed    = Const.marathon_distance / Sabastians_time;
+    auto average_speed    = constant::marathon_distance / Sabastians_time;
     cout << average_speed << " or " << to_equivalent(average_speed) << endl;
 
 
