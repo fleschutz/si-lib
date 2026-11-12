@@ -11,8 +11,17 @@ namespace si {
   namespace constant {
 
     // Defined Constants
-    // -----------------
+    // -----------------   (CODATA 2022, source: https://codata.org)
+    SET(caesium_frequency,     9'192'631'770, hertz);             // the unperturbed ground state hyperfine transition frequency of the ceesium-133 atom
     SET(c,                     299'792'458.0, meters_per_second); // the speed of light in vacuum (symbol: c)
+    SET(h,                  6.626'070'15e-34, jouleseconds);      // Planck constant (symbol: h)
+    SET(e,                 1.602'176'634e-19, coulombs);          // the elementary charge (symbol: e)
+    SET(k_B,                   1.380'649e-23, joules_per_kelvin); // Boltzmann constant (symbol: k)
+    SET(N_A,                   6.02214076e23, per_mol);           // Avogadro constant (symbol: N_A)
+    SET(K_cd,                            683, lumens_per_watt);   // the luminous efficacy of monochromatic radiation of frequency 540 THz
+    SET(g_n,                        9.806'65, meters_per_second2);// standard acceleration of gravity
+    SET(atm,                         101'325, pascals);           // standard atmosphere
+    SET(ssp,                         100'000, pascals);           // standard-state pressure
 
     // Universal Constants
     // -------------------
@@ -27,19 +36,6 @@ namespace si {
 
   constexpr struct { // CODATA 2022 constants
 
-    // Defined Constants
-    // -----------------
-    frequency caesium_frequency =                   hertz(9'192'631'770); // the unperturbed ground state hyperfine transition frequency of the ceesium-133 atom
-    velocity speed_of_light_in_vacuum = meters_per_second(299'792'458.0); // the speed of light in vacuum (symbol: c)
-    velocity c =                        meters_per_second(299'792'458.0); // the speed of light in vacuum (symbol: c)
-    //TBD: planck,             6.626'070'15e-34, jouleseconds); // Planck constant (symbol: h)
-    electric_charge elementary_charge      = coulombs(1.602'176'634e-19); // the elementary charge (symbol: e)
-    //TBD: boltzmann,             1.380'649e-23, joules_per_kelvin); // Boltzmann constant (symbol: k)
-    per_substance avogadro =                      per_mol(6.02214076e23); // Avogadro constant (symbol: N_A)
-    //TBD: K_cd,                            683, lumens_per_watt); // the luminous efficacy of monochromatic radiation of frequency 540 THz
-    acceleration g_n  =                     meters_per_second2(9.806'65); // standard acceleration of gravity
-    pressure atm =                                      pascals(101'325); // standard atmosphere
-    pressure ssp =                                      pascals(100'000); // standard-state pressure
 
     // Universal Constants
     // -------------------

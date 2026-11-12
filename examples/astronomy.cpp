@@ -10,12 +10,12 @@ void astronomy_examples() {
 
     cout << "    === ASTRONOMY EXAMPLES ===" << endl;
     cout << " 1. The travel time of sun light to Earth is... ";
-    cout << (Earth.mean_distance_to_Sun / CODATA.c) << endl;
+    cout << (Earth.mean_distance_to_Sun / constant::c) << endl;
 
 
     cout << " 2. The travel time to Alpha Centauri at 10% the speed of light takes... ";
     auto distance_to_Alpha_Centauri = 4.37_ly;
-    auto travel_speed               = 10_percent * CODATA.c;
+    auto travel_speed               = 10_percent * constant::c;
     auto travel_time                = distance_to_Alpha_Centauri / travel_speed;
     cout << travel_time << endl;
 
@@ -41,7 +41,7 @@ void astronomy_examples() {
 
     cout << " 6. The wavelength of hydrogen (H2) in vacuum is... ";
     auto H2_frequency  = 1420.4057517682_MHz;
-    auto H2_wavelength = wavelength_formula(CODATA.c, H2_frequency);
+    auto H2_wavelength = wavelength_formula(constant::c, H2_frequency);
     cout << H2_wavelength << " or " << to_equivalent(H2_wavelength) << endl;
 
 

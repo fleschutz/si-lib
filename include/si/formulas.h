@@ -262,7 +262,7 @@ namespace si {
 	/// @brief Calculates the G-force when accelerating from v0 to v1 within the given time.
 	FUNC dimensionless acceleration_g_force_formula(velocity v0, velocity v1, time t)
 	{
-		return (v1 - v0) / (t * CODATA.g_n);
+		return (v1 - v0) / (t * constant::g_n);
 	}
 
 	// Formulas for Aircraft
@@ -312,7 +312,7 @@ namespace si {
 	/// @brief Calculates the turn radius at the given speed and bank angle.
 	FUNC length turn_radius_formula(velocity ground_speed, angle bank_angle)
 	{
-		return (ground_speed * ground_speed) / (CODATA.g_n * tan(bank_angle));
+		return (ground_speed * ground_speed) / (constant::g_n * tan(bank_angle));
 	}
 
 	// Formulas for Gravitation
@@ -352,7 +352,7 @@ namespace si {
 	/// @brief Calculates the Schwarzschild radius of a black hole from it's mass (M).
 	FUNC length Schwarzschild_radius_formula(mass M)
 	{
-		return (2.0 * constant::G * M) / square(CODATA.c);
+		return (2.0 * constant::G * M) / square(constant::c);
 	}
 
 	// Various Formulas
