@@ -456,7 +456,7 @@ namespace si {
 	/// @brief Returns a velocity equivalent as string, e.g. in Imperial units.
 	FUNC std::string to_equivalent(velocity V, const char* fmtStr = to_equivalent_format) {
 		if (V <= -1_Mach || V >= 1_Mach) return _fmt(V / 1_Mach, "Mach", fmtStr);
-		return _fmt(V / 1_mph, "mph", fmtStr);
+		return _fmt(V / 1_mi_per_h, "mph", fmtStr);
 	}
 
 	/// @brief Returns a power intensity equivalent as string, e.g. in dB.

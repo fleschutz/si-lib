@@ -120,11 +120,10 @@ namespace si {
   UDL(_m³_per_s, 1, meters3_per_second);   // 1_m³/s (cubic meter per second)
   UDL(_l_per_min,1.0/60000.0, meters3_per_second);   // 1_l_per_min (liter per minute)
   UDL(_l_per_s, 1e-3, meters3_per_second); // 1_l_per_s (liter per second)
-  // velocity per second in...
+  // velocity in...
   UDL(_km_per_s, 1e3, meters_per_second); // 1_km_per_s (km/s)
   UDL(_m_per_s,  1, meters_per_second);   // 1_m_per_s  (m/s)
   UDL(_mm_per_s, 1e-3, meters_per_second);// 1_mm_per_s (mm/s)
-  // velocity per hour in...
   UDL(_km_per_h, 1e3, meters_per_hour);   // 1_km_per_h (km/h)
   UDL(_m_per_h,  1, meters_per_hour);     // 1_m_per_h  (m/h)
   UDL(_mm_per_h, 1e-3, meters_per_hour);  // 1_mm_per_h (mm/h)
@@ -314,41 +313,39 @@ namespace si {
   UDL(_mrad,  1e-3, radians);             // 1_mrad (milliradians)
   UDL(_deg,0.01745329251994329576923690768489, radians); // 1_deg  (angle degree)
 
-  // Imperial / US Units
-  // -------------------
+  // Imperial and US Units
+  // ---------------------
   // length in...
-  UDL(_in,                        0.0254, meters); // 1_in    (inch)
-  UDL(_ft,                        0.3048, meters); // 1_ft    (feet, 12 inches)
-  UDL(_yd,                        0.9144, meters); // 1_yd    (yard)
-  UDL(_ch,                       20.1168, meters); // 1_ch    (chain)
+  UDL(_nmi,                         1852, meters); // 1_nmi   (nautical mile, about one arc minute)
   UDL(_mi,                     1'609.344, meters); // 1_mi    (statute mile, 1760 yd or 80 chains)
   UDL(_cable,                      185.2, meters); // 1_cable (one tenth of a nautical mile)
-  UDL(_nmi,                         1852, meters); // 1_nmi   (nautical mile, about one arc minute)
-  UDL(_NM,                          1852, meters); // 1_NM    (nautical mile, about one arc minute)
+  UDL(_ch,                       20.1168, meters); // 1_ch    (chain)
+  UDL(_yd,                        0.9144, meters); // 1_yd    (yard)
+  UDL(_ft,                        0.3048, meters); // 1_ft    (feet, 12 inches)
+  UDL(_in,                        0.0254, meters); // 1_in    (inch)
   // mass in...
-  UDL(_oz,             0.028'349'523'125, kilograms); // 1_oz (ounce, 1/16 of a pound)
   UDL(_lb,                  0.453'592'37, kilograms); // 1_lb (pound)
-  // Imperial volume in...
+  UDL(_oz,             0.028'349'523'125, kilograms); // 1_oz (ounce, 1/16 of a pound)
+  // volume in...
   UDL(_Imp_gal,               4.54609e-3, meters3); // 1_Imp_gal   (Imperial gallon)
   UDL(_Imp_qt,                 1.1365e-3, meters3); // 1_Imp_qt    (Imperial quart)
   UDL(_Imp_pt,                 0.5683e-3, meters3); // 1_Imp_pt    (Imperial pint)
   UDL(_Imp_cup,     0.284130642624675e-3, meters3); // 1_Imp_cup   (Imperial cup)
   UDL(_Imp_gi,         0.142065312500e-3, meters3); // 1_Imp_gi    (Imperial gill)
   UDL(_Imp_fl_oz,  0.0284130642624675e-3, meters3); // 1_Imp_fl_oz (Imperial fluid ounce)
-  // US volume in...
-  UDL(_US_gal,            3.785411784e-3, meters3); // 1_US_gal   (US gallon)
-  UDL(_US_li_qt,          0.946352946e-3, meters3); // 1_US_qt    (US liquid quart)
-  UDL(_US_li_pt,          0.473176473e-3, meters3); // 1_US_qt    (US liquid pint)
-  UDL(_US_cup,           0.2365882365e-3, meters3); // 1_US_cup   (US cup)
-  UDL(_US_li_gi,       0.118294118250e-3, meters3); // 1_US_gi    (US liquid gill)
-  UDL(_US_fl_oz,      0.0295735295625e-3, meters3); // 1_US_fl_oz (US fluid ounce)
+  UDL(_US_gal,            3.785411784e-3, meters3); // 1_US_gal    (US gallon)
+  UDL(_US_li_qt,          0.946352946e-3, meters3); // 1_US_qt     (US liquid quart)
+  UDL(_US_li_pt,          0.473176473e-3, meters3); // 1_US_qt     (US liquid pint)
+  UDL(_US_cup,           0.2365882365e-3, meters3); // 1_US_cup    (US cup)
+  UDL(_US_li_gi,       0.118294118250e-3, meters3); // 1_US_gi     (US liquid gill)
+  UDL(_US_fl_oz,      0.0295735295625e-3, meters3); // 1_US_fl_oz  (US fluid ounce)
   // velocity in...
   UDL(_kn,                          1852, meters_per_hour);   // 1_kn (knots)
+  UDL(_mi_per_h,                  .44704, meters_per_second); // 1_mi_per_h (miles/hour)
   UDL(_ft_per_min,               0.00508, meters_per_second); // 1_ft_per_min (feet/min)
   UDL(_in_per_s,                  0.0254, meters_per_second); // 1_in_per_s (inch/sec)
   UDL(_in_per_h,            0.0000070556, meters_per_second); // 1_in_per_h (inch/hour)
-  UDL(_mph,                       .44704, meters_per_second); // 1_mph (miles/hour)
-  // temperature in...
+  // absolute temperature in...
   UDL(_degF,                           1, fahrenheit); // 1_degF (°Fahrenheit)
 
   // Astronomical Units (as of IAU 2012)
@@ -367,7 +364,7 @@ namespace si {
 
   // Digital Units
   // -------------
-  // in bits...
+  // bits...
   UDL(_PBit,                        1e15, bits); // 1_PBit (petabit)
   UDL(_TBit,                        1e12, bits); // 1_TBit (terabit)
   UDL(_GBit,                         1e9, bits); // 1_GBit (gigabit)
@@ -375,12 +372,12 @@ namespace si {
   UDL(_kBit,                         1e3, bits); // 1_kBit (kilobit)
   UDL(_bits,                           1, bits); // 2_bits
   UDL(_bit,                            1, bits); // 1_bit
-  // in bits per second...
+  // bits per second...
   UDL(_Tbps,                        1e12, bits_per_second); // 1_Tbps (terabit/sec)
   UDL(_Gbps,                         1e9, bits_per_second); // 1_Gbps (gigabit/sec)
   UDL(_Mbps,                         1e6, bits_per_second); // 1_Mbps (megabit/sec)
   UDL(_Kbps,                         1e3, bits_per_second); // 1_Kbps (kilobit/sec)
-  // in bytes with metric prefixes...
+  // bytes with metric prefixes...
   UDL(_QB,                          1e30, bytes); // 1_QB  (quettabyte)
   UDL(_RB,                          1e27, bytes); // 1_RB  (ronnabyte)
   UDL(_YB,                          1e24, bytes); // 1_YB  (yottabyte)
@@ -393,13 +390,13 @@ namespace si {
   UDL(_kB,                           1e3, bytes); // 1_kB  (kilobyte)
   UDL(_bytes,                          1, bytes); // 2_bytes
   UDL(_byte,                           1, bytes); // 1_byte
-  // in bytes with binary prefixes...
+  // bytes with binary prefixes...
   UDL(_PiB,        1'125'899'906'842'624, bytes); // 1_PiB (pebibyte)
   UDL(_TiB,            1'099'511'627'776, bytes); // 1_TiB (tebibyte)
   UDL(_GiB,                1'073'741'824, bytes); // 1_GiB (gibibyte)
   UDL(_MiB,                    1'048'576, bytes); // 1_MiB (mibibyte)
   UDL(_KiB,                         1024, bytes); // 1_KiB (kibibyte)
-  // in bytes per second...
+  // bytes per second...
   UDL(_PBps,                        1e15, bytes_per_second); // 1_PBps  (petabyte/sec)
   UDL(_TiBps,          1'099'511'627'776, bytes_per_second); // 1_TiBps (tebibyte/sec)
   UDL(_TBps,                        1e12, bytes_per_second); // 1_TBps  (terabyte/sec)

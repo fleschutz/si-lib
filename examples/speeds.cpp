@@ -54,12 +54,12 @@ void speed_examples() {
 
 
     cout << " 8. The sum of 1m/s + 1km/s + 1km/h + 1Mach + 1kn + 1mph + 1ft/min is... ";
-    velocity sum = 1_m_per_s + 1_km_per_s + 1_km_per_h + 1_Mach + 1_kn + 1_mph + 1_ft_per_min;
+    velocity sum = 1_m_per_s + 1_km_per_s + 1_km_per_h + 1_Mach + 1_kn + 1_mi_per_h + 1_ft_per_min;
     cout << sum << " or " << to_equivalent(sum) << endl;
 
 
     cout << " 9. The min/max/average/sum of an array of speeds is...";
-    velocity speeds[] = { 1_m_per_s, 1_km_per_s, 1_km_per_h, 1_Mach, 1_kn, 1_mph, 1_ft_per_min };
+    velocity speeds[] = { 1_m_per_s, 1_km_per_s, 1_km_per_h, 1_Mach, 1_kn, 1_mi_per_h, 1_ft_per_min };
     int n = sizeof(speeds) / sizeof(speeds[0]);
     cout << " min=" << min_of_array(speeds, n) << " max=" << max_of_array(speeds, n)
          << " avg=" << avg_of_array(speeds, n) << " sum=" << sum_of_array(speeds, n)

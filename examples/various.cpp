@@ -16,7 +16,7 @@ void various_examples() {
 
     cout << " 2. The kinetic energy of a mid-size 5000lb SUV at 30mph is... ";
     auto SUV_mass   = 5000_lb; 
-    auto SUV_speed  = 30_mph;
+    auto SUV_speed  = 30_mi_per_h;
     auto SUV_energy = kinetic_energy_formula(SUV_mass, SUV_speed);
     cout << SUV_energy << " or " << to_equivalent(SUV_energy) << endl;
 

@@ -269,7 +269,7 @@ namespace si {
 	static_assert(1_mi  == 1760_yd);
 	static_assert(1_mi  == 80_ch);
 	static_assert(1_mi  == statute_miles(1));
-	static_assert(1_mph == miles_per_hour(1));
+	static_assert(1_mi_per_h == miles_per_hour(1));
 	static_assert(1_ft  == feet(1));
 	static_assert(1_in  == inches(1));
 	static_assert(1_lb  == 16_oz);
