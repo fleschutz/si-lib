@@ -79,10 +79,10 @@ namespace si { namespace constant {
   // Mathematical Constants 
   // ----------------------        (source: https://en.wikipedia.org/wiki/Mathematical_constant as of 2026)
   SET(root_2,       1.41421356237309504880, dimensionless);     // Pythagoras' constant (square root of 2)
-  SET(tau,          6.28318530717958647692, dimensionless);     // 2π (symbol: τ)
-  SET(pi,           3.14159265358979323846, dimensionless);     // Archimedes' constant (symbol: π)
-  SET(half_pi,      1.57079632679489661923, dimensionless);     // π / 2
-  SET(quarter_pi,   0.78539816339744830961, dimensionless);     // π / 4
+  SET(tau,          6.28318530717958647692, radians);           // 2π (symbol: τ)
+  SET(pi,           3.14159265358979323846, radians);           // Archimedes' constant (symbol: π)
+  SET(half_pi,      1.57079632679489661923, radians);           // π / 2
+  SET(quarter_pi,   0.78539816339744830961, radians);           // π / 4
   SET(euler,        2.71828182845904523536, dimensionless);     // Euler's number (symbol: e)
   SET(phi,          1.61803398874989484820, dimensionless);     // golden ratio (symbol: φ)
 
