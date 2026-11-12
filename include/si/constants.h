@@ -54,16 +54,16 @@ namespace si { namespace constant {
   SET(F,                     96'485.332'12, coulombs_per_mol);  // Faraday constant
   SET(m_u,          1.660'539'068'9252e-27, kilograms);         // atomic mass constant
   SET(M_u,             1.000'000'001'05e-3, kilograms_per_mol); // molar mass constant
-  const dimensionless S_0_by_R = -1.15170753706;                // Sackur–Tetrode constant
+  SET(S_0_by_R,             -1.15170753706, dimensionless);     // Sackur–Tetrode constant
   SET(V_m,                22.710'954'64e-3, meters3_per_mol);   // molar volume of ideal gas (273.15K, 100kPa)
 
   // Atomic & Nuclear Constants
   // --------------------------                                 // CODATA 2022 constants (source: https://codata.org)
   SET(a_0,            5.291'772'105'44e-11, meters);            // Bohr radius
-  const dimensionless alpha = 7.2973525e-3;                     // fine-structure constant
-  const dimensionless alpha_inv = 137.035'999'177;              // inverse fine-structure constant
+  SET(alpha,                  7.2973525e-3, dimensionless);     // fine-structure constant
+  SET(alpha_inv,           137.035'999'177, dimensionless);     // inverse fine-structure constant
   SET(E_h,                4.3597447222e-18, joules);            // Hartree energy
-  const dimensionless g_e = -2.00231930436256;                  // electron g-factor
+  SET(g_e,               -2.00231930436256, dimensionless);     // electron g-factor
   SET(m_e,              9.109'383'7139e-31, kilograms);         // electron mass
   SET(m_d,              3.343'583'7768e-27, kilograms);         // deuteron mass
   SET(m_h,              5.006'412'7862e-27, kilograms);         // helion mass
@@ -73,18 +73,18 @@ namespace si { namespace constant {
   SET(m_tau,                  3.167'54e-27, kilograms);         // tau mass
   SET(m_t,              5.007'356'7512e-27, kilograms);         // triton mass
   SET(r_e,              2.817'940'3205e-15, meters);            // classical electron radius
-  const dimensionless sin2Theta_W = 0.22290;                    // weak mixing angle
+  SET(sin2Theta_W,                 0.22290, dimensionless);     // weak mixing angle
   SET(sigma_e,               6.6524587e-29, meters2);           // Thomson cross section (symbol: σ_e)
 
   // Mathematical Constants 
   // ----------------------        (source: https://en.wikipedia.org/wiki/Mathematical_constant as of 2026)
-  const dimensionless root_2 =     1.41421356237309504880;      // Pythagoras' constant (square root of 2)
-  const dimensionless tau =        6.28318530717958647692;      // 2π (symbol: τ)
-  const dimensionless pi =         3.14159265358979323846;      // Archimedes' constant (symbol: π)
-  const dimensionless half_pi =    1.57079632679489661923;      // π / 2
-  const dimensionless quarter_pi = 0.78539816339744830961;      // π / 4
-  const dimensionless euler =      2.71828182845904523536;      // Euler's number (symbol: e)
-  const dimensionless phi =        1.61803398874989484820;      // golden ratio (symbol: φ)
+  SET(root_2,       1.41421356237309504880, dimensionless);     // Pythagoras' constant (square root of 2)
+  SET(tau,          6.28318530717958647692, dimensionless);     // 2π (symbol: τ)
+  SET(pi,           3.14159265358979323846, dimensionless);     // Archimedes' constant (symbol: π)
+  SET(half_pi,      1.57079632679489661923, dimensionless);     // π / 2
+  SET(quarter_pi,   0.78539816339744830961, dimensionless);     // π / 4
+  SET(euler,        2.71828182845904523536, dimensionless);     // Euler's number (symbol: e)
+  SET(phi,          1.61803398874989484820, dimensionless);     // golden ratio (symbol: φ)
 
   // Astronomical Constants
   // ----------------------        (source: https://en.wikipedia.org/wiki/Astronomical_constant as of 2026)
