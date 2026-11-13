@@ -5,8 +5,8 @@
 #pragma once
 #include <si/units.h>
 #define UDL(_literal, _factor, _unit)                                                                                \
-  constexpr auto operator "" _literal(long double q) { return _unit(static_cast<SIdouble>(q * _factor ## L)); }      \
-  constexpr auto operator "" _literal(unsigned long long q) { return _unit(static_cast<SIdouble>(q * _factor ## L)); }
+  constexpr auto operator "" _literal(long double n) { return _unit(static_cast<SIdouble>(n * _factor ## L)); }      \
+  constexpr auto operator "" _literal(unsigned long long n) { return _unit(static_cast<SIdouble>(n * _factor ## L)); }
 
 namespace si {
 

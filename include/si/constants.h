@@ -1,10 +1,10 @@
 /// @file     si/constants.h
-/// @brief    Defines 78 type-safe constants
+/// @brief    Defines 74 type-safe constants
 /// @details  Categories are: defined constants, universal constants, electromagnetic constants, atomic & nuclear constants, physico-chemical constants, physical constants, mathematical constants, astronomical constants, various constants, and references.
 
 #pragma once
 #include <si/units.h>
-#define SET(_name, _quantity, _unit) inline constexpr auto _name = _unit(_quantity)
+#define SET(_name, _number, _unit) inline constexpr auto _name = _unit(_number)
 
 namespace si { namespace constant {
 
