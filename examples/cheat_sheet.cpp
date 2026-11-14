@@ -5,10 +5,14 @@ using namespace si;
 
 void cheat_sheet() {
 
-    // Import Options
-    // --------------
-    length distance = 42_m;   // <- user-defined literal (UDL)
+    // Generating a Quantity
+    // ---------------------
+    length a = 1_m;           // user-defined literal (UDL)
+    length b = meters(1);     // construct from dimensionless number
+    length c = 5.0 * 1_m;     // multiply with a quantity
+    auto   d = 1_m;           // use auto
 
+    length distance = 42_m;   // <- user-defined literal (UDL)
     distance = meters(42.0);  // <- construct with a dimensionless number
     
     double x = 42;
