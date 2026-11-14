@@ -1,10 +1,9 @@
-/// @file   examples/conversions.cpp
-/// @brief  Contains 4 import and 5 export examples using libSI.
+/// @file   examples/cheat_sheet.cpp
 
 #include <si/core.h> 
 using namespace si;
 
-void conversion_examples() {
+void cheat_sheet() {
 
     // Import Options
     // --------------

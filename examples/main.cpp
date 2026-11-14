@@ -7,7 +7,7 @@
 #include <Windows.h>
 #endif
 
-extern void speed_examples(), astronomy_examples(), conversion_examples(), various_examples();
+extern void speed_examples(), astronomy_examples(), various_examples(), cheat_sheet();
 
 int main() {
 #ifdef _WIN32
@@ -20,7 +20,7 @@ int main() {
 
     astronomy_examples();                 // <- calls examples in astronomy.cpp
 
-    conversion_examples();                // <- calls examples in conversions.cpp
-
     various_examples();                   // <- calls examples in various.cpp
+
+    cheat_sheet();                        // <- calls the cheat_sheet.cpp
 }
