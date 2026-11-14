@@ -5,27 +5,37 @@ using namespace si;
 
 void cheat_sheet() {
 
-    // Generating a Quantity
-    // ---------------------
+    // Generate a Quantity
+    // -------------------
     length a = 1_m;           // user-defined literal (UDL)
-    length b = meters(1);     // construct from dimensionless number
-    length c = 5.0 * 1_m;     // multiply with a quantity
-    auto   d = 1_m;           // use auto
-
-    length distance = 42_m;   // <- user-defined literal (UDL)
-    distance = meters(42.0);  // <- construct with a dimensionless number
-    
-    double x = 42;
-    distance = x * 1_m;       // <- multiply a dimensionless number - doesn't work for celsius/fahrenheit due to the offset!
-
+    auto   b = 1_m;           // with auto
+    length c = meters(1);     // construct from dimensionless number
+    length d = 5.0 * 1_m;     // multiply with a quantity - doesn't work for celsius/fahrenheit due to the offset!
+    length distance = 42_m;
     bool is_valid = from_string("42m", distance); // <- string to length conversion
 
+    // Calculate with Quantities
+    // -------------------------
+    area field = a * b;
+    volume cube = a * b * c;
+    velocity speed = 1_km / 1_h;
 
-    // Export Options
-    // --------------
-    double y = meters(distance); // <- cast to a unit (=42)
+    // Angles
+    // ------
+    angle alpha = 90_deg;
+    angle beta = 3_rad;
+    angle delta = radians(3);
+    angle epsilon = sin(delta);
 
-    double z = distance / 1_m;   // <- divide to a dimensionless number (=42) - doesn't work for celsius/fahrenheit due to the offset!
+    // Dimensionless Numbers
+    // ---------------------
+    dimensionless ratio = 0.25;
+    dimensionless part = ratio * 10_percent;
+
+    // Export a Quantity
+    // -----------------
+    double x = meters(distance); // <- cast to a unit (=42)
+    double y = distance / 1_m;   // <- divide to a dimensionless number (=42) - doesn't work for celsius/fahrenheit due to the offset!
 
     std::string str = to_string(distance); // <- length to string conversion (="42.0m")
 
