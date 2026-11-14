@@ -154,8 +154,10 @@ namespace si {
   UDL(_mSv,   1e-3, sieverts);            // 1_mSv (millisievert)
   UDL(_uSv,   1e-6, sieverts);            // 1_uSv (microsievert)
   // mass per area in...
-  UDL(_t_per_m², 1e3, kilograms_per_meter2);// 1_t_per_m²
-  UDL(_kg_per_m²,  1, kilograms_per_meter2);// 1_kg_per_m²
+  UDL(_t_per_m², 1e3, kilograms_per_meter2);// 1_t_per_m²  (t/m²)
+  UDL(_kg_per_m²,  1, kilograms_per_meter2);// 1_kg_per_m² (kg/m²)
+  UDL(_g_per_m²,1e-3, kilograms_per_meter2);// 1_g_per_m²  (g/m²)
+  UDL(_mg_per_m²,1e-6,kilograms_per_meter2);// 1_mg_per_m² (mg/m²)
   // density in...
   UDL(_kg_per_cm³,1e6,kilograms_per_meter3);  // 1_kg_per_cm³
   UDL(_t_per_m³, 1e3, kilograms_per_meter3);  // 1_t_per_m³
