@@ -6,7 +6,7 @@
 #include <si/units.h>
 #define SET(_name, _number, _unit) inline constexpr auto _name = _unit(_number)
 
-namespace si { namespace constant {
+namespace si { namespace constant {                             // singular for better code readability
 
   // Defined Constants
   // -----------------                                          // CODATA 2022 constants (source: https://codata.org)
