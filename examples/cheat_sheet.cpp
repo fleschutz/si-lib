@@ -7,13 +7,12 @@ void cheat_sheet_examples() {
 
     // Generate a Quantity
     // -------------------
-    length a = 1_m;           // user-defined literal (UDL)
-    auto   b = 1_m;           // with convenient auto
-    length c = meters(1);     // construct from dimensionless number
-    length d = 5.0 * 1_m;     // multiply with a quantity - doesn't work for celsius/fahrenheit due to the offset!
-    length distance = 42_m;
-    bool is_valid = from_string("42m", distance); // string to length conversion
-    // length bad = 1_kg;     // ERROR: incompatible dimensions
+    length a = 1_m;              // user-defined literal (UDL)
+    auto   b = 1_m;              // with convenient auto
+    length c = meters(1);        // construct from dimensionless number
+    length d = 5.0 * 1_m;        // multiply with a quantity - doesn't work for celsius/fahrenheit due to the offset!
+    length e = to_length("42m"); // string to length conversion
+    // length bad = 1_kg;        // ERROR: incompatible dimensions
 
     // Calculate on Quantities
     // -----------------------
@@ -42,11 +41,12 @@ void cheat_sheet_examples() {
 
     // Export a Quantity
     // -----------------
-    double x = meters(distance); // cast to a unit (=42)
-    double y = distance / 1_m;   // divide to a dimensionless number (=42) - doesn't work for celsius/fahrenheit due to the offset!
-    std::string str = to_string(distance); // length to string conversion (="42.0m")
-    std::string equiv = to_equivalent(distance); //  length to an equivalent string conversion (="45.93yd")
-    std::string progress = to_percentage(distance, 420_m); // length to percentage string conversion (="10%")
+    length len = 42_m;
+    double x = meters(len);           // cast to a unit (=42)
+    double y = len / 1_m;             // divide to a dimensionless number (=42) - doesn't work for celsius/fahrenheit due to the offset!
+    std::string str = to_string(len); // length to string conversion (="42.0m")
+    std::string equiv = to_equivalent(len); //  length to an equivalent string conversion (="45.93yd")
+    std::string progress = to_percentage(len, 420_m); // length to percentage string conversion (="10%")
 
     // User-defined Units
     // ------------------

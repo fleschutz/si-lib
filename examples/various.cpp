@@ -228,7 +228,7 @@ void various_examples() {
     cout << torque << " of torque" << endl;
 
 
-    cout << "30. What's the total area and weight of 500 papers in A4 format (80g/m2)? ";
+    cout << "30. What's the total area and weight of 500 papers in A4 format (80g/m²)? ";
     length A4_paper_width   = 210_mm;
     length A4_paper_height  = 297_mm;
     auto total_area         = 500 * A4_paper_width * A4_paper_height;

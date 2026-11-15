@@ -6,6 +6,7 @@
 #include <iostream>
 #include <string>
 #include <cstring>
+#include <cmath>
 #include <si/literals.h>
 #define FUNC [[nodiscard]] inline
 
@@ -17,70 +18,61 @@ namespace si {
 	inline auto to_equivalent_format = "%.2Lf %s"; ///< SI standard formatting by default
 	inline auto to_percentage_format = "%.0Lf%s"; 
 
-	// from_string() Function Overloading
-	// ----------------------------------
-	/// @brief The from_string() function
-	FUNC bool from_string(const std::string& str, length& result) {
-		double value = 0.0;
+	/// @brief Returns the length from the given string, or NaN on error.
+	FUNC length to_length(const std::string& str) {
+		double number = 0.0;
 		char unit[100] = "";
-		if (std::sscanf(str.c_str(), "%lf%99s", &value, unit) != 2)
-			return false; // not recognized
+		if (std::sscanf(str.c_str(), "%lf%99s", &number, unit) != 2)
+			return meters(std::nan("1")); // not recognized
 
-		if (!std::strcmp(unit, "Gm"))      result = 1_Gm * value;
-		else if (!std::strcmp(unit, "Mm")) result = 1_Mm * value;
-		else if (!std::strcmp(unit, "km")) result = 1_km * value;
-		else if (!std::strcmp(unit, "m"))  result = 1_m * value;
-		else if (!std::strcmp(unit, "dm")) result = 1_dm * value;
-		else if (!std::strcmp(unit, "cm")) result = 1_cm * value;
-		else if (!std::strcmp(unit, "mm")) result = 1_mm * value;
-		else if (!std::strcmp(unit, "um")) result = 1_um * value;
-		else if (!std::strcmp(unit, "nm")) result = 1_nm * value;
-		else if (!std::strcmp(unit, "pm")) result = 1_pm * value;
-		else
-			return false; // unknown unit
-
-		return true;
+		if (!std::strcmp(unit, "Gm")) return 1_Gm * number;
+		if (!std::strcmp(unit, "Mm")) return 1_Mm * number;
+		if (!std::strcmp(unit, "km")) return 1_km * number;
+		if (!std::strcmp(unit, "m"))  return 1_m * number;
+		if (!std::strcmp(unit, "dm")) return 1_dm * number;
+		if (!std::strcmp(unit, "cm")) return 1_cm * number;
+		if (!std::strcmp(unit, "mm")) return 1_mm * number;
+		if (!std::strcmp(unit, "um")) return 1_um * number;
+		if (!std::strcmp(unit, "nm")) return 1_nm * number;
+		if (!std::strcmp(unit, "pm")) return 1_pm * number;
+		return meters(std::nan("2")); // unknown unit
 	}
 
-	FUNC bool from_string(const std::string& str, time& result) {
-		double value = 0.0;
+	/// @brief Returns the time from the given string, or NaN on error.
+	FUNC time to_time(const std::string& str) {
+		double number = 0.0;
 		char unit[100] = "";
-		if (std::sscanf(str.c_str(), "%lf%99s", &value, unit) != 2)
-			return false; // not recognized
+		if (std::sscanf(str.c_str(), "%lf%99s", &number, unit) != 2)
+			return seconds(std::nan("1")); // not recognized
 
-		if (!std::strcmp(unit, "d"))       result = 1_d * value;
-		else if (!std::strcmp(unit, "h"))  result = 1_h * value;
-		else if (!std::strcmp(unit, "m"))  result = 1_min * value;
-		else if (!std::strcmp(unit, "s"))  result = 1_s * value;
-		else if (!std::strcmp(unit, "ms")) result = 1_ms * value;
-		else if (!std::strcmp(unit, "us")) result = 1_us * value;
-		else if (!std::strcmp(unit, "ns")) result = 1_ns * value;
-		else if (!std::strcmp(unit, "ps")) result = 1_ps * value;
-		else
-			return false; // unknown unit
-
-		return true;
+		if (!std::strcmp(unit, "d"))  return 1_d * number;
+		if (!std::strcmp(unit, "h"))  return 1_h * number;
+		if (!std::strcmp(unit, "m"))  return 1_min * number;
+		if (!std::strcmp(unit, "s"))  return 1_s * number;
+		if (!std::strcmp(unit, "ms")) return 1_ms * number;
+		if (!std::strcmp(unit, "us")) return 1_us * number;
+		if (!std::strcmp(unit, "ns")) return 1_ns * number;
+		if (!std::strcmp(unit, "ps")) return 1_ps * number;
+		return seconds(std::nan("2")); // unknown unit
 	}
 
-	FUNC bool from_string(const std::string& str, mass& result) {
-		double value = 0.0;
+	/// @brief Returns the mass from the given string, or NaN on error.
+	FUNC mass to_mass(const std::string& str) {
+		double number = 0.0;
 		char unit[100] = "";
-		if (std::sscanf(str.c_str(), "%lf%99s", &value, unit) != 2)
-			return false; // not recognized
+		if (std::sscanf(str.c_str(), "%lf%99s", &number, unit) != 2)
+			return kilograms(std::nan("1")); // not recognized
 
-		if (!std::strcmp(unit, "Gt"))      result = 1_Gt * value;
-		else if (!std::strcmp(unit, "Mt")) result = 1_Mt * value;
-		else if (!std::strcmp(unit, "kt")) result = 1_kt * value;
-		else if (!std::strcmp(unit, "t"))  result = 1_t * value;
-		else if (!std::strcmp(unit, "kg")) result = 1_kg * value;
-		else if (!std::strcmp(unit, "g"))  result = 1_g * value;
-		else if (!std::strcmp(unit, "mg")) result = 1_mg * value;
-		else if (!std::strcmp(unit, "ug")) result = 1_ug * value;
-		else if (!std::strcmp(unit, "ng")) result = 1_ng * value;
-		else
-			return false; // unknown unit
-
-		return true;
+		if (!std::strcmp(unit, "Gt")) return 1_Gt * number;
+		if (!std::strcmp(unit, "Mt")) return 1_Mt * number;
+		if (!std::strcmp(unit, "kt")) return 1_kt * number;
+		if (!std::strcmp(unit, "t"))  return 1_t * number;
+		if (!std::strcmp(unit, "kg")) return 1_kg * number;
+		if (!std::strcmp(unit, "g"))  return 1_g * number;
+		if (!std::strcmp(unit, "mg")) return 1_mg * number;
+		if (!std::strcmp(unit, "ug")) return 1_ug * number;
+		if (!std::strcmp(unit, "ng")) return 1_ng * number;
+		return kilograms(std::nan("2")); // unknown unit
 	}
 
 	/// @brief Internal function to format quantity and unit into a string by using a format string.
