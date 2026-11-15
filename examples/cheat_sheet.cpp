@@ -40,9 +40,14 @@ void cheat_sheet_examples() {
 
     // Export a Quantity
     // -----------------
-    double x = meters(distance); // <- cast to a unit (=42)
-    double y = distance / 1_m;   // <- divide to a dimensionless number (=42) - doesn't work for celsius/fahrenheit due to the offset!
-    std::string str = to_string(distance); // <- length to string conversion (="42.0m")
-    std::string equiv = to_equivalent(distance); // <- length to an equivalent string conversion (="45.93yd")
-    std::string progress = to_percentage(distance, 420_m); // <- length to percentage string conversion (="10%")
+    double x = meters(distance); // cast to a unit (=42)
+    double y = distance / 1_m;   // divide to a dimensionless number (=42) - doesn't work for celsius/fahrenheit due to the offset!
+    std::string str = to_string(distance); // length to string conversion (="42.0m")
+    std::string equiv = to_equivalent(distance); //  length to an equivalent string conversion (="45.93yd")
+    std::string progress = to_percentage(distance, 420_m); // length to percentage string conversion (="10%")
+
+    // Create Own Units
+    // ----------------
+    auto one_smoot = unit<length, 17'018, 10'000>(); // Oliver R Smoot's height (https://en.wikipedia.org/wiki/Smoot)
+    auto Harvard_bridge_length = one_smoot(364.4);
 }

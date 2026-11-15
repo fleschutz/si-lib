@@ -433,7 +433,6 @@ namespace si {
   UDL(_Ang,                        1e-10, meters);   // 1_Ang  (angstrom)
   UDL(_percent,                     0.01, dimensionless); // 1_percent (%, per hundred)
   UDL(_bpm,                     1.0/60.0, hertz);    // 1_bpm  (beats per minute)
-  UDL(_smoot,                     1.7018, meters);   // 1_smoot (one Oliver R. Smoot height, fun unit)
 
   // References
   // -------------
