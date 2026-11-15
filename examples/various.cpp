@@ -1,5 +1,5 @@
 /// @file   examples/various.cpp
-/// @brief  Contains 32 various examples 
+/// @brief  Contains 34 various examples 
 
 #include <iostream>
 #include "datasets/all.h"
@@ -236,7 +236,24 @@ void various_examples() {
     cout << total_area << " and " << total_weight << endl;
 
 
-    cout << "31. The distance between Singapore and Tokyo measures...";
+    cout << "31. Calculate the total harddisk size... ";
+    auto cylinders      = 8032;
+    auto heads          = 16;
+    auto sectors        = 63;
+    auto sector_size    = 512_bytes;
+    auto HDD_total_size = cylinders * heads * sectors * sector_size;
+    cout << HDD_total_size << endl;
+
+
+    cout << "32. Calculate the hardisk's data density... ";
+    auto platters           = 8;
+    auto platter_diameter   = 2.5_in;
+    auto area_per_platter   = area_of_circle_formula(platter_diameter / 2.0);
+    auto data_density       = (HDD_total_size / platters / area_per_platter) * 1_in2;
+    cout << data_density << "/inch²" << endl;
+
+
+    cout << "33. The distance between Singapore and Tokyo measures...";
     auto Singapore_lat  = 1.3521_deg;
     auto Singapore_long = 103.8198_deg;
     auto Tokyo_lat      = 35.6762_deg;
@@ -245,7 +262,7 @@ void various_examples() {
     cout << dist << " or " << to_equivalent(dist) << endl;
 
 
-    cout << "32. The nearest airport neighbours are...";
+    cout << "34. The nearest airport neighbours are...";
     length nearestDistance = 999999_km;
     std::string nearest1 = "", nearest2 = "";
     for (const auto& airport1 : airports) { 

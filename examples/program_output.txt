@@ -56,6 +56,8 @@
 28. The AC voltages within a tenth second are... 0.0 V, 220.0 V, 0.0 pV, -220.0 V, -0.0 pV, 220.0 V, -0.1 pV, -220.0 V, -0.1 pV, 220.0 V, 0.4 pV, -220.0 V, -0.8 pV, 220.0 V, 0.7 pV, -220.0 V, -0.1 pV, 220.0 V, -0.5 pV, -220.0 V, 
 29. Applying a perpendicular force of 500N to a 20cm long lever results in... 100.0 J of torque
 30. What's the total area and weight of 500 papers in A4 format (80g/m²)? 31.2 m² and 2.5 kg
-31. The distance between Singapore and Tokyo measures...5311.2 km or 3300.2 mi
-32. The nearest airport neighbours are...Confer's Place Airport and Dick's Strip with only 30.0 m in between
+31. Calculate the total harddisk size... 4.1 GB
+32. Calculate the hardisk's data density... 105.6 MB/inch²
+33. The distance between Singapore and Tokyo measures...5311.2 km or 3300.2 mi
+34. The nearest airport neighbours are...Confer's Place Airport and Dick's Strip with only 30.0 m in between
 
