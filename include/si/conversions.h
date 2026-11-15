@@ -9,11 +9,6 @@
 #include <cmath>
 #include <si/literals.h>
 #define FUNC [[nodiscard]] inline
-#ifdef _WIN32
-#define parse(_buf, _fmtString, _number, _unit) sscanf_s(_buf, _fmtString, _number, _unit)
-#else
-#define parse(_buf, _fmtString, _number, _unit) std::sscanf(_buf, _fmtString, _number, _unit)
-#endif
 
 namespace si {
 
@@ -23,60 +18,62 @@ namespace si {
 	inline auto to_equivalent_format = "%.2Lf %s"; ///< SI standard formatting by default
 	inline auto to_percentage_format = "%.0Lf%s"; 
 
+	static bool _parse(const std::string& str, double& number, char* unit) {
+#ifdef _WIN32
+		return sscanf_s(str.c_str(), "%lf%99s", &number, unit, 100) == 2;
+#else
+		return std::sscanf(str.c_str(), "%lf%99s", &number, unit) == 2;
+#endif
+	}
+
 	/// @brief Returns the length from the given string, or NaN on error.
 	FUNC length to_length(const std::string& str) {
-		double number = 0.0;
+		double num = 0.0;
 		char unit[100] = "";
-		if (parse(str.c_str(), "%lf%99s", &number, unit) != 2)
-			return meters(std::nan("1")); // not recognized
-
-		if (!std::strcmp(unit, "Gm")) return 1_Gm * number;
-		if (!std::strcmp(unit, "Mm")) return 1_Mm * number;
-		if (!std::strcmp(unit, "km")) return 1_km * number;
-		if (!std::strcmp(unit, "m"))  return 1_m * number;
-		if (!std::strcmp(unit, "dm")) return 1_dm * number;
-		if (!std::strcmp(unit, "cm")) return 1_cm * number;
-		if (!std::strcmp(unit, "mm")) return 1_mm * number;
-		if (!std::strcmp(unit, "um")) return 1_um * number;
-		if (!std::strcmp(unit, "nm")) return 1_nm * number;
-		if (!std::strcmp(unit, "pm")) return 1_pm * number;
+		if (!_parse(str, num, unit))  return meters(std::nan("1")); // not recognized
+		if (!std::strcmp(unit, "Gm")) return num * 1_Gm;
+		if (!std::strcmp(unit, "Mm")) return num * 1_Mm;
+		if (!std::strcmp(unit, "km")) return num * 1_km;
+		if (!std::strcmp(unit, "m"))  return num * 1_m;
+		if (!std::strcmp(unit, "dm")) return num * 1_dm;
+		if (!std::strcmp(unit, "cm")) return num * 1_cm;
+		if (!std::strcmp(unit, "mm")) return num * 1_mm;
+		if (!std::strcmp(unit, "um")) return num * 1_um;
+		if (!std::strcmp(unit, "nm")) return num * 1_nm;
+		if (!std::strcmp(unit, "pm")) return num * 1_pm;
 		return meters(std::nan("2")); // unknown unit
 	}
 
 	/// @brief Returns the time from the given string, or NaN on error.
 	FUNC time to_time(const std::string& str) {
-		double number = 0.0;
+		double num = 0.0;
 		char unit[100] = "";
-		if (parse(str.c_str(), "%lf%99s", &number, unit) != 2)
-			return seconds(std::nan("1")); // not recognized
-
-		if (!std::strcmp(unit, "d"))  return 1_d * number;
-		if (!std::strcmp(unit, "h"))  return 1_h * number;
-		if (!std::strcmp(unit, "m"))  return 1_min * number;
-		if (!std::strcmp(unit, "s"))  return 1_s * number;
-		if (!std::strcmp(unit, "ms")) return 1_ms * number;
-		if (!std::strcmp(unit, "us")) return 1_us * number;
-		if (!std::strcmp(unit, "ns")) return 1_ns * number;
-		if (!std::strcmp(unit, "ps")) return 1_ps * number;
+		if (!_parse(str, num, unit))  return seconds(std::nan("1")); // not recognized
+		if (!std::strcmp(unit, "d"))  return num * 1_d;
+		if (!std::strcmp(unit, "h"))  return num * 1_h;
+		if (!std::strcmp(unit, "m"))  return num * 1_min;
+		if (!std::strcmp(unit, "s"))  return num * 1_s;
+		if (!std::strcmp(unit, "ms")) return num * 1_ms;
+		if (!std::strcmp(unit, "us")) return num * 1_us;
+		if (!std::strcmp(unit, "ns")) return num * 1_ns;
+		if (!std::strcmp(unit, "ps")) return num * 1_ps;
 		return seconds(std::nan("2")); // unknown unit
 	}
 
 	/// @brief Returns the mass from the given string, or NaN on error.
 	FUNC mass to_mass(const std::string& str) {
-		double number = 0.0;
+		double num = 0.0;
 		char unit[100] = "";
-		if (parse(str.c_str(), "%lf%99s", &number, unit) != 2)
-			return kilograms(std::nan("1")); // not recognized
-
-		if (!std::strcmp(unit, "Gt")) return 1_Gt * number;
-		if (!std::strcmp(unit, "Mt")) return 1_Mt * number;
-		if (!std::strcmp(unit, "kt")) return 1_kt * number;
-		if (!std::strcmp(unit, "t"))  return 1_t * number;
-		if (!std::strcmp(unit, "kg")) return 1_kg * number;
-		if (!std::strcmp(unit, "g"))  return 1_g * number;
-		if (!std::strcmp(unit, "mg")) return 1_mg * number;
-		if (!std::strcmp(unit, "ug")) return 1_ug * number;
-		if (!std::strcmp(unit, "ng")) return 1_ng * number;
+		if (!_parse(str, num, unit))  return kilograms(std::nan("1")); // not recognized
+		if (!std::strcmp(unit, "Gt")) return num * 1_Gt;
+		if (!std::strcmp(unit, "Mt")) return num * 1_Mt;
+		if (!std::strcmp(unit, "kt")) return num * 1_kt;
+		if (!std::strcmp(unit, "t"))  return num * 1_t;
+		if (!std::strcmp(unit, "kg")) return num * 1_kg;
+		if (!std::strcmp(unit, "g"))  return num * 1_g;
+		if (!std::strcmp(unit, "mg")) return num * 1_mg;
+		if (!std::strcmp(unit, "ug")) return num * 1_ug;
+		if (!std::strcmp(unit, "ng")) return num * 1_ng;
 		return kilograms(std::nan("2")); // unknown unit
 	}
 
