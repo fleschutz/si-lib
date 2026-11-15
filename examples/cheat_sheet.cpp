@@ -5,8 +5,8 @@ using namespace si;
 
 void cheat_sheet_examples() {
 
-    // Generate a Quantity
-    // -------------------
+    // Assign a Quantity
+    // -----------------
     length a = 1_m;              // user-defined literal (UDL)
     auto   b = 1_m;              // with convenient auto
     length c = meters(1);        // construct from dimensionless number
@@ -14,12 +14,13 @@ void cheat_sheet_examples() {
     length e = to_length("42m"); // string to length conversion
     // length f = 1_kg;          // ERROR: incompatible dimensions
 
-    // Calculate on Quantities
-    // -----------------------
+    // Calculations with Quantities
+    // ----------------------------
     area field = a * b;
     volume cube = a * b * c;
     velocity speed = 1_km / 1_h;
     energy E = 1_kg * square(constant::c);
+    length wavelength = wavelength_formula(constant::c, 100_Hz);
 
     // Compare Quantities
     // ------------------
