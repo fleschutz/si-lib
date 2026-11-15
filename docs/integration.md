@@ -42,7 +42,7 @@ target_link_libraries(myapp PRIVATE si-lib::si-lib)
 
 Option 4: Copy the headers (no CMake)
 --------------------------------------
-Put `include/si/` on your compiler's include path and build with C++23 (`-std=c++23` on GCC and Clang,
+Put `include/si/` on your compiler's include path and build with C++17 (`-std=c++17` on GCC and Clang,
 `/std:c++latest` on MSVC). Nothing else is required.
 
 
