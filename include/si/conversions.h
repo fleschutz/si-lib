@@ -9,6 +9,11 @@
 #include <cmath>
 #include <si/literals.h>
 #define FUNC [[nodiscard]] inline
+#ifdef _WIN32
+#define parse(_buf, _fmtString, _number, _unit) sscanf_s(_buf, _fmtString, _number, _unit)
+#else
+#define parse(_buf, _fmtString, _number, _unit) std::sscanf(_buf, _fmtString, _number, _unit)
+#endif
 
 namespace si {
 
@@ -22,7 +27,7 @@ namespace si {
 	FUNC length to_length(const std::string& str) {
 		double number = 0.0;
 		char unit[100] = "";
-		if (std::sscanf(str.c_str(), "%lf%99s", &number, unit) != 2)
+		if (parse(str.c_str(), "%lf%99s", &number, unit) != 2)
 			return meters(std::nan("1")); // not recognized
 
 		if (!std::strcmp(unit, "Gm")) return 1_Gm * number;
@@ -42,7 +47,7 @@ namespace si {
 	FUNC time to_time(const std::string& str) {
 		double number = 0.0;
 		char unit[100] = "";
-		if (std::sscanf(str.c_str(), "%lf%99s", &number, unit) != 2)
+		if (parse(str.c_str(), "%lf%99s", &number, unit) != 2)
 			return seconds(std::nan("1")); // not recognized
 
 		if (!std::strcmp(unit, "d"))  return 1_d * number;
@@ -60,7 +65,7 @@ namespace si {
 	FUNC mass to_mass(const std::string& str) {
 		double number = 0.0;
 		char unit[100] = "";
-		if (std::sscanf(str.c_str(), "%lf%99s", &number, unit) != 2)
+		if (parse(str.c_str(), "%lf%99s", &number, unit) != 2)
 			return kilograms(std::nan("1")); // not recognized
 
 		if (!std::strcmp(unit, "Gt")) return 1_Gt * number;
@@ -511,4 +516,5 @@ namespace si {
 
 } // end of namespace
 
+#undef parse
 #undef FUNC
