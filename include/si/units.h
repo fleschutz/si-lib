@@ -120,12 +120,12 @@ namespace si {
   // -------------
   UNIT(bits)             = unit<digital_size>();
   UNIT(bits_per_second)  = bits / seconds;
-  UNIT(bits_per_m²)      = bits / meters2;
-  UNIT(bits_per_m³)      = bits / meters3;
+  UNIT(bits_per_m2)      = bits / meters2;
+  UNIT(bits_per_m3)      = bits / meters3;
   UNIT(bytes)            = unit<digital_size, 8,1>();
   UNIT(bytes_per_second) = bytes / seconds;
-  UNIT(bytes_per_m²)     = bytes / meters2;
-  UNIT(bytes_per_m³)     = bytes / meters3;
+  UNIT(bytes_per_m2)     = bytes / meters2;
+  UNIT(bytes_per_m3)     = bytes / meters3;
 
   // Various Units
   // -------------
