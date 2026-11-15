@@ -48,8 +48,8 @@ void cheat_sheet_examples() {
     std::string equiv = to_equivalent(distance); //  length to an equivalent string conversion (="45.93yd")
     std::string progress = to_percentage(distance, 420_m); // length to percentage string conversion (="10%")
 
-    // Create Own Units
-    // ----------------
+    // User-defined Units
+    // ------------------
     auto smoot = unit<length, 17'018, 10'000>(); // Oliver R Smoot's height (https://en.wikipedia.org/wiki/Smoot)
     auto Harvard_bridge_length = smoot(364.4);
 }
