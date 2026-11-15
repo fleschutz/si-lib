@@ -1,6 +1,6 @@
-Using *si-lib* in Your Project
-==============================
-
+Integrate *si-lib* in Your Project
+==================================
+First step is to choose one of the 4 integration options:
 
 Option 1: Using `FetchContent` in CMake
 ---------------------------------------
@@ -42,7 +42,7 @@ target_link_libraries(myapp PRIVATE si-lib::si-lib)
 
 Option 4: Copy the headers (no CMake)
 --------------------------------------
-Put `include/si/` on your compiler's include path and build with C++23 (`-std=c++23` on GCC and Clang,
+Put `include/si/` on your compiler's include path and build with C++17 (`-std=c++17` on GCC and Clang,
 `/std:c++latest` on MSVC). Nothing else is required.
 
 
