@@ -12,7 +12,7 @@ void cheat_sheet_examples() {
     length c = meters(1);        // construct from dimensionless number
     length d = 5.0 * 1_m;        // multiply with a quantity - doesn't work for celsius/fahrenheit due to the offset!
     length e = to_length("42m"); // string to length conversion
-    // length bad = 1_kg;        // ERROR: incompatible dimensions
+    // length f = 1_kg;          // ERROR: incompatible dimensions
 
     // Calculate on Quantities
     // -----------------------
