@@ -325,6 +325,11 @@ namespace si {
   UDL(_yd,                        0.9144, meters); // 1_yd    (yard)
   UDL(_ft,                        0.3048, meters); // 1_ft    (feet, 12 inches)
   UDL(_in,                        0.0254, meters); // 1_in    (inch)
+  // area in...
+  UDL(_mi2,                  2.589988e+6, meters2); // 1_mi2 (square mile)
+  UDL(_yd2,                    0.8361274, meters2); // 1_yd2 (square yard)
+  UDL(_ft2,                   0.09290304, meters2); // 1_ft2 (square feet)
+  UDL(_in2,                   0.00064516, meters2); // 1_in2 (square inch)
   // mass in...
   UDL(_lb,                  0.453'592'37, kilograms); // 1_lb (pound)
   UDL(_oz,             0.028'349'523'125, kilograms); // 1_oz (ounce, 1/16 of a pound)

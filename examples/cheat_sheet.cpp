@@ -8,11 +8,11 @@ void cheat_sheet_examples() {
     // Generate a Quantity
     // -------------------
     length a = 1_m;           // user-defined literal (UDL)
-    auto   b = 1_m;           // with auto
+    auto   b = 1_m;           // with convenient auto
     length c = meters(1);     // construct from dimensionless number
     length d = 5.0 * 1_m;     // multiply with a quantity - doesn't work for celsius/fahrenheit due to the offset!
     length distance = 42_m;
-    bool is_valid = from_string("42m", distance); // <- string to length conversion
+    bool is_valid = from_string("42m", distance); // string to length conversion
     // length bad = 1_kg;     // ERROR: incompatible dimensions
 
     // Calculate on Quantities
@@ -20,6 +20,7 @@ void cheat_sheet_examples() {
     area field = a * b;
     volume cube = a * b * c;
     velocity speed = 1_km / 1_h;
+    energy E = 1_kg * square(constant::c);
 
     // Compare Quantities
     // ------------------
@@ -28,10 +29,11 @@ void cheat_sheet_examples() {
 
     // Work with Angles
     // ----------------
-    angle alpha = 90_deg;
-    angle beta  = 3_rad;
-    angle delta = radians(3);
-    angle gamma = si::sin(delta);
+    angle alpha   = 90_deg;
+    angle beta    = 1.57_rad;
+    angle gamma   = 1'570.79_mrad;
+    angle delta   = radians(1.57);
+    angle epsilon = si::sin(delta);
 
     // Dimensionless Numbers
     // ---------------------
@@ -48,6 +50,6 @@ void cheat_sheet_examples() {
 
     // Create Own Units
     // ----------------
-    auto one_smoot = unit<length, 17'018, 10'000>(); // Oliver R Smoot's height (https://en.wikipedia.org/wiki/Smoot)
-    auto Harvard_bridge_length = one_smoot(364.4);
+    auto smoot = unit<length, 17'018, 10'000>(); // Oliver R Smoot's height (https://en.wikipedia.org/wiki/Smoot)
+    auto Harvard_bridge_length = smoot(364.4);
 }
