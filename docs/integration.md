@@ -1,6 +1,6 @@
-Using *si-lib* in Your Project
-==============================
-
+Integrate *si-lib* in Your Project
+==================================
+First step is to choose one of the 4 integration options:
 
 Option 1: Using `FetchContent` in CMake
 ---------------------------------------
