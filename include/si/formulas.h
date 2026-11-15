@@ -11,7 +11,7 @@ namespace si {
 	// Formulas for 2D
 	// ---------------
 	/// @brief Calculates the hypotenuse in a right triangle, based on Pythagorean equation: a² + b² = c² 
-	FUNC length hypotenuse_of_triangle_formula(length a, length b)
+	FUNC length hypotenuse_formula(length a, length b)
 	{
 		return sqrt(a*a + b*b);
 	}
@@ -344,8 +344,8 @@ namespace si {
 	/// @brief Calculates the theoretical local gravity at latitude (lat) and height above MSL (h).
 	FUNC acceleration local_gravity_formula(angle lat, length h)
 	{
-		auto IGF = 9.780327_m_per_s² * (1.0 + 0.0053024 * sin2(lat) - 0.0000058 * sin2(2.0 * lat)); // International Gravity Formula
-		auto FAC = -3.086e-6_m_per_s² * meters(h); // Free Air Correction
+		auto IGF = 9.780327_m_per_s2 * (1.0 + 0.0053024 * sin2(lat) - 0.0000058 * sin2(2.0 * lat)); // International Gravity Formula
+		auto FAC = -3.086e-6_m_per_s2 * meters(h); // Free Air Correction
 		return IGF + FAC;
 	}
 
@@ -453,7 +453,7 @@ namespace si {
 	/// @brief Calculates the human body-mass index (BMI) from weight (w) and height (h).
 	FUNC dimensionless BMI_formula(mass w, length h)
 	{
-		return (w / square(h)) / 1_kg_per_m²;
+		return (w / square(h)) / 1_kg_per_m2;
 	}
 
 	/// @brief Calculates the consumed electrical power of a current (I) and potential (U).

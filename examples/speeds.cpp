@@ -42,13 +42,13 @@ void speed_examples() {
 
 
     cout << " 6. A car's braking distance from 100km/h on dry asphalt is... ";
-    auto braking_on_dry_asphalt = 8_m_per_s²;
+    auto braking_on_dry_asphalt = 8_m_per_s2;
     auto dry_distance           = braking_distance_formula(100_km_per_h, 0_km_per_h, braking_on_dry_asphalt);
     cout << dry_distance << " or " << to_equivalent(dry_distance) << endl;
 
 
     cout << " 7. A car's braking distance from 100km/h on wet asphalt is... ";
-    auto braking_on_wet_asphalt = 6_m_per_s²;
+    auto braking_on_wet_asphalt = 6_m_per_s2;
     auto wet_distance           = braking_distance_formula(100_km_per_h, 0_km_per_h, braking_on_wet_asphalt);
     cout << wet_distance << " or " << to_equivalent(wet_distance) << endl;
 

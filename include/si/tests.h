@@ -17,7 +17,7 @@ namespace si {
     static_assert( 1_km / 30_min == 2_km_per_h );
     static_assert( 1_m * 2_m == 2_m2 );
     static_assert( 1_m * 2_m * 3_m == 6_m3 );
-    static_assert( (1_m * 2_m * 3_m) / 2_s == 3_m³_per_s );
+    static_assert( (1_m * 2_m * 3_m) / 2_s == 3_m3_per_s );
     static_assert( 1000 / 1_s == 1_kHz );
     static_assert( 1_Mach == 330_m_per_s );
     static_assert( 1_Mach * 10_percent == 33_m_per_s );
@@ -144,7 +144,7 @@ namespace si {
 	static_assert(1_m3  == meters3(1));
 	static_assert(1_m3  == 1e6_cm3);
 	static_assert(1_cm3 == 0.000'001_m3);
-	// static_assert(1_cm³ == 1_cm * 1_cm * 1_cm);
+	// static_assert(1_cm3 == 1_cm * 1_cm * 1_cm);
 	// velocity in...
 	static_assert(1_km_per_s == 1000_m_per_s);
 	static_assert(3.6_km_per_h == 1_m_per_s);
@@ -156,8 +156,8 @@ namespace si {
 	static_assert(1_km_per_h == 1000_m / 3600_s);
 	static_assert(1_km_per_h == 500_m / 1800_s);
 	// acceleration in...
-	static_assert(1_km_per_s² == 1000_m_per_s²);
-	static_assert(0.001_km_per_s² == 1_m_per_s²);
+	static_assert(1_km_per_s2 == 1000_m_per_s2);
+	static_assert(0.001_km_per_s2 == 1_m_per_s2);
 	// frequency in...
 	static_assert(1_PHz == 1000_THz);
 	static_assert(1_THz == 1000_GHz);
@@ -178,9 +178,9 @@ namespace si {
 	static_assert(1_Sv  == 1000_mSv);
 	static_assert(1_mSv == 1000_uSv);
 	// mass per area in...
-	static_assert(1_t_per_m² == 1000_kg_per_m²);
+	static_assert(1_t_per_m2 == 1000_kg_per_m2);
 	// mass per volume in...
-	static_assert(1_t_per_m³ == 1000_kg_per_m³);
+	static_assert(1_t_per_m3 == 1000_kg_per_m3);
 	// electric potential (U) in...
 	static_assert(1_GV == 1000_MV);
 	static_assert(1_MV == 1000_kV);
@@ -349,7 +349,7 @@ namespace si {
 	static_assert(square(1_m)  == 1_m2);
 	static_assert(square(3_m)  == 9_m2);
 
-	// static_assert(sqrt(9_m²) == 3_m); (TODO)
+	// static_assert(sqrt(9_m2) == 3_m); (TODO)
 
 	static_assert(cube(-3_m) == -27_m3);
 	static_assert(cube(-1_m) == -1_m3);
@@ -359,7 +359,7 @@ namespace si {
 	static_assert(cube(1_m)  == 1_m3);
 	static_assert(cube(3_m)  == 27_m3);
 
-	// static_assert(cbrt(27_m³) == 3_m); (TODO)
+	// static_assert(cbrt(27_m3) == 3_m); (TODO)
 
 	static_assert(clamp(-2_m, -1_m,1_m) == -1_m);
 	static_assert(clamp(-1_m, 0_m,1_m) == 0_m);

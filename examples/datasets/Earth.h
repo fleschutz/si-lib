@@ -34,8 +34,8 @@ namespace {
     area          water_area =      361'132'000_km2;
     si::volume    volume =           1.08321e12_km3;
     si::mass      mass =             5.97217e24_kg; // ±0.00028e24
-    density       mean_density =              5.513_g_per_cm³;
-    acceleration  surface_gravity =           9.80665_m_per_s²; ///< exactly 1 g0
+    density       mean_density =              5.513_g_per_cm3;
+    acceleration  surface_gravity =           9.80665_m_per_s2; ///< exactly 1 g0
     dimensionless moment_of_inertia_factor =  0.3307;
     velocity      escape_velocity =          11.186_km_per_s;
     si::time      synodic_rotation_period =  24_h;

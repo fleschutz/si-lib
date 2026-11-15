@@ -31,7 +31,7 @@ void astronomy_examples() {
 
     cout << " 5. The impact energy of a 50m asteroid at 50,000km/h is... ";
     auto asteroid_diameter = 50_m;
-    auto asteroid_density  = 2500_kg_per_m³; // mostly estimated only 
+    auto asteroid_density  = 2500_kg_per_m3; // mostly estimated only 
     auto asteroid_velocity = 50'000_km_per_h; // range is usually 50,000..100.000km/h
     auto asteroid_volume   = volume_of_sphere_formula(asteroid_diameter / 2.0);
     auto asteroid_mass     = asteroid_volume * asteroid_density;

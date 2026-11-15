@@ -200,12 +200,12 @@ namespace si {
 
 	/// @brief Returns the per area as string using SI units.
 	FUNC std::string to_string(per_area a, const char* fmtStr = to_string_format) {
-		if (a <= -1_per_km² || a >= 1_per_km²)                return _fmt(a / 1_per_km², "/km²", fmtStr);
-		if (a <= -1_per_hm² || a >= 1_per_hm²)                return _fmt(a / 1_per_hm², "/hm²", fmtStr);
-		if (a <= -1_per_m² || a >= 1_per_m² || a == 0_per_m²) return _fmt(a / 1_per_m², "/m²", fmtStr);
-		if (a <= -1_per_cm² || a >= 1_per_cm²)                return _fmt(a / 1_per_cm², "/cm²", fmtStr);
-		if (a <= -1_per_mm² || a >= 1_per_mm²)                return _fmt(a / 1_per_mm², "/mm²", fmtStr);
-		return _fmt(a / 1_per_μm², "/μm²", fmtStr);
+		if (a <= -1_per_km2 || a >= 1_per_km2)                return _fmt(a / 1_per_km2, "/km²", fmtStr);
+		if (a <= -1_per_hm2 || a >= 1_per_hm2)                return _fmt(a / 1_per_hm2, "/hm²", fmtStr);
+		if (a <= -1_per_m2 || a >= 1_per_m2 || a == 0_per_m2) return _fmt(a / 1_per_m2, "/m²", fmtStr);
+		if (a <= -1_per_cm2 || a >= 1_per_cm2)                return _fmt(a / 1_per_cm2, "/cm²", fmtStr);
+		if (a <= -1_per_mm2 || a >= 1_per_mm2)                return _fmt(a / 1_per_mm2, "/mm²", fmtStr);
+		return _fmt(a / 1_per_μm2, "/μm²", fmtStr);
 	}
 
 	inline std::ostream& operator<<(std::ostream& os, per_area a) {
@@ -241,8 +241,8 @@ namespace si {
 
 	/// @brief Returns the acceleration as string using SI units.
 	FUNC std::string to_string(acceleration a, const char* fmtStr = to_string_format) {
-		if (a <= -1_km_per_s² || a >= 1_km_per_s²) return _fmt(a / 1_km_per_s², "km/s²", fmtStr);
-		return _fmt(a / 1_m_per_s², "m/s²", fmtStr);
+		if (a <= -1_km_per_s2 || a >= 1_km_per_s2) return _fmt(a / 1_km_per_s2, "km/s²", fmtStr);
+		return _fmt(a / 1_m_per_s2, "m/s²", fmtStr);
 	}
 
 	inline std::ostream& operator<<(std::ostream& os, acceleration a) {
@@ -316,10 +316,10 @@ namespace si {
 
 	/// @brief Returns the power intensity as string using SI units.
 	FUNC std::string to_string(power_intensity I, const char* fmtStr = to_string_format) {
-		if (I <= -1_MW_per_m² || I >= 1_MW_per_m²)                  return _fmt(I / 1_MW_per_m², "MW/m²", fmtStr);
-		if (I <= -1_kW_per_m² || I >= 1_kW_per_m²)                  return _fmt(I / 1_kW_per_m², "kW/m²", fmtStr);
-		if (I <= -1_W_per_m² || I >= 1_W_per_m² || I == 0_W_per_m²) return _fmt(I / 1_W_per_m², "W/m²", fmtStr);
-		return _fmt(I / 1_mW_per_m², "mW/m²", fmtStr);
+		if (I <= -1_MW_per_m2 || I >= 1_MW_per_m2)                  return _fmt(I / 1_MW_per_m2, "MW/m²", fmtStr);
+		if (I <= -1_kW_per_m2 || I >= 1_kW_per_m2)                  return _fmt(I / 1_kW_per_m2, "kW/m²", fmtStr);
+		if (I <= -1_W_per_m2 || I >= 1_W_per_m2 || I == 0_W_per_m2) return _fmt(I / 1_W_per_m2, "W/m²", fmtStr);
+		return _fmt(I / 1_mW_per_m2, "mW/m²", fmtStr);
 	}
 
 	inline std::ostream& operator<<(std::ostream& os, const power_intensity I) {
@@ -372,8 +372,8 @@ namespace si {
 
 	/// @brief Returns the mass per area as string using SI units.
 	FUNC std::string to_string(mass_per_area m, const char* fmtStr = to_string_format) {
-		if (m <= -1_t_per_m² || m >= 1_t_per_m²) return _fmt(m / 1_t_per_m², "t/m²", fmtStr);
-		return _fmt(m / 1_kg_per_m², "kg/m²", fmtStr);
+		if (m <= -1_t_per_m2 || m >= 1_t_per_m2) return _fmt(m / 1_t_per_m2, "t/m²", fmtStr);
+		return _fmt(m / 1_kg_per_m2, "kg/m²", fmtStr);
 	}
 
 	inline std::ostream& operator<<(std::ostream& os, mass_per_area m) {
@@ -392,8 +392,8 @@ namespace si {
 
 	/// @brief Returns density as string using SI units.
 	FUNC std::string to_string(density d, const char* fmtStr = to_string_format) {
-		if (d <= -1_t_per_m³ || d >= 1_t_per_m³) return _fmt(d / 1_t_per_m³, "t/m³", fmtStr);
-		return _fmt(d / 1_kg_per_m³, "kg/m³", fmtStr);
+		if (d <= -1_t_per_m3 || d >= 1_t_per_m3) return _fmt(d / 1_t_per_m3, "t/m³", fmtStr);
+		return _fmt(d / 1_kg_per_m3, "kg/m³", fmtStr);
 	}
 
 	inline std::ostream& operator<<(std::ostream& os, density d) {
@@ -461,7 +461,7 @@ namespace si {
 
 	/// @brief Returns a power intensity equivalent as string, e.g. in dB.
 	FUNC std::string to_equivalent(power_intensity I, const char* fmtStr = to_equivalent_format) {
-		return _fmt(10.0 * std::log10((I / 1_W_per_m²) / 1e-12), "dB", fmtStr);
+		return _fmt(10.0 * std::log10((I / 1_W_per_m2) / 1e-12), "dB", fmtStr);
 	}
 
 	/// @brief Returns an energy equivalent as string, e.g. kg TNT.

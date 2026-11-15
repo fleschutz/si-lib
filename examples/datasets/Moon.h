@@ -33,8 +33,8 @@ namespace {
     area          surface_area =               3.793e7_km2;
     si::volume    volume =                   2.1958e10_km3;
     si::mass      mass =                      7.346e22_kg;
-    density       mean_density =                 3.344_g_per_cm³; 
-    acceleration  surface_gravity =              1.622_m_per_s²;
+    density       mean_density =                 3.344_g_per_cm3; 
+    acceleration  surface_gravity =              1.622_m_per_s2;
     velocity      escape_velocity =               2.38_km_per_s;
     velocity      equatorial_rotation_velocity = 4.627_m_per_s;
     dimensionless albedo =                           0.136;

@@ -100,7 +100,7 @@ void various_examples() {
     cout << "14. The filament length of a 750g PLA roll with 2.85mm diameter is... ";
     auto filament_weight    = 750_g;
     auto filament_diameter  = 2.85_mm;
-    auto density_of_PLA     = 1.24_g_per_cm³;
+    auto density_of_PLA     = 1.24_g_per_cm3;
     auto filament_volume    = filament_weight / density_of_PLA;
     auto filament_length    = filament_volume / (constant::pi * square(filament_diameter / 2.0));
     cout << filament_length << " or " << to_equivalent(filament_length) << endl;
@@ -117,7 +117,7 @@ void various_examples() {
     cout << "16. The lift force of an A380 wing at sea level with 284km/h rotation speed is... ";
     auto wing_surface              = 845_m2;
     dimensionless lift_coefficient = 1.3939;
-    auto air_density               = 1.2250_kg_per_m³; // at sea level at 15°C (59°F)
+    auto air_density               = 1.2250_kg_per_m3; // at sea level at 15°C (59°F)
     auto air_speed                 = 284_km_per_h;
     auto lift_force                = lift_force_of_wing_formula(lift_coefficient, wing_surface, air_density, air_speed);
     cout << lift_force << endl;
@@ -135,7 +135,7 @@ void various_examples() {
     auto bottle_volume      = 10_l;
     auto bottle_pressure    = 150_bar;
     auto dive_depth         = 10_m;
-    auto salt_water_density = 1033.23_kg_per_m³;
+    auto salt_water_density = 1033.23_kg_per_m3;
     auto air_pressure       = 1013.25_hPa;
     auto water_pressure     = salt_water_density * constant::g_n * dive_depth + air_pressure;
     auto max_time           = (bottle_volume * bottle_pressure) / (average_breathing * water_pressure);
@@ -162,7 +162,7 @@ void various_examples() {
     cout << "22. The details of a 10m x 1m oak timber log are... ";
     auto log_length     = 10_m;
     auto log_diameter   = 1_m;
-    auto dry_oak_weight = 710_kg_per_m³; 
+    auto dry_oak_weight = 710_kg_per_m3; 
     auto dry_oak_power  = 4.2_kWh_per_kg;
     auto area           = area_of_cylinder_formula(log_diameter / 2, log_length);
     auto volume         = volume_of_cylinder_formula(log_diameter / 2, log_length);
@@ -228,11 +228,11 @@ void various_examples() {
     cout << torque << " of torque" << endl;
 
 
-    cout << "30. What's the total area and weight of 500 papers in A4 format (80g/m²)? ";
+    cout << "30. What's the total area and weight of 500 papers in A4 format (80g/m2)? ";
     length A4_paper_width   = 210_mm;
     length A4_paper_height  = 297_mm;
     auto total_area         = 500 * A4_paper_width * A4_paper_height;
-    auto total_weight       = total_area * 80_g_per_m²;
+    auto total_weight       = total_area * 80_g_per_m2;
     cout << total_area << " and " << total_weight << endl;
 
 
