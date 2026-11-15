@@ -186,12 +186,12 @@ namespace si {
 
 	/// @brief Returns the given area as string using SI units.
 	FUNC std::string to_string(area a, const char* fmtStr = to_string_format) {
-		if (a <= -1_km² || a >= 1_km²)            return _fmt(a / 1_km², "km²", fmtStr);
-		if (a <= -1_hm² || a >= 1_hm²)            return _fmt(a / 1_hm², "hm²", fmtStr);
-		if (a <= -1_m² || a >= 1_m² || a == 0_m²) return _fmt(a / 1_m², "m²", fmtStr);
-		if (a <= -1_cm² || a >= 1_cm²)            return _fmt(a / 1_cm², "cm²", fmtStr);
-		if (a <= -1_mm² || a >= 1_mm²)            return _fmt(a / 1_mm², "mm²", fmtStr);
-		return _fmt(a / 1_um², "µm²", fmtStr);
+		if (a <= -1_km2 || a >= 1_km2)            return _fmt(a / 1_km2, "km²", fmtStr);
+		if (a <= -1_hm2 || a >= 1_hm2)            return _fmt(a / 1_hm2, "hm²", fmtStr);
+		if (a <= -1_m2 || a >= 1_m2 || a == 0_m2) return _fmt(a / 1_m2, "m²", fmtStr);
+		if (a <= -1_cm2 || a >= 1_cm2)            return _fmt(a / 1_cm2, "cm²", fmtStr);
+		if (a <= -1_mm2 || a >= 1_mm2)            return _fmt(a / 1_mm2, "mm²", fmtStr);
+		return _fmt(a / 1_um2, "µm²", fmtStr);
 	}
 
 	inline std::ostream& operator<<(std::ostream& os, area a) {
@@ -214,8 +214,8 @@ namespace si {
 
 	/// @brief Returns the given volume as string using SI units.
 	FUNC std::string to_string(volume v, const char* fmtStr = to_string_format) {
-		if (v <= -1_km³ || v >= 1_km³)         return _fmt(v / 1_km³, "km³", fmtStr);
-		if (v <= -1_m³ || v >= 1_m³)           return _fmt(v / 1_m³, "m³", fmtStr);
+		if (v <= -1_km3 || v >= 1_km3)         return _fmt(v / 1_km3, "km³", fmtStr);
+		if (v <= -1_m3 || v >= 1_m3)           return _fmt(v / 1_m3, "m³", fmtStr);
 		if (v <= -1_l || v >= 1_l || v == 0_l) return _fmt(v / 1_l, "l", fmtStr);
 		if (v <= -1_ml || v >= 1_ml)           return _fmt(v / 1_ml, "ml", fmtStr);
 		if (v <= -1_ul || v >= 1_ul)           return _fmt(v / 1_ul, "µl", fmtStr);

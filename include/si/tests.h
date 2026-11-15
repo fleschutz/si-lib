@@ -15,8 +15,8 @@ namespace si {
     static_assert( 3_m == 3 * 1_m );
     static_assert( 1_km + 1_m + 1_dm + 1_cm + 1_mm == 1001.111_m );
     static_assert( 1_km / 30_min == 2_km_per_h );
-    static_assert( 1_m * 2_m == 2_m² );
-    static_assert( 1_m * 2_m * 3_m == 6_m³ );
+    static_assert( 1_m * 2_m == 2_m2 );
+    static_assert( 1_m * 2_m * 3_m == 6_m3 );
     static_assert( (1_m * 2_m * 3_m) / 2_s == 3_m³_per_s );
     static_assert( 1000 / 1_s == 1_kHz );
     static_assert( 1_Mach == 330_m_per_s );
@@ -127,23 +127,23 @@ namespace si {
 
   inline void check_SI_derived_units() {
 	// area in...
-	static_assert(1_km² == 1_km * 1_km);
-	static_assert(1_km² == 100_hm²);
-	static_assert(1_hm² == 10'000_m²);
-	static_assert(1_hm² == 100_m * 100_m);
-	static_assert(1_m²  == 10'000_cm²);
-	static_assert(1_m²  == meters2(1));
-	static_assert(1_cm² == 0.0001_m²);
-	static_assert(1_m²  == 1_m * 1_m);
-	static_assert(1_cm² == 1_cm * 1_cm);
-	static_assert(1_mm² == 1_mm * 1_mm);
+	static_assert(1_km2 == 1_km * 1_km);
+	static_assert(1_km2 == 100_hm2);
+	static_assert(1_hm2 == 10'000_m2);
+	static_assert(1_hm2 == 100_m * 100_m);
+	static_assert(1_m2  == 10'000_cm2);
+	static_assert(1_m2  == meters2(1));
+	static_assert(1_cm2 == 0.0001_m2);
+	static_assert(1_m2  == 1_m * 1_m);
+	static_assert(1_cm2 == 1_cm * 1_cm);
+	static_assert(1_mm2 == 1_mm * 1_mm);
 	// volume in...
-	static_assert(1_km³ == 1_km * 1_km * 1_km);
-	static_assert(1_km³ == 1e9_m³);
-	static_assert(1_m³  == 1_m * 1_m * 1_m);
-	static_assert(1_m³  == meters3(1));
-	static_assert(1_m³  == 1e6_cm³);
-	static_assert(1_cm³ == 0.000'001_m³);
+	static_assert(1_km3 == 1_km * 1_km * 1_km);
+	static_assert(1_km3 == 1e9_m3);
+	static_assert(1_m3  == 1_m * 1_m * 1_m);
+	static_assert(1_m3  == meters3(1));
+	static_assert(1_m3  == 1e6_cm3);
+	static_assert(1_cm3 == 0.000'001_m3);
 	// static_assert(1_cm³ == 1_cm * 1_cm * 1_cm);
 	// velocity in...
 	static_assert(1_km_per_s == 1000_m_per_s);
@@ -341,23 +341,23 @@ namespace si {
 	static_assert(abs(1_m)    == 1_m);
 	static_assert(abs(5.6_m)  == 5.6_m);
 
-	static_assert(square(-3_m) == 9_m²);
-	static_assert(square(-1_m) == 1_m²);
-	static_assert(square(-.5_m)== .25_m²);
-	static_assert(square(0_m)  == 0_m²);
-	static_assert(square(.5_m) == .25_m²);
-	static_assert(square(1_m)  == 1_m²);
-	static_assert(square(3_m)  == 9_m²);
+	static_assert(square(-3_m) == 9_m2);
+	static_assert(square(-1_m) == 1_m2);
+	static_assert(square(-.5_m)== .25_m2);
+	static_assert(square(0_m)  == 0_m2);
+	static_assert(square(.5_m) == .25_m2);
+	static_assert(square(1_m)  == 1_m2);
+	static_assert(square(3_m)  == 9_m2);
 
 	// static_assert(sqrt(9_m²) == 3_m); (TODO)
 
-	static_assert(cube(-3_m) == -27_m³);
-	static_assert(cube(-1_m) == -1_m³);
-	static_assert(cube(-.5_m)== -0.125_m³);
-	static_assert(cube(0_m)  == 0_m³);
-	static_assert(cube(.5_m) == 0.125_m³);
-	static_assert(cube(1_m)  == 1_m³);
-	static_assert(cube(3_m)  == 27_m³);
+	static_assert(cube(-3_m) == -27_m3);
+	static_assert(cube(-1_m) == -1_m3);
+	static_assert(cube(-.5_m)== -0.125_m3);
+	static_assert(cube(0_m)  == 0_m3);
+	static_assert(cube(.5_m) == 0.125_m3);
+	static_assert(cube(1_m)  == 1_m3);
+	static_assert(cube(3_m)  == 27_m3);
 
 	// static_assert(cbrt(27_m³) == 3_m); (TODO)
 

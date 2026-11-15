@@ -85,12 +85,12 @@ namespace si {
   // SI Derived Units
   // ----------------
   // area in...
-  UDL(_km²,    1e6, meters2);             // 1_km² (square kilometer)
-  UDL(_hm²,    1e4, meters2);             // 1_hm² (hectare)
-  UDL( _m²,      1, meters2);             // 1_m²  (square meter)
-  UDL(_cm²,   1e-4, meters2);             // 1_cm² (square centimeter)
-  UDL(_mm²,   1e-6, meters2);             // 1_mm² (square millimeter)
-  UDL(_um²,  1e-12, meters2);             // 1_um² (square micrometer)
+  UDL(_km2,    1e6, meters2);             // 1_km2 (square kilometer)
+  UDL(_hm2,    1e4, meters2);             // 1_hm2 (hectare)
+  UDL( _m2,      1, meters2);             // 1_m2  (square meter)
+  UDL(_cm2,   1e-4, meters2);             // 1_cm2 (square centimeter)
+  UDL(_mm2,   1e-6, meters2);             // 1_mm2 (square millimeter)
+  UDL(_um2,  1e-12, meters2);             // 1_um2 (square micrometer)
   // per area in...
   UDL(_per_km²,1e-6, per_meter2);         // 1_per_km² (per square kilometer)
   UDL(_per_hm²,1e-4, per_meter2);         // 1_per_hm² (per hectare)
@@ -101,12 +101,12 @@ namespace si {
   // surface flow in...
   UDL(_m²_per_s, 1, meters2_per_second);  // 1_m²/s (square meter per second)
   // volume in cubic meter in...
-  UDL(_km³,    1e9, meters3);             // 1_km³ (cubic kilometer)
-  UDL( _m³,      1, meters3);             // 1_m³  (cubic meter)
-  UDL(_dm³,   1e-3, meters3);             // 1_dm³ (cubic decimeter)
-  UDL(_cm³,   1e-6, meters3);             // 1_cm³ (cubic centimeter, aka ccm)
-  UDL(_mm³,   1e-9, meters3);             // 1_mm³ (cubic millimeter)
-  UDL(_um³,  1e-18, meters3);             // 1_um³ (cubic micrometer)
+  UDL(_km3,    1e9, meters3);             // 1_km3 (cubic kilometer)
+  UDL( _m3,      1, meters3);             // 1_m3  (cubic meter)
+  UDL(_dm3,   1e-3, meters3);             // 1_dm3 (cubic decimeter)
+  UDL(_cm3,   1e-6, meters3);             // 1_cm3 (cubic centimeter, aka ccm)
+  UDL(_mm3,   1e-9, meters3);             // 1_mm3 (cubic millimeter)
+  UDL(_um3,  1e-18, meters3);             // 1_um3 (cubic micrometer)
   // volume in liter in...
   UDL(_Ml,     1e3, meters3);             // 1_Ml (megaliter)
   UDL(_kl,       1, meters3);             // 1_kl (kiloliter)

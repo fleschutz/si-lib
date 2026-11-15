@@ -57,7 +57,7 @@ void various_examples() {
 
     cout << " 8. The population density on Earth (people per km² of land area) is... ";
     dimensionless Earth_population  = 8.2e9;
-    auto Earth_land_area            = 148'940'000_km²;
+    auto Earth_land_area            = 148'940'000_km2;
     auto population_density         = Earth_population / Earth_land_area;
     cout << population_density << endl;
 
@@ -115,7 +115,7 @@ void various_examples() {
 
 
     cout << "16. The lift force of an A380 wing at sea level with 284km/h rotation speed is... ";
-    auto wing_surface              = 845_m²;
+    auto wing_surface              = 845_m2;
     dimensionless lift_coefficient = 1.3939;
     auto air_density               = 1.2250_kg_per_m³; // at sea level at 15°C (59°F)
     auto air_speed                 = 284_km_per_h;

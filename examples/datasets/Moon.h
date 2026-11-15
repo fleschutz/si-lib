@@ -30,8 +30,8 @@ namespace {
     length        polar_radius =               1'736.0_km;
     dimensionless flattening =                       0.0012;
     length        equatorial_circumference =    10'921_km;
-    area          surface_area =               3.793e7_km²;
-    si::volume    volume =                   2.1958e10_km³;
+    area          surface_area =               3.793e7_km2;
+    si::volume    volume =                   2.1958e10_km3;
     si::mass      mass =                      7.346e22_kg;
     density       mean_density =                 3.344_g_per_cm³; 
     acceleration  surface_gravity =              1.622_m_per_s²;

@@ -29,10 +29,10 @@ namespace {
     dimensionless flattening =                1.0/298.257'222'101;
     length        equatorial_circumference = 40'075.017_km;
     length        meridional_circumference = 40'007.863_km;
-    area          surface_area =    510'072'000_km²;
-    area          land_area =       148'940'000_km²;
-    area          water_area =      361'132'000_km²;
-    si::volume    volume =           1.08321e12_km³;
+    area          surface_area =    510'072'000_km2;
+    area          land_area =       148'940'000_km2;
+    area          water_area =      361'132'000_km2;
+    si::volume    volume =           1.08321e12_km3;
     si::mass      mass =             5.97217e24_kg; // ±0.00028e24
     density       mean_density =              5.513_g_per_cm³;
     acceleration  surface_gravity =           9.80665_m_per_s²; ///< exactly 1 g0
