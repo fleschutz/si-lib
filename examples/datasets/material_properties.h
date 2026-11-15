@@ -12,7 +12,7 @@ using namespace si;
 struct material_property_details {
 	const char* Name;                  ///< from column  1 (string)
 	const char* Type;                  ///< from column  2 (string)
-	float Cost;                        ///< from column  3 ($/kg)
+	double Cost;                       ///< from column  3 ($/kg)
 	si::density Density;               ///< from column  4 (mg/m³)
 	si::pressure Youngs_Modulus;       ///< from column  5 (GPa)
 	si::pressure Shear_Modulus;        ///< from column  6 (GPa)
