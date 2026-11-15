@@ -5,6 +5,7 @@ var dir_cac3fe23689f81230d42ff8abf7bc234 =
     [ "core.h", "core_8h.html", null ],
     [ "datatypes.h", "datatypes_8h.html", "datatypes_8h" ],
     [ "formulas.h", "formulas_8h.html", "formulas_8h" ],
+    [ "historic.h", "historic_8h.html", null ],
     [ "internal.h", "internal_8h.html", "internal_8h" ],
     [ "literals.h", "literals_8h.html", "literals_8h" ],
     [ "prefixes.h", "prefixes_8h.html", "prefixes_8h" ],
