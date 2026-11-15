@@ -38,26 +38,24 @@ int main() {   using namespace si;
 | Formulas              | *kinetic_energy_formula()*                | [<si/formulas.h>](include/si/formulas.h)       |
 | Conversions           | *to_equivalent()*                         | [<si/conversions.h>](include/si/conversions.h) |
 | Unit tests            | *static_assert(1_kg == 1000_g);*          | [<si/tests.h>](include/si/tests.h)             | 
-| Examples              | [speeds.cpp](examples/speeds.cpp) & [program output](examples/program_output.txt) | 📂[examples](examples/)                    |
+| Examples              | [speeds.cpp](examples/speeds.cpp) & [program output](examples/program_output.txt) | 📂[examples](examples/)  |
 | Datasets              | *Earth.mass*                              | 📂[examples/datasets](examples/datasets/)      |
-| Documentation         | 📓 [reference manual](https://fleschutz.github.io/si-lib/docs/html/) | 📂[docs](docs/)     |
+| Documentation         | [cheat_sheet.cpp](examples/cheat_sheet.cpp) | 📓[reference manual](https://fleschutz.github.io/si-lib/docs/html/) |
 
 
 💡 Q & A
 ---------
+**Why *si-lib*?** Programming with quantities *(=number+unit)* is more safe, more readable, and more intuitive. It's a new experience, just give it a try.
+
+**What are *si-lib's* use-cases?** Applied math in simulations, simulators, scientific calculations, games, etc.
+
+**How to use *si-lib*?** Follow the [integration manual](docs/integration.md), please.
+
 **What's SI?** It's the [International System of Units](https://en.wikipedia.org/wiki/International_System_of_Units) which is made up of 7 base units that define the 22 derived units.
 
 **What's CODATA?** It's the [Committee On Data](https://codata.org/) of the International Science Council (ISC). It publishes fundamental physical constants on a four-year cycle - the latest update was CODATA 2022.
 
 **What's IAU?** It's the [International Astronomical Union](https://www.iau.org/), which defines the astronomical units.
-
-**What are use-cases of *si-lib*?** Applied math in simulations, simulators, scientific calculations, games, etc.
-
-**How to use *si-lib* in my project?** Follow the [integration instructions](docs/integration.md), please.
-
-**Which #include to use?** Use the convenient *#include <si/core.h>* to include the 6 core header files (datatypes.h, units.h, literals.h, constants.h, formulas.h, conversions.h), otherwise pick the necessary ones only.
-
-**How to import/export numbers and strings?** See our cheat sheet in [examples/cheat_sheet.cpp](examples/cheat_sheet.cpp).
 
 **What are numbers like 1.2e23?** It's the scientific notation in C/C++ for 1.2 x 10²³, the letter 'e' or 'E' represents the 'times 10 to the power of' part.
 

@@ -45,3 +45,8 @@ Option 4: Copy the headers (no CMake)
 Put `include/si/` on your compiler's include path and build with C++23 (`-std=c++23` on GCC and Clang,
 `/std:c++latest` on MSVC). Nothing else is required.
 
+
+Include the Header Files
+------------------------
+Use the convenient *#include <si/core.h>* to include the 6 core header files (datatypes.h, units.h, literals.h, constants.h, formulas.h, conversions.h), otherwise pick the necessary ones only.
+
