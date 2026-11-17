@@ -16,11 +16,11 @@ int main() {
     si::to_string_format = "%.1Lf %s";    // one decimal place and space between quantity and unit
     si::to_equivalent_format = "%.1Lf %s";// one decimal place and space between quantity and unit
 
-    cheat_sheet_examples();               // calls examples in cheat_sheet.cpp
+    cheat_sheet();                        // in cheat_sheet.cpp
 
-    speed_examples();                     // calls examples in speeds.cpp
+    speed_examples();                     // in speeds.cpp
 
-    astronomy_examples();                 // calls examples in astronomy.cpp
+    astronomy_examples();                 // in astronomy.cpp
 
-    various_examples();                   // calls examples in various.cpp
+    various_examples();                   // in various.cpp
 }
