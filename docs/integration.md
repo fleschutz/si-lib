@@ -1,29 +1,34 @@
 Integrate *si-lib* in Your Project
 ==================================
-First step is to choose one of the 4 integration options:
+Please choose one of the 4 integration options:
 
 Option 1: Using `FetchContent` in CMake
 ---------------------------------------
-Pull it at configure time — no vendored copy in your tree:
+Pull it at configure time — no vendored copy in your tree. Add to the `CMakeLists.txt` file:
 
 ```cmake
+cmake_minimum_required(VERSION 3.11) # FetchContent requires version 3.11 or newer
+
 include(FetchContent)
+
 FetchContent_Declare(si-lib
   GIT_REPOSITORY https://github.com/fleschutz/si-lib.git
-  GIT_TAG        v0.6)            # pin a release tag
+  GIT_TAG        v0.7)            # pin a release tag
+
 FetchContent_MakeAvailable(si-lib)
 
-target_link_libraries(myapp PRIVATE si-lib::si-lib)
+target_link_libraries(main PRIVATE si-lib::si-lib)
 ```
 
 
 Option 2: Using `add_subdirectory` in CMake
 -------------------------------------------
-Vendor the project (a submodule or a copy) and add it:
+Vendor the project (a submodule or a copy) and add it. Add to the `CMakeLists.txt` file:
 
 ```cmake
 add_subdirectory(si-lib)
-target_link_libraries(myapp PRIVATE si-lib::si-lib)
+
+target_link_libraries(main PRIVATE si-lib::si-lib)
 ```
 
 Linking the target propagates the include directory, so you do not set either yourself.
@@ -32,11 +37,12 @@ Linking the target propagates the include directory, so you do not set either yo
 Option 3: Using `find_package` in CMake
 ---------------------------------------
 
-If `si-lib` is installed (via `cmake --install`, or a Linux package), consume it with `find_package`:
+If `si-lib` is installed (via `cmake --install`, or a Linux package), consume it with `find_package`. Add to the `CMakeLists.txt` file:
 
 ```cmake
 find_package(si-lib CONFIG REQUIRED)
-target_link_libraries(myapp PRIVATE si-lib::si-lib)
+
+target_link_libraries(main PRIVATE si-lib::si-lib)
 ```
 
 
