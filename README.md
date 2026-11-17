@@ -45,7 +45,7 @@ int main() {   using namespace si;
 
 💡 Q & A
 ---------
-**Why *si-lib*?** Programming with quantities *(=number+unit)* is more safe, more readable, and more intuitive.
+**Why *si-lib*?** Programming with quantities *(=a number and a unit)* is more safe, more readable, and more intuitive.
 
 **What are *si-lib's* use-cases?** Applied math in simulations, simulators, scientific calculations, games, etc.
 
