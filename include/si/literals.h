@@ -100,14 +100,14 @@ namespace si {
   UDL(_per_μm2,1e12, per_meter2);         // 1_per μm2 (per square micrometer)
   // surface flow in...
   UDL(_m2_per_s, 1, meters2_per_second);  // 1_m2/s (square meter per second)
-  // volume in cubic meter in...
+  // volume in cubic meter...
   UDL(_km3,    1e9, meters3);             // 1_km3 (cubic kilometer)
   UDL( _m3,      1, meters3);             // 1_m3  (cubic meter)
   UDL(_dm3,   1e-3, meters3);             // 1_dm3 (cubic decimeter)
   UDL(_cm3,   1e-6, meters3);             // 1_cm3 (cubic centimeter, aka ccm)
   UDL(_mm3,   1e-9, meters3);             // 1_mm3 (cubic millimeter)
   UDL(_um3,  1e-18, meters3);             // 1_um3 (cubic micrometer)
-  // volume in liter in...
+  // volume in liter...
   UDL(_Ml,     1e3, meters3);             // 1_Ml (megaliter)
   UDL(_kl,       1, meters3);             // 1_kl (kiloliter)
   UDL(_hl,     0.1, meters3);             // 1_hl (hectoliter)
@@ -232,7 +232,7 @@ namespace si {
   UDL(_mT,    1e-3, teslas);              // 1_mT  (millitesla)
   UDL(_uT,    1e-6, teslas);              // 1_uT  (microtesla)
   UDL(_nT,    1e-9, teslas);              // 1_nT  (nanotesla)
-  // energy in...
+  // energy in joules...
   UDL(_PJ,    1e15, joules);              // 1_PJ  (petajoule)
   UDL(_TJ,    1e12, joules);              // 1_TJ  (terajoule)
   UDL(_GJ,     1e9, joules);              // 1_GJ  (gigajoule)
@@ -241,7 +241,7 @@ namespace si {
   UDL( _J,       1, joules);              // 1_J   (joule)
   UDL(_mJ,    1e-3, joules);              // 1_mJ  (millijoule)
   UDL(_kJ_per_mol,1e3,joules_per_mol);    // 1_kJ_per_mol (kJ/mol)
-  // or in...
+  // energy in calories...
   UDL(_Mcal,4186800,joules);              // 1_Mcal (megacalorie)
   UDL(_kcal,4186.8, joules);              // 1_kcal (kilocalorie)
   UDL( _cal, 4.1868,joules);              // 1_cal  (calorie)
@@ -304,7 +304,7 @@ namespace si {
   UDL(_mkat,  1e-3, mols_per_second);     // 1_mkat  (millikatal)
   UDL(_ukat,  1e-6, mols_per_second);     // 1_mukat (microkatal)
   UDL(_nkat,  1e-9, mols_per_second);     // 1_nkat  (nanokatal)
-  // other...
+  // other units in...
   UDL(_Nm,       1, newtonmeters);        // 1_Nm  (newtonmeter)
   UDL(_sr,       1, steradians);          // 1_sr  (steradian)
   UDL(_km3_per_s2,1e9, meters3_per_second2);// 1_km3_per_s2 (km³/s²)
