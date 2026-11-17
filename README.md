@@ -34,7 +34,7 @@ int main() {   using namespace si;
 | Datatypes             | *mass*                                    | [<si/datatypes.h>](include/si/datatypes.h)     |
 | Units                 | *kilograms*                               | [<si/units.h>](include/si/units.h)             |
 | User-defined literals | *1_kg*                                    | [<si/literals.h>](include/si/literals.h)       |
-| Constants             | *constant::c (speed of light)*            | [<si/constants.h>](include/si/constants.h)     |
+| Constants             | *constant::c  (the speed of light)*       | [<si/constants.h>](include/si/constants.h)     |
 | Formulas              | *hypotenuse_formula()*                    | [<si/formulas.h>](include/si/formulas.h)       |
 | Conversions           | *to_string()*                             | [<si/conversions.h>](include/si/conversions.h) |
 | Unit tests            | *static_assert(1_kg == 1000_g);*          | [<si/tests.h>](include/si/tests.h)             | 
