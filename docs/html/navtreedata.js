@@ -24,7 +24,7 @@
 */
 var NAVTREE =
 [
-  [ "Project", "index.html", [
+  [ "API Documentation", "index.html", [
     [ "📐si-lib - The Physical Units Library For C++", "index.html", "index" ],
     [ "Namespaces", "namespaces.html", [
       [ "Namespace List", "namespaces.html", "namespaces_dup" ],
