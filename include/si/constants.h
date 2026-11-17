@@ -23,7 +23,7 @@ namespace si { namespace constant {                             // singular for 
 
   // Universal Constants
   // -------------------                                        // CODATA 2022 constants (source: https://codata.org)
-  SET(G,                       6.67430e-11, meters3_per_kilogram_per_second2); // Newtonian constant of gravitation
+  SET(G,                       6.67430e-11, meters3_per_kilogram_per_second2); // Newtonian constant of gravitation (symbol: G)
   SET(Z_0,                 376.730'313'412, ohms);              // characteristic impedance of vacuum
   SET(epsilon_0,        8.854'187'8188e-12, farads_per_meter);  // vacuum electric permittivity, symbol: ε_0
   SET(l_P,                    1.616255e-35, meters);            // Planck length
@@ -101,13 +101,10 @@ namespace si { namespace constant {                             // singular for 
   // Various Constants
   // -----------------
   SET(T0,                                0, kelvins);           // absolute zero (0K, the lowest possible temperature)
-  SET(marathon_distance,            42'195, meters);
-  SET(quarter_mile,                 402.34, meters);
   SET(speed_of_sound,                  343, meters_per_second); // speed of sound in dry air at 20°C (68°F)
   SET(speed_of_sound_in_fresh_water,  1481, meters_per_second); // at 20°C (68°F)
   SET(speed_of_sound_in_iron,         5120, meters_per_second);
   SET(speed_of_sound_in_diamonds,   12'000, meters_per_second);
-  SET(gravitational_constant,6.6743015e-11, meters3_per_kilogram_per_second2);
 
 } } // end of namespaces
 
