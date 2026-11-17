@@ -7,7 +7,7 @@
 #include <Windows.h>
 #endif
 
-extern void cheat_sheet_examples(), speed_examples(), astronomy_examples(), various_examples();
+extern void cheat_sheet(), speed_examples(), astronomy_examples(), various_examples();
 
 int main() {
 #ifdef _WIN32
