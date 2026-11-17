@@ -12,8 +12,8 @@ void cheat_sheet() {
     length e = to_length("42m");   // string to length conversion
     // length f = 1_kg;            // ERROR: incompatible dimensions
 
-    // Calculations with Quantities
-    // ----------------------------
+    // Calculate with Quantities
+    // -------------------------
     area field = a * b;            // area from 2 lengths
     volume cube = a * b * c;       // volume from 3 lengths
     velocity s = 1_km / 1_h;       // speed from distance per time
@@ -26,8 +26,8 @@ void cheat_sheet() {
     // bool bad = (1_m < 1_kg);    // ERROR: incompatible dimensions
     for (auto t = 0_s; t < 5_min; t += 1_s) { } // time loop
 
-    // Work with Angles
-    // ----------------
+    // Angles
+    // ------
     angle alpha   = 90_deg;        // degree literal
     angle beta    = 1.57_rad;      // radian literal
     angle gamma   = 1'570.79_mrad; // milliradian literal
