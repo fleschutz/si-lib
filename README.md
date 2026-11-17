@@ -36,7 +36,7 @@ int main() {   using namespace si;
 | User-defined literals | *1_kg*                                    | [<si/literals.h>](include/si/literals.h)       |
 | Constants             | *constant::c (speed of light)*            | [<si/constants.h>](include/si/constants.h)     |
 | Formulas              | *kinetic_energy_formula()*                | [<si/formulas.h>](include/si/formulas.h)       |
-| Conversions           | *to_equivalent()*                         | [<si/conversions.h>](include/si/conversions.h) |
+| Conversions           | *to_string()*                             | [<si/conversions.h>](include/si/conversions.h) |
 | Unit tests            | *static_assert(1_kg == 1000_g);*          | [<si/tests.h>](include/si/tests.h)             | 
 | Examples              | [speeds.cpp](examples/speeds.cpp) & [program output](examples/program_output.txt) | 📂[examples](examples/)  |
 | Datasets              | *Earth.mass*                              | 📂[examples/datasets](examples/datasets/)      |
