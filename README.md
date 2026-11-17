@@ -49,7 +49,7 @@ int main() {   using namespace si;
 
 **What are *si-lib's* use-cases?** Applied math in simulations, simulators, scientific calculations, games, etc.
 
-**How to use *si-lib*?** Follow the [integration manual](docs/integration.md), please.
+**How to use *si-lib*?** Just follow the [integration manual](docs/integration.md).
 
 **Is it thread-safe?**  Yes, the datatypes are trivially-copyable value types with no shared state (like double). The library's errors are at compile-time only and no exceptions are thrown.
 
