@@ -40,7 +40,7 @@ int main() {   using namespace si;
 | Unit tests            | *static_assert(1_kg == 1000_g);*          | [<si/tests.h>](include/si/tests.h)             | 
 | Examples              | [speeds.cpp](examples/speeds.cpp) & [program output](examples/program_output.txt) | 📂[examples](examples/)  |
 | Datasets              | *Earth.mass*                              | 📂[examples/datasets](examples/datasets/)      |
-| Documentation         | [cheat_sheet.cpp](examples/cheat_sheet.cpp) | 📓[API reference](https://fleschutz.github.io/si-lib/docs/html/) |
+| Documentation         | [cheat_sheet.cpp](examples/cheat_sheet.cpp) | 📓[API Reference](https://fleschutz.github.io/si-lib/docs/html/) |
 
 
 💡 Q & A
