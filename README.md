@@ -51,6 +51,8 @@ int main() {   using namespace si;
 
 **How to use *si-lib*?** Follow the [integration manual](docs/integration.md), please.
 
+**Is it thread-safe?**  Yes, the datatypes are trivially-copyable value types with no shared state (like double). The library's errors are at compile-time only and no exceptions are thrown.
+
 **What's SI?** It's the [International System of Units](https://en.wikipedia.org/wiki/International_System_of_Units) which is made up of 7 base units that define the 22 derived units.
 
 **What's CODATA?** It's the [Committee On Data](https://codata.org/) of the International Science Council (ISC). It publishes fundamental physical constants on a four-year cycle - latest update was CODATA 2022.
