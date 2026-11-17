@@ -1,5 +1,5 @@
 /// @file     si/formulas.h
-/// @brief    Defines 70+ math and physics formulas, e.g. si::area_of_circle().
+/// @brief    Defines 70+ math and physics formulas, e.g. si::hypotenuse_formula().
 /// @details  Categories are: 2D, 3D, moving objects, vehicle, aircraft, gravitation, various, and references.
 
 #pragma once
@@ -10,7 +10,8 @@ namespace si {
 
 	// Formulas for 2D
 	// ---------------
-	/// @brief Calculates the hypotenuse in a right triangle, based on Pythagorean equation: a² + b² = c² 
+
+	/// @brief Calculates the hypotenuse of a right triangle, based on Pythagorean equation: a² + b² = c² 
 	FUNC length hypotenuse_formula(length a, length b)
 	{
 		return sqrt(a*a + b*b);
@@ -122,6 +123,7 @@ namespace si {
 
 	// Formulas for 3D
 	// ---------------
+
 	/// @brief Calculates the area of a cube from length (a).
 	FUNC area area_of_cube_formula(length a)
 	{
