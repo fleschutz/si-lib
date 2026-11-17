@@ -179,8 +179,9 @@ namespace si {
 	}
 
 	/// @brief Calculates the distance between two lat/long coordinates on Earth (haversine formula).
-	FUNC length distance_on_sphere_formula(angle lat1, angle long1, angle lat2, angle long2,
-			                       length radius = 6371.0088_km) // mean Earth radius, recommended by NOAA
+	FUNC length distance_on_sphere_formula(angle lat1, angle long1,
+                                           angle lat2, angle long2,
+			                               length radius = 6371.0088_km) // mean Earth radius, recommended by NOAA
 	{
 		angle dLat = lat1 - lat2;    // difference in latitude
 		angle dLong = long1 - long2; // difference in longitude
@@ -193,6 +194,7 @@ namespace si {
 
 	// Formulas for Moving Objects
 	// ---------------------------
+
 	/// @brief Calculates the average speed from distance and duration.
 	FUNC velocity average_speed_formula(length distance, time duration)
 	{
@@ -243,6 +245,7 @@ namespace si {
 
 	// Formulas for Vehicles
 	// ---------------------
+
 	/// @brief Calculates the revolutions per minute (RPM) from velocity (v) and wheel radius (r).
 	FUNC dimensionless wheel_rpm_formula(velocity v, length r)
 	{
@@ -269,6 +272,7 @@ namespace si {
 
 	// Formulas for Aircraft
 	// ---------------------
+
 	/// @brief Calculates the true airspeed (TAS).
 	FUNC velocity true_airspeed_formula(force lift_force, dimensionless lift_coefficient, area wing_surface, density air_density)
 	{
@@ -319,6 +323,7 @@ namespace si {
 
 	// Formulas for Gravitation
 	// ------------------------
+
 	/// @brief Calculates the gravitational potential energy of a mass (m) at height (h) based on gravity (e.g. on Earth).
 	FUNC energy gravitational_potential_energy_formula(mass m, length h, acceleration gravity)
 	{
@@ -359,6 +364,7 @@ namespace si {
 
 	// Various Formulas
 	// ----------------
+
 	/// @brief Calculates the wavelength from velocity (v) and frequency (f).
 	FUNC length wavelength_formula(velocity v, frequency f)
 	{
