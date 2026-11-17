@@ -1,5 +1,3 @@
-/// @file   examples/cheat_sheet.cpp
-
 #include <si/core.h> 
 using namespace si;
 
@@ -26,6 +24,7 @@ void cheat_sheet_examples() {
     // ------------------
     bool good = (1_m < 2_ft);
     // bool bad = (1_m < 1_kg); // ERROR: incompatible dimensions
+    for (auto t = 0_s; t < 5_min; t += 1_s) { }
 
     // Work with Angles
     // ----------------
