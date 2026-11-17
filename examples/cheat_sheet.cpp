@@ -17,8 +17,8 @@ void cheat_sheet() {
     area field = a * b;            // area from 2 lengths
     volume cube = a * b * c;       // volume from 3 lengths
     velocity s = 1_km / 1_h;       // speed from distance per time
-    energy E = 1_kg * square(constant::c); // using a constant
-    length w = wavelength_formula(constant::c, 100_Hz); // using a formula
+    energy E = 1_kg * square(constant::c); // with constant
+    length w = wavelength_formula(constant::c, 100_Hz); // with formula
 
     // Compare Quantities
     // ------------------
