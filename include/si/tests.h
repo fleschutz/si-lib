@@ -293,33 +293,33 @@ namespace si {
 	static_assert(1_Gbit_per_s == 1000_Mbit_per_s);
 	static_assert(1_Mbit_per_s == 1000_kbit_per_s);
 	static_assert(1_kbit_per_s == bits_per_second(1000));
-	// bytes... (metric prefixes)
-	static_assert(1_byte == 8_bit);
-	static_assert(1_byte == bytes(1));
-	static_assert(1_kB   == 1000_byte);
-	static_assert(1_MB   == 1000_kB);
-	static_assert(1_GB   == 1000_MB);
-	static_assert(1_TB   == 1000_GB);
-	static_assert(1_PB   == 1000_TB);
-	static_assert(1_EB   == 1000_PB);
+	// bytes with metric prefixes...
 	static_assert(1_ZB   == 1000_EB);
-	// bytes... (binary prefixes)
-	static_assert(1_KiB == 1024_byte);
-	static_assert(1_MiB == 1024_KiB);
-	static_assert(1_GiB == 1024_MiB);
+	static_assert(1_EB   == 1000_PB);
+	static_assert(1_PB   == 1000_TB);
+	static_assert(1_TB   == 1000_GB);
+	static_assert(1_GB   == 1000_MB);
+	static_assert(1_MB   == 1000_kB);
+	static_assert(1_kB   == 1000_byte);
+	static_assert(1_byte == bytes(1));
+	static_assert(1_byte == 8_bit);
+	// bytes with binary prefixes...
 	static_assert(1_TiB == 1024_GiB);
-	// bytes per second... (metric prefixes)
-	static_assert(1_KBps == 1000_bytes_per_s);
-	static_assert(1_KBps == bytes_per_second(1000));
-	static_assert(1_MBps == 1000_KBps);
-	static_assert(1_GBps == 1000_MBps);
-	static_assert(1_TBps == 1000_GBps);
-	static_assert(1_PBps == 1000_TBps);
-	// bytes per second... (binary prefixes)
-	static_assert(1_KiBps == 1024_bytes_per_s);
-	static_assert(1_MiBps == 1024_KiBps);
-	static_assert(1_GiBps == 1024_MiBps);
-	static_assert(1_TiBps == 1024_GiBps);
+	static_assert(1_GiB == 1024_MiB);
+	static_assert(1_MiB == 1024_KiB);
+	static_assert(1_KiB == 1024_byte);
+	// bytes per second with metric prefixes...
+	static_assert(1_PB_per_s == 1000_TB_per_s);
+	static_assert(1_TB_per_s == 1000_GB_per_s);
+	static_assert(1_GB_per_s == 1000_MB_per_s);
+	static_assert(1_MB_per_s == 1000_KB_per_s);
+	static_assert(1_KB_per_s == 1000_byte_per_s);
+	static_assert(1_KB_per_s == bytes_per_second(1000));
+	// bytes per second with binary prefixes...
+	static_assert(1_TiB_per_s == 1024_GiB_per_s);
+	static_assert(1_GiB_per_s == 1024_MiB_per_s);
+	static_assert(1_MiB_per_s == 1024_KiB_per_s);
+	static_assert(1_KiB_per_s == 1024_byte_per_s);
   }
 
   inline void check_angle() {

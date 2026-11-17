@@ -406,17 +406,18 @@ namespace si {
   UDL(_GiB,                1'073'741'824, bytes); // 1_GiB (gibibyte)
   UDL(_MiB,                    1'048'576, bytes); // 1_MiB (mibibyte)
   UDL(_KiB,                         1024, bytes); // 1_KiB (kibibyte)
-  // bytes per second...
-  UDL(_PBps,                        1e15, bytes_per_second); // 1_PBps  (petabyte/sec)
-  UDL(_TiBps,          1'099'511'627'776, bytes_per_second); // 1_TiBps (tebibyte/sec)
-  UDL(_TBps,                        1e12, bytes_per_second); // 1_TBps  (terabyte/sec)
-  UDL(_GiBps,              1'073'741'824, bytes_per_second); // 1_GiBps (gibibyte/sec)
-  UDL(_GBps,                         1e9, bytes_per_second); // 1_GBps  (gigabyte/sec)
-  UDL(_MiBps,                  1'048'576, bytes_per_second); // 1_MiBps (mibibyte/sec)
-  UDL(_MBps,                         1e6, bytes_per_second); // 1_MBps  (megabyte/sec)
-  UDL(_KiBps,                       1024, bytes_per_second); // 1_KiBps (kibibyte/sec)
-  UDL(_KBps,                         1e3, bytes_per_second); // 1_KBps  (kilobyte/sec)
-  UDL(_bytes_per_s,                    1, bytes_per_second); // 1_bytes_per_s
+  // bytes per second with metric prefixes...
+  UDL(_PB_per_s,                    1e15, bytes_per_second); // 1_PB_per_s (petabyte/sec)
+  UDL(_TB_per_s,                    1e12, bytes_per_second); // 1_TB_per_s (terabyte/sec)
+  UDL(_GB_per_s,                     1e9, bytes_per_second); // 1_GB_per_s (gigabyte/sec)
+  UDL(_MB_per_s,                     1e6, bytes_per_second); // 1_MB_per_s (megabyte/sec)
+  UDL(_KB_per_s,                     1e3, bytes_per_second); // 1_KB_per_s (kilobyte/sec)
+  UDL(_byte_per_s,                     1, bytes_per_second); // 1_byte_per_s
+  // bytes per second with binary prefixes...
+  UDL(_TiB_per_s,      1'099'511'627'776, bytes_per_second); // 1_TiB_per_s (tebibyte/sec)
+  UDL(_GiB_per_s,          1'073'741'824, bytes_per_second); // 1_GiB_per_s (gibibyte/sec)
+  UDL(_MiB_per_s,              1'048'576, bytes_per_second); // 1_MiB_per_s (mibibyte/sec)
+  UDL(_KiB_per_s,                   1024, bytes_per_second); // 1_KiB_per_s (kibibyte/sec)
 
   // Various Units
   // -------------
