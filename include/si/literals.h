@@ -1,6 +1,6 @@
 /// @file     si/literals.h
 /// @brief    Defines 300+ user-defined literals (UDL, supported since C++11), e.g. 24_h
-/// @details  Categories are: SI base units, SI derived units, Imperial units, astronomical units, digital units, various units, and references.
+/// @details  Categories are: SI base units, SI derived units, Imperial units, astronomical units, digital units, and various units.
 
 #pragma once
 #include <si/units.h>
@@ -11,7 +11,7 @@
 namespace si {
 
   // SI Base Units
-  // -------------
+  // -------------     (https://en.wikipedia.org/wiki/International_System_of_Units as of 2026)
 
   // SYMBOL FACTOR  BASE UNIT             EXAMPLE (sorting: big to small quantity)
   // -----------------------------------------------------------------------------
@@ -316,7 +316,7 @@ namespace si {
   UDL(_deg,0.01745329251994329576923690768489, radians); // 1_deg  (angle degree)
 
   // Imperial and US Units
-  // ---------------------
+  // ---------------------      (https://en.wikipedia.org/wiki/Imperial_units as of 2026)
   // length in...
   UDL(_nmi,                         1852, meters); // 1_nmi   (nautical mile, about one arc minute)
   UDL(_mi,                     1'609.344, meters); // 1_mi    (statute mile, 1760 yd or 80 chains)
@@ -355,8 +355,8 @@ namespace si {
   // absolute temperature in...
   UDL(_degF,                           1, fahrenheit); // 1_degF (°Fahrenheit)
 
-  // Astronomical Units (as of IAU 2012)
-  // ------------------
+  // Astronomical Units
+  // ------------------       (IAU 2012, https://en.wikipedia.org/wiki/Astronomical_system_of_units)
   UDL(_Gpc,     30'856'775'814'913'673e9, meters);   // 1_Gpc    (gigaparsec)
   UDL(_Mpc,     30'856'775'814'913'673e6, meters);   // 1_Mpc    (megaparsec)
   UDL(_kpc,     30'856'775'814'913'673e3, meters);   // 1_kpc    (kiloparsec)
@@ -438,12 +438,6 @@ namespace si {
   UDL(_Ang,                        1e-10, meters);   // 1_Ang  (angstrom)
   UDL(_percent,                     0.01, dimensionless); // 1_percent (%, per hundred)
   UDL(_bpm,                     1.0/60.0, hertz);    // 1_bpm  (beats per minute)
-
-  // References
-  // -------------
-  // 1. https://en.wikipedia.org/wiki/International_System_of_Units
-  // 2. https://en.wikipedia.org/wiki/Astronomical_system_of_units
-  // 3. https://en.wikipedia.org/wiki/Imperial_units
 
 } // end of namespace
 
