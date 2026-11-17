@@ -80,14 +80,14 @@ namespace si { namespace constant {                             // singular for 
   // ----------------------        (source: https://en.wikipedia.org/wiki/Mathematical_constant as of 2026)
   SET(euler,        2.71828182845904523536, dimensionless);     // Euler's number (symbol: e)
   SET(ln_2,         0.69314718055994530941, dimensionless);     // natural logarithm of 2
-  SET(pi,           3.14159265358979323846, radians);           // Archimedes' constant (symbol: π)
-  SET(half_pi,      1.57079632679489661923, radians);           // π / 2
-  SET(quarter_pi,   0.78539816339744830961, radians);           // π / 4
+  SET(pi,           3.14159265358979323846L,radians);           // Archimedes' constant (symbol: π)
+  SET(half_pi,      1.57079632679489661923L,radians);           // π / 2
+  SET(quarter_pi,   0.78539816339744830961L,radians);           // π / 4
   SET(phi,          1.61803398874989484820, dimensionless);     // The golden ratio (symbol: φ)
   SET(sqrt_2,       1.41421356237309504880, dimensionless);     // Pythagoras' constant (square root of 2)
   SET(sqrt_3,       1.73205080756887729352, dimensionless);     // Theodorus's constant (square root of 3)
   SET(sqrt_5,       2.23606797749978969640, dimensionless);     // square root of 5
-  SET(tau,          6.28318530717958647692, radians);           // The full circle constant (symbol: τ)
+  SET(tau,          6.28318530717958647692L,radians);           // The full circle constant (symbol: τ)
 
   // Astronomical Constants
   // ----------------------        (source: https://en.wikipedia.org/wiki/Astronomical_constant as of 2026)
