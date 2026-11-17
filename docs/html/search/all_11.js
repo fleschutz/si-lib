@@ -5,9 +5,8 @@ var searchData=
   ['ratio_2',['ratio',['../structsi_1_1detail_1_1ratio.html',1,'si::detail']]],
   ['ratio_5fproduct_3',['ratio_product',['../structsi_1_1detail_1_1ratio__product.html',1,'si::detail']]],
   ['ratio_5fquotient_4',['ratio_quotient',['../structsi_1_1detail_1_1ratio__quotient.html',1,'si::detail']]],
-  ['readme_2emd_5',['README.md',['../examples_2datasets_2README_8md.html',1,'(Global Namespace)'],['../README_8md.html',1,'(Global Namespace)']]],
-  ['references_6',['References',['../dir_54ffac253db90dff4f2c17ea17041e3b.html#autotoc_md5',1,'']]],
-  ['ronna_7',['ronna',['../namespacesi.html#ae3affcdab8e9fd1c7ce91754b87a6dfb',1,'si']]],
-  ['ronto_8',['ronto',['../namespacesi.html#a7167d70c1452e0ea7afc3b853afe75fe',1,'si']]],
-  ['root_9',['root',['../namespacesi_1_1detail.html#a960e3076ed61a95bb95f4f20e5daa9e0',1,'si::detail::root()'],['../namespacesi.html#a960e3076ed61a95bb95f4f20e5daa9e0',1,'si::root()']]]
+  ['readme_2emd_5',['README.md',['../README_8md.html',1,'']]],
+  ['ronna_6',['ronna',['../namespacesi.html#ae3affcdab8e9fd1c7ce91754b87a6dfb',1,'si']]],
+  ['ronto_7',['ronto',['../namespacesi.html#a7167d70c1452e0ea7afc3b853afe75fe',1,'si']]],
+  ['root_8',['root',['../namespacesi_1_1detail.html#a960e3076ed61a95bb95f4f20e5daa9e0',1,'si::detail::root()'],['../namespacesi.html#a960e3076ed61a95bb95f4f20e5daa9e0',1,'si::root()']]]
 ];

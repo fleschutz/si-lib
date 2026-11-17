@@ -98,24 +98,23 @@ $(function(){initNavTree('index.html','',''); });
 <ul>
 <li><b>Type-safety</b> for datatypes, constants, formulas, literals, etc. (e.g. mass + length = error).</li>
 <li><b>Test-safety</b> by 300+ unit tests (executed at compile-time and on each commit).</li>
-<li><b>Precision</b> by 64-bit floating point, calculations on SI base units, and CODATA constants.</li>
+<li><b>Precision</b> by 64-bit floating point, calculations on SI base units, and CODATA 2022 constants.</li>
 <li><b>Top speed:</b> no runtime overhead and implicit compile-time conversions whenever possible.</li>
-<li><b>Support</b> for SI/Imperial/US/digital/astronomical units, and a lot more.</li>
-<li><b>Excellent</b> readability and also provides literals, constants, formulas, and datasets (optional).</li>
-<li><b>Modern C++ 17:</b> header-only, own namespace, light-weight, no external dependencies.</li>
+<li><b>Support</b> for units in SI, Imperial, US, digital, astronomical, historic, or user-defined.</li>
+<li><b>Excellent</b> readability and provides literals, constants, formulas, and datasets (optional).</li>
+<li><b>Modern C++ 17:</b> header-only, light-weight (143KB), own namespace, no external dependencies.</li>
 <li><b>Cross-platform</b> support for Linux (clang/gcc, x86/arm) and Windows (VS2017-VS2026).</li>
 </ul>
 <h1 class="doxsection"><a class="anchor" id="autotoc_md0"></a>
 🔎 Example</h1>
 <div class="fragment"><div class="line"><span class="preprocessor">#include &lt;<a class="code" href="core_8h.html">si/core.h</a>&gt;</span></div>
 <div class="line"> </div>
-<div class="line"><span class="keywordtype">int</span> <a class="code hl_function" href="main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4">main</a>() {   <span class="keyword">using namespace </span><a class="code hl_namespace" href="namespacesi.html">si</a>;</div>
+<div class="line"><span class="keywordtype">int</span> main() {   <span class="keyword">using namespace </span><a class="code hl_namespace" href="namespacesi.html">si</a>;</div>
 <div class="line">    mass m   = 1_kg;</div>
 <div class="line">    energy E = m * <a class="code hl_function" href="namespacesi.html#a2e6e36e0042def7dc4611c246dfd34a5">square</a>(constant::c);</div>
 <div class="line">    std::cout &lt;&lt; <span class="stringliteral">&quot;The potential energy per kilogram is: &quot;</span> &lt;&lt; E &lt;&lt; std::endl;</div>
 <div class="line">}</div>
 <div class="ttc" id="acore_8h_html"><div class="ttname"><a href="core_8h.html">core.h</a></div><div class="ttdoc">Includes the 6 core header files.</div></div>
-<div class="ttc" id="amain_8cpp_html_ae66f6b31b5ad750f1fe042a706a4e3d4"><div class="ttname"><a href="main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4">main</a></div><div class="ttdeci">int main()</div><div class="ttdef"><b>Definition</b> main.cpp:12</div></div>
 <div class="ttc" id="anamespacesi_html"><div class="ttname"><a href="namespacesi.html">si</a></div><div class="ttdef"><b>Definition</b> constants.h:9</div></div>
 <div class="ttc" id="anamespacesi_html_a2e6e36e0042def7dc4611c246dfd34a5"><div class="ttname"><a href="namespacesi.html#a2e6e36e0042def7dc4611c246dfd34a5">si::square</a></div><div class="ttdeci">constexpr auto square(T x)</div><div class="ttdoc">Raise any number &lt;x&gt; to power of 2 (x² or x*x).</div><div class="ttdef"><b>Definition</b> units.h:185</div></div>
 </div><!-- fragment --><h1 class="doxsection"><a class="anchor" id="autotoc_md1"></a>
@@ -132,11 +131,11 @@ $(function(){initNavTree('index.html','',''); });
 <tr class="markdownTableRowEven">
 <td class="markdownTableBodyNone">User-defined literals  </td><td class="markdownTableBodyNone"><em>1_kg</em>  </td><td class="markdownTableBodyNone"><a href="include/si/literals.h">&lt;si/literals.h&gt;</a>  </td></tr>
 <tr class="markdownTableRowOdd">
-<td class="markdownTableBodyNone">Constants  </td><td class="markdownTableBodyNone"><em>constant::c (speed of light)</em>  </td><td class="markdownTableBodyNone"><a href="include/si/constants.h">&lt;si/constants.h&gt;</a>  </td></tr>
+<td class="markdownTableBodyNone">Constants  </td><td class="markdownTableBodyNone"><em>constant::c (the speed of light)</em>  </td><td class="markdownTableBodyNone"><a href="include/si/constants.h">&lt;si/constants.h&gt;</a>  </td></tr>
 <tr class="markdownTableRowEven">
-<td class="markdownTableBodyNone">Formulas  </td><td class="markdownTableBodyNone"><em>kinetic_energy_formula()</em>  </td><td class="markdownTableBodyNone"><a href="include/si/formulas.h">&lt;si/formulas.h&gt;</a>  </td></tr>
+<td class="markdownTableBodyNone">Formulas  </td><td class="markdownTableBodyNone"><em>hypotenuse_formula()</em>  </td><td class="markdownTableBodyNone"><a href="include/si/formulas.h">&lt;si/formulas.h&gt;</a>  </td></tr>
 <tr class="markdownTableRowOdd">
-<td class="markdownTableBodyNone">Conversions  </td><td class="markdownTableBodyNone"><em>to_equivalent()</em>  </td><td class="markdownTableBodyNone"><a href="include/si/conversions.h">&lt;si/conversions.h&gt;</a>  </td></tr>
+<td class="markdownTableBodyNone">Conversions  </td><td class="markdownTableBodyNone"><em>to_string()</em>  </td><td class="markdownTableBodyNone"><a href="include/si/conversions.h">&lt;si/conversions.h&gt;</a>  </td></tr>
 <tr class="markdownTableRowEven">
 <td class="markdownTableBodyNone">Unit tests  </td><td class="markdownTableBodyNone"><em>static_assert(1_kg == 1000_g);</em>  </td><td class="markdownTableBodyNone"><a href="include/si/tests.h">&lt;si/tests.h&gt;</a>  </td></tr>
 <tr class="markdownTableRowOdd">
@@ -144,15 +143,16 @@ $(function(){initNavTree('index.html','',''); });
 <tr class="markdownTableRowEven">
 <td class="markdownTableBodyNone">Datasets  </td><td class="markdownTableBodyNone"><em>Earth.mass</em>  </td><td class="markdownTableBodyNone">📂<a href="examples/datasets/">examples/datasets</a>  </td></tr>
 <tr class="markdownTableRowOdd">
-<td class="markdownTableBodyNone">Documentation  </td><td class="markdownTableBodyNone"><a href="examples/cheat_sheet.cpp">cheat_sheet.cpp</a>  </td><td class="markdownTableBodyNone">📓<a href="https://fleschutz.github.io/si-lib/docs/html/">reference manual</a>  </td></tr>
+<td class="markdownTableBodyNone">Documentation  </td><td class="markdownTableBodyNone"><a href="examples/cheat_sheet.cpp">cheat_sheet.cpp</a>  </td><td class="markdownTableBodyNone">📓<a href="https://fleschutz.github.io/si-lib/docs/html/">API reference</a>  </td></tr>
 </table>
 <h1 class="doxsection"><a class="anchor" id="autotoc_md2"></a>
 💡 Q &amp; A</h1>
-<p><b>Why <em>si-lib</em>?</b> Programming with quantities <em>(=number+unit)</em> is more safe, more readable, and more intuitive.</p>
+<p><b>Why <em>si-lib</em>?</b> Programming with quantities <em>(=a number and a unit)</em> is more safe, more readable, and more intuitive.</p>
 <p><b>What are <em>si-lib's</em> use-cases?</b> Applied math in simulations, simulators, scientific calculations, games, etc.</p>
-<p><b>How to use <em>si-lib</em>?</b> Follow the integration manual, please.</p>
+<p><b>How to use <em>si-lib</em>?</b> Just follow the integration manual.</p>
+<p><b>Is it thread-safe?</b> Yes, the datatypes are trivially-copyable value types with no shared state (like double). The library's errors are at compile-time only and no exceptions are thrown.</p>
 <p><b>What's SI?</b> It's the <a href="https://en.wikipedia.org/wiki/International_System_of_Units">International System of Units</a> which is made up of 7 base units that define the 22 derived units.</p>
-<p><b>What's CODATA?</b> It's the <a href="https://codata.org/">Committee On Data</a> of the International Science Council (ISC). It publishes fundamental physical constants on a four-year cycle - the latest update was CODATA 2022.</p>
+<p><b>What's CODATA?</b> It's the <a href="https://codata.org/">Committee On Data</a> of the International Science Council (ISC). It publishes fundamental physical constants on a four-year cycle - latest update was CODATA 2022.</p>
 <p><b>What's IAU?</b> It's the <a href="https://www.iau.org/">International Astronomical Union</a>, which defines the astronomical units.</p>
 <p><b>What are numbers like 1.2e23?</b> It's the scientific notation in C/C++ for 1.2 x 10²³, the letter 'e' or 'E' represents the 'times 10 to the power of' part.</p>
 <p><b>Where are the list of references?</b> References are always listed at the end of each source code file.</p>

@@ -117,10 +117,12 @@ Typedefs</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-func-members" class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:aa38c7aaaf5987129c5da0c9eb604323a" id="r_aa38c7aaaf5987129c5da0c9eb604323a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="conversions_8h.html#a587e21dda1f72be700a6206023ad681b">FUNC</a> bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa38c7aaaf5987129c5da0c9eb604323a">from_string</a> (const std::string &amp;str, length &amp;result)</td></tr>
-<tr class="memdesc:aa38c7aaaf5987129c5da0c9eb604323a"><td class="mdescLeft">&#160;</td><td class="mdescRight">The <a class="el" href="#aa38c7aaaf5987129c5da0c9eb604323a" title="The from_string() function.">from_string()</a> function.  <br /></td></tr>
-<tr class="memitem:aecf609dbb8e02360bc3a27c1d514b729" id="r_aecf609dbb8e02360bc3a27c1d514b729"><td class="memItemLeft" align="right" valign="top"><a class="el" href="conversions_8h.html#a587e21dda1f72be700a6206023ad681b">FUNC</a> bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aecf609dbb8e02360bc3a27c1d514b729">from_string</a> (const std::string &amp;str, time &amp;result)</td></tr>
-<tr class="memitem:a525d2c561df804ae6b2da9215973f2d0" id="r_a525d2c561df804ae6b2da9215973f2d0"><td class="memItemLeft" align="right" valign="top"><a class="el" href="conversions_8h.html#a587e21dda1f72be700a6206023ad681b">FUNC</a> bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a525d2c561df804ae6b2da9215973f2d0">from_string</a> (const std::string &amp;str, mass &amp;result)</td></tr>
+<tr class="memitem:adbe93978e06be3867f8a7a77c3f80006" id="r_adbe93978e06be3867f8a7a77c3f80006"><td class="memItemLeft" align="right" valign="top"><a class="el" href="conversions_8h.html#a587e21dda1f72be700a6206023ad681b">FUNC</a> length&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#adbe93978e06be3867f8a7a77c3f80006">to_length</a> (const std::string &amp;str)</td></tr>
+<tr class="memdesc:adbe93978e06be3867f8a7a77c3f80006"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the length from the given string, or NaN on error.  <br /></td></tr>
+<tr class="memitem:a5a0610eb508fb1e51b1bcccbc1e97e56" id="r_a5a0610eb508fb1e51b1bcccbc1e97e56"><td class="memItemLeft" align="right" valign="top"><a class="el" href="conversions_8h.html#a587e21dda1f72be700a6206023ad681b">FUNC</a> time&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5a0610eb508fb1e51b1bcccbc1e97e56">to_time</a> (const std::string &amp;str)</td></tr>
+<tr class="memdesc:a5a0610eb508fb1e51b1bcccbc1e97e56"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the time from the given string, or NaN on error.  <br /></td></tr>
+<tr class="memitem:ad9245f979555f68366dc2ded3731a27e" id="r_ad9245f979555f68366dc2ded3731a27e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="conversions_8h.html#a587e21dda1f72be700a6206023ad681b">FUNC</a> mass&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad9245f979555f68366dc2ded3731a27e">to_mass</a> (const std::string &amp;str)</td></tr>
+<tr class="memdesc:ad9245f979555f68366dc2ded3731a27e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the mass from the given string, or NaN on error.  <br /></td></tr>
 <tr class="memitem:a142a9d1e8e311d857090cd95de38ec55" id="r_a142a9d1e8e311d857090cd95de38ec55"><td class="memItemLeft" align="right" valign="top"><a class="el" href="conversions_8h.html#a587e21dda1f72be700a6206023ad681b">FUNC</a> std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a142a9d1e8e311d857090cd95de38ec55">_fmt</a> (long double quantity, const char *<a class="el" href="#afc854336cdf33375eefdf89efbcfeb14">unit</a>, const char *formatString)</td></tr>
 <tr class="memdesc:a142a9d1e8e311d857090cd95de38ec55"><td class="mdescLeft">&#160;</td><td class="mdescRight">Internal function to format quantity and unit into a string by using a format string.  <br /></td></tr>
 <tr class="memitem:adf2f6632ed599d8cbd4c2b2f328dda3a" id="r_adf2f6632ed599d8cbd4c2b2f328dda3a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="conversions_8h.html#a587e21dda1f72be700a6206023ad681b">FUNC</a> std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#adf2f6632ed599d8cbd4c2b2f328dda3a">to_string</a> (length d, const char *fmtStr=<a class="el" href="#a42c786f5e1225e5e6c0150bbe317a509">to_string_format</a>)</td></tr>
@@ -246,8 +248,8 @@ Functions</h2></td></tr>
 <tr class="memitem:aaa47ca9d8bf167b6ebe7a753216e0111" id="r_aaa47ca9d8bf167b6ebe7a753216e0111"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aaa47ca9d8bf167b6ebe7a753216e0111">TYPE</a> (per_substance, 0, 0, 0, 0, 0,-1, 0, 0)</td></tr>
 <tr class="memitem:a3bd5aa55b245c1284ddfb62856955363" id="r_a3bd5aa55b245c1284ddfb62856955363"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3bd5aa55b245c1284ddfb62856955363">TYPE</a> (digital_size, 0, 0, 0, 0, 0, 0, 0, 1)</td></tr>
 <tr class="memitem:ab3a9bd7d0860c73edad02d2aeed9b1f1" id="r_ab3a9bd7d0860c73edad02d2aeed9b1f1"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab3a9bd7d0860c73edad02d2aeed9b1f1">TYPE</a> (digital_speed, 0, 0,-1, 0, 0, 0, 0, 1)</td></tr>
-<tr class="memitem:a01682b4a12785c09aec2abdb61693cf2" id="r_a01682b4a12785c09aec2abdb61693cf2"><td class="memItemLeft" align="right" valign="top"><a class="el" href="conversions_8h.html#a587e21dda1f72be700a6206023ad681b">FUNC</a> length&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a01682b4a12785c09aec2abdb61693cf2">hypotenuse_of_triangle_formula</a> (length a, length b)</td></tr>
-<tr class="memdesc:a01682b4a12785c09aec2abdb61693cf2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculates the hypotenuse in a right triangle, based on Pythagorean equation: a² + b² = c²  <br /></td></tr>
+<tr class="memitem:a116bbef303844e8ce69be661331ad7e9" id="r_a116bbef303844e8ce69be661331ad7e9"><td class="memItemLeft" align="right" valign="top"><a class="el" href="conversions_8h.html#a587e21dda1f72be700a6206023ad681b">FUNC</a> length&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a116bbef303844e8ce69be661331ad7e9">hypotenuse_formula</a> (length a, length b)</td></tr>
+<tr class="memdesc:a116bbef303844e8ce69be661331ad7e9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculates the hypotenuse of a right triangle, based on Pythagorean equation: a² + b² = c²  <br /></td></tr>
 <tr class="memitem:a328bdc8ed43ee839c4f13ba2b56c0e7e" id="r_a328bdc8ed43ee839c4f13ba2b56c0e7e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="conversions_8h.html#a587e21dda1f72be700a6206023ad681b">FUNC</a> <a class="el" href="#a9b2a47aeba771734637d7fbff1f361b5">angle</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a328bdc8ed43ee839c4f13ba2b56c0e7e">angle1_in_triangle_formula</a> (length o, length h)</td></tr>
 <tr class="memdesc:a328bdc8ed43ee839c4f13ba2b56c0e7e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculates the angle in a right triangle from opposite (o) and hypotenuse (h).  <br /></td></tr>
 <tr class="memitem:ad8de5bb21140d6af6853b6c536bbd2fc" id="r_ad8de5bb21140d6af6853b6c536bbd2fc"><td class="memItemLeft" align="right" valign="top"><a class="el" href="conversions_8h.html#a587e21dda1f72be700a6206023ad681b">FUNC</a> <a class="el" href="#a9b2a47aeba771734637d7fbff1f361b5">angle</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad8de5bb21140d6af6853b6c536bbd2fc">angle2_in_triangle_formula</a> (length a, length h)</td></tr>
@@ -460,25 +462,25 @@ Functions</h2></td></tr>
 <tr class="memitem:a570e2702a2617f0d26efaed09bd21e6e" id="r_a570e2702a2617f0d26efaed09bd21e6e"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a570e2702a2617f0d26efaed09bd21e6e">UDL</a> (_fmol, 1e-15, moles)</td></tr>
 <tr class="memitem:a49ddd9fd0e59578b985744c5c3814e47" id="r_a49ddd9fd0e59578b985744c5c3814e47"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a49ddd9fd0e59578b985744c5c3814e47">UDL</a> (_kcd, 1e3, candelas)</td></tr>
 <tr class="memitem:aced60ad1b13e372ea7b1a268cd553538" id="r_aced60ad1b13e372ea7b1a268cd553538"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aced60ad1b13e372ea7b1a268cd553538">UDL</a> (_cd, 1, candelas)</td></tr>
-<tr class="memitem:ab5f92d18fffe91165b94ab19257aa275" id="r_ab5f92d18fffe91165b94ab19257aa275"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab5f92d18fffe91165b94ab19257aa275">UDL</a> (_km², 1e6, meters2)</td></tr>
-<tr class="memitem:aae1fac3ffbf9d0ada5eb59ba11bdfc81" id="r_aae1fac3ffbf9d0ada5eb59ba11bdfc81"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aae1fac3ffbf9d0ada5eb59ba11bdfc81">UDL</a> (_hm², 1e4, meters2)</td></tr>
-<tr class="memitem:a4c0e86a14b48e4db3a73ed2fd9d2a634" id="r_a4c0e86a14b48e4db3a73ed2fd9d2a634"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4c0e86a14b48e4db3a73ed2fd9d2a634">UDL</a> (_m², 1, meters2)</td></tr>
-<tr class="memitem:a2fe9859ff4beb36a90dd7f7a35abd7ed" id="r_a2fe9859ff4beb36a90dd7f7a35abd7ed"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2fe9859ff4beb36a90dd7f7a35abd7ed">UDL</a> (_cm², 1e-4, meters2)</td></tr>
-<tr class="memitem:a00ee7552e2915ebd5c6ace3237333ae3" id="r_a00ee7552e2915ebd5c6ace3237333ae3"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a00ee7552e2915ebd5c6ace3237333ae3">UDL</a> (_mm², 1e-6, meters2)</td></tr>
-<tr class="memitem:aacc1102accf0b3bed9da0bcc3d53bd05" id="r_aacc1102accf0b3bed9da0bcc3d53bd05"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aacc1102accf0b3bed9da0bcc3d53bd05">UDL</a> (_um², 1e-12, meters2)</td></tr>
-<tr class="memitem:ab2fb99f6d39435bc98ac4fb8d904bdb7" id="r_ab2fb99f6d39435bc98ac4fb8d904bdb7"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab2fb99f6d39435bc98ac4fb8d904bdb7">UDL</a> (_per_km², 1e-6, per_meter2)</td></tr>
-<tr class="memitem:a84dd409712126460cb4841f6859afd64" id="r_a84dd409712126460cb4841f6859afd64"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a84dd409712126460cb4841f6859afd64">UDL</a> (_per_hm², 1e-4, per_meter2)</td></tr>
-<tr class="memitem:a48c8bc934a49286b74104455497222e2" id="r_a48c8bc934a49286b74104455497222e2"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a48c8bc934a49286b74104455497222e2">UDL</a> (_per_m², 1, per_meter2)</td></tr>
-<tr class="memitem:a1a14931cbbed64c2108a5efcf1cc32d5" id="r_a1a14931cbbed64c2108a5efcf1cc32d5"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1a14931cbbed64c2108a5efcf1cc32d5">UDL</a> (_per_cm², 1e4, per_meter2)</td></tr>
-<tr class="memitem:a9e019f902c460f358751771e146b8376" id="r_a9e019f902c460f358751771e146b8376"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9e019f902c460f358751771e146b8376">UDL</a> (_per_mm², 1e6, per_meter2)</td></tr>
-<tr class="memitem:afa687c11f080b468572992c3cf256577" id="r_afa687c11f080b468572992c3cf256577"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#afa687c11f080b468572992c3cf256577">UDL</a> (_per_μm², 1e12, per_meter2)</td></tr>
-<tr class="memitem:aa8fd5f6dbba2a0936d8b6a27c1b9abf1" id="r_aa8fd5f6dbba2a0936d8b6a27c1b9abf1"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa8fd5f6dbba2a0936d8b6a27c1b9abf1">UDL</a> (_m²_per_s, 1, meters2_per_second)</td></tr>
-<tr class="memitem:a2855ed2689998f9dc5dbd1862d19d3c6" id="r_a2855ed2689998f9dc5dbd1862d19d3c6"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2855ed2689998f9dc5dbd1862d19d3c6">UDL</a> (_km³, 1e9, meters3)</td></tr>
-<tr class="memitem:ac2558f0cc30621171bfd9225b12606e9" id="r_ac2558f0cc30621171bfd9225b12606e9"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac2558f0cc30621171bfd9225b12606e9">UDL</a> (_m³, 1, meters3)</td></tr>
-<tr class="memitem:ac7e5b8f6649a2960570f6f1d2fc89a35" id="r_ac7e5b8f6649a2960570f6f1d2fc89a35"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac7e5b8f6649a2960570f6f1d2fc89a35">UDL</a> (_dm³, 1e-3, meters3)</td></tr>
-<tr class="memitem:a4b9c716e8a3269018b4d98f241d021a8" id="r_a4b9c716e8a3269018b4d98f241d021a8"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4b9c716e8a3269018b4d98f241d021a8">UDL</a> (_cm³, 1e-6, meters3)</td></tr>
-<tr class="memitem:abe624eff23c854d39305d25a0d8dca93" id="r_abe624eff23c854d39305d25a0d8dca93"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#abe624eff23c854d39305d25a0d8dca93">UDL</a> (_mm³, 1e-9, meters3)</td></tr>
-<tr class="memitem:ad4d9d7dc4e98b9361e348d3067615d06" id="r_ad4d9d7dc4e98b9361e348d3067615d06"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad4d9d7dc4e98b9361e348d3067615d06">UDL</a> (_um³, 1e-18, meters3)</td></tr>
+<tr class="memitem:aa068c183452292bf1e28532018224843" id="r_aa068c183452292bf1e28532018224843"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa068c183452292bf1e28532018224843">UDL</a> (_km2, 1e6, meters2)</td></tr>
+<tr class="memitem:aae7449545d53a1f242e9aa141308545c" id="r_aae7449545d53a1f242e9aa141308545c"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aae7449545d53a1f242e9aa141308545c">UDL</a> (_hm2, 1e4, meters2)</td></tr>
+<tr class="memitem:aaecb36aeee0d75aa198d29d6a5fdd802" id="r_aaecb36aeee0d75aa198d29d6a5fdd802"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aaecb36aeee0d75aa198d29d6a5fdd802">UDL</a> (_m2, 1, meters2)</td></tr>
+<tr class="memitem:a794240379fce2c9e596f71ec7021bf64" id="r_a794240379fce2c9e596f71ec7021bf64"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a794240379fce2c9e596f71ec7021bf64">UDL</a> (_cm2, 1e-4, meters2)</td></tr>
+<tr class="memitem:aff4b3116ca43dc394a82cae3fd886954" id="r_aff4b3116ca43dc394a82cae3fd886954"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aff4b3116ca43dc394a82cae3fd886954">UDL</a> (_mm2, 1e-6, meters2)</td></tr>
+<tr class="memitem:ada3ccd2d353544699ad9b24d6d968829" id="r_ada3ccd2d353544699ad9b24d6d968829"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ada3ccd2d353544699ad9b24d6d968829">UDL</a> (_um2, 1e-12, meters2)</td></tr>
+<tr class="memitem:ac006876145cbca600988a372cf477ba7" id="r_ac006876145cbca600988a372cf477ba7"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac006876145cbca600988a372cf477ba7">UDL</a> (_per_km2, 1e-6, per_meter2)</td></tr>
+<tr class="memitem:a14c97fd8e428a371a50afe9d2989c4ea" id="r_a14c97fd8e428a371a50afe9d2989c4ea"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a14c97fd8e428a371a50afe9d2989c4ea">UDL</a> (_per_hm2, 1e-4, per_meter2)</td></tr>
+<tr class="memitem:adedf9561a2ec2804f6b06ee61dc91d44" id="r_adedf9561a2ec2804f6b06ee61dc91d44"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#adedf9561a2ec2804f6b06ee61dc91d44">UDL</a> (_per_m2, 1, per_meter2)</td></tr>
+<tr class="memitem:adeb0add34ab2b79c6fd90560e299c6fe" id="r_adeb0add34ab2b79c6fd90560e299c6fe"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#adeb0add34ab2b79c6fd90560e299c6fe">UDL</a> (_per_cm2, 1e4, per_meter2)</td></tr>
+<tr class="memitem:a4111ae11ba6b16d12fef40dbeb189032" id="r_a4111ae11ba6b16d12fef40dbeb189032"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4111ae11ba6b16d12fef40dbeb189032">UDL</a> (_per_mm2, 1e6, per_meter2)</td></tr>
+<tr class="memitem:afee38bb6ca10afde92bd9a34b7205923" id="r_afee38bb6ca10afde92bd9a34b7205923"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#afee38bb6ca10afde92bd9a34b7205923">UDL</a> (_per_μm2, 1e12, per_meter2)</td></tr>
+<tr class="memitem:a7b4f39bc685195a52c9a3adb1250bd1a" id="r_a7b4f39bc685195a52c9a3adb1250bd1a"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7b4f39bc685195a52c9a3adb1250bd1a">UDL</a> (_m2_per_s, 1, meters2_per_second)</td></tr>
+<tr class="memitem:a695d865121d07dd2ec6aa87ac215bb3a" id="r_a695d865121d07dd2ec6aa87ac215bb3a"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a695d865121d07dd2ec6aa87ac215bb3a">UDL</a> (_km3, 1e9, meters3)</td></tr>
+<tr class="memitem:a447779872e93021eacb2f2b38bcbe3b4" id="r_a447779872e93021eacb2f2b38bcbe3b4"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a447779872e93021eacb2f2b38bcbe3b4">UDL</a> (_m3, 1, meters3)</td></tr>
+<tr class="memitem:a79fc15b3e51901e85332771b7c4ca163" id="r_a79fc15b3e51901e85332771b7c4ca163"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a79fc15b3e51901e85332771b7c4ca163">UDL</a> (_dm3, 1e-3, meters3)</td></tr>
+<tr class="memitem:a10446ab49ee68d6904826a2e3c1a0f01" id="r_a10446ab49ee68d6904826a2e3c1a0f01"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a10446ab49ee68d6904826a2e3c1a0f01">UDL</a> (_cm3, 1e-6, meters3)</td></tr>
+<tr class="memitem:a010b1ebbc80034dceed62c858fea0d23" id="r_a010b1ebbc80034dceed62c858fea0d23"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a010b1ebbc80034dceed62c858fea0d23">UDL</a> (_mm3, 1e-9, meters3)</td></tr>
+<tr class="memitem:aaa21c398401d5e077ad8ed1eec900f8e" id="r_aaa21c398401d5e077ad8ed1eec900f8e"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aaa21c398401d5e077ad8ed1eec900f8e">UDL</a> (_um3, 1e-18, meters3)</td></tr>
 <tr class="memitem:a8261bd5f9d8132eefd9b45497552843a" id="r_a8261bd5f9d8132eefd9b45497552843a"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8261bd5f9d8132eefd9b45497552843a">UDL</a> (_Ml, 1e3, meters3)</td></tr>
 <tr class="memitem:ac84fb72c6b5b8ed5e1d5a5858ccaa9bc" id="r_ac84fb72c6b5b8ed5e1d5a5858ccaa9bc"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac84fb72c6b5b8ed5e1d5a5858ccaa9bc">UDL</a> (_kl, 1, meters3)</td></tr>
 <tr class="memitem:ac1789e12d42ec34c95f70b92055a8104" id="r_ac1789e12d42ec34c95f70b92055a8104"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac1789e12d42ec34c95f70b92055a8104">UDL</a> (_hl, 0.1, meters3)</td></tr>
@@ -487,7 +489,7 @@ Functions</h2></td></tr>
 <tr class="memitem:a18a41ef3c573287600d0253a8f73c665" id="r_a18a41ef3c573287600d0253a8f73c665"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a18a41ef3c573287600d0253a8f73c665">UDL</a> (_ul, 1e-9, meters3)</td></tr>
 <tr class="memitem:ac0539d2671f634290e5a4a53e839160a" id="r_ac0539d2671f634290e5a4a53e839160a"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac0539d2671f634290e5a4a53e839160a">UDL</a> (_nl, 1e-12, meters3)</td></tr>
 <tr class="memitem:a858549ce807a93b2baefd1554126ebed" id="r_a858549ce807a93b2baefd1554126ebed"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a858549ce807a93b2baefd1554126ebed">UDL</a> (_pl, 1e-15, meters3)</td></tr>
-<tr class="memitem:a4668d25423820679478072ffc2fd7036" id="r_a4668d25423820679478072ffc2fd7036"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4668d25423820679478072ffc2fd7036">UDL</a> (_m³_per_s, 1, meters3_per_second)</td></tr>
+<tr class="memitem:a81683b4cfe11166da872da05519859ca" id="r_a81683b4cfe11166da872da05519859ca"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a81683b4cfe11166da872da05519859ca">UDL</a> (_m3_per_s, 1, meters3_per_second)</td></tr>
 <tr class="memitem:a14242d4e03496f5900c6fb9d86f0f45b" id="r_a14242d4e03496f5900c6fb9d86f0f45b"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a14242d4e03496f5900c6fb9d86f0f45b">UDL</a> (_l_per_min, 1.0/60000.0, meters3_per_second)</td></tr>
 <tr class="memitem:acb043a9f0da81f37a51704bb21a5677b" id="r_acb043a9f0da81f37a51704bb21a5677b"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#acb043a9f0da81f37a51704bb21a5677b">UDL</a> (_l_per_s, 1e-3, meters3_per_second)</td></tr>
 <tr class="memitem:a7ba08162a5bcfdf667f1aa6a41b622a5" id="r_a7ba08162a5bcfdf667f1aa6a41b622a5"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7ba08162a5bcfdf667f1aa6a41b622a5">UDL</a> (_km_per_s, 1e3, meters_per_second)</td></tr>
@@ -496,8 +498,8 @@ Functions</h2></td></tr>
 <tr class="memitem:a8909202c77ba9f9b420eb4809113c1ad" id="r_a8909202c77ba9f9b420eb4809113c1ad"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8909202c77ba9f9b420eb4809113c1ad">UDL</a> (_km_per_h, 1e3, meters_per_hour)</td></tr>
 <tr class="memitem:ac55c5623728f210c19884cac0ed64c1e" id="r_ac55c5623728f210c19884cac0ed64c1e"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac55c5623728f210c19884cac0ed64c1e">UDL</a> (_m_per_h, 1, meters_per_hour)</td></tr>
 <tr class="memitem:abc9540ee0d2f68193a0c24d1bf5299ff" id="r_abc9540ee0d2f68193a0c24d1bf5299ff"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#abc9540ee0d2f68193a0c24d1bf5299ff">UDL</a> (_mm_per_h, 1e-3, meters_per_hour)</td></tr>
-<tr class="memitem:a203b321b9298245c044f9dbd3efa4be8" id="r_a203b321b9298245c044f9dbd3efa4be8"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a203b321b9298245c044f9dbd3efa4be8">UDL</a> (_km_per_s², 1e3, meters_per_second2)</td></tr>
-<tr class="memitem:a3a469468ca0ea1d3fa9c795843018601" id="r_a3a469468ca0ea1d3fa9c795843018601"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3a469468ca0ea1d3fa9c795843018601">UDL</a> (_m_per_s², 1, meters_per_second2)</td></tr>
+<tr class="memitem:ac163f7a55602c167d97a2a8bc88ff88e" id="r_ac163f7a55602c167d97a2a8bc88ff88e"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac163f7a55602c167d97a2a8bc88ff88e">UDL</a> (_km_per_s2, 1e3, meters_per_second2)</td></tr>
+<tr class="memitem:aa9630a5bda4776b859e53b07b2e7bd3e" id="r_aa9630a5bda4776b859e53b07b2e7bd3e"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa9630a5bda4776b859e53b07b2e7bd3e">UDL</a> (_m_per_s2, 1, meters_per_second2)</td></tr>
 <tr class="memitem:a78d58ab71ebb3cdd9b3f3fd5ba3a8c00" id="r_a78d58ab71ebb3cdd9b3f3fd5ba3a8c00"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a78d58ab71ebb3cdd9b3f3fd5ba3a8c00">UDL</a> (_PHz, 1e15, hertz)</td></tr>
 <tr class="memitem:aefdb93f89830beba90453292026ed5f5" id="r_aefdb93f89830beba90453292026ed5f5"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aefdb93f89830beba90453292026ed5f5">UDL</a> (_THz, 1e12, hertz)</td></tr>
 <tr class="memitem:ad008ac28036c5e614cc2480bf972bad0" id="r_ad008ac28036c5e614cc2480bf972bad0"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad008ac28036c5e614cc2480bf972bad0">UDL</a> (_GHz, 1e9, hertz)</td></tr>
@@ -517,16 +519,16 @@ Functions</h2></td></tr>
 <tr class="memitem:a2d7f03c860a3bb9570189835e0df0d50" id="r_a2d7f03c860a3bb9570189835e0df0d50"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2d7f03c860a3bb9570189835e0df0d50">UDL</a> (_Sv, 1, sieverts)</td></tr>
 <tr class="memitem:a2dc1e6b21555c7728946d76a29de4edc" id="r_a2dc1e6b21555c7728946d76a29de4edc"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2dc1e6b21555c7728946d76a29de4edc">UDL</a> (_mSv, 1e-3, sieverts)</td></tr>
 <tr class="memitem:ac1479115e08b9a031a642f12a444ecb7" id="r_ac1479115e08b9a031a642f12a444ecb7"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac1479115e08b9a031a642f12a444ecb7">UDL</a> (_uSv, 1e-6, sieverts)</td></tr>
-<tr class="memitem:af77945ff95f68213f6ddcedb164c0a29" id="r_af77945ff95f68213f6ddcedb164c0a29"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af77945ff95f68213f6ddcedb164c0a29">UDL</a> (_t_per_m², 1e3, kilograms_per_meter2)</td></tr>
-<tr class="memitem:a4a76bea637a5f78821b1980ec66ce720" id="r_a4a76bea637a5f78821b1980ec66ce720"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4a76bea637a5f78821b1980ec66ce720">UDL</a> (_kg_per_m², 1, kilograms_per_meter2)</td></tr>
-<tr class="memitem:a454fbe81cd45c7c47b7d59859091ecf9" id="r_a454fbe81cd45c7c47b7d59859091ecf9"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a454fbe81cd45c7c47b7d59859091ecf9">UDL</a> (_g_per_m², 1e-3, kilograms_per_meter2)</td></tr>
-<tr class="memitem:a92ece7bf8544c7e3d3f20a16d6291192" id="r_a92ece7bf8544c7e3d3f20a16d6291192"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a92ece7bf8544c7e3d3f20a16d6291192">UDL</a> (_mg_per_m², 1e-6, kilograms_per_meter2)</td></tr>
-<tr class="memitem:ac3afbc5a7c5c103b199e22d166feca5e" id="r_ac3afbc5a7c5c103b199e22d166feca5e"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac3afbc5a7c5c103b199e22d166feca5e">UDL</a> (_kg_per_cm³, 1e6, kilograms_per_meter3)</td></tr>
-<tr class="memitem:a11b04bae6db110ae5751f71e779bff56" id="r_a11b04bae6db110ae5751f71e779bff56"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a11b04bae6db110ae5751f71e779bff56">UDL</a> (_t_per_m³, 1e3, kilograms_per_meter3)</td></tr>
-<tr class="memitem:ac27d0da83049460e50bf635fa34af721" id="r_ac27d0da83049460e50bf635fa34af721"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac27d0da83049460e50bf635fa34af721">UDL</a> (_g_per_cm³, 1e3, kilograms_per_meter3)</td></tr>
-<tr class="memitem:a6d8384b52e354ac0338d09c7b6f2c5d0" id="r_a6d8384b52e354ac0338d09c7b6f2c5d0"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6d8384b52e354ac0338d09c7b6f2c5d0">UDL</a> (_kg_per_m³, 1, kilograms_per_meter3)</td></tr>
-<tr class="memitem:aa9a86b3c413c8927715cca822da719fd" id="r_aa9a86b3c413c8927715cca822da719fd"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa9a86b3c413c8927715cca822da719fd">UDL</a> (_g_per_m³, 1e-3, kilograms_per_meter3)</td></tr>
-<tr class="memitem:af26939064f4884730bdd7926eaafc066" id="r_af26939064f4884730bdd7926eaafc066"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af26939064f4884730bdd7926eaafc066">UDL</a> (_mg_per_m³, 1e-6, kilograms_per_meter3)</td></tr>
+<tr class="memitem:a3617e6f70fb9b447b94776ae2c8da8ca" id="r_a3617e6f70fb9b447b94776ae2c8da8ca"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3617e6f70fb9b447b94776ae2c8da8ca">UDL</a> (_t_per_m2, 1e3, kilograms_per_meter2)</td></tr>
+<tr class="memitem:a1e47a9b65da93b10ad6f3e625ebaecd4" id="r_a1e47a9b65da93b10ad6f3e625ebaecd4"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1e47a9b65da93b10ad6f3e625ebaecd4">UDL</a> (_kg_per_m2, 1, kilograms_per_meter2)</td></tr>
+<tr class="memitem:af7d5c709958e5ae34a2cfb180686f59e" id="r_af7d5c709958e5ae34a2cfb180686f59e"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af7d5c709958e5ae34a2cfb180686f59e">UDL</a> (_g_per_m2, 1e-3, kilograms_per_meter2)</td></tr>
+<tr class="memitem:a8290299d462e748326cb9727e8557915" id="r_a8290299d462e748326cb9727e8557915"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8290299d462e748326cb9727e8557915">UDL</a> (_mg_per_m2, 1e-6, kilograms_per_meter2)</td></tr>
+<tr class="memitem:a32a65f25fe3aa35ea64e68d3b563de43" id="r_a32a65f25fe3aa35ea64e68d3b563de43"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a32a65f25fe3aa35ea64e68d3b563de43">UDL</a> (_kg_per_cm3, 1e6, kilograms_per_meter3)</td></tr>
+<tr class="memitem:a5e181de0fa65947e63654271c9a7009e" id="r_a5e181de0fa65947e63654271c9a7009e"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5e181de0fa65947e63654271c9a7009e">UDL</a> (_t_per_m3, 1e3, kilograms_per_meter3)</td></tr>
+<tr class="memitem:a2655d02b737166279736b13996337f93" id="r_a2655d02b737166279736b13996337f93"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2655d02b737166279736b13996337f93">UDL</a> (_g_per_cm3, 1e3, kilograms_per_meter3)</td></tr>
+<tr class="memitem:ab6ada9e383d1973af303e4bf387427c3" id="r_ab6ada9e383d1973af303e4bf387427c3"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab6ada9e383d1973af303e4bf387427c3">UDL</a> (_kg_per_m3, 1, kilograms_per_meter3)</td></tr>
+<tr class="memitem:a01a7fa42950f9b3b7c16147ca96db4e3" id="r_a01a7fa42950f9b3b7c16147ca96db4e3"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a01a7fa42950f9b3b7c16147ca96db4e3">UDL</a> (_g_per_m3, 1e-3, kilograms_per_meter3)</td></tr>
+<tr class="memitem:aaf74986d5d20d8c6397fa0655d322273" id="r_aaf74986d5d20d8c6397fa0655d322273"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aaf74986d5d20d8c6397fa0655d322273">UDL</a> (_mg_per_m3, 1e-6, kilograms_per_meter3)</td></tr>
 <tr class="memitem:ababc0fca7085951733fc7a57fb8ba83b" id="r_ababc0fca7085951733fc7a57fb8ba83b"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ababc0fca7085951733fc7a57fb8ba83b">UDL</a> (_GV, 1e9, volts)</td></tr>
 <tr class="memitem:ab4189a9d324c1eac17c670aa76ebd688" id="r_ab4189a9d324c1eac17c670aa76ebd688"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab4189a9d324c1eac17c670aa76ebd688">UDL</a> (_MV, 1e6, volts)</td></tr>
 <tr class="memitem:a2000d120d8d399b6e3329045e6572781" id="r_a2000d120d8d399b6e3329045e6572781"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2000d120d8d399b6e3329045e6572781">UDL</a> (_kV, 1e3, volts)</td></tr>
@@ -608,11 +610,11 @@ Functions</h2></td></tr>
 <tr class="memitem:adf9814e7886352025b694504c0a68839" id="r_adf9814e7886352025b694504c0a68839"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#adf9814e7886352025b694504c0a68839">UDL</a> (_Wh, 3.6e3, watts)</td></tr>
 <tr class="memitem:a8267e2a34f0c79a92af78c0fbeef8ca3" id="r_a8267e2a34f0c79a92af78c0fbeef8ca3"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8267e2a34f0c79a92af78c0fbeef8ca3">UDL</a> (_kWh_per_kg, 3.6e6, joules_per_second_per_kilogram)</td></tr>
 <tr class="memitem:a7e7af6500683c39ec3a7bf0fd6c12091" id="r_a7e7af6500683c39ec3a7bf0fd6c12091"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7e7af6500683c39ec3a7bf0fd6c12091">UDL</a> (_Wh_per_kg, 3.6e3, joules_per_second_per_kilogram)</td></tr>
-<tr class="memitem:aa040517a693d123cde678e887da72e8c" id="r_aa040517a693d123cde678e887da72e8c"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa040517a693d123cde678e887da72e8c">UDL</a> (_MW_per_m², 1e6, watts_per_meter2)</td></tr>
-<tr class="memitem:a51984591727980b8b6bc44fbd1b766e3" id="r_a51984591727980b8b6bc44fbd1b766e3"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a51984591727980b8b6bc44fbd1b766e3">UDL</a> (_kW_per_m², 1e3, watts_per_meter2)</td></tr>
-<tr class="memitem:a6b5225cbd7b942657b785a99d4ff7d70" id="r_a6b5225cbd7b942657b785a99d4ff7d70"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6b5225cbd7b942657b785a99d4ff7d70">UDL</a> (_W_per_m², 1, watts_per_meter2)</td></tr>
-<tr class="memitem:aeb16c99b25fcdd3b11dd9633ed3400e3" id="r_aeb16c99b25fcdd3b11dd9633ed3400e3"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aeb16c99b25fcdd3b11dd9633ed3400e3">UDL</a> (_mW_per_m², 1e-3, watts_per_meter2)</td></tr>
-<tr class="memitem:a83f4e497b73b6f6ed23987cc7e92740e" id="r_a83f4e497b73b6f6ed23987cc7e92740e"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a83f4e497b73b6f6ed23987cc7e92740e">UDL</a> (_uW_per_m², 1e-6, watts_per_meter2)</td></tr>
+<tr class="memitem:ac3f15a978485ef629a012fecfbe96e94" id="r_ac3f15a978485ef629a012fecfbe96e94"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac3f15a978485ef629a012fecfbe96e94">UDL</a> (_MW_per_m2, 1e6, watts_per_meter2)</td></tr>
+<tr class="memitem:a6f6d7adacf747d1832bc923b78418470" id="r_a6f6d7adacf747d1832bc923b78418470"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6f6d7adacf747d1832bc923b78418470">UDL</a> (_kW_per_m2, 1e3, watts_per_meter2)</td></tr>
+<tr class="memitem:a07dd6fa9ff0ad3a964f7e11ef2638474" id="r_a07dd6fa9ff0ad3a964f7e11ef2638474"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a07dd6fa9ff0ad3a964f7e11ef2638474">UDL</a> (_W_per_m2, 1, watts_per_meter2)</td></tr>
+<tr class="memitem:ac793e22e4aac840c9378e87edb18e2e8" id="r_ac793e22e4aac840c9378e87edb18e2e8"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac793e22e4aac840c9378e87edb18e2e8">UDL</a> (_mW_per_m2, 1e-3, watts_per_meter2)</td></tr>
+<tr class="memitem:abc8f046b9fd207bcb113f4e095278fb8" id="r_abc8f046b9fd207bcb113f4e095278fb8"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#abc8f046b9fd207bcb113f4e095278fb8">UDL</a> (_uW_per_m2, 1e-6, watts_per_meter2)</td></tr>
 <tr class="memitem:aea04980138bf54cc0b16e21f51e406b9" id="r_aea04980138bf54cc0b16e21f51e406b9"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aea04980138bf54cc0b16e21f51e406b9">UDL</a> (_GPa, 1e9, pascals)</td></tr>
 <tr class="memitem:a0e8c2c3091437f26b768981bb22b130a" id="r_a0e8c2c3091437f26b768981bb22b130a"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0e8c2c3091437f26b768981bb22b130a">UDL</a> (_MPa, 1e6, pascals)</td></tr>
 <tr class="memitem:af64469c22fe7c322fd7a593ce1b431a7" id="r_af64469c22fe7c322fd7a593ce1b431a7"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af64469c22fe7c322fd7a593ce1b431a7">UDL</a> (_kPa, 1e3, pascals)</td></tr>
@@ -647,7 +649,7 @@ Functions</h2></td></tr>
 <tr class="memitem:afa89cfdf19f8cb47d9dd7d42c1c63d7d" id="r_afa89cfdf19f8cb47d9dd7d42c1c63d7d"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#afa89cfdf19f8cb47d9dd7d42c1c63d7d">UDL</a> (_nkat, 1e-9, mols_per_second)</td></tr>
 <tr class="memitem:a7b4fc8782b4b58ad3f88a9ac0bf59c5c" id="r_a7b4fc8782b4b58ad3f88a9ac0bf59c5c"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7b4fc8782b4b58ad3f88a9ac0bf59c5c">UDL</a> (_Nm, 1, newtonmeters)</td></tr>
 <tr class="memitem:aeaa6fb00383b5d98b60abc4c48fee917" id="r_aeaa6fb00383b5d98b60abc4c48fee917"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aeaa6fb00383b5d98b60abc4c48fee917">UDL</a> (_sr, 1, steradians)</td></tr>
-<tr class="memitem:a6aa79391dda3bef3913e5a8a8cf72803" id="r_a6aa79391dda3bef3913e5a8a8cf72803"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6aa79391dda3bef3913e5a8a8cf72803">UDL</a> (_km³_per_s², 1e9, meters3_per_second2)</td></tr>
+<tr class="memitem:a26108a948c8f5b4d14e30852eb0a92c8" id="r_a26108a948c8f5b4d14e30852eb0a92c8"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a26108a948c8f5b4d14e30852eb0a92c8">UDL</a> (_km3_per_s2, 1e9, meters3_per_second2)</td></tr>
 <tr class="memitem:aed7a02890d78524e4fb3cad3e456ab54" id="r_aed7a02890d78524e4fb3cad3e456ab54"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aed7a02890d78524e4fb3cad3e456ab54">UDL</a> (_kg_per_mol, 1, kilograms_per_mol)</td></tr>
 <tr class="memitem:a3a0c0d210de94c9b53ce75fa6e2ee294" id="r_a3a0c0d210de94c9b53ce75fa6e2ee294"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3a0c0d210de94c9b53ce75fa6e2ee294">UDL</a> (_kg_per_W, 1, kilograms_per_watt)</td></tr>
 <tr class="memitem:a25dd8a625e31a7101f7b26cc7693eb6c" id="r_a25dd8a625e31a7101f7b26cc7693eb6c"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a25dd8a625e31a7101f7b26cc7693eb6c">UDL</a> (_kg_per_kW, 1e-3, kilograms_per_watt)</td></tr>
@@ -853,12 +855,12 @@ Functions</h2></td></tr>
 <tr class="memitem:a0f5300da6570c5611c36ee39b300a8c3" id="r_a0f5300da6570c5611c36ee39b300a8c3"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0f5300da6570c5611c36ee39b300a8c3">UNIT</a> (knots)</td></tr>
 <tr class="memitem:a67a1b2c51aa7e94010e2fc26923e10f1" id="r_a67a1b2c51aa7e94010e2fc26923e10f1"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a67a1b2c51aa7e94010e2fc26923e10f1">UNIT</a> (bits)</td></tr>
 <tr class="memitem:a2f6597d486261efb99f0ce663e097300" id="r_a2f6597d486261efb99f0ce663e097300"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2f6597d486261efb99f0ce663e097300">UNIT</a> (bits_per_second)</td></tr>
-<tr class="memitem:a36f7f9b31e99def4222e6cc7b6590f9e" id="r_a36f7f9b31e99def4222e6cc7b6590f9e"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a36f7f9b31e99def4222e6cc7b6590f9e">UNIT</a> (bits_per_m²)</td></tr>
-<tr class="memitem:a7bd6d40862703c1ddceb01f071943e1e" id="r_a7bd6d40862703c1ddceb01f071943e1e"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7bd6d40862703c1ddceb01f071943e1e">UNIT</a> (bits_per_m³)</td></tr>
+<tr class="memitem:ab73502d529eddf66a65d43cb19ebf45c" id="r_ab73502d529eddf66a65d43cb19ebf45c"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab73502d529eddf66a65d43cb19ebf45c">UNIT</a> (bits_per_m2)</td></tr>
+<tr class="memitem:ad23adadb94306a946284c449facf159a" id="r_ad23adadb94306a946284c449facf159a"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad23adadb94306a946284c449facf159a">UNIT</a> (bits_per_m3)</td></tr>
 <tr class="memitem:acc56410c18cfefa6512fb81efe571356" id="r_acc56410c18cfefa6512fb81efe571356"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#acc56410c18cfefa6512fb81efe571356">UNIT</a> (bytes)</td></tr>
 <tr class="memitem:a0722699374a0b36b74f9996a5ad8f116" id="r_a0722699374a0b36b74f9996a5ad8f116"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0722699374a0b36b74f9996a5ad8f116">UNIT</a> (bytes_per_second)</td></tr>
-<tr class="memitem:a0b94358e48edb12d6fe0232b592759ee" id="r_a0b94358e48edb12d6fe0232b592759ee"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0b94358e48edb12d6fe0232b592759ee">UNIT</a> (bytes_per_m²)</td></tr>
-<tr class="memitem:ac7a9803b4b23b99f0ccf96dadddd0997" id="r_ac7a9803b4b23b99f0ccf96dadddd0997"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac7a9803b4b23b99f0ccf96dadddd0997">UNIT</a> (bytes_per_m³)</td></tr>
+<tr class="memitem:a8086c051cf05c1af3ae33a00fe4f2ce3" id="r_a8086c051cf05c1af3ae33a00fe4f2ce3"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8086c051cf05c1af3ae33a00fe4f2ce3">UNIT</a> (bytes_per_m2)</td></tr>
+<tr class="memitem:ab69136d2b392d2d4a32876df745c96ff" id="r_ab69136d2b392d2d4a32876df745c96ff"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab69136d2b392d2d4a32876df745c96ff">UNIT</a> (bytes_per_m3)</td></tr>
 <tr class="memitem:a2f9eb3deb33d783fa7c8fdd8a7343512" id="r_a2f9eb3deb33d783fa7c8fdd8a7343512"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2f9eb3deb33d783fa7c8fdd8a7343512">UNIT</a> (celsius)</td></tr>
 <tr class="memitem:ac0aff23b787603233fe5e7b2bdc6a2a9" id="r_ac0aff23b787603233fe5e7b2bdc6a2a9"><td class="memItemLeft" align="right" valign="top"><a class="el" href="#a9b2a47aeba771734637d7fbff1f361b5">angle</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac0aff23b787603233fe5e7b2bdc6a2a9">sin</a> (<a class="el" href="#a9b2a47aeba771734637d7fbff1f361b5">angle</a> a)</td></tr>
 <tr class="memdesc:ac0aff23b787603233fe5e7b2bdc6a2a9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculates the sinus of an angle (a).  <br /></td></tr>
@@ -2606,71 +2608,6 @@ template&lt;class Lhs, class Rhs, class = enable_for_si&lt;Lhs, Rhs&gt;&gt; </di
 
 </div>
 </div>
-<a id="aa38c7aaaf5987129c5da0c9eb604323a" name="aa38c7aaaf5987129c5da0c9eb604323a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa38c7aaaf5987129c5da0c9eb604323a">&#9670;&#160;</a></span>from_string() <span class="overload">[1/3]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="conversions_8h.html#a587e21dda1f72be700a6206023ad681b">FUNC</a> bool si::from_string </td>
-          <td>(</td>
-          <td class="paramtype">const std::string &amp;</td>          <td class="paramname"><span class="paramname"><em>str</em></span>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">length &amp;</td>          <td class="paramname"><span class="paramname"><em>result</em></span>&#160;)</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>The <a class="el" href="#aa38c7aaaf5987129c5da0c9eb604323a" title="The from_string() function.">from_string()</a> function. </p>
-
-</div>
-</div>
-<a id="a525d2c561df804ae6b2da9215973f2d0" name="a525d2c561df804ae6b2da9215973f2d0"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a525d2c561df804ae6b2da9215973f2d0">&#9670;&#160;</a></span>from_string() <span class="overload">[2/3]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="conversions_8h.html#a587e21dda1f72be700a6206023ad681b">FUNC</a> bool si::from_string </td>
-          <td>(</td>
-          <td class="paramtype">const std::string &amp;</td>          <td class="paramname"><span class="paramname"><em>str</em></span>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">mass &amp;</td>          <td class="paramname"><span class="paramname"><em>result</em></span>&#160;)</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="aecf609dbb8e02360bc3a27c1d514b729" name="aecf609dbb8e02360bc3a27c1d514b729"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aecf609dbb8e02360bc3a27c1d514b729">&#9670;&#160;</a></span>from_string() <span class="overload">[3/3]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="conversions_8h.html#a587e21dda1f72be700a6206023ad681b">FUNC</a> bool si::from_string </td>
-          <td>(</td>
-          <td class="paramtype">const std::string &amp;</td>          <td class="paramname"><span class="paramname"><em>str</em></span>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">time &amp;</td>          <td class="paramname"><span class="paramname"><em>result</em></span>&#160;)</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
 <a id="a4d4d053db12da3efa4595ccd56e6f81b" name="a4d4d053db12da3efa4595ccd56e6f81b"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a4d4d053db12da3efa4595ccd56e6f81b">&#9670;&#160;</a></span>glide_path_formula()</h2>
 
@@ -2796,14 +2733,14 @@ template&lt;class Lhs, class Rhs, class = enable_for_si&lt;Lhs, Rhs&gt;&gt; </di
 
 </div>
 </div>
-<a id="a01682b4a12785c09aec2abdb61693cf2" name="a01682b4a12785c09aec2abdb61693cf2"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a01682b4a12785c09aec2abdb61693cf2">&#9670;&#160;</a></span>hypotenuse_of_triangle_formula()</h2>
+<a id="a116bbef303844e8ce69be661331ad7e9" name="a116bbef303844e8ce69be661331ad7e9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a116bbef303844e8ce69be661331ad7e9">&#9670;&#160;</a></span>hypotenuse_formula()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="conversions_8h.html#a587e21dda1f72be700a6206023ad681b">FUNC</a> length si::hypotenuse_of_triangle_formula </td>
+          <td class="memname"><a class="el" href="conversions_8h.html#a587e21dda1f72be700a6206023ad681b">FUNC</a> length si::hypotenuse_formula </td>
           <td>(</td>
           <td class="paramtype">length</td>          <td class="paramname"><span class="paramname"><em>a</em></span>, </td>
         </tr>
@@ -2815,7 +2752,7 @@ template&lt;class Lhs, class Rhs, class = enable_for_si&lt;Lhs, Rhs&gt;&gt; </di
       </table>
 </div><div class="memdoc">
 
-<p>Calculates the hypotenuse in a right triangle, based on Pythagorean equation: a² + b² = c² </p>
+<p>Calculates the hypotenuse of a right triangle, based on Pythagorean equation: a² + b² = c² </p>
 
 </div>
 </div>
@@ -4353,6 +4290,44 @@ template&lt;typename T&gt; </div>
 
 </div>
 </div>
+<a id="adbe93978e06be3867f8a7a77c3f80006" name="adbe93978e06be3867f8a7a77c3f80006"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adbe93978e06be3867f8a7a77c3f80006">&#9670;&#160;</a></span>to_length()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="conversions_8h.html#a587e21dda1f72be700a6206023ad681b">FUNC</a> length si::to_length </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;</td>          <td class="paramname"><span class="paramname"><em>str</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns the length from the given string, or NaN on error. </p>
+
+</div>
+</div>
+<a id="ad9245f979555f68366dc2ded3731a27e" name="ad9245f979555f68366dc2ded3731a27e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad9245f979555f68366dc2ded3731a27e">&#9670;&#160;</a></span>to_mass()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="conversions_8h.html#a587e21dda1f72be700a6206023ad681b">FUNC</a> mass si::to_mass </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;</td>          <td class="paramname"><span class="paramname"><em>str</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns the mass from the given string, or NaN on error. </p>
+
+</div>
+</div>
 <a id="a86579fe439c6e8b8969eabbee1c6cc7f" name="a86579fe439c6e8b8969eabbee1c6cc7f"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a86579fe439c6e8b8969eabbee1c6cc7f">&#9670;&#160;</a></span>to_percentage() <span class="overload">[1/4]</span></h2>
 
@@ -4999,6 +4974,25 @@ template&lt;typename T&gt; </div>
 </div><div class="memdoc">
 
 <p>Returns the given volume as string using SI units. </p>
+
+</div>
+</div>
+<a id="a5a0610eb508fb1e51b1bcccbc1e97e56" name="a5a0610eb508fb1e51b1bcccbc1e97e56"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5a0610eb508fb1e51b1bcccbc1e97e56">&#9670;&#160;</a></span>to_time()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="conversions_8h.html#a587e21dda1f72be700a6206023ad681b">FUNC</a> time si::to_time </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;</td>          <td class="paramname"><span class="paramname"><em>str</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns the time from the given string, or NaN on error. </p>
 
 </div>
 </div>
@@ -7402,60 +7396,8 @@ template&lt;typename T&gt; </div>
 
 </div>
 </div>
-<a id="a2fe9859ff4beb36a90dd7f7a35abd7ed" name="a2fe9859ff4beb36a90dd7f7a35abd7ed"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a2fe9859ff4beb36a90dd7f7a35abd7ed">&#9670;&#160;</a></span>UDL() <span class="overload">[19/354]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">si::UDL </td>
-          <td>(</td>
-          <td class="paramtype">_cm²</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">1e-</td>          <td class="paramname"><span class="paramname"><em>4</em></span>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">meters2</td>          <td class="paramname"><span class="paramname"><em></em></span>&#160;)</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a4b9c716e8a3269018b4d98f241d021a8" name="a4b9c716e8a3269018b4d98f241d021a8"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a4b9c716e8a3269018b4d98f241d021a8">&#9670;&#160;</a></span>UDL() <span class="overload">[20/354]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">si::UDL </td>
-          <td>(</td>
-          <td class="paramtype">_cm³</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">1e-</td>          <td class="paramname"><span class="paramname"><em>6</em></span>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">meters3</td>          <td class="paramname"><span class="paramname"><em></em></span>&#160;)</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
 <a id="a2a6a0bdd4559687c06fd948e44e7861f" name="a2a6a0bdd4559687c06fd948e44e7861f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a2a6a0bdd4559687c06fd948e44e7861f">&#9670;&#160;</a></span>UDL() <span class="overload">[21/354]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a2a6a0bdd4559687c06fd948e44e7861f">&#9670;&#160;</a></span>UDL() <span class="overload">[19/354]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -7474,6 +7416,58 @@ template&lt;typename T&gt; </div>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">meters</td>          <td class="paramname"><span class="paramname"><em></em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a794240379fce2c9e596f71ec7021bf64" name="a794240379fce2c9e596f71ec7021bf64"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a794240379fce2c9e596f71ec7021bf64">&#9670;&#160;</a></span>UDL() <span class="overload">[20/354]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">si::UDL </td>
+          <td>(</td>
+          <td class="paramtype">_cm2</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">1e-</td>          <td class="paramname"><span class="paramname"><em>4</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">meters2</td>          <td class="paramname"><span class="paramname"><em></em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a10446ab49ee68d6904826a2e3c1a0f01" name="a10446ab49ee68d6904826a2e3c1a0f01"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a10446ab49ee68d6904826a2e3c1a0f01">&#9670;&#160;</a></span>UDL() <span class="overload">[21/354]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">si::UDL </td>
+          <td>(</td>
+          <td class="paramtype">_cm3</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">1e-</td>          <td class="paramname"><span class="paramname"><em>6</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">meters3</td>          <td class="paramname"><span class="paramname"><em></em></span>&#160;)</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -7662,34 +7656,8 @@ template&lt;typename T&gt; </div>
 
 </div>
 </div>
-<a id="ac7e5b8f6649a2960570f6f1d2fc89a35" name="ac7e5b8f6649a2960570f6f1d2fc89a35"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac7e5b8f6649a2960570f6f1d2fc89a35">&#9670;&#160;</a></span>UDL() <span class="overload">[29/354]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">si::UDL </td>
-          <td>(</td>
-          <td class="paramtype">_dm³</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">1e-</td>          <td class="paramname"><span class="paramname"><em>3</em></span>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">meters3</td>          <td class="paramname"><span class="paramname"><em></em></span>&#160;)</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
 <a id="a272aa9d270e48485e2a536698a676b1f" name="a272aa9d270e48485e2a536698a676b1f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a272aa9d270e48485e2a536698a676b1f">&#9670;&#160;</a></span>UDL() <span class="overload">[30/354]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a272aa9d270e48485e2a536698a676b1f">&#9670;&#160;</a></span>UDL() <span class="overload">[29/354]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -7708,6 +7676,32 @@ template&lt;typename T&gt; </div>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">meters</td>          <td class="paramname"><span class="paramname"><em></em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a79fc15b3e51901e85332771b7c4ca163" name="a79fc15b3e51901e85332771b7c4ca163"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a79fc15b3e51901e85332771b7c4ca163">&#9670;&#160;</a></span>UDL() <span class="overload">[30/354]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">si::UDL </td>
+          <td>(</td>
+          <td class="paramtype">_dm3</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">1e-</td>          <td class="paramname"><span class="paramname"><em>3</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">meters3</td>          <td class="paramname"><span class="paramname"><em></em></span>&#160;)</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -7948,8 +7942,8 @@ template&lt;typename T&gt; </div>
 
 </div>
 </div>
-<a id="ac27d0da83049460e50bf635fa34af721" name="ac27d0da83049460e50bf635fa34af721"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac27d0da83049460e50bf635fa34af721">&#9670;&#160;</a></span>UDL() <span class="overload">[40/354]</span></h2>
+<a id="a2655d02b737166279736b13996337f93" name="a2655d02b737166279736b13996337f93"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2655d02b737166279736b13996337f93">&#9670;&#160;</a></span>UDL() <span class="overload">[40/354]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -7957,7 +7951,7 @@ template&lt;typename T&gt; </div>
         <tr>
           <td class="memname">si::UDL </td>
           <td>(</td>
-          <td class="paramtype">_g_per_cm³</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+          <td class="paramtype">_g_per_cm3</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -7974,8 +7968,8 @@ template&lt;typename T&gt; </div>
 
 </div>
 </div>
-<a id="a454fbe81cd45c7c47b7d59859091ecf9" name="a454fbe81cd45c7c47b7d59859091ecf9"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a454fbe81cd45c7c47b7d59859091ecf9">&#9670;&#160;</a></span>UDL() <span class="overload">[41/354]</span></h2>
+<a id="af7d5c709958e5ae34a2cfb180686f59e" name="af7d5c709958e5ae34a2cfb180686f59e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af7d5c709958e5ae34a2cfb180686f59e">&#9670;&#160;</a></span>UDL() <span class="overload">[41/354]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -7983,7 +7977,7 @@ template&lt;typename T&gt; </div>
         <tr>
           <td class="memname">si::UDL </td>
           <td>(</td>
-          <td class="paramtype">_g_per_m²</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+          <td class="paramtype">_g_per_m2</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -8000,8 +7994,8 @@ template&lt;typename T&gt; </div>
 
 </div>
 </div>
-<a id="aa9a86b3c413c8927715cca822da719fd" name="aa9a86b3c413c8927715cca822da719fd"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa9a86b3c413c8927715cca822da719fd">&#9670;&#160;</a></span>UDL() <span class="overload">[42/354]</span></h2>
+<a id="a01a7fa42950f9b3b7c16147ca96db4e3" name="a01a7fa42950f9b3b7c16147ca96db4e3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a01a7fa42950f9b3b7c16147ca96db4e3">&#9670;&#160;</a></span>UDL() <span class="overload">[42/354]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -8009,7 +8003,7 @@ template&lt;typename T&gt; </div>
         <tr>
           <td class="memname">si::UDL </td>
           <td>(</td>
-          <td class="paramtype">_g_per_m³</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+          <td class="paramtype">_g_per_m3</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -8780,8 +8774,8 @@ template&lt;typename T&gt; </div>
 
 </div>
 </div>
-<a id="aae1fac3ffbf9d0ada5eb59ba11bdfc81" name="aae1fac3ffbf9d0ada5eb59ba11bdfc81"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aae1fac3ffbf9d0ada5eb59ba11bdfc81">&#9670;&#160;</a></span>UDL() <span class="overload">[72/354]</span></h2>
+<a id="aae7449545d53a1f242e9aa141308545c" name="aae7449545d53a1f242e9aa141308545c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aae7449545d53a1f242e9aa141308545c">&#9670;&#160;</a></span>UDL() <span class="overload">[72/354]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -8789,7 +8783,7 @@ template&lt;typename T&gt; </div>
         <tr>
           <td class="memname">si::UDL </td>
           <td>(</td>
-          <td class="paramtype">_hm²</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+          <td class="paramtype">_hm2</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -9560,8 +9554,8 @@ template&lt;typename T&gt; </div>
 
 </div>
 </div>
-<a id="ac3afbc5a7c5c103b199e22d166feca5e" name="ac3afbc5a7c5c103b199e22d166feca5e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac3afbc5a7c5c103b199e22d166feca5e">&#9670;&#160;</a></span>UDL() <span class="overload">[102/354]</span></h2>
+<a id="a32a65f25fe3aa35ea64e68d3b563de43" name="a32a65f25fe3aa35ea64e68d3b563de43"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a32a65f25fe3aa35ea64e68d3b563de43">&#9670;&#160;</a></span>UDL() <span class="overload">[102/354]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -9569,7 +9563,7 @@ template&lt;typename T&gt; </div>
         <tr>
           <td class="memname">si::UDL </td>
           <td>(</td>
-          <td class="paramtype">_kg_per_cm³</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+          <td class="paramtype">_kg_per_cm3</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -9612,8 +9606,8 @@ template&lt;typename T&gt; </div>
 
 </div>
 </div>
-<a id="a4a76bea637a5f78821b1980ec66ce720" name="a4a76bea637a5f78821b1980ec66ce720"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a4a76bea637a5f78821b1980ec66ce720">&#9670;&#160;</a></span>UDL() <span class="overload">[104/354]</span></h2>
+<a id="a1e47a9b65da93b10ad6f3e625ebaecd4" name="a1e47a9b65da93b10ad6f3e625ebaecd4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1e47a9b65da93b10ad6f3e625ebaecd4">&#9670;&#160;</a></span>UDL() <span class="overload">[104/354]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -9621,7 +9615,7 @@ template&lt;typename T&gt; </div>
         <tr>
           <td class="memname">si::UDL </td>
           <td>(</td>
-          <td class="paramtype">_kg_per_m²</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+          <td class="paramtype">_kg_per_m2</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -9638,8 +9632,8 @@ template&lt;typename T&gt; </div>
 
 </div>
 </div>
-<a id="a6d8384b52e354ac0338d09c7b6f2c5d0" name="a6d8384b52e354ac0338d09c7b6f2c5d0"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a6d8384b52e354ac0338d09c7b6f2c5d0">&#9670;&#160;</a></span>UDL() <span class="overload">[105/354]</span></h2>
+<a id="ab6ada9e383d1973af303e4bf387427c3" name="ab6ada9e383d1973af303e4bf387427c3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab6ada9e383d1973af303e4bf387427c3">&#9670;&#160;</a></span>UDL() <span class="overload">[105/354]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -9647,7 +9641,7 @@ template&lt;typename T&gt; </div>
         <tr>
           <td class="memname">si::UDL </td>
           <td>(</td>
-          <td class="paramtype">_kg_per_m³</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+          <td class="paramtype">_kg_per_m3</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -9924,86 +9918,8 @@ template&lt;typename T&gt; </div>
 
 </div>
 </div>
-<a id="ab5f92d18fffe91165b94ab19257aa275" name="ab5f92d18fffe91165b94ab19257aa275"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab5f92d18fffe91165b94ab19257aa275">&#9670;&#160;</a></span>UDL() <span class="overload">[116/354]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">si::UDL </td>
-          <td>(</td>
-          <td class="paramtype">_km²</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">1e6</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">meters2</td>          <td class="paramname"><span class="paramname"><em></em></span>&#160;)</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a2855ed2689998f9dc5dbd1862d19d3c6" name="a2855ed2689998f9dc5dbd1862d19d3c6"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a2855ed2689998f9dc5dbd1862d19d3c6">&#9670;&#160;</a></span>UDL() <span class="overload">[117/354]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">si::UDL </td>
-          <td>(</td>
-          <td class="paramtype">_km³</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">1e9</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">meters3</td>          <td class="paramname"><span class="paramname"><em></em></span>&#160;)</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a6aa79391dda3bef3913e5a8a8cf72803" name="a6aa79391dda3bef3913e5a8a8cf72803"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a6aa79391dda3bef3913e5a8a8cf72803">&#9670;&#160;</a></span>UDL() <span class="overload">[118/354]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">si::UDL </td>
-          <td>(</td>
-          <td class="paramtype">_km³_per_s²</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">1e9</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">meters3_per_second2</td>          <td class="paramname"><span class="paramname"><em></em></span>&#160;)</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
 <a id="a3370454d17a0201768008c3740506776" name="a3370454d17a0201768008c3740506776"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a3370454d17a0201768008c3740506776">&#9670;&#160;</a></span>UDL() <span class="overload">[119/354]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a3370454d17a0201768008c3740506776">&#9670;&#160;</a></span>UDL() <span class="overload">[116/354]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -10022,6 +9938,84 @@ template&lt;typename T&gt; </div>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">meters</td>          <td class="paramname"><span class="paramname"><em></em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aa068c183452292bf1e28532018224843" name="aa068c183452292bf1e28532018224843"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa068c183452292bf1e28532018224843">&#9670;&#160;</a></span>UDL() <span class="overload">[117/354]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">si::UDL </td>
+          <td>(</td>
+          <td class="paramtype">_km2</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">1e6</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">meters2</td>          <td class="paramname"><span class="paramname"><em></em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a695d865121d07dd2ec6aa87ac215bb3a" name="a695d865121d07dd2ec6aa87ac215bb3a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a695d865121d07dd2ec6aa87ac215bb3a">&#9670;&#160;</a></span>UDL() <span class="overload">[118/354]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">si::UDL </td>
+          <td>(</td>
+          <td class="paramtype">_km3</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">1e9</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">meters3</td>          <td class="paramname"><span class="paramname"><em></em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a26108a948c8f5b4d14e30852eb0a92c8" name="a26108a948c8f5b4d14e30852eb0a92c8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a26108a948c8f5b4d14e30852eb0a92c8">&#9670;&#160;</a></span>UDL() <span class="overload">[119/354]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">si::UDL </td>
+          <td>(</td>
+          <td class="paramtype">_km3_per_s2</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">1e9</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">meters3_per_second2</td>          <td class="paramname"><span class="paramname"><em></em></span>&#160;)</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -10054,34 +10048,8 @@ template&lt;typename T&gt; </div>
 
 </div>
 </div>
-<a id="a203b321b9298245c044f9dbd3efa4be8" name="a203b321b9298245c044f9dbd3efa4be8"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a203b321b9298245c044f9dbd3efa4be8">&#9670;&#160;</a></span>UDL() <span class="overload">[121/354]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">si::UDL </td>
-          <td>(</td>
-          <td class="paramtype">_km_per_s²</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">1e3</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">meters_per_second2</td>          <td class="paramname"><span class="paramname"><em></em></span>&#160;)</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
 <a id="a7ba08162a5bcfdf667f1aa6a41b622a5" name="a7ba08162a5bcfdf667f1aa6a41b622a5"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a7ba08162a5bcfdf667f1aa6a41b622a5">&#9670;&#160;</a></span>UDL() <span class="overload">[122/354]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a7ba08162a5bcfdf667f1aa6a41b622a5">&#9670;&#160;</a></span>UDL() <span class="overload">[121/354]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -10100,6 +10068,32 @@ template&lt;typename T&gt; </div>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">meters_per_second</td>          <td class="paramname"><span class="paramname"><em></em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ac163f7a55602c167d97a2a8bc88ff88e" name="ac163f7a55602c167d97a2a8bc88ff88e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac163f7a55602c167d97a2a8bc88ff88e">&#9670;&#160;</a></span>UDL() <span class="overload">[122/354]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">si::UDL </td>
+          <td>(</td>
+          <td class="paramtype">_km_per_s2</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">1e3</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">meters_per_second2</td>          <td class="paramname"><span class="paramname"><em></em></span>&#160;)</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -10418,8 +10412,8 @@ template&lt;typename T&gt; </div>
 
 </div>
 </div>
-<a id="a51984591727980b8b6bc44fbd1b766e3" name="a51984591727980b8b6bc44fbd1b766e3"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a51984591727980b8b6bc44fbd1b766e3">&#9670;&#160;</a></span>UDL() <span class="overload">[135/354]</span></h2>
+<a id="a6f6d7adacf747d1832bc923b78418470" name="a6f6d7adacf747d1832bc923b78418470"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6f6d7adacf747d1832bc923b78418470">&#9670;&#160;</a></span>UDL() <span class="overload">[135/354]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -10427,7 +10421,7 @@ template&lt;typename T&gt; </div>
         <tr>
           <td class="memname">si::UDL </td>
           <td>(</td>
-          <td class="paramtype">_kW_per_m²</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+          <td class="paramtype">_kW_per_m2</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -10756,112 +10750,8 @@ template&lt;typename T&gt; </div>
 
 </div>
 </div>
-<a id="a4c0e86a14b48e4db3a73ed2fd9d2a634" name="a4c0e86a14b48e4db3a73ed2fd9d2a634"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a4c0e86a14b48e4db3a73ed2fd9d2a634">&#9670;&#160;</a></span>UDL() <span class="overload">[148/354]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">si::UDL </td>
-          <td>(</td>
-          <td class="paramtype">_m²</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">1</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">meters2</td>          <td class="paramname"><span class="paramname"><em></em></span>&#160;)</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="aa8fd5f6dbba2a0936d8b6a27c1b9abf1" name="aa8fd5f6dbba2a0936d8b6a27c1b9abf1"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa8fd5f6dbba2a0936d8b6a27c1b9abf1">&#9670;&#160;</a></span>UDL() <span class="overload">[149/354]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">si::UDL </td>
-          <td>(</td>
-          <td class="paramtype">_m²_per_s</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">1</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">meters2_per_second</td>          <td class="paramname"><span class="paramname"><em></em></span>&#160;)</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="ac2558f0cc30621171bfd9225b12606e9" name="ac2558f0cc30621171bfd9225b12606e9"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac2558f0cc30621171bfd9225b12606e9">&#9670;&#160;</a></span>UDL() <span class="overload">[150/354]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">si::UDL </td>
-          <td>(</td>
-          <td class="paramtype">_m³</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">1</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">meters3</td>          <td class="paramname"><span class="paramname"><em></em></span>&#160;)</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a4668d25423820679478072ffc2fd7036" name="a4668d25423820679478072ffc2fd7036"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a4668d25423820679478072ffc2fd7036">&#9670;&#160;</a></span>UDL() <span class="overload">[151/354]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">si::UDL </td>
-          <td>(</td>
-          <td class="paramtype">_m³_per_s</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">1</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">meters3_per_second</td>          <td class="paramname"><span class="paramname"><em></em></span>&#160;)</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
 <a id="a26d0da028d3c6381e8fc4319454c6f9a" name="a26d0da028d3c6381e8fc4319454c6f9a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a26d0da028d3c6381e8fc4319454c6f9a">&#9670;&#160;</a></span>UDL() <span class="overload">[152/354]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a26d0da028d3c6381e8fc4319454c6f9a">&#9670;&#160;</a></span>UDL() <span class="overload">[148/354]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -10880,6 +10770,110 @@ template&lt;typename T&gt; </div>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">meters</td>          <td class="paramname"><span class="paramname"><em></em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aaecb36aeee0d75aa198d29d6a5fdd802" name="aaecb36aeee0d75aa198d29d6a5fdd802"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aaecb36aeee0d75aa198d29d6a5fdd802">&#9670;&#160;</a></span>UDL() <span class="overload">[149/354]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">si::UDL </td>
+          <td>(</td>
+          <td class="paramtype">_m2</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">1</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">meters2</td>          <td class="paramname"><span class="paramname"><em></em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a7b4f39bc685195a52c9a3adb1250bd1a" name="a7b4f39bc685195a52c9a3adb1250bd1a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7b4f39bc685195a52c9a3adb1250bd1a">&#9670;&#160;</a></span>UDL() <span class="overload">[150/354]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">si::UDL </td>
+          <td>(</td>
+          <td class="paramtype">_m2_per_s</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">1</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">meters2_per_second</td>          <td class="paramname"><span class="paramname"><em></em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a447779872e93021eacb2f2b38bcbe3b4" name="a447779872e93021eacb2f2b38bcbe3b4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a447779872e93021eacb2f2b38bcbe3b4">&#9670;&#160;</a></span>UDL() <span class="overload">[151/354]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">si::UDL </td>
+          <td>(</td>
+          <td class="paramtype">_m3</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">1</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">meters3</td>          <td class="paramname"><span class="paramname"><em></em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a81683b4cfe11166da872da05519859ca" name="a81683b4cfe11166da872da05519859ca"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a81683b4cfe11166da872da05519859ca">&#9670;&#160;</a></span>UDL() <span class="overload">[152/354]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">si::UDL </td>
+          <td>(</td>
+          <td class="paramtype">_m3_per_s</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">1</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">meters3_per_second</td>          <td class="paramname"><span class="paramname"><em></em></span>&#160;)</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -10912,34 +10906,8 @@ template&lt;typename T&gt; </div>
 
 </div>
 </div>
-<a id="a3a469468ca0ea1d3fa9c795843018601" name="a3a469468ca0ea1d3fa9c795843018601"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a3a469468ca0ea1d3fa9c795843018601">&#9670;&#160;</a></span>UDL() <span class="overload">[154/354]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">si::UDL </td>
-          <td>(</td>
-          <td class="paramtype">_m_per_s²</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">1</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">meters_per_second2</td>          <td class="paramname"><span class="paramname"><em></em></span>&#160;)</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
 <a id="abc466089791bf81f55265a16cf4f61bd" name="abc466089791bf81f55265a16cf4f61bd"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#abc466089791bf81f55265a16cf4f61bd">&#9670;&#160;</a></span>UDL() <span class="overload">[155/354]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#abc466089791bf81f55265a16cf4f61bd">&#9670;&#160;</a></span>UDL() <span class="overload">[154/354]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -10958,6 +10926,32 @@ template&lt;typename T&gt; </div>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">meters_per_second</td>          <td class="paramname"><span class="paramname"><em></em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aa9630a5bda4776b859e53b07b2e7bd3e" name="aa9630a5bda4776b859e53b07b2e7bd3e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa9630a5bda4776b859e53b07b2e7bd3e">&#9670;&#160;</a></span>UDL() <span class="overload">[155/354]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">si::UDL </td>
+          <td>(</td>
+          <td class="paramtype">_m_per_s2</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">1</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">meters_per_second2</td>          <td class="paramname"><span class="paramname"><em></em></span>&#160;)</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -11432,8 +11426,8 @@ template&lt;typename T&gt; </div>
 
 </div>
 </div>
-<a id="a92ece7bf8544c7e3d3f20a16d6291192" name="a92ece7bf8544c7e3d3f20a16d6291192"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a92ece7bf8544c7e3d3f20a16d6291192">&#9670;&#160;</a></span>UDL() <span class="overload">[174/354]</span></h2>
+<a id="a8290299d462e748326cb9727e8557915" name="a8290299d462e748326cb9727e8557915"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8290299d462e748326cb9727e8557915">&#9670;&#160;</a></span>UDL() <span class="overload">[174/354]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -11441,7 +11435,7 @@ template&lt;typename T&gt; </div>
         <tr>
           <td class="memname">si::UDL </td>
           <td>(</td>
-          <td class="paramtype">_mg_per_m²</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+          <td class="paramtype">_mg_per_m2</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -11458,8 +11452,8 @@ template&lt;typename T&gt; </div>
 
 </div>
 </div>
-<a id="af26939064f4884730bdd7926eaafc066" name="af26939064f4884730bdd7926eaafc066"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af26939064f4884730bdd7926eaafc066">&#9670;&#160;</a></span>UDL() <span class="overload">[175/354]</span></h2>
+<a id="aaf74986d5d20d8c6397fa0655d322273" name="aaf74986d5d20d8c6397fa0655d322273"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aaf74986d5d20d8c6397fa0655d322273">&#9670;&#160;</a></span>UDL() <span class="overload">[175/354]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -11467,7 +11461,7 @@ template&lt;typename T&gt; </div>
         <tr>
           <td class="memname">si::UDL </td>
           <td>(</td>
-          <td class="paramtype">_mg_per_m³</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+          <td class="paramtype">_mg_per_m3</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -11978,60 +11972,8 @@ template&lt;typename T&gt; </div>
 
 </div>
 </div>
-<a id="a00ee7552e2915ebd5c6ace3237333ae3" name="a00ee7552e2915ebd5c6ace3237333ae3"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a00ee7552e2915ebd5c6ace3237333ae3">&#9670;&#160;</a></span>UDL() <span class="overload">[195/354]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">si::UDL </td>
-          <td>(</td>
-          <td class="paramtype">_mm²</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">1e-</td>          <td class="paramname"><span class="paramname"><em>6</em></span>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">meters2</td>          <td class="paramname"><span class="paramname"><em></em></span>&#160;)</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="abe624eff23c854d39305d25a0d8dca93" name="abe624eff23c854d39305d25a0d8dca93"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#abe624eff23c854d39305d25a0d8dca93">&#9670;&#160;</a></span>UDL() <span class="overload">[196/354]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">si::UDL </td>
-          <td>(</td>
-          <td class="paramtype">_mm³</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">1e-</td>          <td class="paramname"><span class="paramname"><em>9</em></span>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">meters3</td>          <td class="paramname"><span class="paramname"><em></em></span>&#160;)</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
 <a id="a3026c8a9455270b58a3d5fc4c29faa2d" name="a3026c8a9455270b58a3d5fc4c29faa2d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a3026c8a9455270b58a3d5fc4c29faa2d">&#9670;&#160;</a></span>UDL() <span class="overload">[197/354]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a3026c8a9455270b58a3d5fc4c29faa2d">&#9670;&#160;</a></span>UDL() <span class="overload">[195/354]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -12057,7 +11999,7 @@ template&lt;typename T&gt; </div>
 </div>
 </div>
 <a id="acc0320d5fa36a3041edde4bf1106b740" name="acc0320d5fa36a3041edde4bf1106b740"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#acc0320d5fa36a3041edde4bf1106b740">&#9670;&#160;</a></span>UDL() <span class="overload">[198/354]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#acc0320d5fa36a3041edde4bf1106b740">&#9670;&#160;</a></span>UDL() <span class="overload">[196/354]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -12076,6 +12018,58 @@ template&lt;typename T&gt; </div>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">meters</td>          <td class="paramname"><span class="paramname"><em></em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aff4b3116ca43dc394a82cae3fd886954" name="aff4b3116ca43dc394a82cae3fd886954"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aff4b3116ca43dc394a82cae3fd886954">&#9670;&#160;</a></span>UDL() <span class="overload">[197/354]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">si::UDL </td>
+          <td>(</td>
+          <td class="paramtype">_mm2</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">1e-</td>          <td class="paramname"><span class="paramname"><em>6</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">meters2</td>          <td class="paramname"><span class="paramname"><em></em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a010b1ebbc80034dceed62c858fea0d23" name="a010b1ebbc80034dceed62c858fea0d23"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a010b1ebbc80034dceed62c858fea0d23">&#9670;&#160;</a></span>UDL() <span class="overload">[198/354]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">si::UDL </td>
+          <td>(</td>
+          <td class="paramtype">_mm3</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">1e-</td>          <td class="paramname"><span class="paramname"><em>9</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">meters3</td>          <td class="paramname"><span class="paramname"><em></em></span>&#160;)</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -12784,8 +12778,8 @@ template&lt;typename T&gt; </div>
 
 </div>
 </div>
-<a id="aeb16c99b25fcdd3b11dd9633ed3400e3" name="aeb16c99b25fcdd3b11dd9633ed3400e3"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aeb16c99b25fcdd3b11dd9633ed3400e3">&#9670;&#160;</a></span>UDL() <span class="overload">[226/354]</span></h2>
+<a id="ac793e22e4aac840c9378e87edb18e2e8" name="ac793e22e4aac840c9378e87edb18e2e8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac793e22e4aac840c9378e87edb18e2e8">&#9670;&#160;</a></span>UDL() <span class="overload">[226/354]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -12793,7 +12787,7 @@ template&lt;typename T&gt; </div>
         <tr>
           <td class="memname">si::UDL </td>
           <td>(</td>
-          <td class="paramtype">_mW_per_m²</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+          <td class="paramtype">_mW_per_m2</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -12810,8 +12804,8 @@ template&lt;typename T&gt; </div>
 
 </div>
 </div>
-<a id="aa040517a693d123cde678e887da72e8c" name="aa040517a693d123cde678e887da72e8c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa040517a693d123cde678e887da72e8c">&#9670;&#160;</a></span>UDL() <span class="overload">[227/354]</span></h2>
+<a id="ac3f15a978485ef629a012fecfbe96e94" name="ac3f15a978485ef629a012fecfbe96e94"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac3f15a978485ef629a012fecfbe96e94">&#9670;&#160;</a></span>UDL() <span class="overload">[227/354]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -12819,7 +12813,7 @@ template&lt;typename T&gt; </div>
         <tr>
           <td class="memname">si::UDL </td>
           <td>(</td>
-          <td class="paramtype">_MW_per_m²</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+          <td class="paramtype">_MW_per_m2</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -13668,8 +13662,8 @@ template&lt;typename T&gt; </div>
 
 </div>
 </div>
-<a id="afa687c11f080b468572992c3cf256577" name="afa687c11f080b468572992c3cf256577"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#afa687c11f080b468572992c3cf256577">&#9670;&#160;</a></span>UDL() <span class="overload">[260/354]</span></h2>
+<a id="afee38bb6ca10afde92bd9a34b7205923" name="afee38bb6ca10afde92bd9a34b7205923"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afee38bb6ca10afde92bd9a34b7205923">&#9670;&#160;</a></span>UDL() <span class="overload">[260/354]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -13677,7 +13671,7 @@ template&lt;typename T&gt; </div>
         <tr>
           <td class="memname">si::UDL </td>
           <td>(</td>
-          <td class="paramtype">_per_μm²</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+          <td class="paramtype">_per_μm2</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -13694,8 +13688,8 @@ template&lt;typename T&gt; </div>
 
 </div>
 </div>
-<a id="a1a14931cbbed64c2108a5efcf1cc32d5" name="a1a14931cbbed64c2108a5efcf1cc32d5"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1a14931cbbed64c2108a5efcf1cc32d5">&#9670;&#160;</a></span>UDL() <span class="overload">[261/354]</span></h2>
+<a id="adeb0add34ab2b79c6fd90560e299c6fe" name="adeb0add34ab2b79c6fd90560e299c6fe"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adeb0add34ab2b79c6fd90560e299c6fe">&#9670;&#160;</a></span>UDL() <span class="overload">[261/354]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -13703,7 +13697,7 @@ template&lt;typename T&gt; </div>
         <tr>
           <td class="memname">si::UDL </td>
           <td>(</td>
-          <td class="paramtype">_per_cm²</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+          <td class="paramtype">_per_cm2</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -13720,8 +13714,8 @@ template&lt;typename T&gt; </div>
 
 </div>
 </div>
-<a id="a84dd409712126460cb4841f6859afd64" name="a84dd409712126460cb4841f6859afd64"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a84dd409712126460cb4841f6859afd64">&#9670;&#160;</a></span>UDL() <span class="overload">[262/354]</span></h2>
+<a id="a14c97fd8e428a371a50afe9d2989c4ea" name="a14c97fd8e428a371a50afe9d2989c4ea"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a14c97fd8e428a371a50afe9d2989c4ea">&#9670;&#160;</a></span>UDL() <span class="overload">[262/354]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -13729,7 +13723,7 @@ template&lt;typename T&gt; </div>
         <tr>
           <td class="memname">si::UDL </td>
           <td>(</td>
-          <td class="paramtype">_per_hm²</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+          <td class="paramtype">_per_hm2</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -13746,8 +13740,8 @@ template&lt;typename T&gt; </div>
 
 </div>
 </div>
-<a id="ab2fb99f6d39435bc98ac4fb8d904bdb7" name="ab2fb99f6d39435bc98ac4fb8d904bdb7"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab2fb99f6d39435bc98ac4fb8d904bdb7">&#9670;&#160;</a></span>UDL() <span class="overload">[263/354]</span></h2>
+<a id="ac006876145cbca600988a372cf477ba7" name="ac006876145cbca600988a372cf477ba7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac006876145cbca600988a372cf477ba7">&#9670;&#160;</a></span>UDL() <span class="overload">[263/354]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -13755,7 +13749,7 @@ template&lt;typename T&gt; </div>
         <tr>
           <td class="memname">si::UDL </td>
           <td>(</td>
-          <td class="paramtype">_per_km²</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+          <td class="paramtype">_per_km2</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -13772,8 +13766,8 @@ template&lt;typename T&gt; </div>
 
 </div>
 </div>
-<a id="a48c8bc934a49286b74104455497222e2" name="a48c8bc934a49286b74104455497222e2"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a48c8bc934a49286b74104455497222e2">&#9670;&#160;</a></span>UDL() <span class="overload">[264/354]</span></h2>
+<a id="adedf9561a2ec2804f6b06ee61dc91d44" name="adedf9561a2ec2804f6b06ee61dc91d44"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adedf9561a2ec2804f6b06ee61dc91d44">&#9670;&#160;</a></span>UDL() <span class="overload">[264/354]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -13781,7 +13775,7 @@ template&lt;typename T&gt; </div>
         <tr>
           <td class="memname">si::UDL </td>
           <td>(</td>
-          <td class="paramtype">_per_m²</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+          <td class="paramtype">_per_m2</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -13798,8 +13792,8 @@ template&lt;typename T&gt; </div>
 
 </div>
 </div>
-<a id="a9e019f902c460f358751771e146b8376" name="a9e019f902c460f358751771e146b8376"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a9e019f902c460f358751771e146b8376">&#9670;&#160;</a></span>UDL() <span class="overload">[265/354]</span></h2>
+<a id="a4111ae11ba6b16d12fef40dbeb189032" name="a4111ae11ba6b16d12fef40dbeb189032"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4111ae11ba6b16d12fef40dbeb189032">&#9670;&#160;</a></span>UDL() <span class="overload">[265/354]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -13807,7 +13801,7 @@ template&lt;typename T&gt; </div>
         <tr>
           <td class="memname">si::UDL </td>
           <td>(</td>
-          <td class="paramtype">_per_mm²</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+          <td class="paramtype">_per_mm2</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -14552,8 +14546,8 @@ template&lt;typename T&gt; </div>
 
 </div>
 </div>
-<a id="af77945ff95f68213f6ddcedb164c0a29" name="af77945ff95f68213f6ddcedb164c0a29"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af77945ff95f68213f6ddcedb164c0a29">&#9670;&#160;</a></span>UDL() <span class="overload">[294/354]</span></h2>
+<a id="a3617e6f70fb9b447b94776ae2c8da8ca" name="a3617e6f70fb9b447b94776ae2c8da8ca"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3617e6f70fb9b447b94776ae2c8da8ca">&#9670;&#160;</a></span>UDL() <span class="overload">[294/354]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -14561,7 +14555,7 @@ template&lt;typename T&gt; </div>
         <tr>
           <td class="memname">si::UDL </td>
           <td>(</td>
-          <td class="paramtype">_t_per_m²</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+          <td class="paramtype">_t_per_m2</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -14578,8 +14572,8 @@ template&lt;typename T&gt; </div>
 
 </div>
 </div>
-<a id="a11b04bae6db110ae5751f71e779bff56" name="a11b04bae6db110ae5751f71e779bff56"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a11b04bae6db110ae5751f71e779bff56">&#9670;&#160;</a></span>UDL() <span class="overload">[295/354]</span></h2>
+<a id="a5e181de0fa65947e63654271c9a7009e" name="a5e181de0fa65947e63654271c9a7009e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5e181de0fa65947e63654271c9a7009e">&#9670;&#160;</a></span>UDL() <span class="overload">[295/354]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -14587,7 +14581,7 @@ template&lt;typename T&gt; </div>
         <tr>
           <td class="memname">si::UDL </td>
           <td>(</td>
-          <td class="paramtype">_t_per_m³</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+          <td class="paramtype">_t_per_m3</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -15306,60 +15300,8 @@ template&lt;typename T&gt; </div>
 
 </div>
 </div>
-<a id="aacc1102accf0b3bed9da0bcc3d53bd05" name="aacc1102accf0b3bed9da0bcc3d53bd05"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aacc1102accf0b3bed9da0bcc3d53bd05">&#9670;&#160;</a></span>UDL() <span class="overload">[323/354]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">si::UDL </td>
-          <td>(</td>
-          <td class="paramtype">_um²</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">1e-</td>          <td class="paramname"><span class="paramname"><em>12</em></span>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">meters2</td>          <td class="paramname"><span class="paramname"><em></em></span>&#160;)</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="ad4d9d7dc4e98b9361e348d3067615d06" name="ad4d9d7dc4e98b9361e348d3067615d06"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad4d9d7dc4e98b9361e348d3067615d06">&#9670;&#160;</a></span>UDL() <span class="overload">[324/354]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">si::UDL </td>
-          <td>(</td>
-          <td class="paramtype">_um³</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">1e-</td>          <td class="paramname"><span class="paramname"><em>18</em></span>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">meters3</td>          <td class="paramname"><span class="paramname"><em></em></span>&#160;)</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
 <a id="a5024987a4342bb7ceab0c63a3989837d" name="a5024987a4342bb7ceab0c63a3989837d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a5024987a4342bb7ceab0c63a3989837d">&#9670;&#160;</a></span>UDL() <span class="overload">[325/354]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a5024987a4342bb7ceab0c63a3989837d">&#9670;&#160;</a></span>UDL() <span class="overload">[323/354]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -15378,6 +15320,58 @@ template&lt;typename T&gt; </div>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">meters</td>          <td class="paramname"><span class="paramname"><em></em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ada3ccd2d353544699ad9b24d6d968829" name="ada3ccd2d353544699ad9b24d6d968829"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ada3ccd2d353544699ad9b24d6d968829">&#9670;&#160;</a></span>UDL() <span class="overload">[324/354]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">si::UDL </td>
+          <td>(</td>
+          <td class="paramtype">_um2</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">1e-</td>          <td class="paramname"><span class="paramname"><em>12</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">meters2</td>          <td class="paramname"><span class="paramname"><em></em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aaa21c398401d5e077ad8ed1eec900f8e" name="aaa21c398401d5e077ad8ed1eec900f8e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aaa21c398401d5e077ad8ed1eec900f8e">&#9670;&#160;</a></span>UDL() <span class="overload">[325/354]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">si::UDL </td>
+          <td>(</td>
+          <td class="paramtype">_um3</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">1e-</td>          <td class="paramname"><span class="paramname"><em>18</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">meters3</td>          <td class="paramname"><span class="paramname"><em></em></span>&#160;)</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -15800,8 +15794,8 @@ template&lt;typename T&gt; </div>
 
 </div>
 </div>
-<a id="a83f4e497b73b6f6ed23987cc7e92740e" name="a83f4e497b73b6f6ed23987cc7e92740e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a83f4e497b73b6f6ed23987cc7e92740e">&#9670;&#160;</a></span>UDL() <span class="overload">[342/354]</span></h2>
+<a id="abc8f046b9fd207bcb113f4e095278fb8" name="abc8f046b9fd207bcb113f4e095278fb8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abc8f046b9fd207bcb113f4e095278fb8">&#9670;&#160;</a></span>UDL() <span class="overload">[342/354]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -15809,7 +15803,7 @@ template&lt;typename T&gt; </div>
         <tr>
           <td class="memname">si::UDL </td>
           <td>(</td>
-          <td class="paramtype">_uW_per_m²</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+          <td class="paramtype">_uW_per_m2</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -15904,8 +15898,8 @@ template&lt;typename T&gt; </div>
 
 </div>
 </div>
-<a id="a6b5225cbd7b942657b785a99d4ff7d70" name="a6b5225cbd7b942657b785a99d4ff7d70"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a6b5225cbd7b942657b785a99d4ff7d70">&#9670;&#160;</a></span>UDL() <span class="overload">[346/354]</span></h2>
+<a id="a07dd6fa9ff0ad3a964f7e11ef2638474" name="a07dd6fa9ff0ad3a964f7e11ef2638474"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a07dd6fa9ff0ad3a964f7e11ef2638474">&#9670;&#160;</a></span>UDL() <span class="overload">[346/354]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -15913,7 +15907,7 @@ template&lt;typename T&gt; </div>
         <tr>
           <td class="memname">si::UDL </td>
           <td>(</td>
-          <td class="paramtype">_W_per_m²</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+          <td class="paramtype">_W_per_m2</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -16223,8 +16217,8 @@ template&lt;typename T&gt; </div>
 
 </div>
 </div>
-<a id="a36f7f9b31e99def4222e6cc7b6590f9e" name="a36f7f9b31e99def4222e6cc7b6590f9e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a36f7f9b31e99def4222e6cc7b6590f9e">&#9670;&#160;</a></span>UNIT() <span class="overload">[6/93]</span></h2>
+<a id="ab73502d529eddf66a65d43cb19ebf45c" name="ab73502d529eddf66a65d43cb19ebf45c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab73502d529eddf66a65d43cb19ebf45c">&#9670;&#160;</a></span>UNIT() <span class="overload">[6/93]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -16232,7 +16226,7 @@ template&lt;typename T&gt; </div>
         <tr>
           <td class="memname">si::UNIT </td>
           <td>(</td>
-          <td class="paramtype">bits_per_m²</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td class="paramtype">bits_per_m2</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -16240,8 +16234,8 @@ template&lt;typename T&gt; </div>
 
 </div>
 </div>
-<a id="a7bd6d40862703c1ddceb01f071943e1e" name="a7bd6d40862703c1ddceb01f071943e1e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a7bd6d40862703c1ddceb01f071943e1e">&#9670;&#160;</a></span>UNIT() <span class="overload">[7/93]</span></h2>
+<a id="ad23adadb94306a946284c449facf159a" name="ad23adadb94306a946284c449facf159a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad23adadb94306a946284c449facf159a">&#9670;&#160;</a></span>UNIT() <span class="overload">[7/93]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -16249,7 +16243,7 @@ template&lt;typename T&gt; </div>
         <tr>
           <td class="memname">si::UNIT </td>
           <td>(</td>
-          <td class="paramtype">bits_per_m³</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td class="paramtype">bits_per_m3</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -16291,8 +16285,8 @@ template&lt;typename T&gt; </div>
 
 </div>
 </div>
-<a id="a0b94358e48edb12d6fe0232b592759ee" name="a0b94358e48edb12d6fe0232b592759ee"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a0b94358e48edb12d6fe0232b592759ee">&#9670;&#160;</a></span>UNIT() <span class="overload">[10/93]</span></h2>
+<a id="a8086c051cf05c1af3ae33a00fe4f2ce3" name="a8086c051cf05c1af3ae33a00fe4f2ce3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8086c051cf05c1af3ae33a00fe4f2ce3">&#9670;&#160;</a></span>UNIT() <span class="overload">[10/93]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -16300,7 +16294,7 @@ template&lt;typename T&gt; </div>
         <tr>
           <td class="memname">si::UNIT </td>
           <td>(</td>
-          <td class="paramtype">bytes_per_m²</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td class="paramtype">bytes_per_m2</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -16308,8 +16302,8 @@ template&lt;typename T&gt; </div>
 
 </div>
 </div>
-<a id="ac7a9803b4b23b99f0ccf96dadddd0997" name="ac7a9803b4b23b99f0ccf96dadddd0997"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac7a9803b4b23b99f0ccf96dadddd0997">&#9670;&#160;</a></span>UNIT() <span class="overload">[11/93]</span></h2>
+<a id="ab69136d2b392d2d4a32876df745c96ff" name="ab69136d2b392d2d4a32876df745c96ff"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab69136d2b392d2d4a32876df745c96ff">&#9670;&#160;</a></span>UNIT() <span class="overload">[11/93]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -16317,7 +16311,7 @@ template&lt;typename T&gt; </div>
         <tr>
           <td class="memname">si::UNIT </td>
           <td>(</td>
-          <td class="paramtype">bytes_per_m³</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td class="paramtype">bytes_per_m3</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>

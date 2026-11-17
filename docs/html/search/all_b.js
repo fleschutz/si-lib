@@ -7,6 +7,5 @@ var searchData=
   ['license_20copyright_4',['📜 License &amp;amp; Copyright',['../index.html#autotoc_md4',1,'']]],
   ['lift_5fforce_5fof_5fwing_5fformula_5',['lift_force_of_wing_formula',['../namespacesi.html#ab3f07330f9ab0e8c316c9a8a90770f57',1,'si']]],
   ['literals_2eh_6',['literals.h',['../literals_8h.html',1,'']]],
-  ['lithium_5fbattery_5fmaterials_2eh_7',['lithium_battery_materials.h',['../lithium__battery__materials_8h.html',1,'']]],
-  ['local_5fgravity_5fformula_8',['local_gravity_formula',['../namespacesi.html#a490bd48e011d0bd6b6f6b1d68b35ad10',1,'si']]]
+  ['local_5fgravity_5fformula_7',['local_gravity_formula',['../namespacesi.html#a490bd48e011d0bd6b6f6b1d68b35ad10',1,'si']]]
 ];

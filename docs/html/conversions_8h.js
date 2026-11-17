@@ -2,9 +2,6 @@ var conversions_8h =
 [
     [ "FUNC", "conversions_8h.html#a587e21dda1f72be700a6206023ad681b", null ],
     [ "si::_fmt", "namespacesi.html#a142a9d1e8e311d857090cd95de38ec55", null ],
-    [ "si::from_string", "namespacesi.html#aa38c7aaaf5987129c5da0c9eb604323a", null ],
-    [ "si::from_string", "namespacesi.html#a525d2c561df804ae6b2da9215973f2d0", null ],
-    [ "si::from_string", "namespacesi.html#aecf609dbb8e02360bc3a27c1d514b729", null ],
     [ "si::operator<<", "namespacesi.html#a719a88aa99bef3966a5129f986ed8324", null ],
     [ "si::operator<<", "namespacesi.html#abafcccce8ef4a37f56615906e33e499a", null ],
     [ "si::operator<<", "namespacesi.html#afcf8db4f5b6e4002a0126f4d23705177", null ],
@@ -34,6 +31,8 @@ var conversions_8h =
     [ "si::to_equivalent", "namespacesi.html#a3aa9a95ca5dbba3d565639d1ab922fbf", null ],
     [ "si::to_equivalent", "namespacesi.html#a915d52c19ef6f30569079949a1e08d4b", null ],
     [ "si::to_equivalent", "namespacesi.html#accd1e41c401cdca8ab60e5d74c5a7b9a", null ],
+    [ "si::to_length", "namespacesi.html#adbe93978e06be3867f8a7a77c3f80006", null ],
+    [ "si::to_mass", "namespacesi.html#ad9245f979555f68366dc2ded3731a27e", null ],
     [ "si::to_percentage", "namespacesi.html#a86579fe439c6e8b8969eabbee1c6cc7f", null ],
     [ "si::to_percentage", "namespacesi.html#ad9f7967398ac68b3b669e6d4cd3e82cf", null ],
     [ "si::to_percentage", "namespacesi.html#a86294ac51f8533c6f17cc2cd97f5176a", null ],
@@ -61,6 +60,7 @@ var conversions_8h =
     [ "si::to_string", "namespacesi.html#a0d2177a12a3daf2bc29d1068d0e6bdb4", null ],
     [ "si::to_string", "namespacesi.html#a1ea9b1871bc64f08f046238bf1b9373d", null ],
     [ "si::to_string", "namespacesi.html#aa3000baf947d98ae7354f347e298539d", null ],
+    [ "si::to_time", "namespacesi.html#a5a0610eb508fb1e51b1bcccbc1e97e56", null ],
     [ "si::to_equivalent_format", "namespacesi.html#aa881727a49646a5f5f944e18a859b689", null ],
     [ "si::to_percentage_format", "namespacesi.html#acc172595ae4ed81c8bf53b27ecdb6ea1", null ],
     [ "si::to_string_format", "namespacesi.html#a42c786f5e1225e5e6c0150bbe317a509", null ]

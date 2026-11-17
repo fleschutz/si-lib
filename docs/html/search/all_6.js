@@ -10,6 +10,5 @@ var searchData=
   ['formulas_2eh_7',['formulas.h',['../formulas_8h.html',1,'']]],
   ['free_5ffall_5ftime_5fformula_8',['free_fall_time_formula',['../namespacesi.html#a7f4404b9f54dec0927425ae4f4b2b112',1,'si']]],
   ['frequency_5fof_5fchromatic_5fnote_5fformula_9',['frequency_of_chromatic_note_formula',['../namespacesi.html#a76b0280fcf08a5ebd6723ce1b3149cbb',1,'si']]],
-  ['from_5fstring_10',['from_string',['../namespacesi.html#aa38c7aaaf5987129c5da0c9eb604323a',1,'si::from_string(const std::string &amp;str, length &amp;result)'],['../namespacesi.html#aecf609dbb8e02360bc3a27c1d514b729',1,'si::from_string(const std::string &amp;str, time &amp;result)'],['../namespacesi.html#a525d2c561df804ae6b2da9215973f2d0',1,'si::from_string(const std::string &amp;str, mass &amp;result)']]],
-  ['func_11',['FUNC',['../conversions_8h.html#a587e21dda1f72be700a6206023ad681b',1,'FUNC:&#160;conversions.h'],['../formulas_8h.html#a587e21dda1f72be700a6206023ad681b',1,'FUNC:&#160;formulas.h']]]
+  ['func_10',['FUNC',['../conversions_8h.html#a587e21dda1f72be700a6206023ad681b',1,'FUNC:&#160;conversions.h'],['../formulas_8h.html#a587e21dda1f72be700a6206023ad681b',1,'FUNC:&#160;formulas.h']]]
 ];

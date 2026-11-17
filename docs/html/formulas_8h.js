@@ -44,7 +44,7 @@ var formulas_8h =
     [ "si::gravitational_attractive_force_formula", "namespacesi.html#a384131362a2fe92efea56897ef3b1013", null ],
     [ "si::gravitational_escape_velocity_formula", "namespacesi.html#a2267e5d124987828221fc6979ff29f58", null ],
     [ "si::gravitational_potential_energy_formula", "namespacesi.html#a22e7dfdd2372b90450f79fd70b90ee8e", null ],
-    [ "si::hypotenuse_of_triangle_formula", "namespacesi.html#a01682b4a12785c09aec2abdb61693cf2", null ],
+    [ "si::hypotenuse_formula", "namespacesi.html#a116bbef303844e8ce69be661331ad7e9", null ],
     [ "si::kinetic_energy_formula", "namespacesi.html#a40a6045fdb57f9a9439cd1e2bb8c5428", null ],
     [ "si::latus_rectum_of_ellipse_formula", "namespacesi.html#a836acd322daddc07ba09f8b987e7408b", null ],
     [ "si::lift_force_of_wing_formula", "namespacesi.html#ab3f07330f9ab0e8c316c9a8a90770f57", null ],
