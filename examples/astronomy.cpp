@@ -1,5 +1,5 @@
 /// @file   examples/astronomy.cpp
-/// @brief  Contains 13 astronomy examples using libSI.
+/// @brief  Contains 13 examples regarding astronomy.
 
 #include <iostream>
 #include "datasets/astronomy.h"
