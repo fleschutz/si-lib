@@ -23,8 +23,8 @@ namespace si {
     static_assert( (0_degC + 32_degF + 491.67_degR + 273.15_K) / 4 == 273.15_K );
     static_assert( 1_A * 1_h == 3600_C );
     static_assert( 1_Ah == 3600_C );
-    static_assert( 8_bits == 1_byte );
-    static_assert( 16_bits == 2_bytes );
+    static_assert( 8_bit == 1_byte );
+    static_assert( 16_bit == 2_byte );
   }
 
   inline void check_C_datatypes() {
@@ -277,21 +277,26 @@ namespace si {
 
   inline void check_digital_units() {
 	// bits...
-	static_assert(1_bit  == 0.001_kBit);
+	static_assert(1_Ebit == 1000_Pbit);
+	static_assert(1_Pbit == 1000_Tbit);
+	static_assert(1_Tbit == 1000_Gbit);
+	static_assert(1_Gbit == 1000_Mbit);
+	static_assert(1_Mbit == 1000_kbit);
+	static_assert(1_kbit == 1000_bit);
 	static_assert(1_bit  == bits(1));
-	static_assert(1_kBit == 1000_bits);
-	static_assert(1_MBit == 1000_kBit);
-	static_assert(1_GBit == 1000_MBit);
-	static_assert(1_TBit == 1000_GBit);
+	static_assert(1_bit  == 0.001_kbit);
+	static_assert(4_bit  == 1_nibble);
 	// bits per seconds...
-	static_assert(1_Tbps == 1000_Gbps);
-	static_assert(1_Gbps == 1000_Mbps);
-	static_assert(1_Mbps == 1000_Kbps);
-	static_assert(1_Kbps == bits_per_second(1000));
+	static_assert(1_Ebit_per_s == 1000_Pbit_per_s);
+	static_assert(1_Pbit_per_s == 1000_Tbit_per_s);
+	static_assert(1_Tbit_per_s == 1000_Gbit_per_s);
+	static_assert(1_Gbit_per_s == 1000_Mbit_per_s);
+	static_assert(1_Mbit_per_s == 1000_kbit_per_s);
+	static_assert(1_kbit_per_s == bits_per_second(1000));
 	// bytes... (metric prefixes)
-	static_assert(1_byte == 8_bits);
+	static_assert(1_byte == 8_bit);
 	static_assert(1_byte == bytes(1));
-	static_assert(1_kB   == 1000_bytes);
+	static_assert(1_kB   == 1000_byte);
 	static_assert(1_MB   == 1000_kB);
 	static_assert(1_GB   == 1000_MB);
 	static_assert(1_TB   == 1000_GB);
@@ -299,7 +304,7 @@ namespace si {
 	static_assert(1_EB   == 1000_PB);
 	static_assert(1_ZB   == 1000_EB);
 	// bytes... (binary prefixes)
-	static_assert(1_KiB == 1024_bytes);
+	static_assert(1_KiB == 1024_byte);
 	static_assert(1_MiB == 1024_KiB);
 	static_assert(1_GiB == 1024_MiB);
 	static_assert(1_TiB == 1024_GiB);

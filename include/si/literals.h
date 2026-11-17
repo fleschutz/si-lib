@@ -372,18 +372,21 @@ namespace si {
   // Digital Units
   // -------------
   // bits...
-  UDL(_PBit,                        1e15, bits); // 1_PBit (petabit)
-  UDL(_TBit,                        1e12, bits); // 1_TBit (terabit)
-  UDL(_GBit,                         1e9, bits); // 1_GBit (gigabit)
-  UDL(_MBit,                         1e6, bits); // 1_MBit (megabit)
-  UDL(_kBit,                         1e3, bits); // 1_kBit (kilobit)
-  UDL(_bits,                           1, bits); // 2_bits
+  UDL(_Ebit,                        1e18, bits); // 1_Ebit (exabit)
+  UDL(_Pbit,                        1e15, bits); // 1_Pbit (petabit)
+  UDL(_Tbit,                        1e12, bits); // 1_Tbit (terabit)
+  UDL(_Gbit,                         1e9, bits); // 1_Gbit (gigabit)
+  UDL(_Mbit,                         1e6, bits); // 1_Mbit (megabit)
+  UDL(_kbit,                         1e3, bits); // 1_kbit (kilobit)
+  UDL(_nibble,                         4, bits); // 1_nibble
   UDL(_bit,                            1, bits); // 1_bit
   // bits per second...
-  UDL(_Tbps,                        1e12, bits_per_second); // 1_Tbps (terabit/sec)
-  UDL(_Gbps,                         1e9, bits_per_second); // 1_Gbps (gigabit/sec)
-  UDL(_Mbps,                         1e6, bits_per_second); // 1_Mbps (megabit/sec)
-  UDL(_Kbps,                         1e3, bits_per_second); // 1_Kbps (kilobit/sec)
+  UDL(_Ebit_per_s,                  1e18, bits_per_second); // 1_Ebit_per_s (exabit/sec)
+  UDL(_Pbit_per_s,                  1e15, bits_per_second); // 1_Pbit_per_s (petabit/sec)
+  UDL(_Tbit_per_s,                  1e12, bits_per_second); // 1_Tbit_per_s (terabit/sec)
+  UDL(_Gbit_per_s,                   1e9, bits_per_second); // 1_Gbit_per_s (gigabit/sec)
+  UDL(_Mbit_per_s,                   1e6, bits_per_second); // 1_Mbit_per_s (megabit/sec)
+  UDL(_kbit_per_s,                   1e3, bits_per_second); // 1_kbit_per_s (kilobit/sec)
   // bytes with metric prefixes...
   UDL(_QB,                          1e30, bytes); // 1_QB  (quettabyte)
   UDL(_RB,                          1e27, bytes); // 1_RB  (ronnabyte)
@@ -395,8 +398,8 @@ namespace si {
   UDL(_GB,                           1e9, bytes); // 1_GB  (gigabyte)
   UDL(_MB,                           1e6, bytes); // 1_MB  (megabyte)
   UDL(_kB,                           1e3, bytes); // 1_kB  (kilobyte)
-  UDL(_bytes,                          1, bytes); // 2_bytes
-  UDL(_byte,                           1, bytes); // 1_byte
+  UDL(_B,                              1, bytes); // 1_B   (byte)
+  UDL(_byte,                           1, bytes); // 1_byte (byte)
   // bytes with binary prefixes...
   UDL(_PiB,        1'125'899'906'842'624, bytes); // 1_PiB (pebibyte)
   UDL(_TiB,            1'099'511'627'776, bytes); // 1_TiB (tebibyte)

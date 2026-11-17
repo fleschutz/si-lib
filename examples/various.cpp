@@ -240,7 +240,7 @@ void various_examples() {
     auto cylinders      = 8032;
     auto heads          = 16;
     auto sectors        = 63;
-    auto sector_size    = 512_bytes;
+    auto sector_size    = 512_byte;
     auto HDD_total_size = cylinders * heads * sectors * sector_size;
     cout << HDD_total_size << endl;
 

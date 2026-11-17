@@ -23,9 +23,9 @@ void speed_examples() {
     cout << fall_time << endl;
 
 
-    cout << " 3. The download of 10TB at 1GBit/s takes... ";
+    cout << " 3. The download of 10TB at 1Gbit/s takes... ";
     auto file_size       = 10_TB;
-    auto download_speed  = 1_Gbps;
+    auto download_speed  = 1_Gbit_per_s;
     auto download_time   = file_size / download_speed;
     cout << download_time << endl;
 
