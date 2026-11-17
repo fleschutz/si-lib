@@ -10,7 +10,7 @@ Include *si-lib* to apply math in C++ correct, precise, and convenient. **Featur
 - **Top speed:** no runtime overhead and implicit compile-time conversions whenever possible.
 - **Support** for units in SI, Imperial, US, digital, astronomical, historic, or user-defined.
 - **Excellent** readability and provides literals, constants, formulas, and datasets (optional).
-- **Modern C++ 17:** header-only, own namespace, light-weight, no external dependencies.
+- **Modern C++ 17:** header-only, light-weight (143KB), own namespace, no external dependencies.
 - **Cross-platform** support for Linux (clang/gcc, x86/arm) and Windows (VS2017-VS2026).
 
 🔎 Example
