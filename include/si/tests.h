@@ -1,6 +1,7 @@
 /// @file      <si/tests.h>
-/// @brief     Contains 300+ unit tests, executed at compile-time and on each commit by GitHub actions
-/// @details   Categories are: features, C datatypes, SI datatypes, base units, derived units, astronomical units, Imperial units, digital units, various units, functions and templates.
+/// @brief     Contains 300+ unit tests
+/// @details   The unit tests get executed at compile-time and on each commit by GitHub actions.
+///            Categories are: features, C datatypes, SI datatypes, base units, derived units, astronomical units, Imperial units, units for information, various units, functions and templates.
 
 #pragma once
 #include <cassert>
