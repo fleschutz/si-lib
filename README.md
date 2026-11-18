@@ -51,7 +51,7 @@ int main() {   using namespace si;
 
 **How to use *si-lib*?** Just follow the [integration manual](docs/integration.md).
 
-**Is it thread-safe?**  Yes, the datatypes are trivially-copyable value types with no shared state (like double). The library's errors are at compile-time only and no exceptions are thrown.
+**Is it thread-safe?**  Yes, the datatypes are trivially-copyable value types without shared state. The library's errors are at compile-time only and no exceptions are thrown.
 
 **What's SI?** It's the [International System of Units](https://en.wikipedia.org/wiki/International_System_of_Units) which is made up of 7 base units that define the 22 derived units.
 
