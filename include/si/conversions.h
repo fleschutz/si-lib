@@ -395,7 +395,7 @@ namespace si {
 	}
 
 	/// @brief Returns the digital size as string in bits and bytes.
-	FUNC std::string to_string(digital_size n, const char* fmtStr = to_string_format) {
+	FUNC std::string to_string(data_size n, const char* fmtStr = to_string_format) {
 		if (n <= -1_QB || n >= 1_QB)        return _fmt(n / 1_QB, "QB", fmtStr);
 		if (n <= -1_RB || n >= 1_RB)        return _fmt(n / 1_RB, "RB", fmtStr);
 		if (n <= -1_YB || n >= 1_YB)        return _fmt(n / 1_YB, "YB", fmtStr);
@@ -410,7 +410,7 @@ namespace si {
 		return _fmt(n / 1_bit, "bit", fmtStr);
 	}
 
-	inline std::ostream& operator<<(std::ostream& os, digital_size n) {
+	inline std::ostream& operator<<(std::ostream& os, data_size n) {
 		return (os << to_string(n));
 	}
 
@@ -473,7 +473,7 @@ namespace si {
 	}
 
 	/// @brief Returns a data size equivalent as string.
-	FUNC std::string to_equivalent(digital_size n, const char* fmtStr = to_equivalent_format) {
+	FUNC std::string to_equivalent(data_size n, const char* fmtStr = to_equivalent_format) {
 		if (n <= -1_PiB || n >= 1_PiB) return _fmt(n / 1_PiB, "PiB", fmtStr);
 		if (n <= -1_TiB || n >= 1_TiB) return _fmt(n / 1_TiB, "TiB", fmtStr);
 		if (n <= -1_GiB || n >= 1_GiB) return _fmt(n / 1_GiB, "GiB", fmtStr);
@@ -503,7 +503,7 @@ namespace si {
 	}
 
 	/// @brief Returns the percentage as string, e.g. "50.0%"
-	FUNC std::string to_percentage(digital_size part, digital_size total, const char* fmtStr = to_percentage_format) {
+	FUNC std::string to_percentage(data_size part, data_size total, const char* fmtStr = to_percentage_format) {
 		return _fmt((part / total) * 100.0, "%", fmtStr);
 	}
 

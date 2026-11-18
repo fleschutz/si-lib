@@ -17,12 +17,14 @@ void cheat_sheet() {
     area A = a * b;                // area from length by length
     volume V = A * 10_ft;          // volume from area by height
     density D = 1_kg / V;          // density from mass per volume
-    velocity s = 1_km / 1_h;       // speed from distance per time
-    frequency f = 100 / 1_s;       // frequency from number per time
+    velocity S = 1_km / 1_h;       // speed from distance per time
+    frequency F = 100 / 1_s;       // frequency from number per time
     charge Q = 1_A * 1_h;          // electric charge from ampere-hours
+    resistance R = 1_V / 1_A;      // electrical resistance from volt per ampere
     temperature T = 10_degC + 5_K; // different units
     energy E = 1_kg * square(constant::c); // with constant
-    length w = wavelength_formula(constant::c, 100_Hz); // with formula
+    length W = wavelength_formula(constant::c, 100_Hz); // with formula
+    data_speed DS = 5_TB / 1_s;
 
     // Compare Quantities
     // ------------------
@@ -41,7 +43,8 @@ void cheat_sheet() {
     // Dimensionless Numbers
     // ---------------------
     dimensionless ratio = 0.25;
-    dimensionless part = ratio * 10_percent;
+    dimensionless share = 50_percent * 50'000;
+    dimensionless CO2   = 429.12_ppm;
 
     // Export a Quantity
     // -----------------

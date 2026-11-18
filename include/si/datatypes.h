@@ -1,5 +1,6 @@
-/// @file   <si/datatypes.h>
-/// @brief  Defines the SI base datatypes and the derived, the digital and the dimensionless one
+/// @file     <si/datatypes.h>
+/// @brief    Defines the fundamental datatypes
+/// @details  Categories are: SI base, derived SI, for information, and dimensionless.
 
 #pragma once
 #include <si/internal.h>
@@ -41,6 +42,7 @@ namespace si {
   TYPE(power_intensity,        0, 1,-3, 0, 0, 0, 0, 0); // in watts per square meter
   TYPE(density,               -3, 1, 0, 0, 0, 0, 0, 0); // in kilograms per cubic meter
   TYPE(electric_potential,     2, 1,-3, 0,-1, 0, 0, 0); // in volts
+  TYPE(resistance,             2, 1,-3, 0,-2, 0, 0, 0); // in ohms
   TYPE(charge,                 0, 0, 1, 0, 1, 0, 0, 0); // in ampere-seconds
   TYPE(mass_per_area,         -2, 1, 0, 0, 0, 0, 0, 0); // in kilograms per square meter
   TYPE(mass_per_power,        -2, 0, 3, 0, 0, 0, 0, 0); // in kilograms per watt
@@ -52,10 +54,10 @@ namespace si {
   TYPE(frequency,              0, 0,-1, 0, 0, 0, 0, 0); // per second (reciprocal)
   TYPE(per_substance,          0, 0, 0, 0, 0,-1, 0, 0); // per mol (reciprocal)
 
-  // Digital Datatypes
-  // -----------------
-  TYPE(digital_size,           0, 0, 0, 0, 0, 0, 0, 1); // in bits
-  TYPE(digital_speed,          0, 0,-1, 0, 0, 0, 0, 1); // in bits per second
+  // Information Datatypes
+  // ---------------------
+  TYPE(data_size,              0, 0, 0, 0, 0, 0, 0, 1); // in bits
+  TYPE(data_speed,             0, 0,-1, 0, 0, 0, 0, 1); // in bits per second
 
   // Dimensionless Datatypes
   // -----------------------

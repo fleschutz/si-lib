@@ -48,8 +48,8 @@ namespace si {
     static_assert(sizeof(current) == sizeof(SIdouble));
     static_assert(sizeof(substance) == sizeof(SIdouble));
     static_assert(sizeof(luminous_intensity) == sizeof(SIdouble));
-    static_assert(sizeof(digital_size) == sizeof(SIdouble));
-    static_assert(sizeof(digital_speed) == sizeof(SIdouble));
+    static_assert(sizeof(data_size) == sizeof(SIdouble));
+    static_assert(sizeof(data_speed) == sizeof(SIdouble));
     static_assert(sizeof(dimensionless) == sizeof(SIdouble));
   }
 
@@ -275,7 +275,7 @@ namespace si {
 	static_assert(1_degF== fahrenheit(1));
   }
 
-  inline void check_digital_units() {
+  inline void check_units_for_information() {
 	// bits...
 	static_assert(1_Ebit == 1000_Pbit);
 	static_assert(1_Pbit == 1000_Tbit);

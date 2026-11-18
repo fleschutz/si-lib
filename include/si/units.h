@@ -116,13 +116,13 @@ namespace si {
   UNIT(miles_per_hour) = statute_miles / hours;
   UNIT(knots)          = nautical_miles / hours;
 
-  // Digital Units
-  // -------------
-  UNIT(bits)             = unit<digital_size>();
+  // Units of Information
+  // --------------------
+  UNIT(bits)             = unit<data_size>();
   UNIT(bits_per_second)  = bits / seconds;
   UNIT(bits_per_m2)      = bits / meters2;
   UNIT(bits_per_m3)      = bits / meters3;
-  UNIT(bytes)            = unit<digital_size, 8,1>();
+  UNIT(bytes)            = unit<data_size, 8,1>();
   UNIT(bytes_per_second) = bytes / seconds;
   UNIT(bytes_per_m2)     = bytes / meters2;
   UNIT(bytes_per_m3)     = bytes / meters3;
