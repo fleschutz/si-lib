@@ -334,9 +334,6 @@ namespace si {
   UDL(_yd2,                    0.8361274, meters2); // 1_yd2 (square yard)
   UDL(_ft2,                   0.09290304, meters2); // 1_ft2 (square feet)
   UDL(_in2,                   0.00064516, meters2); // 1_in2 (square inch)
-  // mass in...
-  UDL(_lb,                  0.453'592'37, kilograms); // 1_lb (pound)
-  UDL(_oz,             0.028'349'523'125, kilograms); // 1_oz (ounce, 1/16 of a pound)
   // volume in...
   UDL(_Imp_gal,               4.54609e-3, meters3); // 1_Imp_gal   (Imperial gallon)
   UDL(_Imp_qt,                 1.1365e-3, meters3); // 1_Imp_qt    (Imperial quart)
@@ -350,13 +347,19 @@ namespace si {
   UDL(_US_cup,           0.2365882365e-3, meters3); // 1_US_cup    (US cup)
   UDL(_US_li_gi,       0.118294118250e-3, meters3); // 1_US_gi     (US liquid gill)
   UDL(_US_fl_oz,      0.0295735295625e-3, meters3); // 1_US_fl_oz  (US fluid ounce)
+  // mass in...
+  UDL(_lb,                  0.453'592'37, kilograms); // 1_lb (pound)
+  UDL(_oz,             0.028'349'523'125, kilograms); // 1_oz (ounce, 1/16 of a pound)
+  // pressure in...
+  UDL(_psi,                     6'894.76, pascals);  // 1_psi  (pound per square inch)
+  UDL(_inHg,                    3'386.39, pascals);  // 1_inHg (inch of mercury)
   // velocity in...
   UDL(_kn,                          1852, meters_per_hour);   // 1_kn (knots)
   UDL(_mi_per_h,                  .44704, meters_per_second); // 1_mi_per_h (miles/hour)
   UDL(_ft_per_min,               0.00508, meters_per_second); // 1_ft_per_min (feet/min)
   UDL(_in_per_s,                  0.0254, meters_per_second); // 1_in_per_s (inch/sec)
   UDL(_in_per_h,            0.0000070556, meters_per_second); // 1_in_per_h (inch/hour)
-  // absolute temperature in...
+  // absolute thermodynamic temperature in...
   UDL(_degF,                           1, fahrenheit); // 1_degF (°Fahrenheit)
 
   // Astronomical Units
@@ -425,18 +428,24 @@ namespace si {
 
   // Various Units
   // -------------
+  // pressure in...
   UDL(_Gbar,                        1e14, pascals);  // 1_Gbar (gigabar)
   UDL(_Mbar,                        1e11, pascals);  // 1_Mbar (megabar)
   UDL(_kbar,                         1e8, pascals);  // 1_kbar (kilobar)
   UDL(_bar,                          1e5, pascals);  // 1_bar 
   UDL(_mbar,                         1e2, pascals);  // 1_mbar (millibar)
-  UDL(_psi,                     6'894.76, pascals);  // 1_psi  (pound per square inch)
   UDL(_atm,                      101'325, pascals);  // 1_atm  (atmosphere)
-  UDL(_inHg,                    3'386.39, pascals);  // 1_inHg (inch of mercury)
   UDL(_mmHg,           101'325.0 / 760.0, pascals);  // 1_mmHg (millimetre of mercury)
   UDL(_Torr,           101'325.0 / 760.0, pascals);  // 1_Torr (same as mmHg)
+  // absolute thermodynamic temperature in...
   UDL(_degC,                           1, celsius);  // 1_degC (°Celsius)
   UDL(_degR,                     5.0/9.0, kelvins);  // 1_degR (°Rankine)
+  // concentration in...
+  UDL(_ppt,                        1e-12, dimensionless); // 1_ppt (parts per trillion)
+  UDL(_ppb,                         1e-9, dimensionless); // 1_ppb (parts per billion)
+  UDL(_ppm,                         1e-6, dimensionless); // 1_ppm (parts per million)
+  UDL(_percent,                     0.01, dimensionless); // 1_percent (%, parts per hundred)
+  // misc
   UDL(_Mach,                         330, meters_per_second); // 1_Mach
   UDL(_Da,        1.660'539'068'9252e-27, kilograms);// 1_Da   (dalton, or unified atomic mass unit)
   UDL(_eV,             1.602'176'634e-19, joules);   // 1_eV   (electronvolt, as of 2019 SI)
@@ -444,7 +453,6 @@ namespace si {
   UDL(_shp,           745.69987158227022, watts);    // 1_shp  (shaft horsepower)
   UDL(_PS,                     735.49875, watts);    // 1_PS   ('Pferdestärke', german horsepower)
   UDL(_Ang,                        1e-10, meters);   // 1_Ang  (angstrom)
-  UDL(_percent,                     0.01, dimensionless); // 1_percent (%, per hundred)
   UDL(_bpm,                     1.0/60.0, hertz);    // 1_bpm  (beats per minute)
 
 } // end of namespace
