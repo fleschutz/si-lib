@@ -1,5 +1,5 @@
-/// @file     si/constants.h
-/// @brief    Defines 74 type-safe constants
+/// @file     <si/constants.h>
+/// @brief    Defines 70+ type-safe constants, e.g. si::constant::c
 /// @details  Categories are: defined constants, universal constants, electromagnetic constants, atomic & nuclear constants, physico-chemical constants, physical constants, mathematical constants, astronomical constants, various constants, and references.
 
 #pragma once

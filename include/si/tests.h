@@ -1,5 +1,5 @@
-/// @file      si/tests.h
-/// @brief     Contains 300+ unit tests (executed at compile-time and on each commit by GitHub actions)
+/// @file      <si/tests.h>
+/// @brief     Contains 300+ unit tests, executed at compile-time and on each commit by GitHub actions
 /// @details   Categories are: features, C datatypes, SI datatypes, base units, derived units, astronomical units, Imperial units, digital units, various units, functions and templates.
 
 #pragma once

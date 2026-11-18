@@ -1,5 +1,5 @@
-/// @file     si/formulas.h
-/// @brief    Defines 70+ math and physics formulas, e.g. si::hypotenuse_formula().
+/// @file     <si/formulas.h>
+/// @brief    Defines 70+ math and physics formulas, e.g. si::hypotenuse_formula()
 /// @details  Categories are: 2D, 3D, moving objects, vehicle, aircraft, gravitation, various, and references.
 
 #pragma once

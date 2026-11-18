@@ -1,5 +1,5 @@
-/// @file     si/units.h
-/// @brief    Defines 103 units based on libSI's datatypes, e.g. si::meters
+/// @file     <si/units.h>
+/// @brief    Defines 103 units, e.g. si::meters
 /// @details  Categories are: SI base units, SI derived units, Imperial/digital/various units, and references.
 
 #pragma once

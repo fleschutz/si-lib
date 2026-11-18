@@ -1,4 +1,4 @@
-/// @file     si/literals.h
+/// @file     <si/literals.h>
 /// @brief    Defines 300+ user-defined literals (UDL, supported since C++11), e.g. 24_h
 /// @details  Categories are: SI base units, SI derived units, Imperial units, astronomical units, digital units, and various units.
 

@@ -1,6 +1,6 @@
-/// @file     si/prefixes.h
-/// @brief    Defines the 24 SI prefixes (as of 2026)
-/// @details  Source: https://en.wikipedia.org/wiki/Metric_prefix
+/// @file     <si/prefixes.h>
+/// @brief    Defines the 24 SI prefixes 
+/// @details  Source: https://en.wikipedia.org/wiki/Metric_prefix as of 2026
 
 #pragma once
 #include <si/units.h>

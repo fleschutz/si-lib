@@ -1,5 +1,5 @@
-/// @file     si/conversions.h
-/// @brief    Provides some conversion functions, e.g. to_string(12_m).
+/// @file     <si/conversions.h>
+/// @brief    Provides conversion functions, e.g. to_string(3_m).
 /// @details  Defines the operator << and the functions: from_string(), to_string(), to_equivalent(), and to_percentage().
 
 #pragma once

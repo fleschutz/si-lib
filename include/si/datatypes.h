@@ -1,5 +1,5 @@
-/// @file   si/datatypes.h
-/// @brief  Defines the 7 SI base datatypes, derived SI datatypes, digital datatypes, and a dimensionless one.
+/// @file   <si/datatypes.h>
+/// @brief  Defines the SI base datatypes and the derived, the digital and the dimensionless one
 
 #pragma once
 #include <si/internal.h>
