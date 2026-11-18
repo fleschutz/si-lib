@@ -116,8 +116,8 @@ $(function(){initNavTree('tests_8h_source.html','',''); });
 <div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>    <span class="keyword">static_assert</span>( (0_degC + 32_degF + 491.67_degR + 273.15_K) / 4 == 273.15_K );</div>
 <div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>    <span class="keyword">static_assert</span>( 1_A * 1_h == 3600_C );</div>
 <div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>    <span class="keyword">static_assert</span>( 1_Ah == 3600_C );</div>
-<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>    <span class="keyword">static_assert</span>( 8_bits == 1_byte );</div>
-<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>    <span class="keyword">static_assert</span>( 16_bits == 2_bytes );</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>    <span class="keyword">static_assert</span>( 8_bit == 1_byte );</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>    <span class="keyword">static_assert</span>( 16_bit == 2_byte );</div>
 <div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>  }</div>
 </div>
 <div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span> </div>
@@ -384,140 +384,145 @@ $(function(){initNavTree('tests_8h_source.html','',''); });
 <div class="foldopen" id="foldopen00278" data-start="{" data-end="}">
 <div class="line"><a id="l00278" name="l00278"></a><span class="lineno"><a class="line" href="namespacesi.html#a6c075d2eb86cc9cc5bdc92e8c0f79f1e">  278</a></span>  <span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code hl_function" href="namespacesi.html#a6c075d2eb86cc9cc5bdc92e8c0f79f1e">check_digital_units</a>() {</div>
 <div class="line"><a id="l00279" name="l00279"></a><span class="lineno">  279</span>    <span class="comment">// bits...</span></div>
-<div class="line"><a id="l00280" name="l00280"></a><span class="lineno">  280</span>    <span class="keyword">static_assert</span>(1_bit  == 0.001_kBit);</div>
-<div class="line"><a id="l00281" name="l00281"></a><span class="lineno">  281</span>    <span class="keyword">static_assert</span>(1_bit  == bits(1));</div>
-<div class="line"><a id="l00282" name="l00282"></a><span class="lineno">  282</span>    <span class="keyword">static_assert</span>(1_kBit == 1000_bits);</div>
-<div class="line"><a id="l00283" name="l00283"></a><span class="lineno">  283</span>    <span class="keyword">static_assert</span>(1_MBit == 1000_kBit);</div>
-<div class="line"><a id="l00284" name="l00284"></a><span class="lineno">  284</span>    <span class="keyword">static_assert</span>(1_GBit == 1000_MBit);</div>
-<div class="line"><a id="l00285" name="l00285"></a><span class="lineno">  285</span>    <span class="keyword">static_assert</span>(1_TBit == 1000_GBit);</div>
-<div class="line"><a id="l00286" name="l00286"></a><span class="lineno">  286</span>    <span class="comment">// bits per seconds...</span></div>
-<div class="line"><a id="l00287" name="l00287"></a><span class="lineno">  287</span>    <span class="keyword">static_assert</span>(1_Tbps == 1000_Gbps);</div>
-<div class="line"><a id="l00288" name="l00288"></a><span class="lineno">  288</span>    <span class="keyword">static_assert</span>(1_Gbps == 1000_Mbps);</div>
-<div class="line"><a id="l00289" name="l00289"></a><span class="lineno">  289</span>    <span class="keyword">static_assert</span>(1_Mbps == 1000_Kbps);</div>
-<div class="line"><a id="l00290" name="l00290"></a><span class="lineno">  290</span>    <span class="keyword">static_assert</span>(1_Kbps == bits_per_second(1000));</div>
-<div class="line"><a id="l00291" name="l00291"></a><span class="lineno">  291</span>    <span class="comment">// bytes... (metric prefixes)</span></div>
-<div class="line"><a id="l00292" name="l00292"></a><span class="lineno">  292</span>    <span class="keyword">static_assert</span>(1_byte == 8_bits);</div>
-<div class="line"><a id="l00293" name="l00293"></a><span class="lineno">  293</span>    <span class="keyword">static_assert</span>(1_byte == bytes(1));</div>
-<div class="line"><a id="l00294" name="l00294"></a><span class="lineno">  294</span>    <span class="keyword">static_assert</span>(1_kB   == 1000_bytes);</div>
-<div class="line"><a id="l00295" name="l00295"></a><span class="lineno">  295</span>    <span class="keyword">static_assert</span>(1_MB   == 1000_kB);</div>
-<div class="line"><a id="l00296" name="l00296"></a><span class="lineno">  296</span>    <span class="keyword">static_assert</span>(1_GB   == 1000_MB);</div>
-<div class="line"><a id="l00297" name="l00297"></a><span class="lineno">  297</span>    <span class="keyword">static_assert</span>(1_TB   == 1000_GB);</div>
-<div class="line"><a id="l00298" name="l00298"></a><span class="lineno">  298</span>    <span class="keyword">static_assert</span>(1_PB   == 1000_TB);</div>
-<div class="line"><a id="l00299" name="l00299"></a><span class="lineno">  299</span>    <span class="keyword">static_assert</span>(1_EB   == 1000_PB);</div>
-<div class="line"><a id="l00300" name="l00300"></a><span class="lineno">  300</span>    <span class="keyword">static_assert</span>(1_ZB   == 1000_EB);</div>
-<div class="line"><a id="l00301" name="l00301"></a><span class="lineno">  301</span>    <span class="comment">// bytes... (binary prefixes)</span></div>
-<div class="line"><a id="l00302" name="l00302"></a><span class="lineno">  302</span>    <span class="keyword">static_assert</span>(1_KiB == 1024_bytes);</div>
-<div class="line"><a id="l00303" name="l00303"></a><span class="lineno">  303</span>    <span class="keyword">static_assert</span>(1_MiB == 1024_KiB);</div>
-<div class="line"><a id="l00304" name="l00304"></a><span class="lineno">  304</span>    <span class="keyword">static_assert</span>(1_GiB == 1024_MiB);</div>
-<div class="line"><a id="l00305" name="l00305"></a><span class="lineno">  305</span>    <span class="keyword">static_assert</span>(1_TiB == 1024_GiB);</div>
-<div class="line"><a id="l00306" name="l00306"></a><span class="lineno">  306</span>    <span class="comment">// bytes per second... (metric prefixes)</span></div>
-<div class="line"><a id="l00307" name="l00307"></a><span class="lineno">  307</span>    <span class="keyword">static_assert</span>(1_KBps == 1000_bytes_per_s);</div>
-<div class="line"><a id="l00308" name="l00308"></a><span class="lineno">  308</span>    <span class="keyword">static_assert</span>(1_KBps == bytes_per_second(1000));</div>
-<div class="line"><a id="l00309" name="l00309"></a><span class="lineno">  309</span>    <span class="keyword">static_assert</span>(1_MBps == 1000_KBps);</div>
-<div class="line"><a id="l00310" name="l00310"></a><span class="lineno">  310</span>    <span class="keyword">static_assert</span>(1_GBps == 1000_MBps);</div>
-<div class="line"><a id="l00311" name="l00311"></a><span class="lineno">  311</span>    <span class="keyword">static_assert</span>(1_TBps == 1000_GBps);</div>
-<div class="line"><a id="l00312" name="l00312"></a><span class="lineno">  312</span>    <span class="keyword">static_assert</span>(1_PBps == 1000_TBps);</div>
-<div class="line"><a id="l00313" name="l00313"></a><span class="lineno">  313</span>    <span class="comment">// bytes per second... (binary prefixes)</span></div>
-<div class="line"><a id="l00314" name="l00314"></a><span class="lineno">  314</span>    <span class="keyword">static_assert</span>(1_KiBps == 1024_bytes_per_s);</div>
-<div class="line"><a id="l00315" name="l00315"></a><span class="lineno">  315</span>    <span class="keyword">static_assert</span>(1_MiBps == 1024_KiBps);</div>
-<div class="line"><a id="l00316" name="l00316"></a><span class="lineno">  316</span>    <span class="keyword">static_assert</span>(1_GiBps == 1024_MiBps);</div>
-<div class="line"><a id="l00317" name="l00317"></a><span class="lineno">  317</span>    <span class="keyword">static_assert</span>(1_TiBps == 1024_GiBps);</div>
-<div class="line"><a id="l00318" name="l00318"></a><span class="lineno">  318</span>  }</div>
-</div>
-<div class="line"><a id="l00319" name="l00319"></a><span class="lineno">  319</span> </div>
-<div class="foldopen" id="foldopen00320" data-start="{" data-end="}">
-<div class="line"><a id="l00320" name="l00320"></a><span class="lineno"><a class="line" href="namespacesi.html#a1b7dcd28bce9d270cdff156bba7fc48f">  320</a></span>  <span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code hl_function" href="namespacesi.html#a1b7dcd28bce9d270cdff156bba7fc48f">check_angle</a>() {</div>
-<div class="line"><a id="l00321" name="l00321"></a><span class="lineno">  321</span>        <span class="keyword">static_assert</span>(1_rad == 1000_mrad);</div>
-<div class="line"><a id="l00322" name="l00322"></a><span class="lineno">  322</span>        <span class="keyword">static_assert</span>(0_deg == 0_rad);</div>
+<div class="line"><a id="l00280" name="l00280"></a><span class="lineno">  280</span>    <span class="keyword">static_assert</span>(1_Ebit == 1000_Pbit);</div>
+<div class="line"><a id="l00281" name="l00281"></a><span class="lineno">  281</span>    <span class="keyword">static_assert</span>(1_Pbit == 1000_Tbit);</div>
+<div class="line"><a id="l00282" name="l00282"></a><span class="lineno">  282</span>    <span class="keyword">static_assert</span>(1_Tbit == 1000_Gbit);</div>
+<div class="line"><a id="l00283" name="l00283"></a><span class="lineno">  283</span>    <span class="keyword">static_assert</span>(1_Gbit == 1000_Mbit);</div>
+<div class="line"><a id="l00284" name="l00284"></a><span class="lineno">  284</span>    <span class="keyword">static_assert</span>(1_Mbit == 1000_kbit);</div>
+<div class="line"><a id="l00285" name="l00285"></a><span class="lineno">  285</span>    <span class="keyword">static_assert</span>(1_kbit == 1000_bit);</div>
+<div class="line"><a id="l00286" name="l00286"></a><span class="lineno">  286</span>    <span class="keyword">static_assert</span>(1_bit  == bits(1));</div>
+<div class="line"><a id="l00287" name="l00287"></a><span class="lineno">  287</span>    <span class="keyword">static_assert</span>(1_bit  == 0.001_kbit);</div>
+<div class="line"><a id="l00288" name="l00288"></a><span class="lineno">  288</span>    <span class="keyword">static_assert</span>(4_bit  == 1_nibble);</div>
+<div class="line"><a id="l00289" name="l00289"></a><span class="lineno">  289</span>    <span class="comment">// bits per seconds...</span></div>
+<div class="line"><a id="l00290" name="l00290"></a><span class="lineno">  290</span>    <span class="keyword">static_assert</span>(1_Ebit_per_s == 1000_Pbit_per_s);</div>
+<div class="line"><a id="l00291" name="l00291"></a><span class="lineno">  291</span>    <span class="keyword">static_assert</span>(1_Pbit_per_s == 1000_Tbit_per_s);</div>
+<div class="line"><a id="l00292" name="l00292"></a><span class="lineno">  292</span>    <span class="keyword">static_assert</span>(1_Tbit_per_s == 1000_Gbit_per_s);</div>
+<div class="line"><a id="l00293" name="l00293"></a><span class="lineno">  293</span>    <span class="keyword">static_assert</span>(1_Gbit_per_s == 1000_Mbit_per_s);</div>
+<div class="line"><a id="l00294" name="l00294"></a><span class="lineno">  294</span>    <span class="keyword">static_assert</span>(1_Mbit_per_s == 1000_kbit_per_s);</div>
+<div class="line"><a id="l00295" name="l00295"></a><span class="lineno">  295</span>    <span class="keyword">static_assert</span>(1_kbit_per_s == bits_per_second(1000));</div>
+<div class="line"><a id="l00296" name="l00296"></a><span class="lineno">  296</span>    <span class="comment">// bytes with metric prefixes...</span></div>
+<div class="line"><a id="l00297" name="l00297"></a><span class="lineno">  297</span>    <span class="keyword">static_assert</span>(1_ZB   == 1000_EB);</div>
+<div class="line"><a id="l00298" name="l00298"></a><span class="lineno">  298</span>    <span class="keyword">static_assert</span>(1_EB   == 1000_PB);</div>
+<div class="line"><a id="l00299" name="l00299"></a><span class="lineno">  299</span>    <span class="keyword">static_assert</span>(1_PB   == 1000_TB);</div>
+<div class="line"><a id="l00300" name="l00300"></a><span class="lineno">  300</span>    <span class="keyword">static_assert</span>(1_TB   == 1000_GB);</div>
+<div class="line"><a id="l00301" name="l00301"></a><span class="lineno">  301</span>    <span class="keyword">static_assert</span>(1_GB   == 1000_MB);</div>
+<div class="line"><a id="l00302" name="l00302"></a><span class="lineno">  302</span>    <span class="keyword">static_assert</span>(1_MB   == 1000_kB);</div>
+<div class="line"><a id="l00303" name="l00303"></a><span class="lineno">  303</span>    <span class="keyword">static_assert</span>(1_kB   == 1000_byte);</div>
+<div class="line"><a id="l00304" name="l00304"></a><span class="lineno">  304</span>    <span class="keyword">static_assert</span>(1_byte == bytes(1));</div>
+<div class="line"><a id="l00305" name="l00305"></a><span class="lineno">  305</span>    <span class="keyword">static_assert</span>(1_byte == 8_bit);</div>
+<div class="line"><a id="l00306" name="l00306"></a><span class="lineno">  306</span>    <span class="comment">// bytes with binary prefixes...</span></div>
+<div class="line"><a id="l00307" name="l00307"></a><span class="lineno">  307</span>    <span class="keyword">static_assert</span>(1_TiB == 1024_GiB);</div>
+<div class="line"><a id="l00308" name="l00308"></a><span class="lineno">  308</span>    <span class="keyword">static_assert</span>(1_GiB == 1024_MiB);</div>
+<div class="line"><a id="l00309" name="l00309"></a><span class="lineno">  309</span>    <span class="keyword">static_assert</span>(1_MiB == 1024_KiB);</div>
+<div class="line"><a id="l00310" name="l00310"></a><span class="lineno">  310</span>    <span class="keyword">static_assert</span>(1_KiB == 1024_byte);</div>
+<div class="line"><a id="l00311" name="l00311"></a><span class="lineno">  311</span>    <span class="comment">// bytes per second with metric prefixes...</span></div>
+<div class="line"><a id="l00312" name="l00312"></a><span class="lineno">  312</span>    <span class="keyword">static_assert</span>(1_PB_per_s == 1000_TB_per_s);</div>
+<div class="line"><a id="l00313" name="l00313"></a><span class="lineno">  313</span>    <span class="keyword">static_assert</span>(1_TB_per_s == 1000_GB_per_s);</div>
+<div class="line"><a id="l00314" name="l00314"></a><span class="lineno">  314</span>    <span class="keyword">static_assert</span>(1_GB_per_s == 1000_MB_per_s);</div>
+<div class="line"><a id="l00315" name="l00315"></a><span class="lineno">  315</span>    <span class="keyword">static_assert</span>(1_MB_per_s == 1000_KB_per_s);</div>
+<div class="line"><a id="l00316" name="l00316"></a><span class="lineno">  316</span>    <span class="keyword">static_assert</span>(1_KB_per_s == 1000_byte_per_s);</div>
+<div class="line"><a id="l00317" name="l00317"></a><span class="lineno">  317</span>    <span class="keyword">static_assert</span>(1_KB_per_s == bytes_per_second(1000));</div>
+<div class="line"><a id="l00318" name="l00318"></a><span class="lineno">  318</span>    <span class="comment">// bytes per second with binary prefixes...</span></div>
+<div class="line"><a id="l00319" name="l00319"></a><span class="lineno">  319</span>    <span class="keyword">static_assert</span>(1_TiB_per_s == 1024_GiB_per_s);</div>
+<div class="line"><a id="l00320" name="l00320"></a><span class="lineno">  320</span>    <span class="keyword">static_assert</span>(1_GiB_per_s == 1024_MiB_per_s);</div>
+<div class="line"><a id="l00321" name="l00321"></a><span class="lineno">  321</span>    <span class="keyword">static_assert</span>(1_MiB_per_s == 1024_KiB_per_s);</div>
+<div class="line"><a id="l00322" name="l00322"></a><span class="lineno">  322</span>    <span class="keyword">static_assert</span>(1_KiB_per_s == 1024_byte_per_s);</div>
 <div class="line"><a id="l00323" name="l00323"></a><span class="lineno">  323</span>  }</div>
 </div>
 <div class="line"><a id="l00324" name="l00324"></a><span class="lineno">  324</span> </div>
 <div class="foldopen" id="foldopen00325" data-start="{" data-end="}">
-<div class="line"><a id="l00325" name="l00325"></a><span class="lineno"><a class="line" href="namespacesi.html#aa8762e9d8197afc9765df2ed68494288">  325</a></span>  <span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code hl_function" href="namespacesi.html#aa8762e9d8197afc9765df2ed68494288">check_various_units</a>() {</div>
-<div class="line"><a id="l00326" name="l00326"></a><span class="lineno">  326</span>    <span class="comment">// pressure in...</span></div>
-<div class="line"><a id="l00327" name="l00327"></a><span class="lineno">  327</span>    <span class="keyword">static_assert</span>(1_bar  == 1000_mbar);</div>
-<div class="line"><a id="l00328" name="l00328"></a><span class="lineno">  328</span>    <span class="keyword">static_assert</span>(1_kbar == 1000_bar);</div>
-<div class="line"><a id="l00329" name="l00329"></a><span class="lineno">  329</span>    <span class="keyword">static_assert</span>(1_Mbar == 1000_kbar);</div>
-<div class="line"><a id="l00330" name="l00330"></a><span class="lineno">  330</span>    <span class="keyword">static_assert</span>(1_Gbar == 1000_Mbar);</div>
-<div class="line"><a id="l00331" name="l00331"></a><span class="lineno">  331</span>    <span class="comment">// temperature in...</span></div>
-<div class="line"><a id="l00332" name="l00332"></a><span class="lineno">  332</span>    <span class="keyword">static_assert</span>(0_degC == 273.15_K);</div>
-<div class="line"><a id="l00333" name="l00333"></a><span class="lineno">  333</span>    <span class="comment">//static_assert(491.67_degR == 273.15_K);</span></div>
-<div class="line"><a id="l00334" name="l00334"></a><span class="lineno">  334</span>  }</div>
+<div class="line"><a id="l00325" name="l00325"></a><span class="lineno"><a class="line" href="namespacesi.html#a1b7dcd28bce9d270cdff156bba7fc48f">  325</a></span>  <span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code hl_function" href="namespacesi.html#a1b7dcd28bce9d270cdff156bba7fc48f">check_angle</a>() {</div>
+<div class="line"><a id="l00326" name="l00326"></a><span class="lineno">  326</span>        <span class="keyword">static_assert</span>(1_rad == 1000_mrad);</div>
+<div class="line"><a id="l00327" name="l00327"></a><span class="lineno">  327</span>        <span class="keyword">static_assert</span>(0_deg == 0_rad);</div>
+<div class="line"><a id="l00328" name="l00328"></a><span class="lineno">  328</span>  }</div>
 </div>
-<div class="line"><a id="l00335" name="l00335"></a><span class="lineno">  335</span> </div>
-<div class="foldopen" id="foldopen00336" data-start="{" data-end="}">
-<div class="line"><a id="l00336" name="l00336"></a><span class="lineno"><a class="line" href="namespacesi.html#ac6b790c0cf240a04f0ebb8a536677a08">  336</a></span>  <span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code hl_function" href="namespacesi.html#ac6b790c0cf240a04f0ebb8a536677a08">check_functions_and_templates</a>() {</div>
-<div class="line"><a id="l00337" name="l00337"></a><span class="lineno">  337</span>    <span class="keyword">static_assert</span>(<a class="code hl_function" href="namespacesi.html#a81d5e3226a6c79b8ff2ea09612bfe4f6">abs</a>(-3.5_m) == 3.5_m);</div>
-<div class="line"><a id="l00338" name="l00338"></a><span class="lineno">  338</span>    <span class="keyword">static_assert</span>(<a class="code hl_function" href="namespacesi.html#a81d5e3226a6c79b8ff2ea09612bfe4f6">abs</a>(-1_m)   == 1_m);</div>
-<div class="line"><a id="l00339" name="l00339"></a><span class="lineno">  339</span>    <span class="keyword">static_assert</span>(<a class="code hl_function" href="namespacesi.html#a81d5e3226a6c79b8ff2ea09612bfe4f6">abs</a>(0_m)    == 0_m);</div>
-<div class="line"><a id="l00340" name="l00340"></a><span class="lineno">  340</span>    <span class="keyword">static_assert</span>(<a class="code hl_function" href="namespacesi.html#a81d5e3226a6c79b8ff2ea09612bfe4f6">abs</a>(1_m)    == 1_m);</div>
-<div class="line"><a id="l00341" name="l00341"></a><span class="lineno">  341</span>    <span class="keyword">static_assert</span>(<a class="code hl_function" href="namespacesi.html#a81d5e3226a6c79b8ff2ea09612bfe4f6">abs</a>(5.6_m)  == 5.6_m);</div>
-<div class="line"><a id="l00342" name="l00342"></a><span class="lineno">  342</span> </div>
-<div class="line"><a id="l00343" name="l00343"></a><span class="lineno">  343</span>    <span class="keyword">static_assert</span>(<a class="code hl_function" href="namespacesi.html#a2e6e36e0042def7dc4611c246dfd34a5">square</a>(-3_m) == 9_m2);</div>
-<div class="line"><a id="l00344" name="l00344"></a><span class="lineno">  344</span>    <span class="keyword">static_assert</span>(<a class="code hl_function" href="namespacesi.html#a2e6e36e0042def7dc4611c246dfd34a5">square</a>(-1_m) == 1_m2);</div>
-<div class="line"><a id="l00345" name="l00345"></a><span class="lineno">  345</span>    <span class="keyword">static_assert</span>(<a class="code hl_function" href="namespacesi.html#a2e6e36e0042def7dc4611c246dfd34a5">square</a>(-.5_m)== .25_m2);</div>
-<div class="line"><a id="l00346" name="l00346"></a><span class="lineno">  346</span>    <span class="keyword">static_assert</span>(<a class="code hl_function" href="namespacesi.html#a2e6e36e0042def7dc4611c246dfd34a5">square</a>(0_m)  == 0_m2);</div>
-<div class="line"><a id="l00347" name="l00347"></a><span class="lineno">  347</span>    <span class="keyword">static_assert</span>(<a class="code hl_function" href="namespacesi.html#a2e6e36e0042def7dc4611c246dfd34a5">square</a>(.5_m) == .25_m2);</div>
-<div class="line"><a id="l00348" name="l00348"></a><span class="lineno">  348</span>    <span class="keyword">static_assert</span>(<a class="code hl_function" href="namespacesi.html#a2e6e36e0042def7dc4611c246dfd34a5">square</a>(1_m)  == 1_m2);</div>
-<div class="line"><a id="l00349" name="l00349"></a><span class="lineno">  349</span>    <span class="keyword">static_assert</span>(<a class="code hl_function" href="namespacesi.html#a2e6e36e0042def7dc4611c246dfd34a5">square</a>(3_m)  == 9_m2);</div>
-<div class="line"><a id="l00350" name="l00350"></a><span class="lineno">  350</span> </div>
-<div class="line"><a id="l00351" name="l00351"></a><span class="lineno">  351</span>    <span class="comment">// static_assert(sqrt(9_m2) == 3_m); (TODO)</span></div>
-<div class="line"><a id="l00352" name="l00352"></a><span class="lineno">  352</span> </div>
-<div class="line"><a id="l00353" name="l00353"></a><span class="lineno">  353</span>    <span class="keyword">static_assert</span>(<a class="code hl_function" href="namespacesi.html#a644b606b4503df18073f1ec08ef85b29">cube</a>(-3_m) == -27_m3);</div>
-<div class="line"><a id="l00354" name="l00354"></a><span class="lineno">  354</span>    <span class="keyword">static_assert</span>(<a class="code hl_function" href="namespacesi.html#a644b606b4503df18073f1ec08ef85b29">cube</a>(-1_m) == -1_m3);</div>
-<div class="line"><a id="l00355" name="l00355"></a><span class="lineno">  355</span>    <span class="keyword">static_assert</span>(<a class="code hl_function" href="namespacesi.html#a644b606b4503df18073f1ec08ef85b29">cube</a>(-.5_m)== -0.125_m3);</div>
-<div class="line"><a id="l00356" name="l00356"></a><span class="lineno">  356</span>    <span class="keyword">static_assert</span>(<a class="code hl_function" href="namespacesi.html#a644b606b4503df18073f1ec08ef85b29">cube</a>(0_m)  == 0_m3);</div>
-<div class="line"><a id="l00357" name="l00357"></a><span class="lineno">  357</span>    <span class="keyword">static_assert</span>(<a class="code hl_function" href="namespacesi.html#a644b606b4503df18073f1ec08ef85b29">cube</a>(.5_m) == 0.125_m3);</div>
-<div class="line"><a id="l00358" name="l00358"></a><span class="lineno">  358</span>    <span class="keyword">static_assert</span>(<a class="code hl_function" href="namespacesi.html#a644b606b4503df18073f1ec08ef85b29">cube</a>(1_m)  == 1_m3);</div>
-<div class="line"><a id="l00359" name="l00359"></a><span class="lineno">  359</span>    <span class="keyword">static_assert</span>(<a class="code hl_function" href="namespacesi.html#a644b606b4503df18073f1ec08ef85b29">cube</a>(3_m)  == 27_m3);</div>
-<div class="line"><a id="l00360" name="l00360"></a><span class="lineno">  360</span> </div>
-<div class="line"><a id="l00361" name="l00361"></a><span class="lineno">  361</span>    <span class="comment">// static_assert(cbrt(27_m3) == 3_m); (TODO)</span></div>
-<div class="line"><a id="l00362" name="l00362"></a><span class="lineno">  362</span> </div>
-<div class="line"><a id="l00363" name="l00363"></a><span class="lineno">  363</span>    <span class="keyword">static_assert</span>(<a class="code hl_function" href="namespacesi.html#a50291ece69c501e57f4d9b61e845910e">clamp</a>(-2_m, -1_m,1_m) == -1_m);</div>
-<div class="line"><a id="l00364" name="l00364"></a><span class="lineno">  364</span>    <span class="keyword">static_assert</span>(<a class="code hl_function" href="namespacesi.html#a50291ece69c501e57f4d9b61e845910e">clamp</a>(-1_m, 0_m,1_m) == 0_m);</div>
-<div class="line"><a id="l00365" name="l00365"></a><span class="lineno">  365</span>    <span class="keyword">static_assert</span>(<a class="code hl_function" href="namespacesi.html#a50291ece69c501e57f4d9b61e845910e">clamp</a>(-1_m, 1_m,2_m) == 1_m);</div>
-<div class="line"><a id="l00366" name="l00366"></a><span class="lineno">  366</span>    <span class="keyword">static_assert</span>(<a class="code hl_function" href="namespacesi.html#a50291ece69c501e57f4d9b61e845910e">clamp</a>(-0.5_m, 1_m,2_m) == 1_m);</div>
-<div class="line"><a id="l00367" name="l00367"></a><span class="lineno">  367</span>    <span class="keyword">static_assert</span>(<a class="code hl_function" href="namespacesi.html#a50291ece69c501e57f4d9b61e845910e">clamp</a>(0_m, 0_m,1_m) == 0_m);</div>
-<div class="line"><a id="l00368" name="l00368"></a><span class="lineno">  368</span>    <span class="keyword">static_assert</span>(<a class="code hl_function" href="namespacesi.html#a50291ece69c501e57f4d9b61e845910e">clamp</a>(0_m, -1_m,2_m) == 0_m);</div>
-<div class="line"><a id="l00369" name="l00369"></a><span class="lineno">  369</span>    <span class="keyword">static_assert</span>(<a class="code hl_function" href="namespacesi.html#a50291ece69c501e57f4d9b61e845910e">clamp</a>(3_m, 4_m,5_m) == 4_m);</div>
-<div class="line"><a id="l00370" name="l00370"></a><span class="lineno">  370</span>    <span class="keyword">static_assert</span>(<a class="code hl_function" href="namespacesi.html#a50291ece69c501e57f4d9b61e845910e">clamp</a>(3_m, 1_m,2_m) == 2_m);</div>
-<div class="line"><a id="l00371" name="l00371"></a><span class="lineno">  371</span>  }</div>
+<div class="line"><a id="l00329" name="l00329"></a><span class="lineno">  329</span> </div>
+<div class="foldopen" id="foldopen00330" data-start="{" data-end="}">
+<div class="line"><a id="l00330" name="l00330"></a><span class="lineno"><a class="line" href="namespacesi.html#aa8762e9d8197afc9765df2ed68494288">  330</a></span>  <span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code hl_function" href="namespacesi.html#aa8762e9d8197afc9765df2ed68494288">check_various_units</a>() {</div>
+<div class="line"><a id="l00331" name="l00331"></a><span class="lineno">  331</span>    <span class="comment">// pressure in...</span></div>
+<div class="line"><a id="l00332" name="l00332"></a><span class="lineno">  332</span>    <span class="keyword">static_assert</span>(1_bar  == 1000_mbar);</div>
+<div class="line"><a id="l00333" name="l00333"></a><span class="lineno">  333</span>    <span class="keyword">static_assert</span>(1_kbar == 1000_bar);</div>
+<div class="line"><a id="l00334" name="l00334"></a><span class="lineno">  334</span>    <span class="keyword">static_assert</span>(1_Mbar == 1000_kbar);</div>
+<div class="line"><a id="l00335" name="l00335"></a><span class="lineno">  335</span>    <span class="keyword">static_assert</span>(1_Gbar == 1000_Mbar);</div>
+<div class="line"><a id="l00336" name="l00336"></a><span class="lineno">  336</span>    <span class="comment">// temperature in...</span></div>
+<div class="line"><a id="l00337" name="l00337"></a><span class="lineno">  337</span>    <span class="keyword">static_assert</span>(0_degC == 273.15_K);</div>
+<div class="line"><a id="l00338" name="l00338"></a><span class="lineno">  338</span>    <span class="comment">//static_assert(491.67_degR == 273.15_K);</span></div>
+<div class="line"><a id="l00339" name="l00339"></a><span class="lineno">  339</span>  }</div>
 </div>
-<div class="line"><a id="l00372" name="l00372"></a><span class="lineno">  372</span> </div>
-<div class="foldopen" id="foldopen00373" data-start="{" data-end="}">
-<div class="line"><a id="l00373" name="l00373"></a><span class="lineno"><a class="line" href="namespacesi.html#af43bb805b8291e492138aa64aa8112b5">  373</a></span>  <span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code hl_function" href="namespacesi.html#af43bb805b8291e492138aa64aa8112b5">check_SI_prefixes</a>() {</div>
-<div class="line"><a id="l00374" name="l00374"></a><span class="lineno">  374</span>        <span class="keyword">static_assert</span>(<a class="code hl_variable" href="namespacesi.html#ac7e84639e01856d707f0ff690056d7a9">quetta</a> == 1000 * <a class="code hl_variable" href="namespacesi.html#ae3affcdab8e9fd1c7ce91754b87a6dfb">ronna</a>);</div>
-<div class="line"><a id="l00375" name="l00375"></a><span class="lineno">  375</span>        <span class="keyword">static_assert</span>(<a class="code hl_variable" href="namespacesi.html#ae3affcdab8e9fd1c7ce91754b87a6dfb">ronna</a>  == 1000 * <a class="code hl_variable" href="namespacesi.html#a06cbe1143b1f4c844e486c9825f8ef76">yotta</a>);</div>
-<div class="line"><a id="l00376" name="l00376"></a><span class="lineno">  376</span>        <span class="keyword">static_assert</span>(<a class="code hl_variable" href="namespacesi.html#a06cbe1143b1f4c844e486c9825f8ef76">yotta</a>  == 1000 * <a class="code hl_variable" href="namespacesi.html#a208d73873408a33f1d827d8493f00848">zetta</a>);</div>
-<div class="line"><a id="l00377" name="l00377"></a><span class="lineno">  377</span>        <span class="keyword">static_assert</span>(<a class="code hl_variable" href="namespacesi.html#a208d73873408a33f1d827d8493f00848">zetta</a>  == 1000 * <a class="code hl_variable" href="namespacesi.html#a84b05c412099028a831f34c7b286924b">exa</a>);</div>
-<div class="line"><a id="l00378" name="l00378"></a><span class="lineno">  378</span>        <span class="keyword">static_assert</span>(<a class="code hl_variable" href="namespacesi.html#a84b05c412099028a831f34c7b286924b">exa</a>    == 1000 * <a class="code hl_variable" href="namespacesi.html#a9dac07de4da31c523736e2fab47ee0a9">peta</a>);</div>
-<div class="line"><a id="l00379" name="l00379"></a><span class="lineno">  379</span>        <span class="keyword">static_assert</span>(<a class="code hl_variable" href="namespacesi.html#a9dac07de4da31c523736e2fab47ee0a9">peta</a>   == 1000 * <a class="code hl_variable" href="namespacesi.html#af695a62a4579b86a200f88fc2f0b9b7f">tera</a>);</div>
-<div class="line"><a id="l00380" name="l00380"></a><span class="lineno">  380</span>        <span class="keyword">static_assert</span>(<a class="code hl_variable" href="namespacesi.html#af695a62a4579b86a200f88fc2f0b9b7f">tera</a>   == 1000 * <a class="code hl_variable" href="namespacesi.html#a5ac7479ff57d444eeb2bfb567d1a1d22">giga</a>);</div>
-<div class="line"><a id="l00381" name="l00381"></a><span class="lineno">  381</span>        <span class="keyword">static_assert</span>(<a class="code hl_variable" href="namespacesi.html#a5ac7479ff57d444eeb2bfb567d1a1d22">giga</a>   == 1000 * <a class="code hl_variable" href="namespacesi.html#a02debe39b0485c57ecd17f92d5a8457d">mega</a>);</div>
-<div class="line"><a id="l00382" name="l00382"></a><span class="lineno">  382</span>        <span class="keyword">static_assert</span>(<a class="code hl_variable" href="namespacesi.html#a02debe39b0485c57ecd17f92d5a8457d">mega</a>   == 1000 * <a class="code hl_variable" href="namespacesi.html#aa73706783a2401428a15b3628a266be9">kilo</a>);</div>
-<div class="line"><a id="l00383" name="l00383"></a><span class="lineno">  383</span>        <span class="keyword">static_assert</span>(<a class="code hl_variable" href="namespacesi.html#aa73706783a2401428a15b3628a266be9">kilo</a>   ==   10 * <a class="code hl_variable" href="namespacesi.html#a8178d0ef55253885696083f5979425e6">hecto</a>);</div>
-<div class="line"><a id="l00384" name="l00384"></a><span class="lineno">  384</span>        <span class="keyword">static_assert</span>(<a class="code hl_variable" href="namespacesi.html#a8178d0ef55253885696083f5979425e6">hecto</a>  ==   10 * <a class="code hl_variable" href="namespacesi.html#afdccef55f2b52bc6839f1e77464854cf">deca</a>);</div>
-<div class="line"><a id="l00385" name="l00385"></a><span class="lineno">  385</span>        <span class="keyword">static_assert</span>(<a class="code hl_variable" href="namespacesi.html#afdccef55f2b52bc6839f1e77464854cf">deca</a>   ==  100 * <a class="code hl_variable" href="namespacesi.html#a23a141b1fdfc29ae3fc113277ad82809">deci</a>);</div>
-<div class="line"><a id="l00386" name="l00386"></a><span class="lineno">  386</span>        <span class="keyword">static_assert</span>(<a class="code hl_variable" href="namespacesi.html#a23a141b1fdfc29ae3fc113277ad82809">deci</a>   ==   10 * <a class="code hl_variable" href="namespacesi.html#aeba08646202490865610cb8f6f6a176a">centi</a>);</div>
-<div class="line"><a id="l00387" name="l00387"></a><span class="lineno">  387</span>        <span class="keyword">static_assert</span>(<a class="code hl_variable" href="namespacesi.html#aeba08646202490865610cb8f6f6a176a">centi</a>  ==   10 * <a class="code hl_variable" href="namespacesi.html#a9fe93e394ba3cd09bc3a5e5f50f459aa">milli</a>);</div>
-<div class="line"><a id="l00388" name="l00388"></a><span class="lineno">  388</span>        <span class="keyword">static_assert</span>(<a class="code hl_variable" href="namespacesi.html#a9fe93e394ba3cd09bc3a5e5f50f459aa">milli</a>  == 1000 * <a class="code hl_variable" href="namespacesi.html#a93c15e7987b1b007b44f7f9152f3f98c">micro</a>);</div>
-<div class="line"><a id="l00389" name="l00389"></a><span class="lineno">  389</span>        <span class="comment">//static_assert(micro == 1000 * nano);</span></div>
-<div class="line"><a id="l00390" name="l00390"></a><span class="lineno">  390</span>        <span class="comment">//static_assert(nano  == 1000 * pico);</span></div>
-<div class="line"><a id="l00391" name="l00391"></a><span class="lineno">  391</span>        <span class="comment">//static_assert(pico  == 1000 * femto);</span></div>
-<div class="line"><a id="l00392" name="l00392"></a><span class="lineno">  392</span>        <span class="comment">//static_assert(femto == 1000 * atto);</span></div>
-<div class="line"><a id="l00393" name="l00393"></a><span class="lineno">  393</span>        <span class="comment">//static_assert(atto  == 1000 * zepto);</span></div>
-<div class="line"><a id="l00394" name="l00394"></a><span class="lineno">  394</span>        <span class="comment">//static_assert(zepto == 1000 * yocto);</span></div>
-<div class="line"><a id="l00395" name="l00395"></a><span class="lineno">  395</span>        <span class="comment">//static_assert(yocto == 1000 * ronto);</span></div>
-<div class="line"><a id="l00396" name="l00396"></a><span class="lineno">  396</span>        <span class="comment">//static_assert(ronto == 1000 * quecto);</span></div>
-<div class="line"><a id="l00397" name="l00397"></a><span class="lineno">  397</span>  }</div>
+<div class="line"><a id="l00340" name="l00340"></a><span class="lineno">  340</span> </div>
+<div class="foldopen" id="foldopen00341" data-start="{" data-end="}">
+<div class="line"><a id="l00341" name="l00341"></a><span class="lineno"><a class="line" href="namespacesi.html#ac6b790c0cf240a04f0ebb8a536677a08">  341</a></span>  <span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code hl_function" href="namespacesi.html#ac6b790c0cf240a04f0ebb8a536677a08">check_functions_and_templates</a>() {</div>
+<div class="line"><a id="l00342" name="l00342"></a><span class="lineno">  342</span>    <span class="keyword">static_assert</span>(<a class="code hl_function" href="namespacesi.html#a81d5e3226a6c79b8ff2ea09612bfe4f6">abs</a>(-3.5_m) == 3.5_m);</div>
+<div class="line"><a id="l00343" name="l00343"></a><span class="lineno">  343</span>    <span class="keyword">static_assert</span>(<a class="code hl_function" href="namespacesi.html#a81d5e3226a6c79b8ff2ea09612bfe4f6">abs</a>(-1_m)   == 1_m);</div>
+<div class="line"><a id="l00344" name="l00344"></a><span class="lineno">  344</span>    <span class="keyword">static_assert</span>(<a class="code hl_function" href="namespacesi.html#a81d5e3226a6c79b8ff2ea09612bfe4f6">abs</a>(0_m)    == 0_m);</div>
+<div class="line"><a id="l00345" name="l00345"></a><span class="lineno">  345</span>    <span class="keyword">static_assert</span>(<a class="code hl_function" href="namespacesi.html#a81d5e3226a6c79b8ff2ea09612bfe4f6">abs</a>(1_m)    == 1_m);</div>
+<div class="line"><a id="l00346" name="l00346"></a><span class="lineno">  346</span>    <span class="keyword">static_assert</span>(<a class="code hl_function" href="namespacesi.html#a81d5e3226a6c79b8ff2ea09612bfe4f6">abs</a>(5.6_m)  == 5.6_m);</div>
+<div class="line"><a id="l00347" name="l00347"></a><span class="lineno">  347</span> </div>
+<div class="line"><a id="l00348" name="l00348"></a><span class="lineno">  348</span>    <span class="keyword">static_assert</span>(<a class="code hl_function" href="namespacesi.html#a2e6e36e0042def7dc4611c246dfd34a5">square</a>(-3_m) == 9_m2);</div>
+<div class="line"><a id="l00349" name="l00349"></a><span class="lineno">  349</span>    <span class="keyword">static_assert</span>(<a class="code hl_function" href="namespacesi.html#a2e6e36e0042def7dc4611c246dfd34a5">square</a>(-1_m) == 1_m2);</div>
+<div class="line"><a id="l00350" name="l00350"></a><span class="lineno">  350</span>    <span class="keyword">static_assert</span>(<a class="code hl_function" href="namespacesi.html#a2e6e36e0042def7dc4611c246dfd34a5">square</a>(-.5_m)== .25_m2);</div>
+<div class="line"><a id="l00351" name="l00351"></a><span class="lineno">  351</span>    <span class="keyword">static_assert</span>(<a class="code hl_function" href="namespacesi.html#a2e6e36e0042def7dc4611c246dfd34a5">square</a>(0_m)  == 0_m2);</div>
+<div class="line"><a id="l00352" name="l00352"></a><span class="lineno">  352</span>    <span class="keyword">static_assert</span>(<a class="code hl_function" href="namespacesi.html#a2e6e36e0042def7dc4611c246dfd34a5">square</a>(.5_m) == .25_m2);</div>
+<div class="line"><a id="l00353" name="l00353"></a><span class="lineno">  353</span>    <span class="keyword">static_assert</span>(<a class="code hl_function" href="namespacesi.html#a2e6e36e0042def7dc4611c246dfd34a5">square</a>(1_m)  == 1_m2);</div>
+<div class="line"><a id="l00354" name="l00354"></a><span class="lineno">  354</span>    <span class="keyword">static_assert</span>(<a class="code hl_function" href="namespacesi.html#a2e6e36e0042def7dc4611c246dfd34a5">square</a>(3_m)  == 9_m2);</div>
+<div class="line"><a id="l00355" name="l00355"></a><span class="lineno">  355</span> </div>
+<div class="line"><a id="l00356" name="l00356"></a><span class="lineno">  356</span>    <span class="comment">// static_assert(sqrt(9_m2) == 3_m); (TODO)</span></div>
+<div class="line"><a id="l00357" name="l00357"></a><span class="lineno">  357</span> </div>
+<div class="line"><a id="l00358" name="l00358"></a><span class="lineno">  358</span>    <span class="keyword">static_assert</span>(<a class="code hl_function" href="namespacesi.html#a644b606b4503df18073f1ec08ef85b29">cube</a>(-3_m) == -27_m3);</div>
+<div class="line"><a id="l00359" name="l00359"></a><span class="lineno">  359</span>    <span class="keyword">static_assert</span>(<a class="code hl_function" href="namespacesi.html#a644b606b4503df18073f1ec08ef85b29">cube</a>(-1_m) == -1_m3);</div>
+<div class="line"><a id="l00360" name="l00360"></a><span class="lineno">  360</span>    <span class="keyword">static_assert</span>(<a class="code hl_function" href="namespacesi.html#a644b606b4503df18073f1ec08ef85b29">cube</a>(-.5_m)== -0.125_m3);</div>
+<div class="line"><a id="l00361" name="l00361"></a><span class="lineno">  361</span>    <span class="keyword">static_assert</span>(<a class="code hl_function" href="namespacesi.html#a644b606b4503df18073f1ec08ef85b29">cube</a>(0_m)  == 0_m3);</div>
+<div class="line"><a id="l00362" name="l00362"></a><span class="lineno">  362</span>    <span class="keyword">static_assert</span>(<a class="code hl_function" href="namespacesi.html#a644b606b4503df18073f1ec08ef85b29">cube</a>(.5_m) == 0.125_m3);</div>
+<div class="line"><a id="l00363" name="l00363"></a><span class="lineno">  363</span>    <span class="keyword">static_assert</span>(<a class="code hl_function" href="namespacesi.html#a644b606b4503df18073f1ec08ef85b29">cube</a>(1_m)  == 1_m3);</div>
+<div class="line"><a id="l00364" name="l00364"></a><span class="lineno">  364</span>    <span class="keyword">static_assert</span>(<a class="code hl_function" href="namespacesi.html#a644b606b4503df18073f1ec08ef85b29">cube</a>(3_m)  == 27_m3);</div>
+<div class="line"><a id="l00365" name="l00365"></a><span class="lineno">  365</span> </div>
+<div class="line"><a id="l00366" name="l00366"></a><span class="lineno">  366</span>    <span class="comment">// static_assert(cbrt(27_m3) == 3_m); (TODO)</span></div>
+<div class="line"><a id="l00367" name="l00367"></a><span class="lineno">  367</span> </div>
+<div class="line"><a id="l00368" name="l00368"></a><span class="lineno">  368</span>    <span class="keyword">static_assert</span>(<a class="code hl_function" href="namespacesi.html#a50291ece69c501e57f4d9b61e845910e">clamp</a>(-2_m, -1_m,1_m) == -1_m);</div>
+<div class="line"><a id="l00369" name="l00369"></a><span class="lineno">  369</span>    <span class="keyword">static_assert</span>(<a class="code hl_function" href="namespacesi.html#a50291ece69c501e57f4d9b61e845910e">clamp</a>(-1_m, 0_m,1_m) == 0_m);</div>
+<div class="line"><a id="l00370" name="l00370"></a><span class="lineno">  370</span>    <span class="keyword">static_assert</span>(<a class="code hl_function" href="namespacesi.html#a50291ece69c501e57f4d9b61e845910e">clamp</a>(-1_m, 1_m,2_m) == 1_m);</div>
+<div class="line"><a id="l00371" name="l00371"></a><span class="lineno">  371</span>    <span class="keyword">static_assert</span>(<a class="code hl_function" href="namespacesi.html#a50291ece69c501e57f4d9b61e845910e">clamp</a>(-0.5_m, 1_m,2_m) == 1_m);</div>
+<div class="line"><a id="l00372" name="l00372"></a><span class="lineno">  372</span>    <span class="keyword">static_assert</span>(<a class="code hl_function" href="namespacesi.html#a50291ece69c501e57f4d9b61e845910e">clamp</a>(0_m, 0_m,1_m) == 0_m);</div>
+<div class="line"><a id="l00373" name="l00373"></a><span class="lineno">  373</span>    <span class="keyword">static_assert</span>(<a class="code hl_function" href="namespacesi.html#a50291ece69c501e57f4d9b61e845910e">clamp</a>(0_m, -1_m,2_m) == 0_m);</div>
+<div class="line"><a id="l00374" name="l00374"></a><span class="lineno">  374</span>    <span class="keyword">static_assert</span>(<a class="code hl_function" href="namespacesi.html#a50291ece69c501e57f4d9b61e845910e">clamp</a>(3_m, 4_m,5_m) == 4_m);</div>
+<div class="line"><a id="l00375" name="l00375"></a><span class="lineno">  375</span>    <span class="keyword">static_assert</span>(<a class="code hl_function" href="namespacesi.html#a50291ece69c501e57f4d9b61e845910e">clamp</a>(3_m, 1_m,2_m) == 2_m);</div>
+<div class="line"><a id="l00376" name="l00376"></a><span class="lineno">  376</span>  }</div>
 </div>
-<div class="line"><a id="l00398" name="l00398"></a><span class="lineno">  398</span> </div>
-<div class="line"><a id="l00399" name="l00399"></a><span class="lineno">  399</span>} <span class="comment">// end of namespace</span></div>
+<div class="line"><a id="l00377" name="l00377"></a><span class="lineno">  377</span> </div>
+<div class="foldopen" id="foldopen00378" data-start="{" data-end="}">
+<div class="line"><a id="l00378" name="l00378"></a><span class="lineno"><a class="line" href="namespacesi.html#af43bb805b8291e492138aa64aa8112b5">  378</a></span>  <span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code hl_function" href="namespacesi.html#af43bb805b8291e492138aa64aa8112b5">check_SI_prefixes</a>() {</div>
+<div class="line"><a id="l00379" name="l00379"></a><span class="lineno">  379</span>        <span class="keyword">static_assert</span>(<a class="code hl_variable" href="namespacesi.html#ac7e84639e01856d707f0ff690056d7a9">quetta</a> == 1000 * <a class="code hl_variable" href="namespacesi.html#ae3affcdab8e9fd1c7ce91754b87a6dfb">ronna</a>);</div>
+<div class="line"><a id="l00380" name="l00380"></a><span class="lineno">  380</span>        <span class="keyword">static_assert</span>(<a class="code hl_variable" href="namespacesi.html#ae3affcdab8e9fd1c7ce91754b87a6dfb">ronna</a>  == 1000 * <a class="code hl_variable" href="namespacesi.html#a06cbe1143b1f4c844e486c9825f8ef76">yotta</a>);</div>
+<div class="line"><a id="l00381" name="l00381"></a><span class="lineno">  381</span>        <span class="keyword">static_assert</span>(<a class="code hl_variable" href="namespacesi.html#a06cbe1143b1f4c844e486c9825f8ef76">yotta</a>  == 1000 * <a class="code hl_variable" href="namespacesi.html#a208d73873408a33f1d827d8493f00848">zetta</a>);</div>
+<div class="line"><a id="l00382" name="l00382"></a><span class="lineno">  382</span>        <span class="keyword">static_assert</span>(<a class="code hl_variable" href="namespacesi.html#a208d73873408a33f1d827d8493f00848">zetta</a>  == 1000 * <a class="code hl_variable" href="namespacesi.html#a84b05c412099028a831f34c7b286924b">exa</a>);</div>
+<div class="line"><a id="l00383" name="l00383"></a><span class="lineno">  383</span>        <span class="keyword">static_assert</span>(<a class="code hl_variable" href="namespacesi.html#a84b05c412099028a831f34c7b286924b">exa</a>    == 1000 * <a class="code hl_variable" href="namespacesi.html#a9dac07de4da31c523736e2fab47ee0a9">peta</a>);</div>
+<div class="line"><a id="l00384" name="l00384"></a><span class="lineno">  384</span>        <span class="keyword">static_assert</span>(<a class="code hl_variable" href="namespacesi.html#a9dac07de4da31c523736e2fab47ee0a9">peta</a>   == 1000 * <a class="code hl_variable" href="namespacesi.html#af695a62a4579b86a200f88fc2f0b9b7f">tera</a>);</div>
+<div class="line"><a id="l00385" name="l00385"></a><span class="lineno">  385</span>        <span class="keyword">static_assert</span>(<a class="code hl_variable" href="namespacesi.html#af695a62a4579b86a200f88fc2f0b9b7f">tera</a>   == 1000 * <a class="code hl_variable" href="namespacesi.html#a5ac7479ff57d444eeb2bfb567d1a1d22">giga</a>);</div>
+<div class="line"><a id="l00386" name="l00386"></a><span class="lineno">  386</span>        <span class="keyword">static_assert</span>(<a class="code hl_variable" href="namespacesi.html#a5ac7479ff57d444eeb2bfb567d1a1d22">giga</a>   == 1000 * <a class="code hl_variable" href="namespacesi.html#a02debe39b0485c57ecd17f92d5a8457d">mega</a>);</div>
+<div class="line"><a id="l00387" name="l00387"></a><span class="lineno">  387</span>        <span class="keyword">static_assert</span>(<a class="code hl_variable" href="namespacesi.html#a02debe39b0485c57ecd17f92d5a8457d">mega</a>   == 1000 * <a class="code hl_variable" href="namespacesi.html#aa73706783a2401428a15b3628a266be9">kilo</a>);</div>
+<div class="line"><a id="l00388" name="l00388"></a><span class="lineno">  388</span>        <span class="keyword">static_assert</span>(<a class="code hl_variable" href="namespacesi.html#aa73706783a2401428a15b3628a266be9">kilo</a>   ==   10 * <a class="code hl_variable" href="namespacesi.html#a8178d0ef55253885696083f5979425e6">hecto</a>);</div>
+<div class="line"><a id="l00389" name="l00389"></a><span class="lineno">  389</span>        <span class="keyword">static_assert</span>(<a class="code hl_variable" href="namespacesi.html#a8178d0ef55253885696083f5979425e6">hecto</a>  ==   10 * <a class="code hl_variable" href="namespacesi.html#afdccef55f2b52bc6839f1e77464854cf">deca</a>);</div>
+<div class="line"><a id="l00390" name="l00390"></a><span class="lineno">  390</span>        <span class="keyword">static_assert</span>(<a class="code hl_variable" href="namespacesi.html#afdccef55f2b52bc6839f1e77464854cf">deca</a>   ==  100 * <a class="code hl_variable" href="namespacesi.html#a23a141b1fdfc29ae3fc113277ad82809">deci</a>);</div>
+<div class="line"><a id="l00391" name="l00391"></a><span class="lineno">  391</span>        <span class="keyword">static_assert</span>(<a class="code hl_variable" href="namespacesi.html#a23a141b1fdfc29ae3fc113277ad82809">deci</a>   ==   10 * <a class="code hl_variable" href="namespacesi.html#aeba08646202490865610cb8f6f6a176a">centi</a>);</div>
+<div class="line"><a id="l00392" name="l00392"></a><span class="lineno">  392</span>        <span class="keyword">static_assert</span>(<a class="code hl_variable" href="namespacesi.html#aeba08646202490865610cb8f6f6a176a">centi</a>  ==   10 * <a class="code hl_variable" href="namespacesi.html#a9fe93e394ba3cd09bc3a5e5f50f459aa">milli</a>);</div>
+<div class="line"><a id="l00393" name="l00393"></a><span class="lineno">  393</span>        <span class="keyword">static_assert</span>(<a class="code hl_variable" href="namespacesi.html#a9fe93e394ba3cd09bc3a5e5f50f459aa">milli</a>  == 1000 * <a class="code hl_variable" href="namespacesi.html#a93c15e7987b1b007b44f7f9152f3f98c">micro</a>);</div>
+<div class="line"><a id="l00394" name="l00394"></a><span class="lineno">  394</span>        <span class="comment">//static_assert(micro == 1000 * nano);</span></div>
+<div class="line"><a id="l00395" name="l00395"></a><span class="lineno">  395</span>        <span class="comment">//static_assert(nano  == 1000 * pico);</span></div>
+<div class="line"><a id="l00396" name="l00396"></a><span class="lineno">  396</span>        <span class="comment">//static_assert(pico  == 1000 * femto);</span></div>
+<div class="line"><a id="l00397" name="l00397"></a><span class="lineno">  397</span>        <span class="comment">//static_assert(femto == 1000 * atto);</span></div>
+<div class="line"><a id="l00398" name="l00398"></a><span class="lineno">  398</span>        <span class="comment">//static_assert(atto  == 1000 * zepto);</span></div>
+<div class="line"><a id="l00399" name="l00399"></a><span class="lineno">  399</span>        <span class="comment">//static_assert(zepto == 1000 * yocto);</span></div>
+<div class="line"><a id="l00400" name="l00400"></a><span class="lineno">  400</span>        <span class="comment">//static_assert(yocto == 1000 * ronto);</span></div>
+<div class="line"><a id="l00401" name="l00401"></a><span class="lineno">  401</span>        <span class="comment">//static_assert(ronto == 1000 * quecto);</span></div>
+<div class="line"><a id="l00402" name="l00402"></a><span class="lineno">  402</span>  }</div>
+</div>
+<div class="line"><a id="l00403" name="l00403"></a><span class="lineno">  403</span> </div>
+<div class="line"><a id="l00404" name="l00404"></a><span class="lineno">  404</span>} <span class="comment">// end of namespace</span></div>
 <div class="ttc" id="aliterals_8h_html"><div class="ttname"><a href="literals_8h.html">literals.h</a></div><div class="ttdoc">Defines 300+ user-defined literals (UDL, supported since C++11), e.g. 24_h.</div></div>
 <div class="ttc" id="anamespacesi_html"><div class="ttname"><a href="namespacesi.html">si</a></div><div class="ttdef"><b>Definition</b> constants.h:9</div></div>
 <div class="ttc" id="anamespacesi_html_a02debe39b0485c57ecd17f92d5a8457d"><div class="ttname"><a href="namespacesi.html#a02debe39b0485c57ecd17f92d5a8457d">si::mega</a></div><div class="ttdeci">constexpr dimensionless mega</div><div class="ttdef"><b>Definition</b> prefixes.h:19</div></div>
 <div class="ttc" id="anamespacesi_html_a06cbe1143b1f4c844e486c9825f8ef76"><div class="ttname"><a href="namespacesi.html#a06cbe1143b1f4c844e486c9825f8ef76">si::yotta</a></div><div class="ttdeci">constexpr dimensionless yotta</div><div class="ttdef"><b>Definition</b> prefixes.h:13</div></div>
-<div class="ttc" id="anamespacesi_html_a1b7dcd28bce9d270cdff156bba7fc48f"><div class="ttname"><a href="namespacesi.html#a1b7dcd28bce9d270cdff156bba7fc48f">si::check_angle</a></div><div class="ttdeci">void check_angle()</div><div class="ttdef"><b>Definition</b> tests.h:320</div></div>
+<div class="ttc" id="anamespacesi_html_a1b7dcd28bce9d270cdff156bba7fc48f"><div class="ttname"><a href="namespacesi.html#a1b7dcd28bce9d270cdff156bba7fc48f">si::check_angle</a></div><div class="ttdeci">void check_angle()</div><div class="ttdef"><b>Definition</b> tests.h:325</div></div>
 <div class="ttc" id="anamespacesi_html_a1d25a435174c4e4a8ec923c3cd144de1"><div class="ttname"><a href="namespacesi.html#a1d25a435174c4e4a8ec923c3cd144de1">si::check_SI_base_units</a></div><div class="ttdeci">void check_SI_base_units()</div><div class="ttdef"><b>Definition</b> tests.h:56</div></div>
 <div class="ttc" id="anamespacesi_html_a208d73873408a33f1d827d8493f00848"><div class="ttname"><a href="namespacesi.html#a208d73873408a33f1d827d8493f00848">si::zetta</a></div><div class="ttdeci">constexpr dimensionless zetta</div><div class="ttdef"><b>Definition</b> prefixes.h:14</div></div>
 <div class="ttc" id="anamespacesi_html_a23a141b1fdfc29ae3fc113277ad82809"><div class="ttname"><a href="namespacesi.html#a23a141b1fdfc29ae3fc113277ad82809">si::deci</a></div><div class="ttdeci">constexpr dimensionless deci</div><div class="ttdef"><b>Definition</b> prefixes.h:24</div></div>
@@ -538,18 +543,18 @@ $(function(){initNavTree('tests_8h_source.html','',''); });
 <div class="ttc" id="anamespacesi_html_a9dccf6c5671a13c1b568fbed6467c879"><div class="ttname"><a href="namespacesi.html#a9dccf6c5671a13c1b568fbed6467c879">si::check_Imperial_units</a></div><div class="ttdeci">void check_Imperial_units()</div><div class="ttdef"><b>Definition</b> tests.h:264</div></div>
 <div class="ttc" id="anamespacesi_html_a9fe93e394ba3cd09bc3a5e5f50f459aa"><div class="ttname"><a href="namespacesi.html#a9fe93e394ba3cd09bc3a5e5f50f459aa">si::milli</a></div><div class="ttdeci">constexpr dimensionless milli</div><div class="ttdef"><b>Definition</b> prefixes.h:26</div></div>
 <div class="ttc" id="anamespacesi_html_aa73706783a2401428a15b3628a266be9"><div class="ttname"><a href="namespacesi.html#aa73706783a2401428a15b3628a266be9">si::kilo</a></div><div class="ttdeci">constexpr dimensionless kilo</div><div class="ttdef"><b>Definition</b> prefixes.h:20</div></div>
-<div class="ttc" id="anamespacesi_html_aa8762e9d8197afc9765df2ed68494288"><div class="ttname"><a href="namespacesi.html#aa8762e9d8197afc9765df2ed68494288">si::check_various_units</a></div><div class="ttdeci">void check_various_units()</div><div class="ttdef"><b>Definition</b> tests.h:325</div></div>
+<div class="ttc" id="anamespacesi_html_aa8762e9d8197afc9765df2ed68494288"><div class="ttname"><a href="namespacesi.html#aa8762e9d8197afc9765df2ed68494288">si::check_various_units</a></div><div class="ttdeci">void check_various_units()</div><div class="ttdef"><b>Definition</b> tests.h:330</div></div>
 <div class="ttc" id="anamespacesi_html_ab0aac728ba97ded7abbea0afc28c1c4d"><div class="ttname"><a href="namespacesi.html#ab0aac728ba97ded7abbea0afc28c1c4d">si::SIdouble</a></div><div class="ttdeci">double SIdouble</div><div class="ttdoc">internal datatype to hold floating point values</div><div class="ttdef"><b>Definition</b> internal.h:12</div></div>
 <div class="ttc" id="anamespacesi_html_aba273f6c272de77e9478a9e4c3146285"><div class="ttname"><a href="namespacesi.html#aba273f6c272de77e9478a9e4c3146285">si::dimensionless</a></div><div class="ttdeci">double dimensionless</div><div class="ttdoc">for a quantity without any unit, e.g. 42</div><div class="ttdef"><b>Definition</b> datatypes.h:63</div></div>
-<div class="ttc" id="anamespacesi_html_ac6b790c0cf240a04f0ebb8a536677a08"><div class="ttname"><a href="namespacesi.html#ac6b790c0cf240a04f0ebb8a536677a08">si::check_functions_and_templates</a></div><div class="ttdeci">void check_functions_and_templates()</div><div class="ttdef"><b>Definition</b> tests.h:336</div></div>
+<div class="ttc" id="anamespacesi_html_ac6b790c0cf240a04f0ebb8a536677a08"><div class="ttname"><a href="namespacesi.html#ac6b790c0cf240a04f0ebb8a536677a08">si::check_functions_and_templates</a></div><div class="ttdeci">void check_functions_and_templates()</div><div class="ttdef"><b>Definition</b> tests.h:341</div></div>
 <div class="ttc" id="anamespacesi_html_ac7e84639e01856d707f0ff690056d7a9"><div class="ttname"><a href="namespacesi.html#ac7e84639e01856d707f0ff690056d7a9">si::quetta</a></div><div class="ttdeci">constexpr dimensionless quetta</div><div class="ttdef"><b>Definition</b> prefixes.h:11</div></div>
 <div class="ttc" id="anamespacesi_html_ae3affcdab8e9fd1c7ce91754b87a6dfb"><div class="ttname"><a href="namespacesi.html#ae3affcdab8e9fd1c7ce91754b87a6dfb">si::ronna</a></div><div class="ttdeci">constexpr dimensionless ronna</div><div class="ttdef"><b>Definition</b> prefixes.h:12</div></div>
 <div class="ttc" id="anamespacesi_html_aeba08646202490865610cb8f6f6a176a"><div class="ttname"><a href="namespacesi.html#aeba08646202490865610cb8f6f6a176a">si::centi</a></div><div class="ttdeci">constexpr dimensionless centi</div><div class="ttdef"><b>Definition</b> prefixes.h:25</div></div>
-<div class="ttc" id="anamespacesi_html_af43bb805b8291e492138aa64aa8112b5"><div class="ttname"><a href="namespacesi.html#af43bb805b8291e492138aa64aa8112b5">si::check_SI_prefixes</a></div><div class="ttdeci">void check_SI_prefixes()</div><div class="ttdef"><b>Definition</b> tests.h:373</div></div>
+<div class="ttc" id="anamespacesi_html_af43bb805b8291e492138aa64aa8112b5"><div class="ttname"><a href="namespacesi.html#af43bb805b8291e492138aa64aa8112b5">si::check_SI_prefixes</a></div><div class="ttdeci">void check_SI_prefixes()</div><div class="ttdef"><b>Definition</b> tests.h:378</div></div>
 <div class="ttc" id="anamespacesi_html_af695a62a4579b86a200f88fc2f0b9b7f"><div class="ttname"><a href="namespacesi.html#af695a62a4579b86a200f88fc2f0b9b7f">si::tera</a></div><div class="ttdeci">constexpr dimensionless tera</div><div class="ttdef"><b>Definition</b> prefixes.h:17</div></div>
 <div class="ttc" id="anamespacesi_html_afc5f81f433777fd35e188125c63d643d"><div class="ttname"><a href="namespacesi.html#afc5f81f433777fd35e188125c63d643d">si::check_SI_derived_units</a></div><div class="ttdeci">void check_SI_derived_units()</div><div class="ttdef"><b>Definition</b> tests.h:127</div></div>
 <div class="ttc" id="anamespacesi_html_afdccef55f2b52bc6839f1e77464854cf"><div class="ttname"><a href="namespacesi.html#afdccef55f2b52bc6839f1e77464854cf">si::deca</a></div><div class="ttdeci">constexpr dimensionless deca</div><div class="ttdef"><b>Definition</b> prefixes.h:22</div></div>
-<div class="ttc" id="aprefixes_8h_html"><div class="ttname"><a href="prefixes_8h.html">prefixes.h</a></div><div class="ttdoc">Defines the 24 SI prefixes (as of 2026).</div></div>
+<div class="ttc" id="aprefixes_8h_html"><div class="ttname"><a href="prefixes_8h.html">prefixes.h</a></div><div class="ttdoc">Defines the 24 SI prefixes.</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 </div><!-- container -->
