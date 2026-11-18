@@ -74,7 +74,7 @@ namespace si {
   UNIT(amperes_per_meter2) = amperes / (meters * meters);
   UNIT(ampere_hours)  = amperes * hours;
 
-  UNIT(coulombs)      = unit<electric_charge>();
+  UNIT(coulombs)      = unit<charge>(); // electric charge
   UNIT(coulombs_per_mol) = coulombs / moles;
 
   UNIT(volts)         = unit<electric_potential>();

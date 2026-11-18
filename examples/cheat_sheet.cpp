@@ -10,13 +10,17 @@ void cheat_sheet() {
     length c = meters(1);          // construct from number
     length d = 5.0 * 1_m;          // multiply with a quantity
     length e = to_length("42m");   // string to length conversion
-    // length f = 1_kg;            // ERROR: incompatible dimensions
+    // length bad = 1_kg;          // ERROR: incompatible dimensions
 
     // Calculate with Quantities
     // -------------------------
-    area field = a * b;            // area from 2 lengths
-    volume cube = a * b * c;       // volume from 3 lengths
+    area A = a * b;                // area from length by length
+    volume V = A * 10_ft;          // volume from area by height
+    density D = 1_kg / V;          // density from mass per volume
     velocity s = 1_km / 1_h;       // speed from distance per time
+    frequency f = 100 / 1_s;       // frequency from number per time
+    charge Q = 1_A * 1_h;          // electric charge from ampere-hours
+    temperature T = 10_degC + 5_K; // different units
     energy E = 1_kg * square(constant::c); // with constant
     length w = wavelength_formula(constant::c, 100_Hz); // with formula
 

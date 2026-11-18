@@ -41,7 +41,7 @@ namespace si {
   TYPE(power_intensity,        0, 1,-3, 0, 0, 0, 0, 0); // in watts per square meter
   TYPE(density,               -3, 1, 0, 0, 0, 0, 0, 0); // in kilograms per cubic meter
   TYPE(electric_potential,     2, 1,-3, 0,-1, 0, 0, 0); // in volts
-  TYPE(electric_charge,        0, 0, 1, 0, 1, 0, 0, 0); // in amperes per second
+  TYPE(charge,                 0, 0, 1, 0, 1, 0, 0, 0); // in ampere-seconds
   TYPE(mass_per_area,         -2, 1, 0, 0, 0, 0, 0, 0); // in kilograms per square meter
   TYPE(mass_per_power,        -2, 0, 3, 0, 0, 0, 0, 0); // in kilograms per watt
   TYPE(specific_energy,        2, 0,-2, 0, 0, 0, 0, 0); // in joules per kilogram

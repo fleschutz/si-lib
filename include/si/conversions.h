@@ -351,7 +351,7 @@ namespace si {
 	}
 
 	/// @brief Returns the electric charge as string using SI units.
-	FUNC std::string to_string(electric_charge Q, const char* fmtStr = to_string_format) {
+	FUNC std::string to_string(charge Q, const char* fmtStr = to_string_format) {
 		if (Q <= -1_GAh || Q >= 1_GAh)            return _fmt(Q / 1_GAh, "GAh", fmtStr);
 		if (Q <= -1_MAh || Q >= 1_MAh)            return _fmt(Q / 1_MAh, "MAh", fmtStr);
 		if (Q <= -1_kAh || Q >= 1_kAh)            return _fmt(Q / 1_kAh, "kAh", fmtStr);
@@ -360,7 +360,7 @@ namespace si {
 		return _fmt(Q / 1_uAh, "µAh", fmtStr);
 	}
 
-	inline std::ostream& operator<<(std::ostream& os, electric_charge Q) {
+	inline std::ostream& operator<<(std::ostream& os, charge Q) {
 		return (os << to_string(Q));
 	}
 
