@@ -74,7 +74,7 @@ namespace si {
   UNIT amperes_per_meter2 = amperes / (meters * meters);
   UNIT ampere_hours   = amperes * hours;
 
-  UNIT coulombs       = unit<charge>(); // electric charge
+  UNIT coulombs       = unit<charge>();
   UNIT coulombs_per_mol = coulombs / moles;
 
   UNIT volts          = unit<electric_potential>();
@@ -109,7 +109,7 @@ namespace si {
   UNIT pounds          = unit<mass, 45359237,100000000>();
   UNIT ounces          = unit<mass, 45359237,1600000000>();
   UNIT feet            = unit<length, 3048,10000>();
-  UNIT nautical_miles  = unit<length, 1852,1>();
+  UNIT nautical_miles  = unit<length, 1852>();
   UNIT inches          = unit<length, 254,10000>();
   UNIT statute_miles   = unit<length, 1609344,1000>();
   UNIT fahrenheit      = detail::unit<detail::temperature_dimension, detail::tag_fahrenheit>();
@@ -122,7 +122,7 @@ namespace si {
   UNIT bits_per_second   = bits / seconds;
   UNIT bits_per_m2       = bits / meters2;
   UNIT bits_per_m3       = bits / meters3;
-  UNIT bytes             = unit<data_size, 8,1>();
+  UNIT bytes             = unit<data_size, 8>();
   UNIT bytes_per_second  = bytes / seconds;
   UNIT bytes_per_m2      = bytes / meters2;
   UNIT bytes_per_m3      = bytes / meters3;
