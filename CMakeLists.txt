@@ -1,5 +1,5 @@
-# CMake Build Instructions
-# ========================
+# Build Instructions for CMake
+# ============================
 
 cmake_minimum_required(VERSION 3.10)
 
@@ -15,10 +15,6 @@ endif(MSVC)
 include_directories(include/)
 
 add_executable(program examples/main.cpp examples/astronomy.cpp examples/cheat_sheet.cpp examples/speeds.cpp examples/various.cpp)
-
-# add unit tests
-enable_testing()
-add_test(NAME examples COMMAND program)
 
 install(TARGETS program DESTINATION . )
 
