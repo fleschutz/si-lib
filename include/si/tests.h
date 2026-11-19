@@ -330,9 +330,9 @@ namespace si {
         static_assert(0_rad == 0_arcsec);
         static_assert(0_rad == radians(0));
         static_assert(1_rad == 1000_mrad);
-	static_assert(std::abs(180_deg - constant::pi) < 1e-12);
-	static_assert(std::abs(180_deg - 10800_arcmin) < 1e-12);
-	static_assert(std::abs(180_deg - 648000_arcsec) < 1e-12);
+	static_assert(nearly_equal(180_deg, constant::pi));
+	static_assert(nearly_equal(180_deg, 10800_arcmin));
+	static_assert(nearly_equal(180_deg, 648000_arcsec));
   }
 
   inline void check_various_units() {
