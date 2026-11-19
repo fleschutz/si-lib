@@ -1,6 +1,6 @@
 /// @file     <si/units.h>
 /// @brief    Defines 103 units, e.g. si::meters
-/// @details  Categories are: SI base units, SI derived units, Imperial/digital/various units, and references.
+/// @details  Categories are: SI base units, SI derived, Imperial, digital data, various, and references.
 
 #pragma once
 #include <si/datatypes.h>
@@ -116,8 +116,8 @@ namespace si {
   UNIT(miles_per_hour) = statute_miles / hours;
   UNIT(knots)          = nautical_miles / hours;
 
-  // Units of Information
-  // --------------------
+  // Digital Data Units
+  // ------------------
   UNIT(bits)             = unit<data_size>();
   UNIT(bits_per_second)  = bits / seconds;
   UNIT(bits_per_m2)      = bits / meters2;

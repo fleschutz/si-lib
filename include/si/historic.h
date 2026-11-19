@@ -1,5 +1,5 @@
 /// @file     <si/historic.h>
-/// @brief    Defines the historic units
+/// @brief    Defines historic units
 
 #pragma once
 #include <si/core.h>

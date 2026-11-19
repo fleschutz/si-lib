@@ -1,5 +1,5 @@
 /// @file   <si/core.h>
-/// @brief  Includes the 6 core header files
+/// @brief  Includes the 6 core header files (for convenience)
 
 #pragma once
 #include <si/datatypes.h>

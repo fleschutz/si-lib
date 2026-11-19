@@ -1,6 +1,7 @@
 /// @file     <si/literals.h>
-/// @brief    Defines 300+ user-defined literals (UDL, supported since C++11), e.g. 24_h
-/// @details  Categories are: SI base units, SI derived units, Imperial units, astronomical units, digital units, and various units.
+/// @brief    Defines 300+ user-defined literals, e.g. 24_h
+/// @details  User-defined literals (UDL) are supported since C++11.
+///           Categories are: SI base units, SI derived units, Imperial units, astronomical units, digital data units, and various.
 
 #pragma once
 #include <si/units.h>
@@ -376,8 +377,8 @@ namespace si {
   UDL(_Mearth,                 5.9722e24, kilograms);// 1_Mearth (Earth mass)
   UDL(_Mmoon,              7.34767309e22, kilograms);// 1_Mmoon  (Moon mass)
 
-  // Digital Units
-  // -------------
+  // Digital Data Units
+  // ------------------
   // bits...
   UDL(_Ebit,                        1e18, bits); // 1_Ebit (exabit)
   UDL(_Pbit,                        1e15, bits); // 1_Pbit (petabit)

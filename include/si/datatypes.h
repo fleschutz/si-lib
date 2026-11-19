@@ -1,6 +1,6 @@
 /// @file     <si/datatypes.h>
-/// @brief    Defines the fundamental datatypes
-/// @details  Categories are: SI base, derived SI, for information, and dimensionless.
+/// @brief    Defines the fundamental datatypes, e.g. si::length
+/// @details  Categories are: SI base, derived SI, digital data, and dimensionless.
 
 #pragma once
 #include <si/internal.h>
@@ -54,8 +54,8 @@ namespace si {
   TYPE(frequency,              0, 0,-1, 0, 0, 0, 0, 0); // per second (reciprocal)
   TYPE(per_substance,          0, 0, 0, 0, 0,-1, 0, 0); // per mol (reciprocal)
 
-  // Information Datatypes
-  // ---------------------
+  // Digital Data Datatypes
+  // ----------------------
   TYPE(data_size,              0, 0, 0, 0, 0, 0, 0, 1); // in bits
   TYPE(data_speed,             0, 0,-1, 0, 0, 0, 0, 1); // in bits per second
 

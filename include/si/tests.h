@@ -1,7 +1,7 @@
 /// @file      <si/tests.h>
 /// @brief     Contains 300+ unit tests
 /// @details   The unit tests get executed at compile-time and on each commit by GitHub actions.
-///            Categories are: features, C datatypes, SI datatypes, base units, derived units, astronomical units, Imperial units, units for information, various units, functions and templates.
+///            Categories are: features, C datatypes, SI datatypes, base units, derived units, astronomical units, Imperial units, digital data units, various units, functions and templates.
 
 #pragma once
 #include <cassert>
@@ -276,7 +276,7 @@ namespace si {
 	static_assert(1_degF== fahrenheit(1));
   }
 
-  inline void check_units_for_information() {
+  inline void check_digital_data_units() {
 	// bits...
 	static_assert(1_Ebit == 1000_Pbit);
 	static_assert(1_Pbit == 1000_Tbit);
