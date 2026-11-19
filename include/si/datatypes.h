@@ -61,8 +61,8 @@ namespace si {
 
   // Dimensionless Datatypes
   // -----------------------
-  typedef long double angle;      ///< for a dimensionless angle in high precision, e.g. 3.1415
-  typedef double dimensionless;   ///< for a quantity without any unit, e.g. 42
+  typedef long double angle;                            // in radians (high precision)
+  typedef double dimensionless;                         // any dimensionless number, e.g. 42
 
 } // end of namespace
 
