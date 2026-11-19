@@ -323,9 +323,16 @@ namespace si {
 	static_assert(1_KiB_per_s == 1024_byte_per_s);
   }
 
-  inline void check_angle() {
+  inline void check_angles() {
+        static_assert(0_rad == 0_mrad);
+        static_assert(0_rad == 0_deg);
+        static_assert(0_rad == 0_arcmin);
+        static_assert(0_rad == 0_arcsec);
+        static_assert(0_rad == radians(0));
         static_assert(1_rad == 1000_mrad);
-        static_assert(0_deg == 0_rad);
+	static_assert(std::abs(180_deg - constant::pi) < 1e-12);
+	static_assert(std::abs(180_deg - 10800_arcmin) < 1e-12);
+	static_assert(std::abs(180_deg - 648000_arcsec) < 1e-12);
   }
 
   inline void check_various_units() {
