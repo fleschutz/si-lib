@@ -34,11 +34,11 @@ void cheat_sheet() {
 
     // Angles
     // ------
-    angle alpha   = 90_deg;        // degree literal
-    angle beta    = 1.57_rad;      // radian literal
-    angle gamma   = 1'570.79_mrad; // milliradian literal
-    angle delta   = radians(1.57); // construct from number
-    angle epsilon = si::sin(delta);
+    angle alpha   = 180_deg;       // 180°
+    angle beta    = constant::pi;  // or π
+    angle gamma   = 3.14_rad;      // or in radian
+    angle delta   = 3'141.5_mrad;  // or in milliradian 
+    angle epsilon = radians(3.14); // or constructed from number
 
     // Dimensionless Numbers
     // ---------------------
