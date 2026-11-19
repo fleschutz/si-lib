@@ -310,16 +310,19 @@ namespace si {
   UDL(_mkat,  1e-3, mols_per_second);     // 1_mkat  (millikatal)
   UDL(_ukat,  1e-6, mols_per_second);     // 1_mukat (microkatal)
   UDL(_nkat,  1e-9, mols_per_second);     // 1_nkat  (nanokatal)
+  // angles in...
+  UDL(_rad,      1, radians);             // 1_rad  (radian)
+  UDL(_mrad,  1e-3, radians);             // 1_mrad (milliradians)
+  UDL(_deg,0.01745329251994329576923690768489, radians); // 1_deg    (°, degree)
+  UDL(_arcmin,0.00290888208665721596153948461, radians); // 1_arcmin (arc minute)
+  UDL(_arcsec,0.00004848136811095359935899141, radians); // 1_arcsec (arc second)
   // other units in...
   UDL(_Nm,       1, newtonmeters);        // 1_Nm  (newtonmeter)
   UDL(_sr,       1, steradians);          // 1_sr  (steradian)
   UDL(_km3_per_s2,1e9, meters3_per_second2);// 1_km3_per_s2 (km³/s²)
   UDL(_kg_per_mol,1,kilograms_per_mol);   // 1_kg_per_mol (kg/mol)
   UDL(_kg_per_W, 1,kilograms_per_watt);   // 1_kg_per_W (kg/W)
-  UDL(_kg_per_kW,1e-3,kilograms_per_watt);   // 1_kg_per_kW (kg/kW)
-  UDL(_rad,      1, radians);             // 1_rad  (radian)
-  UDL(_mrad,  1e-3, radians);             // 1_mrad (milliradians)
-  UDL(_deg,0.01745329251994329576923690768489, radians); // 1_deg  (angle degree)
+  UDL(_kg_per_kW,1e-3,kilograms_per_watt);// 1_kg_per_kW (kg/kW)
 
   // Imperial and US Units
   // ---------------------      (https://en.wikipedia.org/wiki/Imperial_units as of 2026)

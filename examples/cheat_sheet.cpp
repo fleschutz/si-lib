@@ -39,6 +39,8 @@ void cheat_sheet() {
     angle gamma   = 3.14_rad;      // or in radian
     angle delta   = 3'141.5_mrad;  // or in milliradian 
     angle epsilon = radians(3.14); // or constructed from number
+    angle zeta    = 10800_arcmin;  // or in arcminutes
+    angle eta     = 648000_arcsec; // or in arcseconds
 
     // Dimensionless Numbers
     // ---------------------
