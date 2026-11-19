@@ -372,7 +372,7 @@ namespace si {
 	}
 
 	/// @brief Calculates V(t) from peak voltage (V0), frequency (f), and time (t).
-	FUNC electric_potential sine_wave_formula(electric_potential V0, frequency f, si::time t)
+	FUNC potential sine_wave_formula(potential V0, frequency f, si::time t)
 	{
 		return V0 * sin(constant::tau * f * t);
 	}
@@ -465,7 +465,7 @@ namespace si {
 	}
 
 	/// @brief Calculates the consumed electrical power of a current (I) and potential (U).
-	FUNC auto consumed_electrical_power_formula(current I, electric_potential U)
+	FUNC auto consumed_electrical_power_formula(current I, potential U)
 	{
 		return I * U;
 	}

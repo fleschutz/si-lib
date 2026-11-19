@@ -167,6 +167,7 @@ namespace si {
   UDL(_g_per_m3,1e-3, kilograms_per_meter3);  // 1_g_per_m3   (g/m³)
   UDL(_mg_per_m3,1e-6, kilograms_per_meter3); // 1_mg_per_m3  (mg/m³)
   // electric potential in...
+  UDL(_TV,    1e12, volts);               // 1_TV (teravolt)
   UDL(_GV,     1e9, volts);               // 1_GV (gigavolt)
   UDL(_MV,     1e6, volts);               // 1_MV (megavolt)
   UDL(_kV,     1e3, volts);               // 1_kV (kilovolt)

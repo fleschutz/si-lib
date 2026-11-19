@@ -335,18 +335,19 @@ namespace si {
 	}
 
 	/// @brief Returns the electric potential as string using SI units.
-	FUNC std::string to_string(electric_potential U, const char* fmtStr = to_string_format) {
-		if (U <= -1_GV || U >= 1_GV)           return _fmt(U / 1_GV, "GV", fmtStr);
-		if (U <= -1_MV || U >= 1_MV)           return _fmt(U / 1_MV, "MV", fmtStr);
-		if (U <= -1_kV || U >= 1_kV)           return _fmt(U / 1_kV, "kV", fmtStr);
-		if (U <= -1_V || U >= 1_V || U == 0_V) return _fmt(U / 1_V, "V", fmtStr);
-		if (U <= -1_mV || U >= 1_mV)           return _fmt(U / 1_mV, "mV", fmtStr);
-		if (U <= -1_uV || U >= 1_uV)           return _fmt(U / 1_uV, "µV", fmtStr);
-		if (U <= -1_nV || U >= 1_nV)           return _fmt(U / 1_nV, "nV", fmtStr);
+	FUNC std::string to_string(potential U, const char* fmtStr = to_string_format) {
+		if (U <= -1_TV || U >= 1_TV)      return _fmt(U / 1_TV, "TV", fmtStr);
+		if (U <= -1_GV || U >= 1_GV)      return _fmt(U / 1_GV, "GV", fmtStr);
+		if (U <= -1_MV || U >= 1_MV)      return _fmt(U / 1_MV, "MV", fmtStr);
+		if (U <= -1_kV || U >= 1_kV)      return _fmt(U / 1_kV, "kV", fmtStr);
+		if (U <= -1_V  || U >= 1_V || !U) return _fmt(U / 1_V, "V", fmtStr);
+		if (U <= -1_mV || U >= 1_mV)      return _fmt(U / 1_mV, "mV", fmtStr);
+		if (U <= -1_uV || U >= 1_uV)      return _fmt(U / 1_uV, "µV", fmtStr);
+		if (U <= -1_nV || U >= 1_nV)      return _fmt(U / 1_nV, "nV", fmtStr);
 		return _fmt(U / 1_pV, "pV", fmtStr);
 	}
 
-	inline std::ostream& operator<<(std::ostream& os, electric_potential U) {
+	inline std::ostream& operator<<(std::ostream& os, potential U) {
 		return (os << to_string(U));
 	}
 

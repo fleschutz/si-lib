@@ -77,7 +77,7 @@ namespace si {
   UNIT coulombs       = unit<charge>();
   UNIT coulombs_per_mol = coulombs / moles;
 
-  UNIT volts          = unit<electric_potential>();
+  UNIT volts          = unit<potential>();
   UNIT farads         = coulombs / volts;
   UNIT hertz_per_volt = hertz / volts;
   UNIT farads_per_meter = farads / meters;
