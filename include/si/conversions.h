@@ -77,10 +77,10 @@ namespace si {
 		return kilograms(std::nan("2")); // unknown unit
 	}
 
-	/// @brief Internal function to format quantity and unit into a string by using a format string.
-	FUNC std::string _fmt(long double quantity, const char* unit, const char* formatString) {
+	/// @brief Internal function to format a number and a unit into a string by using a format string.
+	FUNC std::string _fmt(long double number, const char* unit, const char* formatString) {
 		char buf[256] = "";
-		std::snprintf(buf, sizeof(buf), formatString, quantity, unit);
+		std::snprintf(buf, sizeof(buf), formatString, number, unit);
 		return std::string(buf);
 	}
 
@@ -89,70 +89,70 @@ namespace si {
 
 	/// @brief Returns the given length as string using SI units.
 	FUNC std::string to_string(length d, const char* fmtStr = to_string_format) {
-		if (d <= -1_Gpc || d >= 1_Gpc)         return _fmt(d / 1_Gpc, "Gpc", fmtStr); // gigaparsec
-		if (d <= -1_Mpc || d >= 1_Mpc)         return _fmt(d / 1_Mpc, "Mpc", fmtStr); // megaparsec
-		if (d <= -1_kpc || d >= 1_kpc)         return _fmt(d / 1_kpc, "kpc", fmtStr); // kiloparsec
-		if (d <= -1_pc || d >= 1_pc)           return _fmt(d / 1_pc, "pc", fmtStr);   // parsec
-		if (d <= -1_ly || d >= 1_ly)           return _fmt(d / 1_ly, "ly", fmtStr);   // light-year
-		if (d <= -0.1_au || d >= 0.1_au)       return _fmt(d / 1_au, "au", fmtStr);   // astronomical unit
-		if (d <= -1_km || d >= 1_km)           return _fmt(d / 1_km, "km", fmtStr);   // kilometer
-		if (d <= -1_m || d >= 1_m || d == 0_m) return _fmt(d / 1_m, "m", fmtStr);     // meter
-		if (d <= -1_cm || d >= 1_cm)           return _fmt(d / 1_cm, "cm", fmtStr);   // centimeter
-		if (d <= -1_mm || d >= 1_mm)           return _fmt(d / 1_mm, "mm", fmtStr);   // millimeter
-		if (d <= -1_um || d >= 1_um)           return _fmt(d / 1_um, "µm", fmtStr);   // micrometer
-		if (d <= -1_nm || d >= 1_nm)           return _fmt(d / 1_nm, "nm", fmtStr);   // nanometer
+		if (d <= -1_Gpc || d >= 1_Gpc)     return _fmt(d / 1_Gpc, "Gpc", fmtStr); // gigaparsec
+		if (d <= -1_Mpc || d >= 1_Mpc)     return _fmt(d / 1_Mpc, "Mpc", fmtStr); // megaparsec
+		if (d <= -1_kpc || d >= 1_kpc)     return _fmt(d / 1_kpc, "kpc", fmtStr); // kiloparsec
+		if (d <= -1_pc  || d >= 1_pc)      return _fmt(d / 1_pc, "pc", fmtStr);   // parsec
+		if (d <= -1_ly  || d >= 1_ly)      return _fmt(d / 1_ly, "ly", fmtStr);   // light-year
+		if (d <= -0.1_au|| d >= 0.1_au)    return _fmt(d / 1_au, "au", fmtStr);   // astronomical unit
+		if (d <= -1_km  || d >= 1_km)      return _fmt(d / 1_km, "km", fmtStr);   // kilometer
+		if (d <= -1_m   || d >= 1_m || !d) return _fmt(d / 1_m, "m", fmtStr);     // meter
+		if (d <= -1_cm  || d >= 1_cm)      return _fmt(d / 1_cm, "cm", fmtStr);   // centimeter
+		if (d <= -1_mm  || d >= 1_mm)      return _fmt(d / 1_mm, "mm", fmtStr);   // millimeter
+		if (d <= -1_um  || d >= 1_um)      return _fmt(d / 1_um, "µm", fmtStr);   // micrometer
+		if (d <= -1_nm  || d >= 1_nm)      return _fmt(d / 1_nm, "nm", fmtStr);   // nanometer
 		return _fmt(d / 1_pm, "pm", fmtStr);
 	}
 
 	/// @brief Returns the given time as string using SI units.
 	FUNC std::string to_string(time t, const char* fmtStr = to_string_format) {
-		if (t <= -365.25_d || t >= 365.25_d)   return _fmt(t / 365.25_d, "y", fmtStr);
-		if (t <= -1_w || t >= 1_w)             return _fmt(t / 1_w, "w", fmtStr);
-		if (t <= -2_d || t >= 2_d)             return _fmt(t / 1_d, "d", fmtStr);
-		if (t <= -2_h || t >= 2_h)             return _fmt(t / 1_h, "h", fmtStr);
-		if (t <= -2_min || t >= 2_min)         return _fmt(t / 1_min, "min", fmtStr);
-		if (t <= -1_s || t >= 1_s || t == 0_s) return _fmt(t / 1_s, "s", fmtStr);
-		if (t <= -1_ms || t >= 1_ms)           return _fmt(t / 1_ms, "ms", fmtStr);
-		if (t <= -1_us || t >= 1_us)           return _fmt(t / 1_us, "µs", fmtStr);
-		if (t <= -1_ns || t >= 1_ns)           return _fmt(t / 1_ns, "ns", fmtStr);
+		if (t <= -365.25_d || t >= 365.25_d) return _fmt(t / 365.25_d, "y", fmtStr);
+		if (t <= -1_w || t >= 1_w)           return _fmt(t / 1_w, "w", fmtStr);
+		if (t <= -2_d || t >= 2_d)           return _fmt(t / 1_d, "d", fmtStr);
+		if (t <= -2_h || t >= 2_h)           return _fmt(t / 1_h, "h", fmtStr);
+		if (t <= -2_min || t >= 2_min)       return _fmt(t / 1_min, "min", fmtStr);
+		if (t <= -1_s || t >= 1_s || !t)     return _fmt(t / 1_s, "s", fmtStr);
+		if (t <= -1_ms || t >= 1_ms)         return _fmt(t / 1_ms, "ms", fmtStr);
+		if (t <= -1_us || t >= 1_us)         return _fmt(t / 1_us, "µs", fmtStr);
+		if (t <= -1_ns || t >= 1_ns)         return _fmt(t / 1_ns, "ns", fmtStr);
 		return _fmt(t / 1_ps, "ps", fmtStr);
 	}
 
 	/// @brief Returns the given mass as string using SI units.
 	FUNC std::string to_string(mass m, const char* fmtStr = to_string_format) {
-		if (m <= -1_Pt || m >= 1_Pt)              return _fmt(m / 1_Pt, "Pt", fmtStr);
-		if (m <= -1_Tt || m >= 1_Tt)              return _fmt(m / 1_Tt, "Tt", fmtStr);
-		if (m <= -1_Gt || m >= 1_Gt)              return _fmt(m / 1_Gt, "Gt", fmtStr);
-		if (m <= -1_Mt || m >= 1_Mt)              return _fmt(m / 1_Mt, "Mt", fmtStr);
-		if (m <= -1_kt || m >= 1_kt)              return _fmt(m / 1_kt, "kt", fmtStr);
-		if (m <= -1_t || m >= 1_t)                return _fmt(m / 1_t, "t", fmtStr);
-		if (m <= -1_kg || m >= 1_kg || m == 0_kg) return _fmt(m / 1_kg, "kg", fmtStr);
-		if (m <= -1_g || m >= 1_g)                return _fmt(m / 1_g, "g", fmtStr);
-		if (m <= -1_mg || m >= 1_mg)              return _fmt(m / 1_mg, "mg", fmtStr);
-		if (m <= -1_ug || m >= 1_ug)              return _fmt(m / 1_ug, "µg", fmtStr);
+		if (m <= -1_Pt || m >= 1_Pt)       return _fmt(m / 1_Pt, "Pt", fmtStr);
+		if (m <= -1_Tt || m >= 1_Tt)       return _fmt(m / 1_Tt, "Tt", fmtStr);
+		if (m <= -1_Gt || m >= 1_Gt)       return _fmt(m / 1_Gt, "Gt", fmtStr);
+		if (m <= -1_Mt || m >= 1_Mt)       return _fmt(m / 1_Mt, "Mt", fmtStr);
+		if (m <= -1_kt || m >= 1_kt)       return _fmt(m / 1_kt, "kt", fmtStr);
+		if (m <= -1_t  || m >= 1_t)        return _fmt(m / 1_t, "t", fmtStr);
+		if (m <= -1_kg || m >= 1_kg || !m) return _fmt(m / 1_kg, "kg", fmtStr);
+		if (m <= -1_g  || m >= 1_g)        return _fmt(m / 1_g, "g", fmtStr);
+		if (m <= -1_mg || m >= 1_mg)       return _fmt(m / 1_mg, "mg", fmtStr);
+		if (m <= -1_ug || m >= 1_ug)       return _fmt(m / 1_ug, "µg", fmtStr);
 		return _fmt(m / 1_ng, "ng", fmtStr);
 	}
 
 	/// @brief Returns the given temperature as string using SI units.
 	FUNC std::string to_string(temperature T, const char* fmtStr = to_string_format) {
-		if (T >= 1_GK)                       return _fmt(T / 1_GK, "GK", fmtStr);
-		if (T >= 1_MK)                       return _fmt(T / 1_MK, "MK", fmtStr);
+		if (T <= -1_GK || T >= 1_GK)         return _fmt(T / 1_GK, "GK", fmtStr);
+		if (T <= -1_MK || T >= 1_MK)         return _fmt(T / 1_MK, "MK", fmtStr);
 		if (T >= -150_degC && T <= 150_degC) return _fmt(celsius(T), "°C", fmtStr); // human temperature range
-		if (T >= 1_K || T == 0.0_K)          return _fmt(T / 1_K, "K", fmtStr);
-		if (T >= 1_mK)                       return _fmt(T / 1_mK, "mK", fmtStr);
-		if (T >= 1_uK)                       return _fmt(T / 1_uK, "µK", fmtStr);
+		if (T <= -1_K || T >= 1_K || !T)     return _fmt(T / 1_K, "K", fmtStr);
+		if (T <= -1_mK || T >= 1_mK)         return _fmt(T / 1_mK, "mK", fmtStr);
+		if (T <= -1_uK || T >= 1_uK)         return _fmt(T / 1_uK, "µK", fmtStr);
 		return _fmt(T / 1_nK, "nK", fmtStr);
 	}
 
 	/// @brief Returns the electric current as string using SI units.
 	inline std::string to_string(current I, const char* fmtStr = to_string_format) {
-		if (I <= -1_GA || I >= 1_GA)           return _fmt(I / 1_GA, "GA", fmtStr);
-		if (I <= -1_MA || I >= 1_MA)           return _fmt(I / 1_MA, "MA", fmtStr);
-		if (I <= -1_kA || I >= 1_kA)           return _fmt(I / 1_kA, "kA", fmtStr);
-		if (I <= -1_A || I >= 1_A || I == 0_A) return _fmt(I / 1_A, "A", fmtStr);
-		if (I <= -1_mA || I >= 1_mA)           return _fmt(I / 1_mA, "mA", fmtStr);
-		if (I <= -1_uA || I >= 1_uA)           return _fmt(I / 1_uA, "µA", fmtStr);
-		if (I <= -1_nA || I >= 1_nA)           return _fmt(I / 1_nA, "nA", fmtStr);
+		if (I <= -1_GA || I >= 1_GA)      return _fmt(I / 1_GA, "GA", fmtStr);
+		if (I <= -1_MA || I >= 1_MA)      return _fmt(I / 1_MA, "MA", fmtStr);
+		if (I <= -1_kA || I >= 1_kA)      return _fmt(I / 1_kA, "kA", fmtStr);
+		if (I <= -1_A  || I >= 1_A || !I) return _fmt(I / 1_A, "A", fmtStr);
+		if (I <= -1_mA || I >= 1_mA)      return _fmt(I / 1_mA, "mA", fmtStr);
+		if (I <= -1_uA || I >= 1_uA)      return _fmt(I / 1_uA, "µA", fmtStr);
+		if (I <= -1_nA || I >= 1_nA)      return _fmt(I / 1_nA, "nA", fmtStr);
 		return _fmt(I / 1_pA, "pA", fmtStr);
 	}
 
@@ -160,40 +160,40 @@ namespace si {
 
 	/// @brief Returns the given area as string using SI units.
 	FUNC std::string to_string(area a, const char* fmtStr = to_string_format) {
-		if (a <= -1_km2 || a >= 1_km2)            return _fmt(a / 1_km2, "km²", fmtStr);
-		if (a <= -1_hm2 || a >= 1_hm2)            return _fmt(a / 1_hm2, "hm²", fmtStr);
-		if (a <= -1_m2 || a >= 1_m2 || a == 0_m2) return _fmt(a / 1_m2, "m²", fmtStr);
-		if (a <= -1_cm2 || a >= 1_cm2)            return _fmt(a / 1_cm2, "cm²", fmtStr);
-		if (a <= -1_mm2 || a >= 1_mm2)            return _fmt(a / 1_mm2, "mm²", fmtStr);
+		if (a <= -1_km2 || a >= 1_km2)      return _fmt(a / 1_km2, "km²", fmtStr);
+		if (a <= -1_hm2 || a >= 1_hm2)      return _fmt(a / 1_hm2, "hm²", fmtStr);
+		if (a <= -1_m2  || a >= 1_m2 || !a) return _fmt(a / 1_m2, "m²", fmtStr);
+		if (a <= -1_cm2 || a >= 1_cm2)      return _fmt(a / 1_cm2, "cm²", fmtStr);
+		if (a <= -1_mm2 || a >= 1_mm2)      return _fmt(a / 1_mm2, "mm²", fmtStr);
 		return _fmt(a / 1_um2, "µm²", fmtStr);
 	}
 
 	/// @brief Returns the per area as string using SI units.
 	FUNC std::string to_string(per_area a, const char* fmtStr = to_string_format) {
-		if (a <= -1_per_km2 || a >= 1_per_km2)                return _fmt(a / 1_per_km2, "/km²", fmtStr);
-		if (a <= -1_per_hm2 || a >= 1_per_hm2)                return _fmt(a / 1_per_hm2, "/hm²", fmtStr);
-		if (a <= -1_per_m2 || a >= 1_per_m2 || a == 0_per_m2) return _fmt(a / 1_per_m2, "/m²", fmtStr);
-		if (a <= -1_per_cm2 || a >= 1_per_cm2)                return _fmt(a / 1_per_cm2, "/cm²", fmtStr);
-		if (a <= -1_per_mm2 || a >= 1_per_mm2)                return _fmt(a / 1_per_mm2, "/mm²", fmtStr);
+		if (a <= -1_per_km2 || a >= 1_per_km2)      return _fmt(a / 1_per_km2, "/km²", fmtStr);
+		if (a <= -1_per_hm2 || a >= 1_per_hm2)      return _fmt(a / 1_per_hm2, "/hm²", fmtStr);
+		if (a <= -1_per_m2  || a >= 1_per_m2 || !a) return _fmt(a / 1_per_m2, "/m²", fmtStr);
+		if (a <= -1_per_cm2 || a >= 1_per_cm2)      return _fmt(a / 1_per_cm2, "/cm²", fmtStr);
+		if (a <= -1_per_mm2 || a >= 1_per_mm2)      return _fmt(a / 1_per_mm2, "/mm²", fmtStr);
 		return _fmt(a / 1_per_μm2, "/μm²", fmtStr);
 	}
 
 	/// @brief Returns the given volume as string using SI units.
 	FUNC std::string to_string(volume v, const char* fmtStr = to_string_format) {
-		if (v <= -1_km3 || v >= 1_km3)         return _fmt(v / 1_km3, "km³", fmtStr);
-		if (v <= -1_m3 || v >= 1_m3)           return _fmt(v / 1_m3, "m³", fmtStr);
-		if (v <= -1_l || v >= 1_l || v == 0_l) return _fmt(v / 1_l, "l", fmtStr);
-		if (v <= -1_ml || v >= 1_ml)           return _fmt(v / 1_ml, "ml", fmtStr);
-		if (v <= -1_ul || v >= 1_ul)           return _fmt(v / 1_ul, "µl", fmtStr);
-		if (v <= -1_nl || v >= 1_nl)           return _fmt(v / 1_nl, "nl", fmtStr);
+		if (v <= -1_km3|| v >= 1_km3)     return _fmt(v / 1_km3, "km³", fmtStr);
+		if (v <= -1_m3 || v >= 1_m3)      return _fmt(v / 1_m3, "m³", fmtStr);
+		if (v <= -1_l  || v >= 1_l || !v) return _fmt(v / 1_l, "l", fmtStr);
+		if (v <= -1_ml || v >= 1_ml)      return _fmt(v / 1_ml, "ml", fmtStr);
+		if (v <= -1_ul || v >= 1_ul)      return _fmt(v / 1_ul, "µl", fmtStr);
+		if (v <= -1_nl || v >= 1_nl)      return _fmt(v / 1_nl, "nl", fmtStr);
 		return _fmt(v / 1_pl, "pl", fmtStr);
 	}
 
 	/// @brief Returns velocity as string using SI units.
 	FUNC std::string to_string(velocity v, const char* fmtStr = to_string_format) {
-		if (v <= -1_km_per_s || v >= 1_km_per_s)                 return _fmt(v / 1_km_per_s, "km/s", fmtStr);
-		if (v <= -1_km_per_h || v >= 1_km_per_h)                 return _fmt(v / 1_km_per_h, "km/h", fmtStr);
-		if (v <= -1_m_per_s || v >= 1_m_per_s || v == 0_m_per_s) return _fmt(v / 1_m_per_s, "m/s", fmtStr);
+		if (v <= -1_km_per_s || v >= 1_km_per_s)      return _fmt(v / 1_km_per_s, "km/s", fmtStr);
+		if (v <= -1_km_per_h || v >= 1_km_per_h)      return _fmt(v / 1_km_per_h, "km/h", fmtStr);
+		if (v <= -1_m_per_s  || v >= 1_m_per_s || !v) return _fmt(v / 1_m_per_s, "m/s", fmtStr);
 		return _fmt(v / 1_mm_per_h, "mm/h", fmtStr);
 	}
 
@@ -205,68 +205,68 @@ namespace si {
 
 	/// @brief Returns the frequency as string using SI units.
 	FUNC std::string to_string(frequency f, const char* fmtStr = to_string_format) {
-		if (f <= -1_THz || f >= 1_THz)            return _fmt(f / 1_THz, "THz", fmtStr);
-		if (f <= -1_GHz || f >= 1_GHz)            return _fmt(f / 1_GHz, "GHz", fmtStr);
-		if (f <= -1_MHz || f >= 1_MHz)            return _fmt(f / 1_MHz, "MHz", fmtStr);
-		if (f <= -1_kHz || f >= 1_kHz)            return _fmt(f / 1_kHz, "kHz", fmtStr);
-		if (f <= -1_Hz || f >= 1_Hz || f == 0_Hz) return _fmt(f / 1_Hz, "Hz", fmtStr);
-		if (f <= -1_mHz || f >= 1_mHz)            return _fmt(f / 1_mHz, "mHz", fmtStr);
+		if (f <= -1_THz || f >= 1_THz)      return _fmt(f / 1_THz, "THz", fmtStr);
+		if (f <= -1_GHz || f >= 1_GHz)      return _fmt(f / 1_GHz, "GHz", fmtStr);
+		if (f <= -1_MHz || f >= 1_MHz)      return _fmt(f / 1_MHz, "MHz", fmtStr);
+		if (f <= -1_kHz || f >= 1_kHz)      return _fmt(f / 1_kHz, "kHz", fmtStr);
+		if (f <= -1_Hz  || f >= 1_Hz || !f) return _fmt(f / 1_Hz, "Hz", fmtStr);
+		if (f <= -1_mHz || f >= 1_mHz)      return _fmt(f / 1_mHz, "mHz", fmtStr);
 		return _fmt(f / 1_uHz, "µHz", fmtStr);
 	}
 
 	/// @brief Returns the force as string using SI units.
 	FUNC std::string to_string(force F, const char* fmtStr = to_string_format) {
-		if (F <= -1_ZN || F >= 1_ZN)           return _fmt(F / 1_ZN, "ZN", fmtStr);
-		if (F <= -1_EN || F >= 1_EN)           return _fmt(F / 1_EN, "EN", fmtStr);
-		if (F <= -1_PN || F >= 1_PN)           return _fmt(F / 1_PN, "PN", fmtStr);
-		if (F <= -1_TN || F >= 1_TN)           return _fmt(F / 1_TN, "TN", fmtStr);
-		if (F <= -1_GN || F >= 1_GN)           return _fmt(F / 1_GN, "GN", fmtStr);
-		if (F <= -1_MN || F >= 1_MN)           return _fmt(F / 1_MN, "MN", fmtStr);
-		if (F <= -1_kN || F >= 1_kN)           return _fmt(F / 1_kN, "kN", fmtStr);
-		if (F <= -1_N || F >= 1_N || F == 0_N) return _fmt(F / 1_N, "N", fmtStr);
-		if (F <= -1_mN || F >= 1_mN)           return _fmt(F / 1_mN, "mN", fmtStr);
-		if (F <= -1_uN || F >= 1_uN)           return _fmt(F / 1_uN, "µN", fmtStr);
-		if (F <= -1_nN || F >= 1_nN)           return _fmt(F / 1_nN, "nN", fmtStr);
+		if (F <= -1_ZN || F >= 1_ZN)      return _fmt(F / 1_ZN, "ZN", fmtStr);
+		if (F <= -1_EN || F >= 1_EN)      return _fmt(F / 1_EN, "EN", fmtStr);
+		if (F <= -1_PN || F >= 1_PN)      return _fmt(F / 1_PN, "PN", fmtStr);
+		if (F <= -1_TN || F >= 1_TN)      return _fmt(F / 1_TN, "TN", fmtStr);
+		if (F <= -1_GN || F >= 1_GN)      return _fmt(F / 1_GN, "GN", fmtStr);
+		if (F <= -1_MN || F >= 1_MN)      return _fmt(F / 1_MN, "MN", fmtStr);
+		if (F <= -1_kN || F >= 1_kN)      return _fmt(F / 1_kN, "kN", fmtStr);
+		if (F <= -1_N  || F >= 1_N || !F) return _fmt(F / 1_N, "N", fmtStr);
+		if (F <= -1_mN || F >= 1_mN)      return _fmt(F / 1_mN, "mN", fmtStr);
+		if (F <= -1_uN || F >= 1_uN)      return _fmt(F / 1_uN, "µN", fmtStr);
+		if (F <= -1_nN || F >= 1_nN)      return _fmt(F / 1_nN, "nN", fmtStr);
 		return _fmt(F / 1_pN, "pN", fmtStr);
 	}
 
 	/// @brief Returns the energy as string using SI units.
 	FUNC std::string to_string(energy E, const char* fmtStr = to_string_format) {
-		if (E <= -1_PJ || E >= 1_PJ)           return _fmt(E / 1_PJ, "PJ", fmtStr);
-		if (E <= -1_TJ || E >= 1_TJ)           return _fmt(E / 1_TJ, "TJ", fmtStr);
-		if (E <= -1_GJ || E >= 1_GJ)           return _fmt(E / 1_GJ, "GJ", fmtStr);
-		if (E <= -1_MJ || E >= 1_MJ)           return _fmt(E / 1_MJ, "MJ", fmtStr);
-		if (E <= -1_kJ || E >= 1_kJ)           return _fmt(E / 1_kJ, "kJ", fmtStr);
-		if (E <= -1_J || E >= 1_J || E == 0_J) return _fmt(E / 1_J, "J", fmtStr);
+		if (E <= -1_PJ || E >= 1_PJ)      return _fmt(E / 1_PJ, "PJ", fmtStr);
+		if (E <= -1_TJ || E >= 1_TJ)      return _fmt(E / 1_TJ, "TJ", fmtStr);
+		if (E <= -1_GJ || E >= 1_GJ)      return _fmt(E / 1_GJ, "GJ", fmtStr);
+		if (E <= -1_MJ || E >= 1_MJ)      return _fmt(E / 1_MJ, "MJ", fmtStr);
+		if (E <= -1_kJ || E >= 1_kJ)      return _fmt(E / 1_kJ, "kJ", fmtStr);
+		if (E <= -1_J  || E >= 1_J || !E) return _fmt(E / 1_J, "J", fmtStr);
 		return _fmt(E / 1_mJ, "mJ", fmtStr);
 	}
 
 	/// @brief Returns the power as string using SI units.
 	FUNC std::string to_string(power P, const char* fmtStr = to_string_format) {
-		if (P <= -1_TW || P >= 1_TW)           return _fmt(P / 1_TW, "TW", fmtStr);
-		if (P <= -1_GW || P >= 1_GW)           return _fmt(P / 1_GW, "GW", fmtStr);
-		if (P <= -1_MW || P >= 1_MW)           return _fmt(P / 1_MW, "MW", fmtStr);
-		if (P <= -1_kW || P >= 1_kW)           return _fmt(P / 1_kW, "kW", fmtStr);
-		if (P <= -1_W || P >= 1_W || P == 0_W) return _fmt(P / 1_W, "W", fmtStr);
-		if (P <= -1_mW || P >= 1_mW)           return _fmt(P / 1_mW, "mW", fmtStr);
+		if (P <= -1_TW || P >= 1_TW)      return _fmt(P / 1_TW, "TW", fmtStr);
+		if (P <= -1_GW || P >= 1_GW)      return _fmt(P / 1_GW, "GW", fmtStr);
+		if (P <= -1_MW || P >= 1_MW)      return _fmt(P / 1_MW, "MW", fmtStr);
+		if (P <= -1_kW || P >= 1_kW)      return _fmt(P / 1_kW, "kW", fmtStr);
+		if (P <= -1_W  || P >= 1_W || !P) return _fmt(P / 1_W, "W", fmtStr);
+		if (P <= -1_mW || P >= 1_mW)      return _fmt(P / 1_mW, "mW", fmtStr);
 		return _fmt(P / 1_uW, "µW", fmtStr);
 	}
 
 	/// @brief Returns the power intensity as string using SI units.
 	FUNC std::string to_string(power_intensity I, const char* fmtStr = to_string_format) {
-		if (I <= -1_MW_per_m2 || I >= 1_MW_per_m2)                  return _fmt(I / 1_MW_per_m2, "MW/m²", fmtStr);
-		if (I <= -1_kW_per_m2 || I >= 1_kW_per_m2)                  return _fmt(I / 1_kW_per_m2, "kW/m²", fmtStr);
-		if (I <= -1_W_per_m2 || I >= 1_W_per_m2 || I == 0_W_per_m2) return _fmt(I / 1_W_per_m2, "W/m²", fmtStr);
+		if (I <= -1_MW_per_m2 || I >= 1_MW_per_m2)      return _fmt(I / 1_MW_per_m2, "MW/m²", fmtStr);
+		if (I <= -1_kW_per_m2 || I >= 1_kW_per_m2)      return _fmt(I / 1_kW_per_m2, "kW/m²", fmtStr);
+		if (I <= -1_W_per_m2  || I >= 1_W_per_m2 || !I) return _fmt(I / 1_W_per_m2, "W/m²", fmtStr);
 		return _fmt(I / 1_mW_per_m2, "mW/m²", fmtStr);
 	}
 
 	/// @brief Returns the pressure as string using SI units.
 	FUNC std::string to_string(pressure p, const char* fmtStr = to_string_format) {
-		if (p <= -1_MPa || p >= 1_MPa)            return _fmt(p / 1_MPa, "MPa", fmtStr);
-		if (p <= -1_kPa || p >= 1_kPa)            return _fmt(p / 1_kPa, "kPa", fmtStr);
-		if (p <= -1_hPa || p >= 1_hPa)            return _fmt(p / 1_hPa, "hPa", fmtStr);
-		if (p <= -1_Pa || p >= 1_Pa || p == 0_Pa) return _fmt(p / 1_Pa, "Pa", fmtStr);
-		if (p <= -1_mPa || p >= 1_mPa)            return _fmt(p / 1_mPa, "mPa", fmtStr);
+		if (p <= -1_MPa || p >= 1_MPa)      return _fmt(p / 1_MPa, "MPa", fmtStr);
+		if (p <= -1_kPa || p >= 1_kPa)      return _fmt(p / 1_kPa, "kPa", fmtStr);
+		if (p <= -1_hPa || p >= 1_hPa)      return _fmt(p / 1_hPa, "hPa", fmtStr);
+		if (p <= -1_Pa  || p >= 1_Pa || !p) return _fmt(p / 1_Pa, "Pa", fmtStr);
+		if (p <= -1_mPa || p >= 1_mPa)      return _fmt(p / 1_mPa, "mPa", fmtStr);
 		return _fmt(p / 1_uPa, "µPa", fmtStr);
 	}
 
@@ -285,11 +285,11 @@ namespace si {
 
 	/// @brief Returns the electric charge as string using SI units.
 	FUNC std::string to_string(charge Q, const char* fmtStr = to_string_format) {
-		if (Q <= -1_GAh || Q >= 1_GAh)            return _fmt(Q / 1_GAh, "GAh", fmtStr);
-		if (Q <= -1_MAh || Q >= 1_MAh)            return _fmt(Q / 1_MAh, "MAh", fmtStr);
-		if (Q <= -1_kAh || Q >= 1_kAh)            return _fmt(Q / 1_kAh, "kAh", fmtStr);
-		if (Q <= -1_Ah || Q >= 1_Ah || Q == 0_Ah) return _fmt(Q / 1_Ah, "Ah", fmtStr);
-		if (Q <= -1_mAh || Q >= 1_mAh)            return _fmt(Q / 1_mAh, "mAh", fmtStr);
+		if (Q <= -1_GAh || Q >= 1_GAh)      return _fmt(Q / 1_GAh, "GAh", fmtStr);
+		if (Q <= -1_MAh || Q >= 1_MAh)      return _fmt(Q / 1_MAh, "MAh", fmtStr);
+		if (Q <= -1_kAh || Q >= 1_kAh)      return _fmt(Q / 1_kAh, "kAh", fmtStr);
+		if (Q <= -1_Ah  || Q >= 1_Ah || !Q) return _fmt(Q / 1_Ah, "Ah", fmtStr);
+		if (Q <= -1_mAh || Q >= 1_mAh)      return _fmt(Q / 1_mAh, "mAh", fmtStr);
 		return _fmt(Q / 1_uAh, "µAh", fmtStr);
 	}
 
