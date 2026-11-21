@@ -126,8 +126,8 @@ namespace si {
 		if (m <= -1_Mt || m >= 1_Mt)       return _fmt(m / 1_Mt, "Mt", fmtStr);
 		if (m <= -1_kt || m >= 1_kt)       return _fmt(m / 1_kt, "kt", fmtStr);
 		if (m <= -1_t  || m >= 1_t)        return _fmt(m / 1_t, "t", fmtStr);
-		if (m <= -1_kg || m >= 1_kg || !m) return _fmt(m / 1_kg, "kg", fmtStr);
-		if (m <= -1_g  || m >= 1_g)        return _fmt(m / 1_g, "g", fmtStr);
+		if (m <= -1_kg || m >= 1_kg)       return _fmt(m / 1_kg, "kg", fmtStr);
+		if (m <= -1_g  || m >= 1_g || !m)  return _fmt(m / 1_g, "g", fmtStr);
 		if (m <= -1_mg || m >= 1_mg)       return _fmt(m / 1_mg, "mg", fmtStr);
 		if (m <= -1_ug || m >= 1_ug)       return _fmt(m / 1_ug, "µg", fmtStr);
 		return _fmt(m / 1_ng, "ng", fmtStr);
@@ -156,7 +156,8 @@ namespace si {
 		return _fmt(I / 1_pA, "pA", fmtStr);
 	}
 
-	// Convert the derived SI units:
+	// Derived SI Units
+	// ----------------
 
 	/// @brief Returns the given area as string using SI units.
 	FUNC std::string to_string(area a, const char* fmtStr = to_string_format) {

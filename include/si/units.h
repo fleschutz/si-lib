@@ -55,16 +55,16 @@ namespace si {
   UNIT newtonseconds  = newtons * seconds;
   UNIT newtons_per_ampere2 = newtons / (amperes * amperes);
   // energy in...
-  UNIT joules         = unit<energy>();
+  UNIT joules         = kilograms * (meters * meters) / (seconds * seconds);
   UNIT jouleseconds   = joules * seconds;
   UNIT joules_per_s   =  joules / seconds;
-  UNIT joules_per_kelvin = joules / kelvins;
+  UNIT joules_per_K = joules / kelvins;
   UNIT joules_per_s_per_kg = joules / seconds / kilograms;
-  UNIT joules_per_kg_per_kelvin = joules / kilograms / kelvins;
+  UNIT joules_per_kg_per_K = joules / kilograms / kelvins;
   UNIT joules_per_mol = unit<energy_per_mol>();
-  UNIT joules_per_kelvin_per_mol = joules / kelvins / moles;
+  UNIT joules_per_K_per_mol = joules / kelvins / moles;
   // pressure in...
-  UNIT pascals        = unit<pressure>();
+  UNIT pascals        = kilograms / meters / (seconds * seconds);
   // absorbed dose in...
   UNIT grays          = joules / kilograms;
   UNIT sieverts       = joules / kilograms;

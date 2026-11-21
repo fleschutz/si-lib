@@ -15,7 +15,7 @@ namespace si { namespace constant {                             // singular for 
   SET(c²,           89'875'517'873'681'764, m2_per_s2);         // the speed of light in vacuum squared 
   SET(h,                  6.626'070'15e-34, jouleseconds);      // Planck constant (symbol: h)
   SET(e,                 1.602'176'634e-19, coulombs);          // the elementary charge (symbol: e)
-  SET(k_B,                   1.380'649e-23, joules_per_kelvin); // Boltzmann constant (symbol: k)
+  SET(k_B,                   1.380'649e-23, joules_per_K);      // Boltzmann constant (symbol: k)
   SET(N_A,                   6.02214076e23, per_mol);           // Avogadro constant (symbol: N_A)
   SET(K_cd,                            683, lumens_per_watt);   // the luminous efficacy of monochromatic radiation of frequency 540 THz
   SET(g_n,                        9.806'65, m_per_s2);          // standard acceleration of gravity
@@ -47,8 +47,8 @@ namespace si { namespace constant {                             // singular for 
 
   // Physico-chemical Constants
   // --------------------------                                 // CODATA 2022 constants (source: https://codata.org)
-  SET(R,                     8.314'462'618, joules_per_kelvin_per_mol); // molar gas constant
-  SET(R_dry_air,              287.050'0676, joules_per_kg_per_kelvin); // specific gas constant for dry air
+  SET(R,                     8.314'462'618, joules_per_K_per_mol); // molar gas constant
+  SET(R_dry_air,              287.050'0676, joules_per_kg_per_K); // specific gas constant for dry air
   SET(b,                    2.897771955e-3, meter_kelvins);     // Wien wavelength displacement law constant
   SET(c_1,                 3.741771852e-16, wattmeters2);       // first radiation constant
   SET(c_1L,                1.191042972e-16, watts_per_m2);      // first radiation constant for spectral radiance
