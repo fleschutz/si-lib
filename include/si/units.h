@@ -21,14 +21,16 @@ namespace si {
   // Derived SI Units
   // ----------------
   UNIT kilometers     = unit<length, 1000>();
+  UNIT centimeters    = unit<length, 1,100>();
   UNIT millimeters    = unit<length, 1,1000>();
   UNIT per_meter      = unit<per_length>();
   UNIT minutes        = unit<time, 60>();
   UNIT hours          = unit<time, 3600>();
   UNIT hertz          = unit<frequency>();
   // area in...
-  UNIT meters2        = unit<area>(); // (square meter)
   UNIT kilometers2    = unit<area, 1000*1000>();
+  UNIT centimeters2   = unit<area, 1,100*100>();
+  UNIT meters2        = unit<area>();
   UNIT per_meter2     = unit<per_area>();
   UNIT meter_kelvins  = meters * kelvins;
   UNIT meters2_per_second = meters2 / seconds;
@@ -124,6 +126,7 @@ namespace si {
   UNIT bits_per_m3       = bits / meters3;
   UNIT bytes             = unit<data_size, 8>();
   UNIT bytes_per_second  = bytes / seconds;
+  UNIT bytes_per_cm2     = bytes / centimeters2;
   UNIT bytes_per_m2      = bytes / meters2;
   UNIT bytes_per_m3      = bytes / meters3;
 

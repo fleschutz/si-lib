@@ -245,12 +245,12 @@ void various_examples() {
     cout << HDD_total_size << endl;
 
 
-    cout << "32. What's the data density of a 4GB/2.5'' hardisk? ";
+    cout << "32. What's the data density of a 4GB/8platter/2.5'' hardisk? ";
     auto platters           = 8;
     auto platter_diameter   = 2.5_in;
     auto area_per_platter   = area_of_circle_formula(platter_diameter / 2.0);
-    auto data_density       = (HDD_total_size / platters / area_per_platter) * 1_cm2;
-    cout << data_density << "/cm²" << endl;
+    auto data_density       = HDD_total_size / platters / area_per_platter;
+    cout << data_density << endl;
 
 
     cout << "33. What's the direct distance between Singapore and Tokyo? ";
