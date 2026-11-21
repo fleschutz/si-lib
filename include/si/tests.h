@@ -323,6 +323,12 @@ namespace si {
 	static_assert(1_KiB_per_s == 1024_byte_per_s);
   }
 
+  /// @brief Returns true if both angles are nearly equal.
+  [[nodiscard]] inline constexpr bool nearly_equal(angle a, angle b) {
+	angle delta = a - b;
+	return delta > -1e-10 && delta < 1e-10;
+  }
+
   inline void check_angles() {
         static_assert(0_rad == 0_mrad);
         static_assert(0_rad == 0_deg);

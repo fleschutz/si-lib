@@ -174,12 +174,6 @@ namespace si {
       return std::atan2(meters(y), meters(x));
   }
 
-  /// @brief Returns true if both angles are nearly equal.
-  [[nodiscard]] inline constexpr bool nearly_equal(angle a, angle b) {
-	angle delta = a - b;
-	return delta > -1e-10 && delta < 1e-10;
-  }
-
   /// @brief Raise any number <x> to power of 2 (x² or x*x).
   template <typename T>
   [[nodiscard]] inline constexpr auto square(T x) { return x * x; }
