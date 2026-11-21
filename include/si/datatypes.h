@@ -57,8 +57,9 @@ namespace si {
   // Digital Data Datatypes
   // ----------------------
   TYPE(data_size,              0, 0, 0, 0, 0, 0, 0, 1); // in bits
-  TYPE(data_speed,             0, 0,-1, 0, 0, 0, 0, 1); // in bits per second
-  TYPE(data_density,          -2, 0, 0, 0, 0, 0, 0, 1); // in bits per square meter
+  TYPE(data_per_time,          0, 0,-1, 0, 0, 0, 0, 1); // in bits per second
+  TYPE(data_per_area,         -2, 0, 0, 0, 0, 0, 0, 1); // in bits per square meter
+  TYPE(data_per_volume,       -3, 0, 0, 0, 0, 0, 0, 1); // in bits per cubic meter
 
   // Dimensionless Datatypes
   // -----------------------

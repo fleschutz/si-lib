@@ -128,8 +128,7 @@ namespace si {
   UNIT bytes             = unit<data_size, 8>();
   UNIT bytes_per_s       = bytes / seconds;
   UNIT bytes_per_cm2     = bytes / (centimeters * centimeters);
-  UNIT bytes_per_m2      = bytes / (meters * meters);
-  UNIT bytes_per_m3      = bytes / (meters * meters * meters);
+  UNIT bytes_per_cm3     = bytes / (centimeters * centimeters * centimeters);
 
   // Various Units
   // -------------

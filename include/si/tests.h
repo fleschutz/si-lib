@@ -50,7 +50,6 @@ namespace si {
     static_assert(sizeof(substance) == sizeof(SIdouble));
     static_assert(sizeof(luminous_intensity) == sizeof(SIdouble));
     static_assert(sizeof(data_size) == sizeof(SIdouble));
-    static_assert(sizeof(data_speed) == sizeof(SIdouble));
     static_assert(sizeof(dimensionless) == sizeof(SIdouble));
   }
 

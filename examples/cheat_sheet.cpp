@@ -22,7 +22,7 @@ void cheat_sheet() {
     charge Q = 1_A * 1_h;          // electric charge from ampere-hours
     resistance R = 1_V / 1_A;      // electrical resistance from volt per ampere
     temperature T = 10_degC + 5_K; // different units
-    data_speed DS = 5_TB / 1_s;    // data speed from data size per time
+    auto DS = 5_TB / 1_s;          // data speed from data size per time
     energy E = 1_kg * square(constant::c); // with a constant
     length W = wavelength_formula(constant::c, 100_Hz); // with a formula
 

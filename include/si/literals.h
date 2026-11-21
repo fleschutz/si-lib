@@ -430,10 +430,10 @@ namespace si {
   UDL(_GiB_per_s,          1'073'741'824, bytes_per_s); // 1_GiB_per_s (gibibyte/sec)
   UDL(_MiB_per_s,              1'048'576, bytes_per_s); // 1_MiB_per_s (mibibyte/sec)
   UDL(_KiB_per_s,                   1024, bytes_per_s); // 1_KiB_per_s (kibibyte/sec)
-  // bytes per square centimeter
-  UDL(_TB_per_cm2,                  1e12, bytes_per_cm2); // 1_TB_per_cm2 (terabyte/cm²)
-  UDL(_GB_per_cm2,                   1e9, bytes_per_cm2); // 1_GB_per_cm2 (gigabyte/cm²)
+  // bytes per area...
   UDL(_MB_per_cm2,                   1e6, bytes_per_cm2); // 1_MB_per_cm2 (megabyte/cm²)
+  // bytes per area...
+  UDL(_MB_per_cm3,                   1e6, bytes_per_cm3); // 1_MB_per_cm3 (megabyte/cm²)
 
   // Various Units
   // -------------

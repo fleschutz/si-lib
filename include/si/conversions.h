@@ -328,10 +328,16 @@ namespace si {
 		return _fmt(n / 1_bit, "bit", fmtStr);
 	}
 
-	FUNC std::string to_string(data_density n, const char* fmtStr = to_string_format) {
-		if (n <= -1_TB_per_cm2 || n >= 1_TB_per_cm2) return _fmt(n / 1_TB_per_cm2, "TB/cm²", fmtStr);
-		if (n <= -1_GB_per_cm2 || n >= 1_GB_per_cm2) return _fmt(n / 1_GB_per_cm2, "GB/cm²", fmtStr);
+	FUNC std::string to_string(data_per_time n, const char* fmtStr = to_string_format) {
+		return _fmt(n / 1_MB_per_s, "MB/s", fmtStr);
+	}
+
+	FUNC std::string to_string(data_per_area n, const char* fmtStr = to_string_format) {
 		return _fmt(n / 1_MB_per_cm2, "MB/cm²", fmtStr);
+	}
+
+	FUNC std::string to_string(data_per_volume n, const char* fmtStr = to_string_format) {
+		return _fmt(n / 1_MB_per_cm3, "MB/cm³", fmtStr);
 	}
 
 	/// @brief Returns the angle as string in degree.
@@ -451,7 +457,9 @@ namespace si {
 	inline std::ostream& operator<<(std::ostream& o, mass_per_power n) { return o << to_string(n); }
 	inline std::ostream& operator<<(std::ostream& o, density n) { return o << to_string(n); }
 	inline std::ostream& operator<<(std::ostream& o, data_size n) { return o << to_string(n); }
-	inline std::ostream& operator<<(std::ostream& o, data_density n) { return o << to_string(n); }
+	inline std::ostream& operator<<(std::ostream& o, data_per_time n) { return o << to_string(n); }
+	inline std::ostream& operator<<(std::ostream& o, data_per_area n) { return o << to_string(n); }
+	inline std::ostream& operator<<(std::ostream& o, data_per_volume n) { return o << to_string(n); }
 
 	// References
 	// ----------
