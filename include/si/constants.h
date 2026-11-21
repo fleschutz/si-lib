@@ -12,6 +12,7 @@ namespace si { namespace constant {                             // singular for 
   // -----------------                                          // CODATA 2022 constants (source: https://codata.org)
   SET(caesium_frequency,     9'192'631'770, hertz);             // the unperturbed ground state hyperfine transition frequency of the ceesium-133 atom
   SET(c,                     299'792'458.0, meters_per_second); // the speed of light in vacuum (symbol: c)
+  SET(c²,           89'875'517'873'681'764, m2_per_s2);         // the speed of light in vacuum squared 
   SET(h,                  6.626'070'15e-34, jouleseconds);      // Planck constant (symbol: h)
   SET(e,                 1.602'176'634e-19, coulombs);          // the elementary charge (symbol: e)
   SET(k_B,                   1.380'649e-23, joules_per_kelvin); // Boltzmann constant (symbol: k)

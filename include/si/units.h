@@ -34,7 +34,8 @@ namespace si {
   UNIT per_meter2     = unit<per_area>();
   UNIT meter_kelvins  = meters * kelvins;
   UNIT meters2_per_second = meters2 / seconds;
-  UNIT kilograms_per_meter2 = kilograms / meters2;
+  UNIT m2_per_s2      = (meters * meters) / (seconds * seconds);
+  UNIT kg_per_m2      = kilograms / (meters * meters);
   // volume in...
   UNIT meters3        = unit<volume>(); // (cubic meter)
   UNIT kilometers3    = unit<volume, 1000*1000*1000>();
@@ -121,11 +122,11 @@ namespace si {
   // Digital Data Units
   // ------------------
   UNIT bits              = unit<data_size>();
-  UNIT bits_per_second   = bits / seconds;
+  UNIT bits_per_s        = bits / seconds;
   UNIT bits_per_m2       = bits / meters2;
   UNIT bits_per_m3       = bits / meters3;
   UNIT bytes             = unit<data_size, 8>();
-  UNIT bytes_per_second  = bytes / seconds;
+  UNIT bytes_per_s       = bytes / seconds;
   UNIT bytes_per_cm2     = bytes / centimeters2;
   UNIT bytes_per_m2      = bytes / meters2;
   UNIT bytes_per_m3      = bytes / meters3;

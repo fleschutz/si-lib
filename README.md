@@ -20,7 +20,7 @@ Include *si-lib* to apply math in C++ correct, precise, and convenient. **Featur
 
 int main() {   using namespace si;
     mass m   = 1_kg;
-    energy E = m * square(constant::c);
+    energy E = m * constant::c²;
     std::cout << "The potential energy per kilogram is: " << E << std::endl;
 }
 ```

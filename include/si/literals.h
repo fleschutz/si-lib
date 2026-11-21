@@ -155,10 +155,10 @@ namespace si {
   UDL(_mSv,   1e-3, sieverts);            // 1_mSv (millisievert)
   UDL(_uSv,   1e-6, sieverts);            // 1_uSv (microsievert)
   // mass per area in...
-  UDL(_t_per_m2, 1e3, kilograms_per_meter2);// 1_t_per_m2  (t/m²)
-  UDL(_kg_per_m2,  1, kilograms_per_meter2);// 1_kg_per_m2 (kg/m²)
-  UDL(_g_per_m2,1e-3, kilograms_per_meter2);// 1_g_per_m2  (g/m²)
-  UDL(_mg_per_m2,1e-6,kilograms_per_meter2);// 1_mg_per_m2 (mg/m²)
+  UDL(_t_per_m2, 1e3, kg_per_m2);         // 1_t_per_m2  (t/m²)
+  UDL(_kg_per_m2,  1, kg_per_m2);         // 1_kg_per_m2 (kg/m²)
+  UDL(_g_per_m2,1e-3, kg_per_m2);         // 1_g_per_m2  (g/m²)
+  UDL(_mg_per_m2,1e-6,kg_per_m2);         // 1_mg_per_m2 (mg/m²)
   // density in...
   UDL(_kg_per_cm3,1e6,kilograms_per_meter3);  // 1_kg_per_cm3 (kg/cm³)
   UDL(_t_per_m3, 1e3, kilograms_per_meter3);  // 1_t_per_m3   (t/m³)
@@ -393,12 +393,12 @@ namespace si {
   UDL(_nibble,                         4, bits); // 1_nibble
   UDL(_bit,                            1, bits); // 1_bit
   // bits per second...
-  UDL(_Ebit_per_s,                  1e18, bits_per_second); // 1_Ebit_per_s (exabit/sec)
-  UDL(_Pbit_per_s,                  1e15, bits_per_second); // 1_Pbit_per_s (petabit/sec)
-  UDL(_Tbit_per_s,                  1e12, bits_per_second); // 1_Tbit_per_s (terabit/sec)
-  UDL(_Gbit_per_s,                   1e9, bits_per_second); // 1_Gbit_per_s (gigabit/sec)
-  UDL(_Mbit_per_s,                   1e6, bits_per_second); // 1_Mbit_per_s (megabit/sec)
-  UDL(_kbit_per_s,                   1e3, bits_per_second); // 1_kbit_per_s (kilobit/sec)
+  UDL(_Ebit_per_s,                  1e18, bits_per_s); // 1_Ebit_per_s (exabit/sec)
+  UDL(_Pbit_per_s,                  1e15, bits_per_s); // 1_Pbit_per_s (petabit/sec)
+  UDL(_Tbit_per_s,                  1e12, bits_per_s); // 1_Tbit_per_s (terabit/sec)
+  UDL(_Gbit_per_s,                   1e9, bits_per_s); // 1_Gbit_per_s (gigabit/sec)
+  UDL(_Mbit_per_s,                   1e6, bits_per_s); // 1_Mbit_per_s (megabit/sec)
+  UDL(_kbit_per_s,                   1e3, bits_per_s); // 1_kbit_per_s (kilobit/sec)
   // bytes with metric prefixes...
   UDL(_QB,                          1e30, bytes); // 1_QB  (quettabyte)
   UDL(_RB,                          1e27, bytes); // 1_RB  (ronnabyte)
@@ -419,17 +419,17 @@ namespace si {
   UDL(_MiB,                    1'048'576, bytes); // 1_MiB (mibibyte)
   UDL(_KiB,                         1024, bytes); // 1_KiB (kibibyte)
   // bytes per second with metric prefixes...
-  UDL(_PB_per_s,                    1e15, bytes_per_second); // 1_PB_per_s (petabyte/sec)
-  UDL(_TB_per_s,                    1e12, bytes_per_second); // 1_TB_per_s (terabyte/sec)
-  UDL(_GB_per_s,                     1e9, bytes_per_second); // 1_GB_per_s (gigabyte/sec)
-  UDL(_MB_per_s,                     1e6, bytes_per_second); // 1_MB_per_s (megabyte/sec)
-  UDL(_KB_per_s,                     1e3, bytes_per_second); // 1_KB_per_s (kilobyte/sec)
-  UDL(_byte_per_s,                     1, bytes_per_second); // 1_byte_per_s
+  UDL(_PB_per_s,                    1e15, bytes_per_s); // 1_PB_per_s (petabyte/sec)
+  UDL(_TB_per_s,                    1e12, bytes_per_s); // 1_TB_per_s (terabyte/sec)
+  UDL(_GB_per_s,                     1e9, bytes_per_s); // 1_GB_per_s (gigabyte/sec)
+  UDL(_MB_per_s,                     1e6, bytes_per_s); // 1_MB_per_s (megabyte/sec)
+  UDL(_KB_per_s,                     1e3, bytes_per_s); // 1_KB_per_s (kilobyte/sec)
+  UDL(_byte_per_s,                     1, bytes_per_s); // 1_byte_per_s
   // bytes per second with binary prefixes...
-  UDL(_TiB_per_s,      1'099'511'627'776, bytes_per_second); // 1_TiB_per_s (tebibyte/sec)
-  UDL(_GiB_per_s,          1'073'741'824, bytes_per_second); // 1_GiB_per_s (gibibyte/sec)
-  UDL(_MiB_per_s,              1'048'576, bytes_per_second); // 1_MiB_per_s (mibibyte/sec)
-  UDL(_KiB_per_s,                   1024, bytes_per_second); // 1_KiB_per_s (kibibyte/sec)
+  UDL(_TiB_per_s,      1'099'511'627'776, bytes_per_s); // 1_TiB_per_s (tebibyte/sec)
+  UDL(_GiB_per_s,          1'073'741'824, bytes_per_s); // 1_GiB_per_s (gibibyte/sec)
+  UDL(_MiB_per_s,              1'048'576, bytes_per_s); // 1_MiB_per_s (mibibyte/sec)
+  UDL(_KiB_per_s,                   1024, bytes_per_s); // 1_KiB_per_s (kibibyte/sec)
   // bytes per square centimeter
   UDL(_TB_per_cm2,                  1e12, bytes_per_cm2); // 1_TB_per_cm2 (terabyte/cm²)
   UDL(_GB_per_cm2,                   1e9, bytes_per_cm2); // 1_GB_per_cm2 (gigabyte/cm²)

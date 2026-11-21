@@ -293,7 +293,7 @@ namespace si {
 	static_assert(1_Tbit_per_s == 1000_Gbit_per_s);
 	static_assert(1_Gbit_per_s == 1000_Mbit_per_s);
 	static_assert(1_Mbit_per_s == 1000_kbit_per_s);
-	static_assert(1_kbit_per_s == bits_per_second(1000));
+	static_assert(1_kbit_per_s == bits_per_s(1000));
 	// bytes with metric prefixes...
 	static_assert(1_ZB   == 1000_EB);
 	static_assert(1_EB   == 1000_PB);
@@ -315,7 +315,7 @@ namespace si {
 	static_assert(1_GB_per_s == 1000_MB_per_s);
 	static_assert(1_MB_per_s == 1000_KB_per_s);
 	static_assert(1_KB_per_s == 1000_byte_per_s);
-	static_assert(1_KB_per_s == bytes_per_second(1000));
+	static_assert(1_KB_per_s == bytes_per_s(1000));
 	// bytes per second with binary prefixes...
 	static_assert(1_TiB_per_s == 1024_GiB_per_s);
 	static_assert(1_GiB_per_s == 1024_MiB_per_s);
