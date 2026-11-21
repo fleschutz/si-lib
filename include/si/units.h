@@ -10,45 +10,45 @@ namespace si {
 
   // SI Base Units
   // -------------
-  UNIT meters         = unit<length>();
-  UNIT seconds        = unit<time>();
-  UNIT kilograms      = unit<mass>();
-  UNIT kelvins        = unit<temperature>();
-  UNIT amperes        = unit<current>();
-  UNIT moles          = unit<substance>();
-  UNIT candelas       = unit<luminous_intensity>();
+  UNIT meters         = unit<length>();             // symbol: m
+  UNIT seconds        = unit<time>();               // symbol: s
+  UNIT kilograms      = unit<mass>();               // symbol: kg
+  UNIT kelvins        = unit<temperature>();        // symbol: K
+  UNIT amperes        = unit<current>();            // symbol: A
+  UNIT moles          = unit<substance>();          // symbol: mol
+  UNIT candelas       = unit<luminous_intensity>(); // symbol: cd
 
   // Derived SI Units
   // ----------------
   UNIT kilometers     = unit<length, 1000>();
   UNIT centimeters    = unit<length, 1,100>();
   UNIT millimeters    = unit<length, 1,1000>();
-  UNIT per_meter      = unit<per_length>();
+  UNIT per_m          = unit<per_length>();
   UNIT minutes        = unit<time, 60>();
   UNIT hours          = unit<time, 3600>();
   UNIT hertz          = unit<frequency>();
   // area in...
-  UNIT kilometers2    = unit<area, 1000*1000>();
-  UNIT centimeters2   = unit<area, 1,100*100>();
-  UNIT meters2        = unit<area>();
-  UNIT per_meter2     = unit<per_area>();
+  UNIT kilometers2    = kilometers * kilometers;
+  UNIT centimeters2   = centimeters * centimeters;
+  UNIT meters2        = meters * meters;
+  UNIT per_m2         = unit<per_area>();
   UNIT meter_kelvins  = meters * kelvins;
-  UNIT meters2_per_second = meters2 / seconds;
+  UNIT m2_per_s       = (meters * meters) / seconds;
   UNIT m2_per_s2      = (meters * meters) / (seconds * seconds);
   UNIT kg_per_m2      = kilograms / (meters * meters);
   // volume in...
-  UNIT meters3        = unit<volume>(); // (cubic meter)
-  UNIT kilometers3    = unit<volume, 1000*1000*1000>();
-  UNIT meters3_per_second = meters3 / seconds;
-  UNIT meters3_per_mol = meters3 / moles;
-  UNIT meters3_per_second2 = meters3 / (seconds * seconds);
-  UNIT meters3_per_kilogram_per_second2 = meters3 / kilograms / (seconds * seconds);
-  UNIT kilograms_per_meter3 = kilograms / meters3;
+  UNIT meters3        = meters * meters * meters; 
+  UNIT km3            = kilometers * kilometers * kilometers;
+  UNIT m3_per_s       = (meters * meters * meters) / seconds;
+  UNIT m3_per_mol     = (meters * meters * meters) / moles;
+  UNIT m3_per_s2      = (meters * meters * meters) / (seconds * seconds);
+  UNIT m3_per_kg_per_s2 = (meters * meters * meters) / kilograms / (seconds * seconds);
+  UNIT kg_per_m3      = kilograms / (meters * meters * meters);
   // velocity in...
-  UNIT meters_per_second = unit<velocity>();
-  UNIT meters_per_hour   = meters / hours;
+  UNIT m_per_s        = meters / seconds;
+  UNIT m_per_h        = meters / hours;
   // acceleration in...
-  UNIT meters_per_second2 = unit<acceleration>();
+  UNIT m_per_s2       = meters / (seconds * seconds);
   // force in...
   UNIT newtons        = unit<force>();
   UNIT newtonmeters   = newtons * meters;
@@ -57,10 +57,10 @@ namespace si {
   // energy in...
   UNIT joules         = unit<energy>();
   UNIT jouleseconds   = joules * seconds;
-  UNIT joules_per_second =  joules / seconds;
+  UNIT joules_per_s   =  joules / seconds;
   UNIT joules_per_kelvin = joules / kelvins;
-  UNIT joules_per_second_per_kilogram = joules / seconds / kilograms;
-  UNIT joules_per_kilogram_per_kelvin = joules / kilograms / kelvins;
+  UNIT joules_per_s_per_kg = joules / seconds / kilograms;
+  UNIT joules_per_kg_per_kelvin = joules / kilograms / kelvins;
   UNIT joules_per_mol = unit<energy_per_mol>();
   UNIT joules_per_kelvin_per_mol = joules / kelvins / moles;
   // pressure in...
@@ -70,11 +70,11 @@ namespace si {
   UNIT sieverts       = joules / kilograms;
 
   UNIT watts          = unit<power>();
-  UNIT wattmeters2    = watts * meters2;
-  UNIT watts_per_meter2 = watts / meters2;
+  UNIT wattmeters2    = watts * meters * meters;
+  UNIT watts_per_m2   = watts / (meters * meters);
 
-  UNIT amperes_per_meter = amperes / meters;
-  UNIT amperes_per_meter2 = amperes / (meters * meters);
+  UNIT amperes_per_m  = amperes / meters;
+  UNIT amperes_per_m2 = amperes / (meters * meters);
   UNIT ampere_hours   = amperes * hours;
 
   UNIT coulombs       = unit<charge>();
@@ -83,11 +83,11 @@ namespace si {
   UNIT volts          = unit<potential>();
   UNIT farads         = coulombs / volts;
   UNIT hertz_per_volt = hertz / volts;
-  UNIT farads_per_meter = farads / meters;
+  UNIT farads_per_m   = farads / meters;
   UNIT ohms           = volts / amperes;
   UNIT ohm_meters     = ohms * meters;
   UNIT siemens        = amperes / volts;
-  UNIT siemens_per_meter = siemens / meters;
+  UNIT siemens_per_m  = siemens / meters;
   UNIT henrys         = volts * seconds / amperes;
   UNIT webers         = volts * seconds;
   UNIT teslas         = kilograms / (amperes * seconds * seconds);
@@ -99,13 +99,13 @@ namespace si {
   UNIT lumens_per_watt = lumens / watts;
   UNIT lux            = lumens / meters2;
 
-  UNIT kilograms_per_mol = kilograms / moles;
-  UNIT mols_per_meter3 = moles / meters3;
-  UNIT mols_per_kilogram = moles / kilograms;
-  UNIT mols_per_second = moles / seconds;
-  UNIT per_mol         = unit<per_substance>();
+  UNIT kg_per_mol     = kilograms / moles;
+  UNIT mols_per_m3    = moles / (meters * meters * meters);
+  UNIT mols_per_kg    = moles / kilograms;
+  UNIT mols_per_s     = moles / seconds;
+  UNIT per_mol        = unit<per_substance>();
 
-  UNIT kilograms_per_watt = kilograms / watts;
+  UNIT kg_per_watt    = kilograms / watts;
 
   // Imperial Units
   // --------------
@@ -116,20 +116,20 @@ namespace si {
   UNIT inches          = unit<length, 254,10000>();
   UNIT statute_miles   = unit<length, 1609344,1000>();
   UNIT fahrenheit      = detail::unit<detail::temperature_dimension, detail::tag_fahrenheit>();
-  UNIT miles_per_hour  = statute_miles / hours;
+  UNIT miles_per_h     = statute_miles / hours;
   UNIT knots           = nautical_miles / hours;
 
   // Digital Data Units
   // ------------------
   UNIT bits              = unit<data_size>();
   UNIT bits_per_s        = bits / seconds;
-  UNIT bits_per_m2       = bits / meters2;
-  UNIT bits_per_m3       = bits / meters3;
+  UNIT bits_per_m2       = bits / (meters * meters);
+  UNIT bits_per_m3       = bits / (meters * meters * meters);
   UNIT bytes             = unit<data_size, 8>();
   UNIT bytes_per_s       = bytes / seconds;
-  UNIT bytes_per_cm2     = bytes / centimeters2;
-  UNIT bytes_per_m2      = bytes / meters2;
-  UNIT bytes_per_m3      = bytes / meters3;
+  UNIT bytes_per_cm2     = bytes / (centimeters * centimeters);
+  UNIT bytes_per_m2      = bytes / (meters * meters);
+  UNIT bytes_per_m3      = bytes / (meters * meters * meters);
 
   // Various Units
   // -------------

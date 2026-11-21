@@ -57,7 +57,7 @@
 29. Applying a perpendicular force of 500N to a 20cm long lever results in... 100.0 J of torque
 30. What's the total area and weight of 500 papers in A4 format (80g/m²)? 31.2 m² and 2.5 kg
 31. Calculate the total harddisk size by CHS geometry... 4.1 GB
-32. What's the data density of a 4GB/2.5'' hardisk? 16.4 MB/cm²
+32. What's the data density of a 4GB/8platter/2.5'' hardisk? 16.4 MB/cm²
 33. What's the direct distance between Singapore and Tokyo? 5311.2 km or 3300.2 mi
 34. The nearest airport neighbours are...Confer's Place Airport and Dick's Strip with only 30.0 m in between
 

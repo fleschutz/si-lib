@@ -507,7 +507,7 @@ namespace si {
 	FUNC velocity min_of_array(velocity arr[], int n)
 	{
 		if (n < 1)
-			return meters_per_second(0);
+			return m_per_s(0);
 		velocity minimum = arr[0];
 		for (int i = 1; i < n; ++i)
 			if (arr[i] < minimum)
@@ -519,7 +519,7 @@ namespace si {
 	FUNC velocity max_of_array(velocity arr[], int n)
 	{
 		if (n < 1)
-			return meters_per_second(0);
+			return m_per_s(0);
 		velocity maximum = arr[0];
 		for (int i = 1; i < n; ++i)
 			if (arr[i] > maximum)
@@ -531,8 +531,8 @@ namespace si {
 	FUNC velocity avg_of_array(velocity arr[], int n)
 	{
 		if (n < 1)
-			return meters_per_second(0);
-		velocity sum = meters_per_second(0);
+			return m_per_s(0);
+		velocity sum = m_per_s(0);
 		for (int i = 0; i < n; ++i)
 			sum += arr[i];
 		return sum / n;
@@ -541,7 +541,7 @@ namespace si {
 	/// @brief Returns the sum of all velocities in the given array.
 	FUNC velocity sum_of_array(velocity arr[], int n)
 	{
-		velocity sum = meters_per_second(0);
+		velocity sum = m_per_s(0);
 		for (int i = 0; i < n; ++i)
 			sum += arr[i];
 		return sum;

@@ -93,14 +93,14 @@ namespace si {
   UDL(_mm2,   1e-6, meters2);             // 1_mm2 (square millimeter)
   UDL(_um2,  1e-12, meters2);             // 1_um2 (square micrometer)
   // per area in...
-  UDL(_per_km2,1e-6, per_meter2);         // 1_per_km2 (per square kilometer)
-  UDL(_per_hm2,1e-4, per_meter2);         // 1_per_hm2 (per hectare)
-  UDL(_per_m2,    1, per_meter2);         // 1_per_m2  (per square meter)
-  UDL(_per_cm2, 1e4, per_meter2);         // 1_per_cm2 (per square centimeter)
-  UDL(_per_mm2, 1e6, per_meter2);         // 1_per_mm2 (per square millimeter)
-  UDL(_per_μm2,1e12, per_meter2);         // 1_per μm2 (per square micrometer)
+  UDL(_per_km2,1e-6, per_m2);             // 1_per_km2 (per square kilometer)
+  UDL(_per_hm2,1e-4, per_m2);             // 1_per_hm2 (per hectare)
+  UDL(_per_m2,    1, per_m2);             // 1_per_m2  (per square meter)
+  UDL(_per_cm2, 1e4, per_m2);             // 1_per_cm2 (per square centimeter)
+  UDL(_per_mm2, 1e6, per_m2);             // 1_per_mm2 (per square millimeter)
+  UDL(_per_μm2,1e12, per_m2);             // 1_per μm2 (per square micrometer)
   // surface flow in...
-  UDL(_m2_per_s, 1, meters2_per_second);  // 1_m2/s (square meter per second)
+  UDL(_m2_per_s, 1, m2_per_s);            // 1_m2/s (square meter per second)
   // volume in cubic meter...
   UDL(_km3,    1e9, meters3);             // 1_km3 (cubic kilometer)
   UDL( _m3,      1, meters3);             // 1_m3  (cubic meter)
@@ -118,19 +118,19 @@ namespace si {
   UDL(_nl,   1e-12, meters3);             // 1_nl (nanoliter)
   UDL(_pl,   1e-15, meters3);             // 1_pl (picoliter)
   // volumetric flow in...
-  UDL(_m3_per_s, 1, meters3_per_second);   // 1_m3/s (cubic meter per second)
-  UDL(_l_per_min,1.0/60000.0, meters3_per_second);   // 1_l_per_min (liter per minute)
-  UDL(_l_per_s, 1e-3, meters3_per_second); // 1_l_per_s (liter per second)
+  UDL(_m3_per_s, 1, m3_per_s);            // 1_m3_per_s (cubic meter per second)
+  UDL(_l_per_min,1.0/60000.0, m3_per_s);  // 1_l_per_min (liter per minute)
+  UDL(_l_per_s, 1e-3, m3_per_s);          // 1_l_per_s (liter per second)
   // velocity in...
-  UDL(_km_per_s, 1e3, meters_per_second); // 1_km_per_s (km/s)
-  UDL(_m_per_s,  1, meters_per_second);   // 1_m_per_s  (m/s)
-  UDL(_mm_per_s, 1e-3, meters_per_second);// 1_mm_per_s (mm/s)
-  UDL(_km_per_h, 1e3, meters_per_hour);   // 1_km_per_h (km/h)
-  UDL(_m_per_h,  1, meters_per_hour);     // 1_m_per_h  (m/h)
-  UDL(_mm_per_h, 1e-3, meters_per_hour);  // 1_mm_per_h (mm/h)
+  UDL(_km_per_s, 1e3, m_per_s);           // 1_km_per_s (km/s)
+  UDL(_m_per_s,  1, m_per_s);             // 1_m_per_s  (m/s)
+  UDL(_mm_per_s, 1e-3, m_per_s);          // 1_mm_per_s (mm/s)
+  UDL(_km_per_h, 1e3, m_per_h);           // 1_km_per_h (km/h)
+  UDL(_m_per_h,  1, m_per_h);             // 1_m_per_h  (m/h)
+  UDL(_mm_per_h, 1e-3, m_per_h);          // 1_mm_per_h (mm/h)
   // acceleration in...
-  UDL(_km_per_s2,1e3, meters_per_second2);// 1_km_per_s2 (km/s²)
-  UDL(_m_per_s2, 1, meters_per_second2);  // 1_m_per_s2  (m/s²)
+  UDL(_km_per_s2,1e3, m_per_s2);          // 1_km_per_s2 (km/s²)
+  UDL(_m_per_s2, 1, m_per_s2);            // 1_m_per_s2  (m/s²)
   // frequency in...
   UDL(_PHz,   1e15, hertz);               // 1_PHz (petahertz)
   UDL(_THz,   1e12, hertz);               // 1_THz (terahertz)
@@ -160,12 +160,12 @@ namespace si {
   UDL(_g_per_m2,1e-3, kg_per_m2);         // 1_g_per_m2  (g/m²)
   UDL(_mg_per_m2,1e-6,kg_per_m2);         // 1_mg_per_m2 (mg/m²)
   // density in...
-  UDL(_kg_per_cm3,1e6,kilograms_per_meter3);  // 1_kg_per_cm3 (kg/cm³)
-  UDL(_t_per_m3, 1e3, kilograms_per_meter3);  // 1_t_per_m3   (t/m³)
-  UDL(_g_per_cm3,1e3, kilograms_per_meter3);  // 1_g_per_cm3  (g/cm³)
-  UDL(_kg_per_m3,  1, kilograms_per_meter3);  // 1_kg_per_m3  (kg/m³)
-  UDL(_g_per_m3,1e-3, kilograms_per_meter3);  // 1_g_per_m3   (g/m³)
-  UDL(_mg_per_m3,1e-6, kilograms_per_meter3); // 1_mg_per_m3  (mg/m³)
+  UDL(_kg_per_cm3,1e6,kg_per_m3);         // 1_kg_per_cm3 (kg/cm³)
+  UDL(_t_per_m3, 1e3, kg_per_m3);         // 1_t_per_m3   (t/m³)
+  UDL(_g_per_cm3,1e3, kg_per_m3);         // 1_g_per_cm3  (g/cm³)
+  UDL(_kg_per_m3,  1, kg_per_m3);         // 1_kg_per_m3  (kg/m³)
+  UDL(_g_per_m3,1e-3, kg_per_m3);         // 1_g_per_m3   (g/m³)
+  UDL(_mg_per_m3,1e-6, kg_per_m3);        // 1_mg_per_m3  (mg/m³)
   // electric potential in...
   UDL(_TV,    1e12, volts);               // 1_TV (teravolt)
   UDL(_GV,     1e9, volts);               // 1_GV (gigavolt)
@@ -194,9 +194,9 @@ namespace si {
   UDL(_uS,    1e-6, siemens);             // 1_uS (microsiemens)
   UDL(_nS,    1e-9, siemens);             // 1_nS (nanosiemens)
   // electric conductivity in...
-  UDL(_MS_per_m,1e6, siemens_per_meter);  // 1_MS_per_m (MS/m, megasiemens per meter)
-  UDL(_kS_per_m,1e3, siemens_per_meter);  // 1_kS_per_m (kS/m, kilosiemens per meter)
-  UDL( _S_per_m,  1, siemens_per_meter);   // 1_S_per_m (S/m, siemens per meter)
+  UDL(_MS_per_m,1e6, siemens_per_m);      // 1_MS_per_m (MS/m, megasiemens per meter)
+  UDL(_kS_per_m,1e3, siemens_per_m);      // 1_kS_per_m (kS/m, kilosiemens per meter)
+  UDL( _S_per_m,  1, siemens_per_m);      // 1_S_per_m (S/m, siemens per meter)
   // electric charge in coulombs in...
   UDL(_GC,     1e9, coulombs);            // 1_GC (gigaoulomb)
   UDL(_MC,     1e6, coulombs);            // 1_MC (megaoulomb)
@@ -264,14 +264,14 @@ namespace si {
   UDL(_mW,    1e-3, watts);               // 1_mW  (milliwatt)
   UDL(_uW,    1e-6, watts);               // 1_uW  (microwatt)
   // active power per mass in...
-  UDL(_kWh_per_kg, 3.6e6, joules_per_second_per_kilogram);  // 1_kWh_per_kg (kilowatt-hour per kilogram)
-  UDL(_Wh_per_kg,  3.6e3, joules_per_second_per_kilogram);  // 1_Wh_per_kg (watt-hour per kilogram)
+  UDL(_kWh_per_kg, 3.6e6, joules_per_s_per_kg); // 1_kWh_per_kg (kilowatt-hour per kilogram)
+  UDL(_Wh_per_kg,  3.6e3, joules_per_s_per_kg); // 1_Wh_per_kg (watt-hour per kilogram)
   // power intensity in...
-  UDL(_MW_per_m2,1e6, watts_per_meter2);  // 1_MW_per_m2 (kilowatt per square meter)
-  UDL(_kW_per_m2,1e3, watts_per_meter2);  // 1_kW_per_m2 (kilowatt per square meter)
-  UDL(_W_per_m2, 1, watts_per_meter2);    // 1_W_per_m2  (watt per square meter)
-  UDL(_mW_per_m2,1e-3, watts_per_meter2); // 1_mW_per_m2 (milliwatt per square meter)
-  UDL(_uW_per_m2,1e-6, watts_per_meter2); // 1_uW_per_m2 (milliwatt per square meter)
+  UDL(_MW_per_m2,1e6, watts_per_m2);      // 1_MW_per_m2 (kilowatt per square meter)
+  UDL(_kW_per_m2,1e3, watts_per_m2);      // 1_kW_per_m2 (kilowatt per square meter)
+  UDL(_W_per_m2, 1, watts_per_m2);        // 1_W_per_m2  (watt per square meter)
+  UDL(_mW_per_m2,1e-3, watts_per_m2);     // 1_mW_per_m2 (milliwatt per square meter)
+  UDL(_uW_per_m2,1e-6, watts_per_m2);     // 1_uW_per_m2 (milliwatt per square meter)
   // pressure in...
   UDL(_TPa,   1e12, pascals);             // 1_TPa (terapascal) 
   UDL(_GPa,    1e9, pascals);             // 1_GPa (gigapascal) 
@@ -306,10 +306,10 @@ namespace si {
   UDL(_nlx,   1e-9, lux);                 // 1_nlx (nanolux)
   UDL(_plx,  1e-12, lux);                 // 1_plx (picolux)
   // catalytic activity in...
-  UDL( _kat,     1, mols_per_second);     // 1_kat   (katal)
-  UDL(_mkat,  1e-3, mols_per_second);     // 1_mkat  (millikatal)
-  UDL(_ukat,  1e-6, mols_per_second);     // 1_mukat (microkatal)
-  UDL(_nkat,  1e-9, mols_per_second);     // 1_nkat  (nanokatal)
+  UDL( _kat,     1, mols_per_s);          // 1_kat   (katal)
+  UDL(_mkat,  1e-3, mols_per_s);          // 1_mkat  (millikatal)
+  UDL(_ukat,  1e-6, mols_per_s);          // 1_mukat (microkatal)
+  UDL(_nkat,  1e-9, mols_per_s);          // 1_nkat  (nanokatal)
   // angles in...
   UDL(_rad,      1, radians);             // 1_rad  (radian)
   UDL(_mrad,  1e-3, radians);             // 1_mrad (milliradians)
@@ -319,10 +319,10 @@ namespace si {
   // other units in...
   UDL(_Nm,       1, newtonmeters);        // 1_Nm  (newtonmeter)
   UDL(_sr,       1, steradians);          // 1_sr  (steradian)
-  UDL(_km3_per_s2,1e9, meters3_per_second2);// 1_km3_per_s2 (km³/s²)
-  UDL(_kg_per_mol,1,kilograms_per_mol);   // 1_kg_per_mol (kg/mol)
-  UDL(_kg_per_W, 1,kilograms_per_watt);   // 1_kg_per_W (kg/W)
-  UDL(_kg_per_kW,1e-3,kilograms_per_watt);// 1_kg_per_kW (kg/kW)
+  UDL(_km3_per_s2,1e9, m3_per_s2);        // 1_km3_per_s2 (km³/s²)
+  UDL(_kg_per_mol,1, kg_per_mol);         // 1_kg_per_mol (kg/mol)
+  UDL(_kg_per_W, 1, kg_per_watt);         // 1_kg_per_W (kg/W)
+  UDL(_kg_per_kW,1e-3, kg_per_watt);      // 1_kg_per_kW (kg/kW)
 
   // Imperial and US Units
   // ---------------------      (https://en.wikipedia.org/wiki/Imperial_units as of 2026)
@@ -359,11 +359,11 @@ namespace si {
   UDL(_psi,                     6'894.76, pascals);  // 1_psi  (pound per square inch)
   UDL(_inHg,                    3'386.39, pascals);  // 1_inHg (inch of mercury)
   // velocity in...
-  UDL(_kn,                          1852, meters_per_hour);   // 1_kn (knots)
-  UDL(_mi_per_h,                  .44704, meters_per_second); // 1_mi_per_h (miles/hour)
-  UDL(_ft_per_min,               0.00508, meters_per_second); // 1_ft_per_min (feet/min)
-  UDL(_in_per_s,                  0.0254, meters_per_second); // 1_in_per_s (inch/sec)
-  UDL(_in_per_h,            0.0000070556, meters_per_second); // 1_in_per_h (inch/hour)
+  UDL(_kn,                          1852, m_per_h);  // 1_kn (knots)
+  UDL(_mi_per_h,                  .44704, m_per_s);  // 1_mi_per_h (miles/hour)
+  UDL(_ft_per_min,               0.00508, m_per_s);  // 1_ft_per_min (feet/min)
+  UDL(_in_per_s,                  0.0254, m_per_s);  // 1_in_per_s (inch/sec)
+  UDL(_in_per_h,            0.0000070556, m_per_s);  // 1_in_per_h (inch/hour)
   // absolute thermodynamic temperature in...
   UDL(_degF,                           1, fahrenheit); // 1_degF (°Fahrenheit)
 
@@ -455,7 +455,7 @@ namespace si {
   UDL(_ppm,                         1e-6, dimensionless); // 1_ppm (parts per million)
   UDL(_pct,                         1e-2, dimensionless); // 1_pct (%, parts per hundred)
   // misc
-  UDL(_Mach,                         330, meters_per_second); // 1_Mach
+  UDL(_Mach,                         330, m_per_s);  // 1_Mach
   UDL(_Da,        1.660'539'068'9252e-27, kilograms);// 1_Da   (dalton, or unified atomic mass unit)
   UDL(_eV,             1.602'176'634e-19, joules);   // 1_eV   (electronvolt, as of 2019 SI)
   UDL(_hp,            745.69987158227022, watts);    // 1_hp   (horsepower)
