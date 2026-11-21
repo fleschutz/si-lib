@@ -51,16 +51,16 @@ namespace {
     // Atmosphere
     // ---------- (source: https://en.wikipedia.org/wiki/Earth as of 2026)
     pressure      surface_pressure =    101.325_kPa; ///< at sea level
-    dimensionless nitrogen =             78.08_percent;  ///< dry air
-    dimensionless oxygen =               20.95_percent;    ///< dry air
-    dimensionless water_vapor =           1_percent;   ///< up to 1%, is variable
-    dimensionless argon =                 0.9340_percent;
-    dimensionless carbon_dioxide =        0.0430_percent;
-    dimensionless neon =                  0.00182_percent;
-    dimensionless helium =                0.00052_percent;
-    dimensionless methane =               0.00017_percent;
-    dimensionless krypton =               0.00011_percent;
-    dimensionless hydrogen =              0.00006_percent;
+    dimensionless nitrogen =             78.08_pct;  ///< dry air
+    dimensionless oxygen =               20.95_pct;    ///< dry air
+    dimensionless water_vapor =           1_pct;   ///< up to 1%, is variable
+    dimensionless argon =                 0.9340_pct;
+    dimensionless carbon_dioxide =        0.0430_pct;
+    dimensionless neon =                  0.00182_pct;
+    dimensionless helium =                0.00052_pct;
+    dimensionless methane =               0.00017_pct;
+    dimensionless krypton =               0.00011_pct;
+    dimensionless hydrogen =              0.00006_pct;
 
     // Various 
     // ------- (source: https://worldpopulationreview.com as of 2026)

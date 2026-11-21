@@ -15,7 +15,7 @@ void astronomy_examples() {
 
     cout << " 2. The travel time to Alpha Centauri at 10% the speed of light takes... ";
     auto distance_to_Alpha_Centauri = 4.37_ly;
-    auto travel_speed               = 10_percent * constant::c;
+    auto travel_speed               = 10_pct * constant::c;
     auto travel_time                = distance_to_Alpha_Centauri / travel_speed;
     cout << travel_time << endl;
 

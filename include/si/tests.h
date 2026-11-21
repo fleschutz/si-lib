@@ -20,7 +20,7 @@ namespace si {
     static_assert( (1_m * 2_m * 3_m) / 2_s == 3_m3_per_s );
     static_assert( 1000 / 1_s == 1_kHz );
     static_assert( 1_Mach == 330_m_per_s );
-    static_assert( 1_Mach * 10_percent == 33_m_per_s );
+    static_assert( 1_Mach * 10_pct == 33_m_per_s );
     static_assert( (0_degC + 32_degF + 491.67_degR + 273.15_K) / 4 == 273.15_K );
     static_assert( 1_A * 1_h == 3600_C );
     static_assert( 1_Ah == 3600_C );

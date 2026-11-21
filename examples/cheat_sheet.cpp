@@ -36,17 +36,19 @@ void cheat_sheet() {
     // ------
     angle alpha   = 180_deg;       // 180°
     angle beta    = constant::pi;  // or π
-    angle gamma   = 3.14_rad;      // or in radian
-    angle delta   = 3'141.5_mrad;  // or in milliradian 
-    angle epsilon = radians(3.14); // or constructed from number
-    angle zeta    = 10800_arcmin;  // or in arcminutes
-    angle eta     = 648000_arcsec; // or in arcseconds
+    angle gamma   = 3.14_rad;      // or as radian
+    angle delta   = 3'141.5_mrad;  // or as milliradian 
+    angle eta     = 10800_arcmin;  // or as arcminutes
+    angle epsilon = 648000_arcsec; // or as arcseconds
+    angle zeta    = radians(3.14); // or constructed from number
 
     // Dimensionless Numbers
     // ---------------------
-    dimensionless ratio = 0.25;
-    dimensionless share = 50_percent * 50'000;
-    dimensionless CO2   = 429.12_ppm;
+    dimensionless fac1 = 0.10; 
+    dimensionless fac2 = 10_pct;  // or as percentage (%)
+    dimensionless fac3 = 100'000_ppm; // or as parts per million
+    dimensionless fac4 = 100'000'000_ppb; // or as parts per billion
+    dimensionless fac5 = 100'000'000'000_ppt; // or as parts per trillion
 
     // Export a Quantity
     // -----------------

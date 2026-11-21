@@ -22,16 +22,16 @@ namespace {
 
     // Photosphere
     // ----------- (source: https://en.wikipedia.org/wiki/Sun as of 2026)
-    dimensionless hydrogen =             73.46_percent;
-    dimensionless helium =               24.85_percent;
-    dimensionless oxygen =                0.77_percent;
-    dimensionless carbon =                0.29_percent;
-    dimensionless iron =                  0.16_percent;
-    dimensionless neon =                  0.12_percent;
-    dimensionless nitrogen =              0.09_percent;
-    dimensionless silicon =               0.07_percent;
-    dimensionless magnesium =             0.05_percent;
-    dimensionless sulfur =                0.04_percent;
+    dimensionless hydrogen =             73.46_pct;
+    dimensionless helium =               24.85_pct;
+    dimensionless oxygen =                0.77_pct;
+    dimensionless carbon =                0.29_pct;
+    dimensionless iron =                  0.16_pct;
+    dimensionless neon =                  0.12_pct;
+    dimensionless nitrogen =              0.09_pct;
+    dimensionless silicon =               0.07_pct;
+    dimensionless magnesium =             0.05_pct;
+    dimensionless sulfur =                0.04_pct;
 
   } Sun;
 

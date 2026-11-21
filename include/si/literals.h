@@ -453,7 +453,7 @@ namespace si {
   UDL(_ppt,                        1e-12, dimensionless); // 1_ppt (parts per trillion)
   UDL(_ppb,                         1e-9, dimensionless); // 1_ppb (parts per billion)
   UDL(_ppm,                         1e-6, dimensionless); // 1_ppm (parts per million)
-  UDL(_percent,                     0.01, dimensionless); // 1_percent (%, parts per hundred)
+  UDL(_pct,                         1e-2, dimensionless); // 1_pct (%, parts per hundred)
   // misc
   UDL(_Mach,                         330, meters_per_second); // 1_Mach
   UDL(_Da,        1.660'539'068'9252e-27, kilograms);// 1_Da   (dalton, or unified atomic mass unit)
