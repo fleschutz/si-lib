@@ -32,7 +32,7 @@ namespace si { namespace constant {                             // singular for 
   SET(T_P,                     1.416784e32, kelvins);           // Planck temperature
   SET(t_P,                    5.391247e-44, seconds);           // Planck time
   SET(h_bar,             1.054'571'817e-34, jouleseconds);      // reduced Planck constant
-  SET(mu_0,            1.256'637'061'27e-6, newtons_per_ampere2);// vacuum magnetic permeability
+  SET(mu_0,            1.256'637'061'27e-6, newtons_per_A2);    // vacuum magnetic permeability
 
   // Electromagnetic Constants
   // -------------------------                                  // CODATA 2022 constants (source: https://codata.org)

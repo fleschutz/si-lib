@@ -4,62 +4,65 @@
 
 #pragma once
 #include <si/datatypes.h>
+#define DEF(_name, _symbol, _value)     \
+  inline constexpr auto _name = _value; \
+  inline const char* to_str(decltype(_name) n) { return "0 " _symbol; }
 #define UNIT inline constexpr auto
 
 namespace si {
 
   // SI Base Units
   // -------------
-  UNIT meters         = unit<length>();             // symbol: m
-  UNIT seconds        = unit<time>();               // symbol: s
-  UNIT kilograms      = unit<mass>();               // symbol: kg
-  UNIT kelvins        = unit<temperature>();        // symbol: K
-  UNIT amperes        = unit<current>();            // symbol: A
-  UNIT moles          = unit<substance>();          // symbol: mol
-  UNIT candelas       = unit<luminous_intensity>(); // symbol: cd
+  DEF(meters,       "m",   unit<length>());
+  DEF(seconds,      "s",   unit<time>());
+  DEF(kilograms,    "kg",  unit<mass>());
+  DEF(kelvins,      "K",   unit<temperature>());
+  DEF(amperes,      "A",   unit<current>());
+  DEF(moles,        "mol", unit<substance>());
+  DEF(candelas,     "cd",  unit<luminous_intensity>());
 
   // Derived SI Units
   // ----------------
-  UNIT kilometers     = unit<length, 1000>();
-  UNIT centimeters    = unit<length, 1,100>();
-  UNIT millimeters    = unit<length, 1,1000>();
-  UNIT per_m          = unit<per_length>();
-  UNIT minutes        = unit<time, 60>();
-  UNIT hours          = unit<time, 3600>();
-  UNIT hertz          = unit<frequency>();
+  DEF(kilometers,   "km",  (unit<length,1000>()));
+  DEF(centimeters,  "cm",  (unit<length, 1,100>()));
+  DEF(millimeters,  "mm",  (unit<length, 1,1000>()));
+  DEF(per_m,        "/m",  unit<per_length>());
+  DEF(minutes,      "min", (unit<time, 60>()));
+  DEF(hours,        "h",   (unit<time, 3600>()));
+  DEF(hertz,        "Hz",  unit<frequency>());
   // area in...
-  UNIT kilometers2    = kilometers * kilometers;
-  UNIT centimeters2   = centimeters * centimeters;
-  UNIT meters2        = meters * meters;
-  UNIT per_m2         = unit<per_area>();
-  UNIT meter_kelvins  = meters * kelvins;
-  UNIT m2_per_s       = (meters * meters) / seconds;
-  UNIT m2_per_s2      = (meters * meters) / (seconds * seconds);
-  UNIT kg_per_m2      = kilograms / (meters * meters);
+  DEF(kilometers2,  "km²", kilometers * kilometers);
+  DEF(centimeters2, "cm²", centimeters * centimeters);
+  DEF(meters2,      "m²",  meters * meters);
+  DEF(per_m2,       "/m²", unit<per_area>());
+  DEF(meter_kelvins,"mK",  meters * kelvins);
+  DEF(m2_per_s,     "m²/s",(meters * meters) / seconds);
+  DEF(m2_per_s2,    "m²/s²",(meters * meters) / (seconds * seconds));
+  DEF(kg_per_m2,    "kg/m²",kilograms / (meters * meters));
   // volume in...
-  UNIT meters3        = meters * meters * meters; 
-  UNIT km3            = kilometers * kilometers * kilometers;
-  UNIT m3_per_s       = (meters * meters * meters) / seconds;
-  UNIT m3_per_mol     = (meters * meters * meters) / moles;
-  UNIT m3_per_s2      = (meters * meters * meters) / (seconds * seconds);
-  UNIT m3_per_kg_per_s2 = (meters * meters * meters) / kilograms / (seconds * seconds);
-  UNIT kg_per_m3      = kilograms / (meters * meters * meters);
+  DEF(meters3,      "m³",  meters * meters * meters); 
+  DEF(km3,          "km³", kilometers * kilometers * kilometers);
+  DEF(m3_per_s,     "m³/s",(meters * meters * meters) / seconds);
+  DEF(m3_per_mol,   "m³/mol",(meters * meters * meters) / moles);
+  DEF(m3_per_s2,    "m³/s²",(meters * meters * meters) / (seconds * seconds));
+  DEF(m3_per_kg_per_s2,"m³/kg/s²",(meters * meters * meters) / kilograms / (seconds * seconds));
+  DEF(kg_per_m3,    "kg/m³",kilograms / (meters * meters * meters));
   // velocity in...
-  UNIT m_per_s        = meters / seconds;
-  UNIT m_per_h        = meters / hours;
+  DEF(m_per_s,      "m/s", meters / seconds);
+  DEF(m_per_h,      "m/h", meters / hours);
   // acceleration in...
-  UNIT m_per_s2       = meters / (seconds * seconds);
+  DEF(m_per_s2,     "m/s²",meters / (seconds * seconds));
   // force in...
-  UNIT newtons        = unit<force>();
-  UNIT newtonmeters   = newtons * meters;
-  UNIT newtonseconds  = newtons * seconds;
-  UNIT newtons_per_ampere2 = newtons / (amperes * amperes);
+  DEF(newtons,      "N",   unit<force>());
+  DEF(newtonmeters, "Nm",  newtons * meters);
+  DEF(newtonseconds,"Ns",  newtons * seconds);
+  DEF(newtons_per_A2,"N/A²", newtons / (amperes * amperes));
   // energy in...
-  UNIT joules         = kilograms * (meters * meters) / (seconds * seconds);
-  UNIT jouleseconds   = joules * seconds;
-  UNIT joules_per_s   =  joules / seconds;
-  UNIT joules_per_K = joules / kelvins;
-  UNIT joules_per_s_per_kg = joules / seconds / kilograms;
+  DEF(joules,       "J",  kilograms * (meters * meters) / (seconds * seconds));
+  DEF(jouleseconds, "Js", joules * seconds);
+  DEF(joules_per_s, "J/s",joules / seconds);
+  DEF(joules_per_K, "J/K",joules / kelvins);
+  DEF(joules_per_s_per_kg,"J/s/kg",joules / seconds / kilograms);
   UNIT joules_per_kg_per_K = joules / kilograms / kelvins;
   UNIT joules_per_mol = unit<energy_per_mol>();
   UNIT joules_per_K_per_mol = joules / kelvins / moles;
@@ -199,4 +202,5 @@ namespace si {
 
 } // end of namespace
 
+#undef DEF
 #undef UNIT
