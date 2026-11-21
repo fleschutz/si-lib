@@ -6,8 +6,8 @@ Include *si-lib* to apply math in C++ correct, precise, and convenient. **Featur
 
 - **Type-safety** for datatypes, constants, formulas, literals, etc. (e.g. mass + length = error).
 - **Test-safety** by 300+ unit tests (executed at compile-time and on each commit).
-- **Precision** by 64-bit floating point, calculations on SI base units, and CODATA 2022 constants.
-- **Top speed:** no runtime overhead and implicit compile-time conversions whenever possible.
+- **Top precision** due to 64-bit floating point, calculations on SI base units, and CODATA 2022 constants.
+- **Full speed:** no runtime overhead and implicit compile-time conversions whenever possible.
 - **Support** for units in SI, Imperial, US, digital, astronomical, historic, or user-defined.
 - **Excellent** readability - with bundled literals, constants, formulas, and datasets (optional).
 - **Modern C++ 17:** header-only, light-weight (143KB), own namespace, no external dependencies.
