@@ -11,7 +11,7 @@ void speed_examples() {
     cout << "    === SPEED EXAMPLES ===" << endl;
 
     cout << " 1. What was the average speed of Sabastian Sawe's marathon world record? ";
-	auto marathon_distance = 42.195_km;
+    auto marathon_distance = 42.195_km;
     auto Sabastians_time   = 1_h + 59_min + 30_s;
     auto average_speed     = marathon_distance / Sabastians_time;
     cout << average_speed << " or " << to_equivalent(average_speed) << endl;
@@ -23,11 +23,10 @@ void speed_examples() {
     cout << fall_time << endl;
 
 
-    cout << " 3. The download of 10TB at 1Gbit/s takes... ";
-    auto file_size       = 10_TB;
-    auto download_speed  = 1_Gbit_per_s;
-    auto download_time   = file_size / download_speed;
-    cout << download_time << endl;
+    cout << " 3. How long does the download of GTA 6 (212GB) take at 100Mbit/s? ";
+    auto file_size       = 212_GB;
+    auto download_speed  = 100_Mbit_per_s;
+    cout << (file_size / download_speed) << endl;
 
 
     cout << " 4. Which average speed is needed to travel around the World in 80 days? ";

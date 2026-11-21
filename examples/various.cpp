@@ -236,7 +236,7 @@ void various_examples() {
     cout << total_area << " and " << total_weight << endl;
 
 
-    cout << "31. Calculate the total harddisk size... ";
+    cout << "31. Calculate the total harddisk size by CHS geometry... ";
     auto cylinders      = 8032;
     auto heads          = 16;
     auto sectors        = 63;
@@ -245,15 +245,15 @@ void various_examples() {
     cout << HDD_total_size << endl;
 
 
-    cout << "32. Calculate the hardisk's data density... ";
+    cout << "32. What's the data density of a 4GB/2.5'' hardisk? ";
     auto platters           = 8;
     auto platter_diameter   = 2.5_in;
     auto area_per_platter   = area_of_circle_formula(platter_diameter / 2.0);
-    auto data_density       = (HDD_total_size / platters / area_per_platter) * 1_in2;
-    cout << data_density << "/inch²" << endl;
+    auto data_density       = (HDD_total_size / platters / area_per_platter) * 1_cm2;
+    cout << data_density << "/cm²" << endl;
 
 
-    cout << "33. The distance between Singapore and Tokyo measures...";
+    cout << "33. What's the direct distance between Singapore and Tokyo? ";
     auto Singapore_lat  = 1.3521_deg;
     auto Singapore_long = 103.8198_deg;
     auto Tokyo_lat      = 35.6762_deg;

@@ -1,7 +1,7 @@
     === SPEED EXAMPLES ===
  1. What was the average speed of Sabastian Sawe's marathon world record? 21.2 km/h or 13.2 mph
  2. What's the free-fall time from Burj Khalifa tower (2716ft)? 13.0 s
- 3. The download of 10TB at 1Gbit/s takes... 22.2 h
+ 3. How long does the download of GTA 6 (212GB) take at 100Mbit/s? 4.7 h
  4. Which average speed is needed to travel around the World in 80 days? 20.9 km/h or 13.0 mph
  5. A flight non-stop around the Earth at Mach 1 would take... 33.7 h
  6. A car's braking distance from 100km/h on dry asphalt is... 48.2 m or 52.7 yd
@@ -56,8 +56,8 @@
 28. The AC voltages within a tenth second are... 0.0 V, 220.0 V, -0.0 pV, -220.0 V, 0.0 pV, 220.0 V, -0.2 pV, -220.0 V, 0.1 pV, 220.0 V, 0.3 pV, -220.0 V, -0.6 pV, 220.0 V, 0.5 pV, -220.0 V, 0.1 pV, 220.0 V, -0.7 pV, -220.0 V, 
 29. Applying a perpendicular force of 500N to a 20cm long lever results in... 100.0 J of torque
 30. What's the total area and weight of 500 papers in A4 format (80g/m²)? 31.2 m² and 2.5 kg
-31. Calculate the total harddisk size... 4.1 GB
-32. Calculate the hardisk's data density... 105.6 MB/inch²
-33. The distance between Singapore and Tokyo measures...5311.2 km or 3300.2 mi
+31. Calculate the total harddisk size by CHS geometry... 4.1 GB
+32. What's the data density of a 4GB/2.5'' hardisk? 16.4 MB/cm²
+33. What's the direct distance between Singapore and Tokyo? 5311.2 km or 3300.2 mi
 34. The nearest airport neighbours are...Confer's Place Airport and Dick's Strip with only 30.0 m in between
 
