@@ -3,8 +3,8 @@ using namespace si;
 
 void cheat_sheet() {
 
-    // Assign a Quantity
-    // -----------------
+    // Assignment
+    // ----------
     length a = 1_m;                // user-defined literal (UDL)
     auto   b = 1_m;                // with convenient auto
     length c = meters(1);          // construct from number
@@ -12,8 +12,8 @@ void cheat_sheet() {
     length e = to_length("42m");   // string to length conversion
     // length bad = 1_kg;          // ERROR: incompatible dimensions
 
-    // Calculate with Quantities
-    // -------------------------
+    // Calculations
+    // ------------
     area A = a * b;                // area from length by length
     volume V = A * 10_ft;          // volume from area by height
     density D = 1_kg / V;          // density from mass per volume
@@ -26,8 +26,8 @@ void cheat_sheet() {
     energy E = 1_kg * square(constant::c); // with a constant
     length W = wavelength_formula(constant::c, 100_Hz); // with a formula
 
-    // Compare Quantities
-    // ------------------
+    // Comparison
+    // ----------
     bool good = (1_m < 2_ft);      // correct 
     // bool bad = (1_m < 1_kg);    // ERROR: incompatible dimensions
     for (auto t = 0_s; t < 5_min; t += 1_s) { } // time loop
@@ -42,13 +42,14 @@ void cheat_sheet() {
     angle epsilon = 648000_arcsec; // or as arcseconds
     angle zeta    = radians(3.14); // or constructed from number
 
-    // Dimensionless Numbers
-    // ---------------------
-    dimensionless fac1 = 0.10; 
-    dimensionless fac2 = 10_pct;  // or as percentage (%)
-    dimensionless fac3 = 100'000_ppm; // or as parts per million
-    dimensionless fac4 = 100'000'000_ppb; // or as parts per billion
-    dimensionless fac5 = 100'000'000'000_ppt; // or as parts per trillion
+    // Ratio
+    // -----
+    dimensionless ratio1 = 0.10; 
+    dimensionless ratio2 = 10_pct; // or as percentage (%)
+    dimensionless ratio3 = 1000_bp; // or as basis points
+    dimensionless ratio4 = 100'000_ppm; // or as parts per million
+    dimensionless ratio5 = 100'000'000_ppb; // or as parts per billion
+    dimensionless ratio6 = 100'000'000'000_ppt; // or as parts per trillion
 
     // Export a Quantity
     // -----------------

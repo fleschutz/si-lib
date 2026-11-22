@@ -454,6 +454,7 @@ namespace si {
   UDL(_ppt,                        1e-12, dimensionless); // 1_ppt (parts per trillion)
   UDL(_ppb,                         1e-9, dimensionless); // 1_ppb (parts per billion)
   UDL(_ppm,                         1e-6, dimensionless); // 1_ppm (parts per million)
+  UDL(_bp,                          1e-4, dimensionless); // 1_bp (parts per ten thousand)
   UDL(_pct,                         1e-2, dimensionless); // 1_pct (%, parts per hundred)
   // misc
   UDL(_Mach,                         330, m_per_s);  // 1_Mach

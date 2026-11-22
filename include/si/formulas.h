@@ -408,12 +408,12 @@ namespace si {
 		return s0 + v0 * t + 0.5 * a * t * t;
 	}
 
-	/// @brief Calculates the windchill temperature.
+	/// @brief Calculates the wind chill (feels like temperature, 2001 North American formula).
 	FUNC temperature windchill_temperature_formula(temperature air_temperature, velocity wind_speed)
 	{
-		auto air_celsius = celsius(air_temperature);
-		return celsius(13.12 + 0.6215 * air_celsius
-		  + (0.3965 * air_celsius - 11.37) * std::pow(wind_speed / 1_km_per_h, 0.16));
+		auto T = celsius(air_temperature); // dry-bulb air temperature in °C
+		auto V = wind_speed / 1_km_per_h;  // wind speed at 10 m in km/h
+		return celsius(13.12 + 0.6215*T - 11.37*std::pow(V,0.16) + 0.3965*T*std::pow(V,0.16));
 	}
 
 	/// @brief Returns the temperature gradient per kilometer for the given geopotential altitude.

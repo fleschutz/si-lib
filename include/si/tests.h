@@ -322,22 +322,24 @@ namespace si {
 	static_assert(1_KiB_per_s == 1024_byte_per_s);
   }
 
-  /// @brief Returns true if both angles are nearly equal.
-  [[nodiscard]] inline constexpr bool nearly_equal(angle a, angle b) {
-	angle delta = a - b;
-	return delta > -1e-10 && delta < 1e-10;
-  }
-
   inline void check_angles() {
-        static_assert(0_rad == 0_mrad);
-        static_assert(0_rad == 0_deg);
-        static_assert(0_rad == 0_arcmin);
-        static_assert(0_rad == 0_arcsec);
-        static_assert(0_rad == radians(0));
-        static_assert(1_rad == 1000_mrad);
+	static_assert(0_rad == 0_mrad);
+	static_assert(0_rad == 0_deg);
+	static_assert(0_rad == 0_arcmin);
+	static_assert(0_rad == 0_arcsec);
+	static_assert(0_rad == radians(0));
+	static_assert(1_rad == 1000_mrad);
 	static_assert(nearly_equal(180_deg, constant::pi));
 	static_assert(nearly_equal(180_deg, 10800_arcmin));
 	static_assert(nearly_equal(180_deg, 648000_arcsec));
+  }
+
+  inline void check_ratios() {
+	static_assert(0.10 == 10_pct);
+	static_assert(0.10 == 1000_bp);
+	static_assert(0.10 == 100'000_ppm);
+	static_assert(0.10 == 100'000'000_ppb);
+	static_assert(0.10 == 100'000'000'000_ppt);
   }
 
   inline void check_various_units() {
@@ -348,7 +350,7 @@ namespace si {
 	static_assert(1_Gbar == 1000_Mbar);
 	// temperature in...
 	static_assert(0_degC == 273.15_K);
-	//static_assert(491.67_degR == 273.15_K);
+	//static_assert(nearly_equal(491.67_degR, 273.15_K));
   }
 
   inline void check_functions_and_templates() {
@@ -404,14 +406,14 @@ namespace si {
         static_assert(deci   ==   10 * centi);
         static_assert(centi  ==   10 * milli);
         static_assert(milli  == 1000 * micro);
-        //static_assert(micro == 1000 * nano);
-        //static_assert(nano  == 1000 * pico);
-        //static_assert(pico  == 1000 * femto);
-        //static_assert(femto == 1000 * atto);
-        //static_assert(atto  == 1000 * zepto);
-        //static_assert(zepto == 1000 * yocto);
-        //static_assert(yocto == 1000 * ronto);
-        //static_assert(ronto == 1000 * quecto);
+        static_assert(nearly_equal(micro, 1000 * nano));
+        static_assert(nearly_equal(nano, 1000 * pico));
+        static_assert(nearly_equal(pico, 1000 * femto));
+        static_assert(nearly_equal(femto, 1000 * atto));
+        static_assert(nearly_equal(atto, 1000 * zepto));
+        static_assert(nearly_equal(zepto, 1000 * yocto));
+        static_assert(nearly_equal(yocto, 1000 * ronto));
+        static_assert(nearly_equal(ronto, 1000 * quecto));
   }
 
 } // end of namespace

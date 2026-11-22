@@ -1,6 +1,6 @@
 /// @file     <si/units.h>
 /// @brief    Defines 100+ units, e.g. si::meters
-/// @details  Categories are: SI base units, SI derived, Imperial, digital data, various, and references.
+/// @details  Categories are: SI base units, SI derived, Imperial, digital data, and various.
 
 #pragma once
 #include <si/datatypes.h>
@@ -193,9 +193,12 @@ namespace si {
       return x;
   }
 
-  // References
-  // ----------
-  // 1. https://en.wikipedia.org/wiki/International_System_of_Units
+  /// @brief Returns true if both quantities are nearly equal.
+  template <typename T>
+  [[nodiscard]] inline constexpr bool nearly_equal(T a, T b) {
+	T delta = a - b;
+	return delta > -1e-10 && delta < 1e-10;
+  }
 
 } // end of namespace
 
