@@ -374,6 +374,7 @@ namespace si {
   UDL(_kpc,     30'856'775'814'913'673e3, meters);   // 1_kpc    (kiloparsec)
   UDL(_pc,      30'856'775'814'913'673e0, meters);   // 1_pc     (parsec)
   UDL(_ly,         9'460'730'472'580'800, meters);   // 1_ly     (light-year)
+  UDL(_ld,            25'902'068'356'000, meters);   // 1_ld     (light-day)
   UDL(_au,               149'597'870'700, meters);   // 1_au     (astronomical unit, Earth-Sun distance)
   UDL(_ls,                   299'792'458, meters);   // 1_ls     (light-second)
   UDL(_Msun,                   1.9885e30, kilograms);// 1_Msun   (solar mass, ~1 Sun mass)

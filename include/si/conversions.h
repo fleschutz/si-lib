@@ -351,6 +351,7 @@ namespace si {
 	/// @brief Returns a length equivalent as string, e.g. in Imperial units.
 	FUNC std::string to_equivalent(length d, const char* fmtStr = to_equivalent_format) {
 		if (d <= -1_ly || d >= 1_ly) return _fmt(d / 1_ly, "light-years", fmtStr);
+		if (d <= -1_ld || d >= 1_ld) return _fmt(d / 1_ld, "light-day", fmtStr);
 		if (d <= -1_ls || d >= 1_ls) return _fmt(d / 1_ls, "light-seconds", fmtStr);
 		if (d <= -1_mi || d >= 1_mi) return _fmt(d / 1_mi, "mi", fmtStr);
 		if (d <= -1_yd || d >= 1_yd) return _fmt(d / 1_yd, "yd", fmtStr);
