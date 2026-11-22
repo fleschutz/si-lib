@@ -458,10 +458,10 @@ namespace si {
 		return m / p;
 	}
 
-	/// @brief Calculates the human body-mass index (BMI) from weight (w) and height (h).
-	FUNC dimensionless BMI_formula(mass w, length h)
+	/// @brief Calculates the human body-mass index (BMI) from body mass (m) and standing height (h).
+	FUNC dimensionless BMI_formula(mass m, length h)
 	{
-		return (w / square(h)) / 1_kg_per_m2;
+		return (m / square(h)) / 1_kg_per_m2;
 	}
 
 	/// @brief Calculates the consumed electrical power of a current (I) and potential (U).
@@ -497,10 +497,16 @@ namespace si {
 		return (v0 * sin(a) + sqrt(square(v0 * sin(a)) + 2.0 * g * h)) / g;
 	}
 
-	/// @brief Calculates the amount of energy absorbed (E) from a source of radiation by some material per mass (m)
+	/// @brief Calculates the amount of energy absorbed (E) from a source of radiation by some material per mass (m).
 	FUNC specific_energy absorbed_dose_formula(energy E, mass m)
 	{
 		return E / m;
+	}
+
+	/// @brief Calculates the wind turbine power output from air density (p), area of the disc (A), wind speed at hub height (v), and a ratio (0.35-0.45 for a good modern rot).
+	FUNC power wind_turbine_power_formula(density p, area A, velocity v, dimensionless Cp)
+	{
+		return 0.5 * p * A * cube(v) * Cp;
 	}
 
 	/// @brief Returns the minimum velocity in the given array.
