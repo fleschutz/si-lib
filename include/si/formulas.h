@@ -89,10 +89,10 @@ namespace si {
 		return constant::pi * r * r;
 	}
 
-	/// @brief Calculates approximately(!) the perimeter of an ellipse from length of semi-major axis (a) and length of semi-minor axis (b).
+	/// @brief Calculates the perimeter of an ellipse from half the long axis (a) and half the short axis (b) (Ramanujan approximation).
 	FUNC length perimeter_of_ellipse_formula(length a, length b)
 	{
-		return constant::pi * sqrt(2.0 * (square(a) + square(b)));
+		return constant::pi * (3.*(a+b) - sqrt( (3.*a + b)*(a + 3.*b)) );
 	}
 
 	/// @brief Calculates the area of an ellipse from radius (a) and (b).
@@ -169,7 +169,13 @@ namespace si {
 	/// @brief Calculates the volume of a sphere from radius (r).
 	FUNC volume volume_of_sphere_formula(length r)
 	{
-		return (4. / 3.) * constant::pi * r * r * r;
+		return (4./3.) * constant::pi * r * r * r;
+	}
+
+	/// @brief Calculates the volume of an ellipsoid from half of axis (a), (b), and (c).
+	FUNC volume volume_of_ellipsoid_formula(length a, length b, length c)
+	{
+		return (4./3.) * constant::pi * a * b * c;
 	}
 
 	/// @brief Calculates the volume of a prism from base area (A) and height (h).
