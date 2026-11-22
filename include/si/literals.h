@@ -449,7 +449,7 @@ namespace si {
   UDL(_Torr,           101'325.0 / 760.0, pascals);  // 1_Torr (same as mmHg)
   // absolute thermodynamic temperature in...
   UDL(_degC,                           1, celsius);  // 1_degC (°Celsius)
-  UDL(_degR,                     5.0/9.0, kelvins);  // 1_degR (°Rankine)
+  UDL(_degR, 0.5555555555555555555555555, kelvins);  // 1_degR (°Rankine)
   // concentration in...
   UDL(_ppt,                        1e-12, dimensionless); // 1_ppt (parts per trillion)
   UDL(_ppb,                         1e-9, dimensionless); // 1_ppb (parts per billion)

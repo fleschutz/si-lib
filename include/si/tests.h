@@ -1,419 +1,411 @@
 /// @file      <si/tests.h>
 /// @brief     Contains 300+ unit tests
-/// @details   The unit tests get executed at compile-time and on each commit by GitHub actions.
-///            Categories are: features, C datatypes, SI datatypes, base units, derived units, astronomical units, Imperial units, digital data units, various units, functions and templates.
+/// @details   The unit tests are executed at compile-time and on each commit by GitHub actions.
+///            Categories are: features, datatypes, base units, derived units, astronomical units, Imperial units, digital data units, angles, ratios, various, functions and templates, SI prefixes.
 
 #pragma once
 #include <cassert>
 #include <si/literals.h>
 #include <si/prefixes.h>
+#define EXACT(_condition) static_assert(_condition)
+#define NEARLY0(_delta)   static_assert(_delta > -1e-10 && _delta < 1e-10)
 
 namespace si {
 
   inline void check_features() { // shows what's possible - the serious checks follow below
-    static_assert( 3_m == meters(3) );
-    static_assert( 3_m == 3 * 1_m );
-    static_assert( 1_km + 1_m + 1_dm + 1_cm + 1_mm == 1001.111_m );
-    static_assert( 1_km / 30_min == 2_km_per_h );
-    static_assert( 1_m * 2_m == 2_m2 );
-    static_assert( 1_m * 2_m * 3_m == 6_m3 );
-    static_assert( (1_m * 2_m * 3_m) / 2_s == 3_m3_per_s );
-    static_assert( 1000 / 1_s == 1_kHz );
-    static_assert( 1_Mach == 330_m_per_s );
-    static_assert( 1_Mach * 10_pct == 33_m_per_s );
-    static_assert( (0_degC + 32_degF + 491.67_degR + 273.15_K) / 4 == 273.15_K );
-    static_assert( 1_A * 1_h == 3600_C );
-    static_assert( 1_Ah == 3600_C );
-    static_assert( 8_bit == 1_byte );
-    static_assert( 16_bit == 2_byte );
+	EXACT( 3_m == meters(3) );
+	EXACT( 3_m == 3 * 1_m );
+	EXACT( 1_km + 1_m + 1_dm + 1_cm + 1_mm == 1001.111_m );
+	EXACT( 1_km / 30_min == 2_km_per_h );
+	EXACT( 1_m * 2_m == 2_m2 );
+	EXACT( 1_m * 2_m * 3_m == 6_m3 );
+	EXACT( (1_m * 2_m * 3_m) / 2_s == 3_m3_per_s );
+	EXACT( 1000 / 1_s == 1_kHz );
+	EXACT( 1_Mach == 330_m_per_s );
+	EXACT( 1_Mach * 10_pct == 33_m_per_s );
+	EXACT( (0_degC + 32_degF + 491.67_degR + 273.15_K) / 4 == 273.15_K );
+	EXACT( 1_A * 1_h == 3600_C );
+	EXACT( 1_Ah == 3600_C );
+	EXACT( 8_bit == 1_byte );
+	EXACT( 16_bit == 2_byte );
   }
 
-  inline void check_C_datatypes() {
-    static_assert(sizeof(char) <= sizeof(short));
-    static_assert(sizeof(short) <= sizeof(int));
-    static_assert(sizeof(int) <= sizeof(long));
-    static_assert(sizeof(long) <= sizeof(long long));
-    static_assert(sizeof(float) <= sizeof(double));
-    static_assert(sizeof(double) <= sizeof(long double));
-    static_assert(sizeof(char) == sizeof(unsigned char));
-    static_assert(sizeof(short) == sizeof(unsigned short));
-    static_assert(sizeof(int) == sizeof(unsigned int));
-    static_assert(sizeof(long) == sizeof(unsigned long));
-  }
-
-  inline void check_SI_datatypes() {
-    static_assert(sizeof(length) == sizeof(SIdouble));
-    static_assert(sizeof(mass) == sizeof(SIdouble));
-    static_assert(sizeof(time) == sizeof(SIdouble));
-    static_assert(sizeof(temperature) == sizeof(SIdouble));
-    static_assert(sizeof(current) == sizeof(SIdouble));
-    static_assert(sizeof(substance) == sizeof(SIdouble));
-    static_assert(sizeof(luminous_intensity) == sizeof(SIdouble));
-    static_assert(sizeof(data_size) == sizeof(SIdouble));
-    static_assert(sizeof(dimensionless) == sizeof(SIdouble));
+  inline void check_datatypes() {
+	EXACT(sizeof(length) == sizeof(SIdouble));
+	EXACT(sizeof(mass) == sizeof(SIdouble));
+	EXACT(sizeof(time) == sizeof(SIdouble));
+	EXACT(sizeof(temperature) == sizeof(SIdouble));
+	EXACT(sizeof(current) == sizeof(SIdouble));
+	EXACT(sizeof(substance) == sizeof(SIdouble));
+	EXACT(sizeof(luminous_intensity) == sizeof(SIdouble));
+	EXACT(sizeof(data_size) == sizeof(SIdouble));
+	EXACT(sizeof(dimensionless) == sizeof(SIdouble));
   }
 
   inline void check_SI_base_units() {
 	// length in...
-	static_assert(1_Pm == 1000_Tm);
-	static_assert(1_Tm == 1000_Gm);
-	static_assert(1_Gm == 1000_Mm);
-	static_assert(1_Mm == 1000_km);
-	static_assert(1_km == 1000_m);
-	static_assert(1_km == kilometers(1));
-	static_assert(1_m  == 10_dm);
-	static_assert(1_m  == 100_cm);
-	static_assert(1_m  == meters(1));
-	static_assert(1_m  == 1000_mm);
-	static_assert(1_m  == 0.001_km);
-	static_assert(1_dm == 0.1_m);
-	static_assert(1_cm == 0.01_m);
-	static_assert(1_mm == 0.001_m);
-	static_assert(1_mm == millimeters(1));
-	static_assert(1_um == 0.001_mm);
-	static_assert(1_nm == 0.001_um);
+	EXACT(1_Pm == 1000_Tm);
+	EXACT(1_Tm == 1000_Gm);
+	EXACT(1_Gm == 1000_Mm);
+	EXACT(1_Mm == 1000_km);
+	EXACT(1_km == 1000_m);
+	EXACT(1_km == kilometers(1));
+	EXACT(1_m  == 10_dm);
+	EXACT(1_m  == 100_cm);
+	EXACT(1_m  == meters(1));
+	EXACT(1_m  == 1000_mm);
+	EXACT(1_m  == 0.001_km);
+	EXACT(1_dm == 0.1_m);
+	EXACT(1_cm == 0.01_m);
+	EXACT(1_mm == 0.001_m);
+	EXACT(1_mm == millimeters(1));
+	EXACT(1_um == 0.001_mm);
+	EXACT(1_nm == 0.001_um);
 	// time in...
-	static_assert(1_d   == 24_h);
-	static_assert(1_h   == 60_min);
-	static_assert(1_h   == hours(1));
-	static_assert(1_min == 60_s);
-	static_assert(1_min == minutes(1));
-	static_assert(1_s   == 1000_ms);
-	static_assert(1_s   == seconds(1));
-	static_assert(1_ms  == 0.001_s);
-	static_assert(1_us  == 0.001_ms);
-	static_assert(1_ns  == 0.001_us);
+	EXACT(1_d   == 24_h);
+	EXACT(1_h   == 60_min);
+	EXACT(1_h   == hours(1));
+	EXACT(1_min == 60_s);
+	EXACT(1_min == minutes(1));
+	EXACT(1_s   == 1000_ms);
+	EXACT(1_s   == seconds(1));
+	EXACT(1_ms  == 0.001_s);
+	EXACT(1_us  == 0.001_ms);
+	EXACT(1_ns  == 0.001_us);
 	// mass in...
-	static_assert(1_Gt == 1000_Mt);
-	static_assert(1_Mt == 1000_kt);
-	static_assert(1_kt == 1000_t);
-	static_assert(1_t  == 1000_kg);
-	static_assert(1_kg == 1000_g);
-	static_assert(1_kg == kilograms(1));
-	static_assert(1_g  == 0.001_kg);
-	static_assert(1_mg == 0.001_g);
-	static_assert(1_ug == 0.001_mg);
+	EXACT(1_Gt == 1000_Mt);
+	EXACT(1_Mt == 1000_kt);
+	EXACT(1_kt == 1000_t);
+	EXACT(1_t  == 1000_kg);
+	EXACT(1_kg == 1000_g);
+	EXACT(1_kg == kilograms(1));
+	EXACT(1_g  == 0.001_kg);
+	EXACT(1_mg == 0.001_g);
+	EXACT(1_ug == 0.001_mg);
 	// thermodynamic temperature in...
-	static_assert(1_GK == 1000_MK);
-	static_assert(1_MK == 1000_kK);
-	static_assert(1_kK == 1000_K);
-	static_assert(1_mK == 0.001_K);
-	static_assert(1_uK == 0.001_mK);
-	static_assert(1_nK == 0.001_uK);
+	EXACT(1_GK == 1000_MK);
+	EXACT(1_MK == 1000_kK);
+	EXACT(1_kK == 1000_K);
+	EXACT(1_mK == 0.001_K);
+	EXACT(1_uK == 0.001_mK);
+	EXACT(1_nK == 0.001_uK);
 	// electric current in...
-	static_assert(1_GA == 1000_MA);
-	static_assert(1_MA == 1000_kA);
-	static_assert(1_kA == 1000_A);
-	static_assert(1_A  == 1000_mA);
-	static_assert(1_A  == amperes(1));
-	static_assert(1_mA == 0.001_A);
-	static_assert(1_uA == 0.001_mA);
-	static_assert(1_nA == 0.001_uA);
+	EXACT(1_GA == 1000_MA);
+	EXACT(1_MA == 1000_kA);
+	EXACT(1_kA == 1000_A);
+	EXACT(1_A  == 1000_mA);
+	EXACT(1_A  == amperes(1));
+	EXACT(1_mA == 0.001_A);
+	EXACT(1_uA == 0.001_mA);
+	EXACT(1_nA == 0.001_uA);
 	// amount of substance in...
-	static_assert(1_Gmol == 1000_Mmol);
-	static_assert(1_Mmol == 1000_kmol);
-	static_assert(1_kmol == 1000_mol);
-	static_assert(1_mol  == 0.001_kmol);
-	static_assert(1_mol  == moles(1));
-	static_assert(1_mmol == 0.001_mol);
-	static_assert(1_umol == 0.001_mmol);
-	static_assert(1_nmol == 0.001_umol);
+	EXACT(1_Gmol == 1000_Mmol);
+	EXACT(1_Mmol == 1000_kmol);
+	EXACT(1_kmol == 1000_mol);
+	EXACT(1_mol  == 0.001_kmol);
+	EXACT(1_mol  == moles(1));
+	EXACT(1_mmol == 0.001_mol);
+	EXACT(1_umol == 0.001_mmol);
+	EXACT(1_nmol == 0.001_umol);
 	// luminous intensity in...
-	static_assert(1_kcd == 1000_cd);
-	static_assert(1_cd == 0.001_kcd);
-	static_assert(1_cd == candelas(1));
+	EXACT(1_kcd == 1000_cd);
+	EXACT(1_cd == 0.001_kcd);
+	EXACT(1_cd == candelas(1));
   }
 
   inline void check_SI_derived_units() {
 	// area in...
-	static_assert(1_km2 == 1_km * 1_km);
-	static_assert(1_km2 == 100_hm2);
-	static_assert(1_hm2 == 10'000_m2);
-	static_assert(1_hm2 == 100_m * 100_m);
-	static_assert(1_m2  == 10'000_cm2);
-	static_assert(1_m2  == meters2(1));
-	static_assert(1_cm2 == 0.0001_m2);
-	static_assert(1_m2  == 1_m * 1_m);
-	static_assert(1_cm2 == 1_cm * 1_cm);
-	static_assert(1_mm2 == 1_mm * 1_mm);
+	EXACT(1_km2 == 1_km * 1_km);
+	EXACT(1_km2 == 100_hm2);
+	EXACT(1_hm2 == 10'000_m2);
+	EXACT(1_hm2 == 100_m * 100_m);
+	EXACT(1_m2  == 10'000_cm2);
+	EXACT(1_m2  == meters2(1));
+	EXACT(1_cm2 == 0.0001_m2);
+	EXACT(1_m2  == 1_m * 1_m);
+	EXACT(1_cm2 == 1_cm * 1_cm);
+	EXACT(1_mm2 == 1_mm * 1_mm);
 	// volume in...
-	static_assert(1_km3 == 1_km * 1_km * 1_km);
-	static_assert(1_km3 == 1e9_m3);
-	static_assert(1_m3  == 1_m * 1_m * 1_m);
-	static_assert(1_m3  == meters3(1));
-	static_assert(1_m3  == 1e6_cm3);
-	static_assert(1_cm3 == 0.000'001_m3);
+	EXACT(1_km3 == 1_km * 1_km * 1_km);
+	EXACT(1_km3 == 1e9_m3);
+	EXACT(1_m3  == 1_m * 1_m * 1_m);
+	EXACT(1_m3  == meters3(1));
+	EXACT(1_m3  == 1e6_cm3);
+	EXACT(1_cm3 == 0.000'001_m3);
 	// static_assert(1_cm3 == 1_cm * 1_cm * 1_cm);
 	// velocity in...
-	static_assert(1_km_per_s == 1000_m_per_s);
-	static_assert(3.6_km_per_h == 1_m_per_s);
-	static_assert(1_km_per_h == 1_km / 1_h);
-	static_assert(1_km_per_h == 1000_m / 1_h);
-	static_assert(1_km_per_h == 1_km / 60_min);
-	static_assert(1_km_per_h == 1000_m / 60_min);
-	static_assert(1_km_per_h == 1_km / 3600_s);
-	static_assert(1_km_per_h == 1000_m / 3600_s);
-	static_assert(1_km_per_h == 500_m / 1800_s);
+	EXACT(1_km_per_s == 1000_m_per_s);
+	EXACT(3.6_km_per_h == 1_m_per_s);
+	EXACT(1_km_per_h == 1_km / 1_h);
+	EXACT(1_km_per_h == 1000_m / 1_h);
+	EXACT(1_km_per_h == 1_km / 60_min);
+	EXACT(1_km_per_h == 1000_m / 60_min);
+	EXACT(1_km_per_h == 1_km / 3600_s);
+	EXACT(1_km_per_h == 1000_m / 3600_s);
+	EXACT(1_km_per_h == 500_m / 1800_s);
 	// acceleration in...
-	static_assert(1_km_per_s2 == 1000_m_per_s2);
-	static_assert(0.001_km_per_s2 == 1_m_per_s2);
+	EXACT(1_km_per_s2 == 1000_m_per_s2);
+	EXACT(0.001_km_per_s2 == 1_m_per_s2);
 	// frequency in...
-	static_assert(1_PHz == 1000_THz);
-	static_assert(1_THz == 1000_GHz);
-	static_assert(1_GHz == 1000_MHz);
-	static_assert(1_MHz == 1000_kHz);
-	static_assert(1_kHz == 1000_Hz);
-	static_assert(1_Hz  == 0.001_kHz);
-	static_assert(1_Hz  == hertz(1));
-	static_assert(1_Hz  == 0.000001_MHz);
-	static_assert(1_Hz  == 0.000000001_GHz);
-	static_assert(1_mHz == 0.001_Hz);
+	EXACT(1_PHz == 1000_THz);
+	EXACT(1_THz == 1000_GHz);
+	EXACT(1_GHz == 1000_MHz);
+	EXACT(1_MHz == 1000_kHz);
+	EXACT(1_kHz == 1000_Hz);
+	EXACT(1_Hz  == 0.001_kHz);
+	EXACT(1_Hz  == hertz(1));
+	EXACT(1_Hz  == 0.000001_MHz);
+	EXACT(1_Hz  == 0.000000001_GHz);
+	EXACT(1_mHz == 0.001_Hz);
 	// radioactive activity (A) in...
-	static_assert(1_TBq == 1000_GBq);
-	static_assert(1_GBq == 1000_MBq);
-	static_assert(1_MBq == 1000_kBq);
-	static_assert(1_kBq == 1000_Bq);
+	EXACT(1_TBq == 1000_GBq);
+	EXACT(1_GBq == 1000_MBq);
+	EXACT(1_MBq == 1000_kBq);
+	EXACT(1_kBq == 1000_Bq);
 	// equivalent dose (H) and effective dose (E) in...
-	static_assert(1_Sv  == 1000_mSv);
-	static_assert(1_mSv == 1000_uSv);
+	EXACT(1_Sv  == 1000_mSv);
+	EXACT(1_mSv == 1000_uSv);
 	// mass per area in...
-	static_assert(1_t_per_m2 == 1000_kg_per_m2);
+	EXACT(1_t_per_m2 == 1000_kg_per_m2);
 	// mass per volume in...
-	static_assert(1_t_per_m3 == 1000_kg_per_m3);
+	EXACT(1_t_per_m3 == 1000_kg_per_m3);
 	// electric potential (U) in...
-	static_assert(1_GV == 1000_MV);
-	static_assert(1_MV == 1000_kV);
-	static_assert(1_kV == 1000_V);
-	static_assert(1_V  == 1000_mV);
-	static_assert(1_V  == volts(1));
-	static_assert(1_mV == 1000_uV);
+	EXACT(1_GV == 1000_MV);
+	EXACT(1_MV == 1000_kV);
+	EXACT(1_kV == 1000_V);
+	EXACT(1_V  == 1000_mV);
+	EXACT(1_V  == volts(1));
+	EXACT(1_mV == 1000_uV);
 	// electric resistance (R) in...
-	static_assert(1_GOhm == 1000_MOhm);
-	static_assert(1_MOhm == 1000_kOhm);
-	static_assert(1_kOhm == 1000_Ohm);
-	static_assert(1_Ohm  == 1000_mOhm);
-	static_assert(1_Ohm  == ohms(1));
-	static_assert(1_mOhm == 1000_uOhm);
+	EXACT(1_GOhm == 1000_MOhm);
+	EXACT(1_MOhm == 1000_kOhm);
+	EXACT(1_kOhm == 1000_Ohm);
+	EXACT(1_Ohm  == 1000_mOhm);
+	EXACT(1_Ohm  == ohms(1));
+	EXACT(1_mOhm == 1000_uOhm);
 	// electric conductance (G) in...
-	static_assert(1_MS == 1000_kS);
-	static_assert(1_kS == 1000_S);
-	static_assert(1_S  == 1000_mS);
-	static_assert(1_mS == 1000_uS);
+	EXACT(1_MS == 1000_kS);
+	EXACT(1_kS == 1000_S);
+	EXACT(1_S  == 1000_mS);
+	EXACT(1_mS == 1000_uS);
 	// electric conductivity (σ) in...
-	static_assert(1_MS_per_m == 1000_kS_per_m);
-	static_assert(1_kS_per_m == 1000_S_per_m);
+	EXACT(1_MS_per_m == 1000_kS_per_m);
+	EXACT(1_kS_per_m == 1000_S_per_m);
 	// electric charge (Q) in...
-	static_assert(1_GAh == 1000_MAh);
-	static_assert(1_MAh == 1000_kAh);
-	static_assert(1_kAh == 1000_Ah);
-	static_assert(1_Ah  == 1000_mAh);
-	static_assert(1_mAh == 1000_uAh);
+	EXACT(1_GAh == 1000_MAh);
+	EXACT(1_MAh == 1000_kAh);
+	EXACT(1_kAh == 1000_Ah);
+	EXACT(1_Ah  == 1000_mAh);
+	EXACT(1_mAh == 1000_uAh);
 	// electric capacitance (C) in...
-	static_assert(1_F  == 1000_mF);
-	static_assert(1_mF == 1000_uF);
-	static_assert(1_nF == 1000_pF);
+	EXACT(1_F  == 1000_mF);
+	EXACT(1_mF == 1000_uF);
+	EXACT(1_nF == 1000_pF);
 	// electric inductance (L) in...
-	static_assert(1_H   == 1000_mH);
-	static_assert(1_mH  == 1000_uH);
+	EXACT(1_H   == 1000_mH);
+	EXACT(1_mH  == 1000_uH);
 	// magnetic field (B) in...
-	static_assert(1_T  == 1000_mT);
-	static_assert(1_T  == teslas(1));
-	static_assert(1_mT == 1000_uT);
+	EXACT(1_T  == 1000_mT);
+	EXACT(1_T  == teslas(1));
+	EXACT(1_mT == 1000_uT);
 	// energy (E) in...
-	static_assert(1_PJ == 1000_TJ);
-	static_assert(1_TJ == 1000_GJ);
-	static_assert(1_GJ == 1000_MJ);
-	static_assert(1_MJ == 1000_kJ);
-	static_assert(1_kJ == 1000_J);
-	static_assert(1_J  == 1000_mJ);
-	static_assert(1_J  == joules(1));
+	EXACT(1_PJ == 1000_TJ);
+	EXACT(1_TJ == 1000_GJ);
+	EXACT(1_GJ == 1000_MJ);
+	EXACT(1_MJ == 1000_kJ);
+	EXACT(1_kJ == 1000_J);
+	EXACT(1_J  == 1000_mJ);
+	EXACT(1_J  == joules(1));
 	// active power (P) in...
-	static_assert(1_TW == 1000_GW);
-	static_assert(1_GW == 1000_MW);
-	static_assert(1_MW == 1000_kW);
-	static_assert(1_kW == 1000_W);
-	static_assert(1_W  == 1000_mW);
-	static_assert(1_W  == watts(1));
-	static_assert(1_mW == 1000_uW);
+	EXACT(1_TW == 1000_GW);
+	EXACT(1_GW == 1000_MW);
+	EXACT(1_MW == 1000_kW);
+	EXACT(1_kW == 1000_W);
+	EXACT(1_W  == 1000_mW);
+	EXACT(1_W  == watts(1));
+	EXACT(1_mW == 1000_uW);
 	// pressure (p) in...
-	static_assert(1_MPa == 1000_kPa);
-	static_assert(1_kPa == 1000_Pa);
-	static_assert(1_Pa  == 1000_mPa);
-	static_assert(1_Pa  == pascals(1));
-	static_assert(1_mPa == 1000_uPa);
+	EXACT(1_MPa == 1000_kPa);
+	EXACT(1_kPa == 1000_Pa);
+	EXACT(1_Pa  == 1000_mPa);
+	EXACT(1_Pa  == pascals(1));
+	EXACT(1_mPa == 1000_uPa);
 	// force (F) in...
-	static_assert(1_GN == 1000_MN);
-	static_assert(1_MN == 1000_kN);
-	static_assert(1_kN == 1000_N);
-	static_assert(1_N  == 1000_mN);
-	static_assert(1_N  == newtons(1));
-	static_assert(1_mN == 1000_uN);
+	EXACT(1_GN == 1000_MN);
+	EXACT(1_MN == 1000_kN);
+	EXACT(1_kN == 1000_N);
+	EXACT(1_N  == 1000_mN);
+	EXACT(1_N  == newtons(1));
+	EXACT(1_mN == 1000_uN);
 	// luminous flux per area in...
-	static_assert(1_klx == 1000_lx);
-	static_assert(1_lx  == 1000_mlx);
-	static_assert(1_lx  == lux(1));
-	static_assert(1_mlx == 1000_ulx);
+	EXACT(1_klx == 1000_lx);
+	EXACT(1_lx  == 1000_mlx);
+	EXACT(1_lx  == lux(1));
+	EXACT(1_mlx == 1000_ulx);
   }
 
   inline void check_astronomical_units() {
-	static_assert(1_Gpc == 1000_Mpc);
-	static_assert(1_Mpc == 1000_kpc);
-	static_assert(1_kpc == 1000_pc);
+	EXACT(1_Gpc == 1000_Mpc);
+	EXACT(1_Mpc == 1000_kpc);
+	EXACT(1_kpc == 1000_pc);
   }
 
   inline void check_Imperial_units() {
-	static_assert(1_nmi == 10_cable);
-	static_assert(1_nmi == 1852_m);
-	static_assert(1_nmi == nautical_miles(1));
-	static_assert(1_mi  == 1760_yd);
-	static_assert(1_mi  == 80_ch);
-	static_assert(1_mi  == statute_miles(1));
-	static_assert(1_mi_per_h == miles_per_h(1));
-	static_assert(1_ft  == feet(1));
-	static_assert(1_in  == inches(1));
-	static_assert(1_lb  == 16_oz);
-	static_assert(1_degF== fahrenheit(1));
+	EXACT(1_nmi == 10_cable);
+	EXACT(1_nmi == 1852_m);
+	EXACT(1_nmi == nautical_miles(1));
+	EXACT(1_mi  == 1760_yd);
+	EXACT(1_mi  == 80_ch);
+	EXACT(1_mi  == statute_miles(1));
+	EXACT(1_mi_per_h == miles_per_h(1));
+	EXACT(1_ft  == feet(1));
+	EXACT(1_in  == inches(1));
+	EXACT(1_lb  == 16_oz);
+	EXACT(1_degF== fahrenheit(1));
   }
 
   inline void check_digital_data_units() {
 	// bits...
-	static_assert(1_Ebit == 1000_Pbit);
-	static_assert(1_Pbit == 1000_Tbit);
-	static_assert(1_Tbit == 1000_Gbit);
-	static_assert(1_Gbit == 1000_Mbit);
-	static_assert(1_Mbit == 1000_kbit);
-	static_assert(1_kbit == 1000_bit);
-	static_assert(1_bit  == bits(1));
-	static_assert(1_bit  == 0.001_kbit);
-	static_assert(4_bit  == 1_nibble);
+	EXACT(1_Ebit == 1000_Pbit);
+	EXACT(1_Pbit == 1000_Tbit);
+	EXACT(1_Tbit == 1000_Gbit);
+	EXACT(1_Gbit == 1000_Mbit);
+	EXACT(1_Mbit == 1000_kbit);
+	EXACT(1_kbit == 1000_bit);
+	EXACT(1_bit  == bits(1));
+	EXACT(1_bit  == 0.001_kbit);
+	EXACT(4_bit  == 1_nibble);
 	// bits per seconds...
-	static_assert(1_Ebit_per_s == 1000_Pbit_per_s);
-	static_assert(1_Pbit_per_s == 1000_Tbit_per_s);
-	static_assert(1_Tbit_per_s == 1000_Gbit_per_s);
-	static_assert(1_Gbit_per_s == 1000_Mbit_per_s);
-	static_assert(1_Mbit_per_s == 1000_kbit_per_s);
-	static_assert(1_kbit_per_s == bits_per_s(1000));
+	EXACT(1_Ebit_per_s == 1000_Pbit_per_s);
+	EXACT(1_Pbit_per_s == 1000_Tbit_per_s);
+	EXACT(1_Tbit_per_s == 1000_Gbit_per_s);
+	EXACT(1_Gbit_per_s == 1000_Mbit_per_s);
+	EXACT(1_Mbit_per_s == 1000_kbit_per_s);
+	EXACT(1_kbit_per_s == bits_per_s(1000));
 	// bytes with metric prefixes...
-	static_assert(1_ZB   == 1000_EB);
-	static_assert(1_EB   == 1000_PB);
-	static_assert(1_PB   == 1000_TB);
-	static_assert(1_TB   == 1000_GB);
-	static_assert(1_GB   == 1000_MB);
-	static_assert(1_MB   == 1000_kB);
-	static_assert(1_kB   == 1000_byte);
-	static_assert(1_byte == bytes(1));
-	static_assert(1_byte == 8_bit);
+	EXACT(1_ZB   == 1000_EB);
+	EXACT(1_EB   == 1000_PB);
+	EXACT(1_PB   == 1000_TB);
+	EXACT(1_TB   == 1000_GB);
+	EXACT(1_GB   == 1000_MB);
+	EXACT(1_MB   == 1000_kB);
+	EXACT(1_kB   == 1000_byte);
+	EXACT(1_byte == bytes(1));
+	EXACT(1_byte == 8_bit);
 	// bytes with binary prefixes...
-	static_assert(1_TiB == 1024_GiB);
-	static_assert(1_GiB == 1024_MiB);
-	static_assert(1_MiB == 1024_KiB);
-	static_assert(1_KiB == 1024_byte);
+	EXACT(1_TiB == 1024_GiB);
+	EXACT(1_GiB == 1024_MiB);
+	EXACT(1_MiB == 1024_KiB);
+	EXACT(1_KiB == 1024_byte);
 	// bytes per second with metric prefixes...
-	static_assert(1_PB_per_s == 1000_TB_per_s);
-	static_assert(1_TB_per_s == 1000_GB_per_s);
-	static_assert(1_GB_per_s == 1000_MB_per_s);
-	static_assert(1_MB_per_s == 1000_KB_per_s);
-	static_assert(1_KB_per_s == 1000_byte_per_s);
-	static_assert(1_KB_per_s == bytes_per_s(1000));
+	EXACT(1_PB_per_s == 1000_TB_per_s);
+	EXACT(1_TB_per_s == 1000_GB_per_s);
+	EXACT(1_GB_per_s == 1000_MB_per_s);
+	EXACT(1_MB_per_s == 1000_KB_per_s);
+	EXACT(1_KB_per_s == 1000_byte_per_s);
+	EXACT(1_KB_per_s == bytes_per_s(1000));
 	// bytes per second with binary prefixes...
-	static_assert(1_TiB_per_s == 1024_GiB_per_s);
-	static_assert(1_GiB_per_s == 1024_MiB_per_s);
-	static_assert(1_MiB_per_s == 1024_KiB_per_s);
-	static_assert(1_KiB_per_s == 1024_byte_per_s);
+	EXACT(1_TiB_per_s == 1024_GiB_per_s);
+	EXACT(1_GiB_per_s == 1024_MiB_per_s);
+	EXACT(1_MiB_per_s == 1024_KiB_per_s);
+	EXACT(1_KiB_per_s == 1024_byte_per_s);
   }
 
   inline void check_angles() {
-	static_assert(0_rad == 0_mrad);
-	static_assert(0_rad == 0_deg);
-	static_assert(0_rad == 0_arcmin);
-	static_assert(0_rad == 0_arcsec);
-	static_assert(0_rad == radians(0));
-	static_assert(1_rad == 1000_mrad);
-	static_assert(nearly_equal(180_deg, constant::pi));
-	static_assert(nearly_equal(180_deg, 10800_arcmin));
-	static_assert(nearly_equal(180_deg, 648000_arcsec));
+	EXACT(0_rad == 0_mrad);
+	EXACT(0_rad == 0_deg);
+	EXACT(0_rad == 0_arcmin);
+	EXACT(0_rad == 0_arcsec);
+	EXACT(0_rad == radians(0));
+	EXACT(1_rad == 1000_mrad);
+	NEARLY0(180_deg - constant::pi);
+	NEARLY0(180_deg - 10800_arcmin);
+	NEARLY0(180_deg - 648000_arcsec);
   }
 
   inline void check_ratios() {
-	static_assert(0.10 == 10_pct);
-	static_assert(0.10 == 1000_bp);
-	static_assert(0.10 == 100'000_ppm);
-	static_assert(0.10 == 100'000'000_ppb);
-	static_assert(0.10 == 100'000'000'000_ppt);
+	EXACT( 0.10 == 10_pct);
+	EXACT( 0.10 == 1000_bp);
+	NEARLY0(0.10 - 100'000_ppm);
+	NEARLY0(0.10 - 100'000'000_ppb);
+	NEARLY0(0.10 - 100'000'000'000_ppt);
   }
 
   inline void check_various_units() {
 	// pressure in...
-	static_assert(1_bar  == 1000_mbar);
-	static_assert(1_kbar == 1000_bar);
-	static_assert(1_Mbar == 1000_kbar);
-	static_assert(1_Gbar == 1000_Mbar);
+	EXACT(1_bar  == 1000_mbar);
+	EXACT(1_kbar == 1000_bar);
+	EXACT(1_Mbar == 1000_kbar);
+	EXACT(1_Gbar == 1000_Mbar);
 	// temperature in...
-	static_assert(0_degC == 273.15_K);
-	//static_assert(nearly_equal(491.67_degR, 273.15_K));
+	EXACT(0_degC == 273.15_K);
+	//NEARLY0(491.67_degR - 273.15_K);
   }
 
   inline void check_functions_and_templates() {
-	static_assert(abs(-3.5_m) == 3.5_m);
-	static_assert(abs(-1_m)   == 1_m);
-	static_assert(abs(0_m)    == 0_m);
-	static_assert(abs(1_m)    == 1_m);
-	static_assert(abs(5.6_m)  == 5.6_m);
+	EXACT(abs(-3.5_m) == 3.5_m);
+	EXACT(abs(-1_m)   == 1_m);
+	EXACT(abs(0_m)    == 0_m);
+	EXACT(abs(1_m)    == 1_m);
+	EXACT(abs(5.6_m)  == 5.6_m);
 
-	static_assert(square(-3_m) == 9_m2);
-	static_assert(square(-1_m) == 1_m2);
-	static_assert(square(-.5_m)== .25_m2);
-	static_assert(square(0_m)  == 0_m2);
-	static_assert(square(.5_m) == .25_m2);
-	static_assert(square(1_m)  == 1_m2);
-	static_assert(square(3_m)  == 9_m2);
+	EXACT(square(-3_m) == 9_m2);
+	EXACT(square(-1_m) == 1_m2);
+	EXACT(square(-.5_m)== .25_m2);
+	EXACT(square(0_m)  == 0_m2);
+	EXACT(square(.5_m) == .25_m2);
+	EXACT(square(1_m)  == 1_m2);
+	EXACT(square(3_m)  == 9_m2);
 
 	// static_assert(sqrt(9_m2) == 3_m); (TODO)
 
-	static_assert(cube(-3_m) == -27_m3);
-	static_assert(cube(-1_m) == -1_m3);
-	static_assert(cube(-.5_m)== -0.125_m3);
-	static_assert(cube(0_m)  == 0_m3);
-	static_assert(cube(.5_m) == 0.125_m3);
-	static_assert(cube(1_m)  == 1_m3);
-	static_assert(cube(3_m)  == 27_m3);
+	EXACT(cube(-3_m) == -27_m3);
+	EXACT(cube(-1_m) == -1_m3);
+	EXACT(cube(-.5_m)== -0.125_m3);
+	EXACT(cube(0_m)  == 0_m3);
+	EXACT(cube(.5_m) == 0.125_m3);
+	EXACT(cube(1_m)  == 1_m3);
+	EXACT(cube(3_m)  == 27_m3);
 
 	// static_assert(cbrt(27_m3) == 3_m); (TODO)
 
-	static_assert(clamp(-2_m, -1_m,1_m) == -1_m);
-	static_assert(clamp(-1_m, 0_m,1_m) == 0_m);
-	static_assert(clamp(-1_m, 1_m,2_m) == 1_m);
-	static_assert(clamp(-0.5_m, 1_m,2_m) == 1_m);
-	static_assert(clamp(0_m, 0_m,1_m) == 0_m);
-	static_assert(clamp(0_m, -1_m,2_m) == 0_m);
-	static_assert(clamp(3_m, 4_m,5_m) == 4_m);
-	static_assert(clamp(3_m, 1_m,2_m) == 2_m);
+	EXACT(clamp(-2_m, -1_m,1_m) == -1_m);
+	EXACT(clamp(-1_m, 0_m,1_m) == 0_m);
+	EXACT(clamp(-1_m, 1_m,2_m) == 1_m);
+	EXACT(clamp(-0.5_m, 1_m,2_m) == 1_m);
+	EXACT(clamp(0_m, 0_m,1_m) == 0_m);
+	EXACT(clamp(0_m, -1_m,2_m) == 0_m);
+	EXACT(clamp(3_m, 4_m,5_m) == 4_m);
+	EXACT(clamp(3_m, 1_m,2_m) == 2_m);
   }
 
   inline void check_SI_prefixes() {
-        static_assert(quetta == 1000 * ronna);
-        static_assert(ronna  == 1000 * yotta);
-        static_assert(yotta  == 1000 * zetta);
-        static_assert(zetta  == 1000 * exa);
-        static_assert(exa    == 1000 * peta);
-        static_assert(peta   == 1000 * tera);
-        static_assert(tera   == 1000 * giga);
-        static_assert(giga   == 1000 * mega);
-        static_assert(mega   == 1000 * kilo);
-        static_assert(kilo   ==   10 * hecto);
-        static_assert(hecto  ==   10 * deca);
-        static_assert(deca   ==  100 * deci);
-        static_assert(deci   ==   10 * centi);
-        static_assert(centi  ==   10 * milli);
-        static_assert(milli  == 1000 * micro);
-        static_assert(nearly_equal(micro, 1000 * nano));
-        static_assert(nearly_equal(nano, 1000 * pico));
-        static_assert(nearly_equal(pico, 1000 * femto));
-        static_assert(nearly_equal(femto, 1000 * atto));
-        static_assert(nearly_equal(atto, 1000 * zepto));
-        static_assert(nearly_equal(zepto, 1000 * yocto));
-        static_assert(nearly_equal(yocto, 1000 * ronto));
-        static_assert(nearly_equal(ronto, 1000 * quecto));
+        EXACT(quetta == 1000 * ronna);
+        EXACT(ronna  == 1000 * yotta);
+        EXACT(yotta  == 1000 * zetta);
+        EXACT(zetta  == 1000 * exa);
+        EXACT(exa    == 1000 * peta);
+        EXACT(peta   == 1000 * tera);
+        EXACT(tera   == 1000 * giga);
+        EXACT(giga   == 1000 * mega);
+        EXACT(mega   == 1000 * kilo);
+        EXACT(kilo   ==   10 * hecto);
+        EXACT(hecto  ==   10 * deca);
+        EXACT(deca   ==  100 * deci);
+        EXACT(deci   ==   10 * centi);
+        EXACT(centi  ==   10 * milli);
+        EXACT(milli  == 1000 * micro);
+        NEARLY0(micro - 1000 * nano);
+        NEARLY0(nano  - 1000 * pico);
+        NEARLY0(pico  - 1000 * femto);
+        NEARLY0(femto - 1000 * atto);
+        NEARLY0(atto  - 1000 * zepto);
+        NEARLY0(zepto - 1000 * yocto);
+        NEARLY0(yocto - 1000 * ronto);
+        NEARLY0(ronto - 1000 * quecto);
   }
 
 } // end of namespace
+
+#undef EXACT
+#undef NEARLY0

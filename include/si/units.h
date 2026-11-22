@@ -193,13 +193,6 @@ namespace si {
       return x;
   }
 
-  /// @brief Returns true if both quantities are nearly equal.
-  template <typename T>
-  [[nodiscard]] inline constexpr bool nearly_equal(T a, T b) {
-	T delta = a - b;
-	return delta > -1e-10 && delta < 1e-10;
-  }
-
 } // end of namespace
 
 #undef UNIT
