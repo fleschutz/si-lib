@@ -411,31 +411,15 @@ namespace si {
 		return _fmt(n / 1_bit, "bit", fmtStr);
 	}
 
-	// to_percentage() Function Overloading
-	// ------------------------------------
-
-	/// @brief Returns the percentage as string, e.g. "50.0%"
-	FUNC std::string to_percentage(length part, length total, const char* fmtStr = to_percentage_format) {
+	// to_percentage() Template
+	// ------------------------
+	template <typename T>
+	FUNC std::string to_percentage(T part, T total, const char* fmtStr = to_percentage_format) {
 		return _fmt((part / total) * 100.0, "%", fmtStr);
 	}
 
-	/// @brief Returns the percentage as string, e.g. "50.0%"
-	FUNC std::string to_percentage(mass part, mass total, const char* fmtStr = to_percentage_format) {
-		return _fmt((part / total) * 100.0, "%", fmtStr);
-	}
-
-	/// @brief Returns the percentage as string, e.g. "50.0%"
-	FUNC std::string to_percentage(velocity part, velocity total, const char* fmtStr = to_percentage_format) {
-		return _fmt((part / total) * 100.0, "%", fmtStr);
-	}
-
-	/// @brief Returns the percentage as string, e.g. "50.0%"
-	FUNC std::string to_percentage(data_size part, data_size total, const char* fmtStr = to_percentage_format) {
-		return _fmt((part / total) * 100.0, "%", fmtStr);
-	}
-
-	// Operator <<
-	// -----------
+	// The << Operator
+	// ---------------
 	inline std::ostream& operator<<(std::ostream& o, length n) { return o << to_string(n); }
 	inline std::ostream& operator<<(std::ostream& o, time n) { return o << to_string(n); }
 	inline std::ostream& operator<<(std::ostream& o, mass n) { return o << to_string(n); }
