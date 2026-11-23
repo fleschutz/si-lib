@@ -7,8 +7,8 @@
 #include <cassert>
 #include <si/literals.h>
 #include <si/prefixes.h>
-#define EXACT(_condition) static_assert(_condition)
-#define NEARLY0(_delta)   static_assert(_delta > -1e-10 && _delta < 1e-10)
+#define EXACT(_condition)    static_assert(_condition)
+#define NEARLY_EQUAL(_a, _b) static_assert((_a) * 1.00001 >= (_b) && (_a) <= (_b) * 1.00001)
 
 namespace si {
 
@@ -318,17 +318,17 @@ namespace si {
 	EXACT(0_rad == 0_arcsec);
 	EXACT(0_rad == radians(0));
 	EXACT(1_rad == 1000_mrad);
-	NEARLY0(180_deg - constant::pi);
-	NEARLY0(180_deg - 10800_arcmin);
-	NEARLY0(180_deg - 648000_arcsec);
+	NEARLY_EQUAL(180_deg, constant::pi);
+	NEARLY_EQUAL(180_deg, 10800_arcmin);
+	NEARLY_EQUAL(180_deg, 648000_arcsec);
   }
 
   inline void check_ratios() {
 	EXACT( 0.10 == 10_pct);
 	EXACT( 0.10 == 1000_bp);
-	NEARLY0(0.10 - 100'000_ppm);
-	NEARLY0(0.10 - 100'000'000_ppb);
-	NEARLY0(0.10 - 100'000'000'000_ppt);
+	NEARLY_EQUAL(0.10, 100'000_ppm);
+	NEARLY_EQUAL(0.10, 100'000'000_ppb);
+	NEARLY_EQUAL(0.10, 100'000'000'000_ppt);
   }
 
   inline void check_various_units() {
@@ -338,8 +338,9 @@ namespace si {
 	EXACT(1_Mbar == 1000_kbar);
 	EXACT(1_Gbar == 1000_Mbar);
 	// temperature in...
-	EXACT(0_degC == 273.15_K);
-	//NEARLY0(491.67_degR - 273.15_K);
+	NEARLY_EQUAL(0_degC, 273.15_K);
+	NEARLY_EQUAL(0_degC, 32.0_degF);
+	NEARLY_EQUAL(491.67_degR, 273.15_K);
   }
 
   inline void check_functions_and_templates() {
@@ -395,17 +396,16 @@ namespace si {
         EXACT(deci   ==   10 * centi);
         EXACT(centi  ==   10 * milli);
         EXACT(milli  == 1000 * micro);
-        NEARLY0(micro - 1000 * nano);
-        NEARLY0(nano  - 1000 * pico);
-        NEARLY0(pico  - 1000 * femto);
-        NEARLY0(femto - 1000 * atto);
-        NEARLY0(atto  - 1000 * zepto);
-        NEARLY0(zepto - 1000 * yocto);
-        NEARLY0(yocto - 1000 * ronto);
-        NEARLY0(ronto - 1000 * quecto);
+        NEARLY_EQUAL(micro, 1000 * nano);
+        NEARLY_EQUAL(nano,  1000 * pico);
+        NEARLY_EQUAL(pico,  1000 * femto);
+        NEARLY_EQUAL(femto, 1000 * atto);
+        NEARLY_EQUAL(atto,  1000 * zepto);
+        NEARLY_EQUAL(zepto, 1000 * yocto);
+        NEARLY_EQUAL(yocto, 1000 * ronto);
+        NEARLY_EQUAL(ronto, 1000 * quecto);
   }
-
 } // end of namespace
 
 #undef EXACT
-#undef NEARLY0
+#undef NEARLY_EQUAL

@@ -11,7 +11,7 @@ void various_examples() {
     cout << "    === VARIOUS EXAMPLES ===" << endl;
 
     mass m   = 1_kg;
-    energy E = m * constant::c²;
+    energy E = m * square(constant::c);
     cout << " 1. The potential energy per kilogram is: " << E << endl;
 
 

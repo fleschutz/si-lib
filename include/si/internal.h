@@ -92,7 +92,7 @@ namespace si {
 		template <class T> [[nodiscard]] SI_INLINE_CONSTEXPR vec2<T> operator-(const vec2<T>& v) { return { -v.x, -v.y }; }
 		template <class T> [[nodiscard]] SI_INLINE_CONSTEXPR vec3<T> operator-(const vec3<T>& v) { return { -v.x, -v.y, -v.z }; }
 
-		// comparsion operators
+		// comparison operators
 		template <class T, class U> [[nodiscard]] SI_INLINE_CONSTEXPR bool operator==(const vec2<T>& lhs, const vec2<U>& rhs) { return lhs.x == rhs.x && lhs.y == rhs.y; }
 		template <class T, class U> [[nodiscard]] SI_INLINE_CONSTEXPR bool operator==(const vec3<T>& lhs, const vec3<U>& rhs) { return lhs.x == rhs.x && lhs.y == rhs.y && lhs.z == rhs.z; }
 		template <class T, class U> [[nodiscard]] SI_INLINE_CONSTEXPR bool operator!=(const vec2<T>& lhs, const vec2<U>& rhs) { return lhs.x != rhs.x || lhs.y != rhs.y; }
@@ -291,24 +291,16 @@ namespace si {
 		template <class Dimension, class T>
 		class quantity_storage {
 		public:
-			SI_INLINE_CONSTEXPR quantity_storage()
-				: m_value(0)
-			{}
+			SI_INLINE_CONSTEXPR quantity_storage() : m_value(0) {}
 
-			SI_INLINE_CONSTEXPR explicit operator bool() const {
-				return static_cast<bool>(m_value);
-			}
+			SI_INLINE_CONSTEXPR explicit operator bool() const { return static_cast<bool>(m_value); }
 
 		private:
 			T m_value;
 
-			friend SI_INLINE_CONSTEXPR const T& value(const quantity_storage& x) {
-				return x.m_value;
-			}
+			friend SI_INLINE_CONSTEXPR const T& value(const quantity_storage& x) { return x.m_value; }
 
-			friend SI_INLINE_CONSTEXPR T& value(quantity_storage& x) {
-				return x.m_value;
-			}
+			friend SI_INLINE_CONSTEXPR T& value(quantity_storage& x) { return x.m_value; }
 		};
 
 		// Helper function for filling all components of either a scalar or a vector to a given value
@@ -326,9 +318,7 @@ namespace si {
 
 			SI_INLINE_CONSTEXPR quantity(zero_t = {}) { }
 
-			SI_INLINE_CONSTEXPR quantity(Dimension, const T& x) {
-				value(*this) = x;
-			}
+			SI_INLINE_CONSTEXPR quantity(Dimension, const T& x) { value(*this) = x; }
 
 			template <class U>
 			SI_INLINE_CONSTEXPR quantity(const quantity<Dimension, U>& q) {
@@ -378,8 +368,7 @@ namespace si {
 
 		template <class U>
 		SI_INLINE_CONSTEXPR auto value2(zero_t, const U& other) {
-			// Return zero of the given other type (i.e. return vec2() instead of plain 0)
-			return decltype(value(other)){};
+			return decltype(value(other)){}; // Return zero of the given other type (i.e. return vec2() instead of plain 0)
 		}
 
 		// Checks wheter two types have compatible dimensions (zero is compatible with everything)
