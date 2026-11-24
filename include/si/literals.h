@@ -316,6 +316,9 @@ namespace si {
   UDL(_deg,0.01745329251994329576923690768489, radians); // 1_deg    (°, degree)
   UDL(_arcmin,0.00029088820866572159615394846, radians); // 1_arcmin (', arc minute)
   UDL(_arcsec,0.00000484813681109535993589914, radians); // 1_arcsec ('', arc second)
+  UDL(_mil,0.00098174770424681, radians); // 1_mil (NATO)
+  UDL(_grad, 0.01570796, radians);        // 1_grad (gradians)
+  UDL(_tr,6.28318530717958647692,radians);// 1_tr (turn)
   // other units in...
   UDL(_Nm,       1, newtonmeters);        // 1_Nm  (newtonmeter)
   UDL(_sr,       1, steradians);          // 1_sr  (steradian)
