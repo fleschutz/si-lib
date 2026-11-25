@@ -1,7 +1,6 @@
 #include <si/core.h> 
-using namespace si;
 
-void cheat_sheet() {
+void cheat_sheet() {   using namespace si;
 
     // Assignment
     // ----------
@@ -54,9 +53,9 @@ void cheat_sheet() {
     // -----
     for (auto t = 0_s; t < 5_min; t += 1_s) { } // 0 to 5min in 1s steps
 
-    // User-defined Units
-    // ------------------
-    auto smoot = unit<length, 17'018, 10'000>(); // Oliver R Smoot's height (https://en.wikipedia.org/wiki/Smoot)
+    // New Units
+    // ---------
+    auto smoot = unit<length, 17018, 10000>(); // Oliver R Smoot's height (https://en.wikipedia.org/wiki/Smoot)
     auto Harvard_bridge_length = smoot(364.4);
 
     // Export
