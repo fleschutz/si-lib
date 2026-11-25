@@ -1,7 +1,7 @@
 Integrate *si-lib* in Projects
 ==============================
 
-Please choose one of the 4 integration options:
+Please choose one integration option:
 
 ### Option 1: Using `FetchContent` in CMake
 
@@ -58,4 +58,4 @@ Use the convenient *#include <si/core.h>* to include the 6 core header files (da
 
 Improve Debugging
 -----------------
-If you might be debugging using Microsoft Visual Studio, you may find the debugger visualisation file at ../examples/visualization.natvis useful to include into your build.
+If you might be debugging using Microsoft Visual Studio, you may find the debugger visualisation file at examples/visualization.natvis useful to include into your build.
