@@ -28,9 +28,8 @@ void cheat_sheet() {
 
     // Comparison
     // ----------
-    bool good = (1_m < 2_ft);      // correct 
-    // bool bad = (1_m < 1_kg);    // ERROR: incompatible dimensions
-    for (auto t = 0_s; t < 5_min; t += 1_s) { } // time loop
+    bool good = (1_m > 2_ft);      // correct 
+    // bool bad = (1_m > 1_kg);    // ERROR: incompatible dimensions
 
     // Angles
     // ------
@@ -50,6 +49,10 @@ void cheat_sheet() {
     dimensionless r4 = 100'000_ppm;// or as parts per million
     dimensionless r5 = 100'000'000_ppb; // or as parts per billion
     dimensionless r6 = 100'000'000'000_ppt; // or as parts per trillion
+
+    // Loops
+    // -----
+    for (auto t = 0_s; t < 5_min; t += 1_s) { } // 0 to 5min in 1s steps
 
     // User-defined Units
     // ------------------
