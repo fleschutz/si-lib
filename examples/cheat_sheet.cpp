@@ -2,8 +2,8 @@
 
 void cheat_sheet() {   using namespace si;
 
-    // Assignment
-    // ----------
+    // Assignments
+    // -----------
     length a = 1_m;                // user-defined literal (UDL)
     auto   b = 1_m;                // with convenient auto
     length c = meters(1);          // construct from number
@@ -13,6 +13,7 @@ void cheat_sheet() {   using namespace si;
 
     // Calculations
     // ------------
+    auto t = 1_h + 7_min + 9_s;    // time added
     area A = a * b;                // area from length by length
     volume V = A * 10_ft;          // volume from area by height
     density D = 1_kg / V;          // density from mass per volume
@@ -23,10 +24,10 @@ void cheat_sheet() {   using namespace si;
     temperature T = 10_degC + 5_K; // different units
     auto DS = 5_TB / 1_s;          // data speed from data size per time
     energy E = 1_kg * square(constant::c); // with a constant
-    length W = wavelength_formula(constant::c, 100_Hz); // with a formula
+    length W = wavelength_formula(constant::c, 100_Hz); // using a formula
 
-    // Comparison
-    // ----------
+    // Comparisons
+    // -----------
     bool good = (1_m > 2_ft);      // correct 
     // bool bad = (1_m > 1_kg);    // ERROR: incompatible dimensions
 
@@ -58,8 +59,8 @@ void cheat_sheet() {   using namespace si;
     auto smoot = unit<length, 17018, 10000>(); // Oliver R Smoot's height (https://en.wikipedia.org/wiki/Smoot)
     auto Harvard_bridge_length = smoot(364.4);
 
-    // Export
-    // ------
+    // Exports
+    // -------
     length len = 42_m;
     auto e1 = meters(len);         // cast to number (=42)
     auto e2 = len / 1_m;           // divide to a number (=42)
