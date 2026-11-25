@@ -50,12 +50,12 @@ namespace si {
 	TEST( 1_Mm == 1000_km );
 	TEST( 1_km == 1000_m  );
 	TEST( 1_m  == meters(1));
-	TEST( 1_dm == 0.1_m   );
-	TEST( 1_cm == 0.1_dm  );
-	TEST( 1_mm == 0.1_cm  );
-	TEST( 1_um == 0.001_mm);
-	NEARLY_EQUAL(1_nm, 0.001_um);
-	NEARLY_EQUAL(1_pm, 0.001_nm);
+	TEST( 1_m  == 10_dm   );
+	TEST( 1_dm == 10_cm   );
+	TEST( 1_cm == 10_mm   );
+	TEST( 1_mm == 1000_um );
+	TEST( 1_um == 1000_nm );
+	NEARLY_EQUAL(1_nm, 1000_pm);
 	// time in...
 	TEST(1_d   == 24_h);
 	TEST(1_h   == 60_min);
