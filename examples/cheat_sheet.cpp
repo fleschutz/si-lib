@@ -53,7 +53,7 @@ void cheat_sheet() {   using namespace si;
     // -----
     for (auto t = 0_s; t < 5_min; t += 1_s) { } // 0 to 5min in 1s steps
 
-    // New Units
+    // Own Units
     // ---------
     auto smoot = unit<length, 17018, 10000>(); // Oliver R Smoot's height (https://en.wikipedia.org/wiki/Smoot)
     auto Harvard_bridge_length = smoot(364.4);
