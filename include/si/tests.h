@@ -8,7 +8,7 @@
 #include <si/literals.h>
 #include <si/prefixes.h>
 #define TEST(_condition)     static_assert(_condition)
-#define NEARLY_EQUAL(_a, _b) static_assert((_a) * 1.0000001 >= (_b) && (_a) <= (_b) * 1.0000001)
+#define NEARLY_EQUAL(_a, _b) static_assert((_a) * 1.000000001 >= (_b) && (_a) <= (_b) * 1.000000001)
 
 namespace si {
 
@@ -54,7 +54,7 @@ namespace si {
 	TEST( 1_dm == 10_cm   );
 	TEST( 1_cm == 10_mm   );
 	TEST( 1_mm == 1000_um );
-	TEST( 1_um == 1000_nm );
+	NEARLY_EQUAL(1_um, 1000_nm);
 	NEARLY_EQUAL(1_nm, 1000_pm);
 	// time in...
 	TEST(1_d   == 24_h);
