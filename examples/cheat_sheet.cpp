@@ -34,34 +34,34 @@ void cheat_sheet() {
 
     // Angles
     // ------
-    angle alpha   = 180_deg;       // 180°
-    angle beta    = constant::pi;  // or π
-    angle gamma   = 3.14_rad;      // or as radian
-    angle delta   = 3'141.5_mrad;  // or as milliradian 
-    angle eta     = 10800_arcmin;  // or as arcminutes
-    angle epsilon = 648000_arcsec; // or as arcseconds
-    angle zeta    = radians(3.14); // or constructed from number
+    angle a1 = 180_deg;            // 180°
+    angle a2 = constant::pi;       // or π
+    angle a3 = 3.14_rad;           // or as radian
+    angle a4 = 3'141.5_mrad;       // or as milliradian 
+    angle a5 = 10800_arcmin;       // or as arcminutes
+    angle a6 = 648000_arcsec;      // or as arcseconds
+    angle a7 = radians(3.14);      // or constructed from number
 
-    // Ratio
-    // -----
-    dimensionless ratio1 = 0.10; 
-    dimensionless ratio2 = 10_pct; // or as percentage (%)
-    dimensionless ratio3 = 1000_bp; // or as basis points
-    dimensionless ratio4 = 100'000_ppm; // or as parts per million
-    dimensionless ratio5 = 100'000'000_ppb; // or as parts per billion
-    dimensionless ratio6 = 100'000'000'000_ppt; // or as parts per trillion
-
-    // Export a Quantity
-    // -----------------
-    length len = 42_m;
-    double x = meters(len);        // cast to a unit (=42)
-    double y = len / 1_m;          // divide to a dimensionless number (=42) - doesn't work for celsius/fahrenheit due to the offset!
-    std::string str = to_string(len); // length to string conversion (="42.0m")
-    std::string equiv = to_equivalent(len); //  length to an equivalent string conversion (="45.93yd")
-    std::string progress = to_percentage(len, 420_m); // length to percentage string conversion (="10%")
+    // Ratios
+    // ------
+    dimensionless r1 = 0.1;        // 1/10
+    dimensionless r2 = 10_pct;     // or as percentage (%)
+    dimensionless r3 = 1000_bp;    // or as basis points
+    dimensionless r4 = 100'000_ppm;// or as parts per million
+    dimensionless r5 = 100'000'000_ppb; // or as parts per billion
+    dimensionless r6 = 100'000'000'000_ppt; // or as parts per trillion
 
     // User-defined Units
     // ------------------
     auto smoot = unit<length, 17'018, 10'000>(); // Oliver R Smoot's height (https://en.wikipedia.org/wiki/Smoot)
     auto Harvard_bridge_length = smoot(364.4);
+
+    // Export
+    // ------
+    length len = 42_m;
+    auto e1 = meters(len);         // cast to number (=42)
+    auto e2 = len / 1_m;           // divide to a number (=42)
+    auto e3 = to_string(len);      // convert to a string (="42.0m")
+    auto e4 = to_equivalent(len);  // convert to an equivalent string (="45.93yd")
+    auto e5 = to_percentage(len, 420_m); // convert to percentage string (="10%")
 }
