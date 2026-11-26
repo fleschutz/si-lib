@@ -70,7 +70,7 @@ void speed_examples() {
     auto downloaded = 0_byte, total = 1_GB;
     auto duration   = 0_s;
     for (; downloaded < total; downloaded += 100_MB, duration += 1_s) {
-	    cout << to_percentage(downloaded, total) << ", ";
+	    cout << to_pct(downloaded, total) << ", ";
     }
     cout << downloaded << " downloaded in " << duration << endl << endl;
 

@@ -1,6 +1,6 @@
 /// @file     <si/conversions.h>
 /// @brief    Provides conversion functions, e.g. to_string()
-/// @details  Defines from_string(), to_string(), to_equivalent(), to_percentage(), and the operator <<.
+/// @details  Defines from_string(), to_string(), to_equivalent(), to_pct(), and the operator <<.
 
 #pragma once
 #include <iostream>
@@ -411,10 +411,10 @@ namespace si {
 		return _fmt(n / 1_bit, "bit", fmtStr);
 	}
 
-	// to_percentage() Template
-	// ------------------------
+	// to_pct() Template
+	// -----------------
 	template <typename T>
-	FUNC std::string to_percentage(T part, T total, const char* fmtStr = to_percentage_format) {
+	FUNC std::string to_pct(T part, T total, const char* fmtStr = to_percentage_format) {
 		return _fmt((part / total) * 100.0, "%", fmtStr);
 	}
 
