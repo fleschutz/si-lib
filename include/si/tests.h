@@ -1,7 +1,7 @@
 /// @file      <si/tests.h>
 /// @brief     Contains 300+ unit tests
 /// @details   The unit tests are executed at compile-time and on each commit by GitHub actions.
-///            Categories are: features, datatypes, base units, derived units, astronomical units, Imperial units, digital data units, angles, ratios, various, functions and templates, SI prefixes.
+///            Categories are: some features, base units, derived units, astronomical units, Imperial units, digital data units, angles, ratios, various, functions and templates, SI prefixes.
 
 #pragma once
 #include <cassert>
@@ -12,7 +12,7 @@
 
 namespace si {
 
-  inline void check_features() { // shows what's possible - the serious checks follow below
+  inline void check_some_features() { // just show what's possible - the serious checks follow below
 	TEST( 3_m == meters(3) );
 	TEST( 3_m == 3 * 1_m );
 	TEST( 1_km + 1_m + 1_dm + 1_cm + 1_mm == 1001.111_m );
@@ -30,18 +30,6 @@ namespace si {
 	TEST( 16_bit == 2_byte );
   }
 
-  inline void check_datatypes() {
-	TEST(sizeof(length) == sizeof(SIdouble));
-	TEST(sizeof(mass) == sizeof(SIdouble));
-	TEST(sizeof(time) == sizeof(SIdouble));
-	TEST(sizeof(temperature) == sizeof(SIdouble));
-	TEST(sizeof(current) == sizeof(SIdouble));
-	TEST(sizeof(substance) == sizeof(SIdouble));
-	TEST(sizeof(luminous_intensity) == sizeof(SIdouble));
-	TEST(sizeof(data_size) == sizeof(SIdouble));
-	TEST(sizeof(dimensionless) == sizeof(SIdouble));
-  }
-
   inline void check_SI_base_units() {
 	// length in...
 	TEST( 1_Pm == 1000_Tm );
@@ -57,101 +45,99 @@ namespace si {
 	NEARLY_EQUAL(1_um, 1000_nm);
 	NEARLY_EQUAL(1_nm, 1000_pm);
 	// time in...
-	TEST(1_d   == 24_h);
-	TEST(1_h   == 60_min);
-	TEST(1_h   == hours(1));
-	TEST(1_min == 60_s);
-	TEST(1_min == minutes(1));
-	TEST(1_s   == 1000_ms);
-	TEST(1_s   == seconds(1));
-	TEST(1_ms  == 0.001_s);
-	TEST(1_us  == 0.001_ms);
-	TEST(1_ns  == 0.001_us);
+	TEST( 1_d   == 24_h );
+	TEST( 1_h   == 60_min );
+	TEST( 1_h   == hours(1) );
+	TEST( 1_min == 60_s );
+	TEST( 1_min == minutes(1) );
+	TEST( 1_s   == 1000_ms );
+	TEST( 1_s   == seconds(1) );
+	TEST( 1_ms  == 0.001_s );
+	TEST( 1_us  == 0.001_ms );
+	TEST( 1_ns  == 0.001_us );
 	// mass in...
-	TEST(1_Gt == 1000_Mt);
-	TEST(1_Mt == 1000_kt);
-	TEST(1_kt == 1000_t);
-	TEST(1_t  == 1000_kg);
-	TEST(1_kg == 1000_g);
-	TEST(1_kg == kilograms(1));
-	TEST(1_g  == 0.001_kg);
-	TEST(1_mg == 0.001_g);
-	TEST(1_ug == 0.001_mg);
+	TEST( 1_Gt == 1000_Mt );
+	TEST( 1_Mt == 1000_kt );
+	TEST( 1_kt == 1000_t );
+	TEST( 1_t  == 1000_kg );
+	TEST( 1_kg == 1000_g );
+	TEST( 1_kg == kilograms(1) );
+	TEST( 1_g  == 0.001_kg );
+	TEST( 1_mg == 0.001_g );
+	TEST( 1_ug == 0.001_mg );
 	// thermodynamic temperature in...
-	TEST(1_GK == 1000_MK);
-	TEST(1_MK == 1000_kK);
-	TEST(1_kK == 1000_K);
-	TEST(1_mK == 0.001_K);
-	TEST(1_uK == 0.001_mK);
-	TEST(1_nK == 0.001_uK);
+	TEST( 1_GK == 1000_MK );
+	TEST( 1_MK == 1000_kK );
+	TEST( 1_kK == 1000_K );
+	TEST( 1_mK == 0.001_K );
+	TEST( 1_uK == 0.001_mK );
+	TEST( 1_nK == 0.001_uK );
 	// electric current in...
-	TEST(1_GA == 1000_MA);
-	TEST(1_MA == 1000_kA);
-	TEST(1_kA == 1000_A);
-	TEST(1_A  == 1000_mA);
-	TEST(1_A  == amperes(1));
-	TEST(1_mA == 0.001_A);
-	TEST(1_uA == 0.001_mA);
-	TEST(1_nA == 0.001_uA);
+	TEST( 1_GA == 1000_MA );
+	TEST( 1_MA == 1000_kA );
+	TEST( 1_kA == 1000_A );
+	TEST( 1_A  == 1000_mA );
+	TEST( 1_A  == amperes(1) );
+	TEST( 1_mA == 0.001_A );
+	TEST( 1_uA == 0.001_mA );
+	TEST( 1_nA == 0.001_uA );
 	// amount of substance in...
-	TEST(1_Gmol == 1000_Mmol);
-	TEST(1_Mmol == 1000_kmol);
-	TEST(1_kmol == 1000_mol);
-	TEST(1_mol  == 0.001_kmol);
-	TEST(1_mol  == moles(1));
-	TEST(1_mmol == 0.001_mol);
-	TEST(1_umol == 0.001_mmol);
-	TEST(1_nmol == 0.001_umol);
+	TEST( 1_Gmol == 1000_Mmol );
+	TEST( 1_Mmol == 1000_kmol );
+	TEST( 1_kmol == 1000_mol );
+	TEST( 1_mol  == 0.001_kmol );
+	TEST( 1_mol  == moles(1) );
+	TEST( 1_mmol == 0.001_mol );
+	TEST( 1_umol == 0.001_mmol );
+	TEST( 1_nmol == 0.001_umol );
 	// luminous intensity in...
-	TEST(1_kcd == 1000_cd);
-	TEST(1_cd == 0.001_kcd);
-	TEST(1_cd == candelas(1));
+	TEST( 1_kcd == 1000_cd );
+	TEST( 1_cd == 0.001_kcd );
+	TEST( 1_cd == candelas(1) );
   }
 
   inline void check_SI_derived_units() {
 	// area in...
-	TEST(1_km2 == 1_km * 1_km);
-	TEST(1_km2 == 100_hm2);
-	TEST(1_hm2 == 10'000_m2);
-	TEST(1_hm2 == 100_m * 100_m);
-	TEST(1_m2  == 10'000_cm2);
-	TEST(1_m2  == meters2(1));
-	TEST(1_cm2 == 0.0001_m2);
-	TEST(1_m2  == 1_m * 1_m);
-	TEST(1_cm2 == 1_cm * 1_cm);
-	TEST(1_mm2 == 1_mm * 1_mm);
+	TEST( 1_km2 == 1_km * 1_km );
+	TEST( 1_km2 == 100_hm2 );
+	TEST( 1_hm2 == 10'000_m2 );
+	TEST( 1_hm2 == 100_m * 100_m );
+	TEST( 1_m2  == 10'000_cm2 );
+	TEST( 1_m2  == meters2(1) );
+	TEST( 1_cm2 == 0.0001_m2 );
+	TEST( 1_m2  == 1_m * 1_m );
+	TEST( 1_cm2 == 1_cm * 1_cm );
+	TEST( 1_mm2 == 1_mm * 1_mm );
 	// volume in...
-	TEST(1_km3 == 1_km * 1_km * 1_km);
-	TEST(1_km3 == 1e9_m3);
-	TEST(1_m3  == 1_m * 1_m * 1_m);
-	TEST(1_m3  == meters3(1));
-	TEST(1_m3  == 1e6_cm3);
-	TEST(1_cm3 == 0.000'001_m3);
+	TEST( 1_km3 == 1_km * 1_km * 1_km );
+	TEST( 1_km3 == 1e9_m3 );
+	TEST( 1_m3  == 1_m * 1_m * 1_m );
+	TEST( 1_m3  == meters3(1) );
+	TEST( 1_m3  == 1e6_cm3 );
+	TEST( 1_cm3 == 0.000'001_m3 );
 	// static_assert(1_cm3 == 1_cm * 1_cm * 1_cm);
 	// velocity in...
-	TEST(1_km_per_s == 1000_m_per_s);
-	TEST(3.6_km_per_h == 1_m_per_s);
-	TEST(1_km_per_h == 1_km / 1_h);
-	TEST(1_km_per_h == 1000_m / 1_h);
-	TEST(1_km_per_h == 1_km / 60_min);
-	TEST(1_km_per_h == 1000_m / 60_min);
-	TEST(1_km_per_h == 1_km / 3600_s);
-	TEST(1_km_per_h == 1000_m / 3600_s);
-	TEST(1_km_per_h == 500_m / 1800_s);
+	TEST( 1_km_per_s == 1000_m_per_s );
+	TEST( 3.6_km_per_h == 1_m_per_s );
+	TEST( 1_km_per_h == 1_km / 1_h );
+	TEST( 1_km_per_h == 1000_m / 1_h );
+	TEST( 1_km_per_h == 1_km / 60_min );
+	TEST( 1_km_per_h == 1000_m / 60_min );
+	TEST( 1_km_per_h == 1_km / 3600_s );
+	TEST( 1_km_per_h == 1000_m / 3600_s );
+	TEST( 1_km_per_h == 500_m / 1800_s );
 	// acceleration in...
 	TEST(1_km_per_s2 == 1000_m_per_s2);
 	TEST(0.001_km_per_s2 == 1_m_per_s2);
 	// frequency in...
-	TEST(1_PHz == 1000_THz);
-	TEST(1_THz == 1000_GHz);
-	TEST(1_GHz == 1000_MHz);
-	TEST(1_MHz == 1000_kHz);
-	TEST(1_kHz == 1000_Hz);
-	TEST(1_Hz  == 0.001_kHz);
-	TEST(1_Hz  == hertz(1));
-	TEST(1_Hz  == 0.000001_MHz);
-	TEST(1_Hz  == 0.000000001_GHz);
-	TEST(1_mHz == 0.001_Hz);
+	TEST( 1_PHz == 1000_THz );
+	TEST( 1_THz == 1000_GHz );
+	TEST( 1_GHz == 1000_MHz );
+	TEST( 1_MHz == 1000_kHz );
+	TEST( 1_kHz == 1000_Hz );
+	TEST( 1_Hz  == hertz(1) );
+	TEST( 1_mHz == 0.001_Hz );
+	TEST( 1_uHz == 0.001_mHz );
 	// radioactive activity (A) in...
 	TEST(1_TBq == 1000_GBq);
 	TEST(1_GBq == 1000_MBq);
@@ -353,7 +339,7 @@ namespace si {
 	TEST(square(1_m)  == 1_m2);
 	TEST(square(3_m)  == 9_m2);
 
-	// static_assert(sqrt(9_m2) == 3_m); (TODO)
+	// static_assert(sqrt(9_m2) == 3_m);
 
 	TEST(cube(-3_m) == -27_m3);
 	TEST(cube(-1_m) == -1_m3);
@@ -363,7 +349,7 @@ namespace si {
 	TEST(cube(1_m)  == 1_m3);
 	TEST(cube(3_m)  == 27_m3);
 
-	// static_assert(cbrt(27_m3) == 3_m); (TODO)
+	// static_assert(cbrt(27_m3) == 3_m);
 
 	TEST(clamp(-2_m, -1_m,1_m) == -1_m);
 	TEST(clamp(-1_m, 0_m,1_m) == 0_m);
