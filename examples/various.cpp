@@ -26,7 +26,7 @@ void various_examples() {
     auto SUV_mass   = 5000_lb; 
     auto SUV_speed  = 30_mi_per_h;
     auto SUV_energy = kinetic_energy_formula(SUV_mass, SUV_speed);
-    cout << SUV_energy << " or " << to_equivalent(SUV_energy) << endl;
+    cout << SUV_energy << " or " << to_equiv(SUV_energy) << endl;
 
 
     cout << " 4. The local gravity at Mount Everest's peak is... ";
@@ -52,7 +52,7 @@ void various_examples() {
     cout << " 7. The frequency and wavelength of the high 'c' music note is...";
     auto high_c_frequency = 1046.5_Hz;
     auto wavelength       = wavelength_formula(constant::speed_of_sound, high_c_frequency);
-    cout << high_c_frequency << " and " << wavelength << " or " << to_equivalent(wavelength) << endl;
+    cout << high_c_frequency << " and " << wavelength << " or " << to_equiv(wavelength) << endl;
 
 
     cout << " 8. The population density on Earth (people per km² of land area) is... ";
@@ -86,7 +86,7 @@ void various_examples() {
     auto air_temperature  = 5_degC;
     auto wind_speed       = 55_km_per_h;
     auto windchill_temp   = windchill_temperature_formula(air_temperature, wind_speed);
-    cout << windchill_temp << " or " << to_equivalent(windchill_temp) << endl;
+    cout << windchill_temp << " or " << to_equiv(windchill_temp) << endl;
 
 
     cout << "13. The surface area and volume of a 30cm x 1cm pizza is... ";
@@ -103,7 +103,7 @@ void various_examples() {
     auto density_of_PLA     = 1.24_g_per_cm3;
     auto filament_volume    = filament_weight / density_of_PLA;
     auto filament_length    = filament_volume / (constant::pi * square(filament_diameter / 2.0));
-    cout << filament_length << " or " << to_equivalent(filament_length) << endl;
+    cout << filament_length << " or " << to_equiv(filament_length) << endl;
 
 
     cout << "15. The surface area and volume of a soccer ball is... ";
@@ -127,7 +127,7 @@ void various_examples() {
     auto loudspeaker_power     = 1_W;
     auto loudspeaker_distance  = 1_m;
     auto sound_intensity       = sound_intensity_formula(loudspeaker_power, loudspeaker_distance);
-    cout << sound_intensity << " or " << to_equivalent(sound_intensity) << endl;
+    cout << sound_intensity << " or " << to_equiv(sound_intensity) << endl;
 
 
     cout << "18. The max diving time in salt water in 10m depth using a 10l bottle is... ";
@@ -156,7 +156,7 @@ void various_examples() {
     auto Earth_radius         = 6371.009_km;
     auto Radar_station_height = 30_ft;
     auto distance             = sqrt((Earth_radius + Radar_station_height) * (Earth_radius + Radar_station_height) - Earth_radius * Earth_radius);
-    cout << distance << " or " << to_equivalent(distance) << endl;
+    cout << distance << " or " << to_equiv(distance) << endl;
 
 
     cout << "22. The details of a 10m x 1m oak timber log are... ";
@@ -259,7 +259,7 @@ void various_examples() {
     auto Tokyo_lat      = 35.6762_deg;
     auto Tokyo_long     = 139.6503_deg;
     auto dist           = distance_on_sphere_formula(Singapore_lat, Singapore_long, Tokyo_lat, Tokyo_long);
-    cout << dist << " or " << to_equivalent(dist) << endl;
+    cout << dist << " or " << to_equiv(dist) << endl;
 
 
     cout << "34. The nearest airport neighbours are...";

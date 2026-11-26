@@ -1,6 +1,6 @@
 /// @file     <si/conversions.h>
 /// @brief    Provides conversion functions, e.g. to_string()
-/// @details  Defines from_string(), to_string(), to_equivalent(), to_pct(), and the operator <<.
+/// @details  Defines from_string(), to_string(), to_equiv(), to_pct(), and the operator <<.
 
 #pragma once
 #include <iostream>
@@ -12,11 +12,12 @@
 
 namespace si {
 
-	// Default Format Strings (Configurable)
-	// -------------------------------------
-	inline auto to_string_format     = "%.2Lf %s"; ///< SI standard formatting by default
-	inline auto to_equivalent_format = "%.2Lf %s"; ///< SI standard formatting by default
-	inline auto to_percentage_format = "%.0Lf%s"; 
+	// Formatting of to_*() Functions (Configurable)
+	// ---------------------------------------------
+	inline auto to_string_format = "%.2Lf %s"; // SI standard formatting, e.g. "1.23 m"
+	inline auto to_equiv_format  = "%.2Lf %s"; // SI standard formatting, e.g. "1.23 ft"
+	inline auto to_pct_format    = "%.0Lf%%";  // e.g. "100%" 
+
 
 	static bool _parse(const std::string& str, double& number, char* unit) {
 #ifdef _WIN32
@@ -345,11 +346,11 @@ namespace si {
 		return _fmt(a / 1_deg, "°", fmtStr);
 	}
 
-	// to_equivalent() Function Overloading
-	// ------------------------------------
+	// to_equiv() Function Overloading
+	// --------------------------------
 
 	/// @brief Returns a length equivalent as string, e.g. in Imperial units.
-	FUNC std::string to_equivalent(length d, const char* fmtStr = to_equivalent_format) {
+	FUNC std::string to_equiv(length d, const char* fmtStr = to_equiv_format) {
 		if (d <= -1_ly || d >= 1_ly) return _fmt(d / 1_ly, "light-years", fmtStr);
 		if (d <= -1_ld || d >= 1_ld) return _fmt(d / 1_ld, "light-day", fmtStr);
 		if (d <= -1_ls || d >= 1_ls) return _fmt(d / 1_ls, "light-seconds", fmtStr);
@@ -360,7 +361,7 @@ namespace si {
 	}
 
 	/// @brief Returns a mass equivalent as string, e.g. in Imperial units.
-	FUNC std::string to_equivalent(mass m, const char* fmtStr = to_equivalent_format) {
+	FUNC std::string to_equiv(mass m, const char* fmtStr = to_equiv_format) {
 		if (m <= -1_Msun || m >= 1_Msun)     return _fmt(m / 1_Msun, "solar masses", fmtStr);
 		if (m <= -1_Mjup || m >= 1_Mjup)     return _fmt(m / 1_Mjup, "Jupiter masses", fmtStr);
 		if (m <= -1_Mearth || m >= 1_Mearth) return _fmt(m / 1_Mearth, "Earth masses", fmtStr);
@@ -370,23 +371,23 @@ namespace si {
 	}
 
 	/// @brief Returns a temperature equivalent as string, e.g. in Fahrenheit.
-	FUNC std::string to_equivalent(temperature T, const char* fmtStr = to_equivalent_format) {
+	FUNC std::string to_equiv(temperature T, const char* fmtStr = to_equiv_format) {
 		return _fmt(fahrenheit(T), "°F", fmtStr);
 	}
 
 	/// @brief Returns a velocity equivalent as string, e.g. in Imperial units.
-	FUNC std::string to_equivalent(velocity V, const char* fmtStr = to_equivalent_format) {
+	FUNC std::string to_equiv(velocity V, const char* fmtStr = to_equiv_format) {
 		if (V <= -1_Mach || V >= 1_Mach) return _fmt(V / 1_Mach, "Mach", fmtStr);
 		return _fmt(V / 1_mi_per_h, "mph", fmtStr);
 	}
 
 	/// @brief Returns a power intensity equivalent as string, e.g. in dB.
-	FUNC std::string to_equivalent(power_intensity I, const char* fmtStr = to_equivalent_format) {
+	FUNC std::string to_equiv(power_intensity I, const char* fmtStr = to_equiv_format) {
 		return _fmt(10.0 * std::log10((I / 1_W_per_m2) / 1e-12), "dB", fmtStr);
 	}
 
 	/// @brief Returns an energy equivalent as string, e.g. kg TNT.
-	FUNC std::string to_equivalent(energy E, const char* fmtStr = to_equivalent_format) {
+	FUNC std::string to_equiv(energy E, const char* fmtStr = to_equiv_format) {
 		constexpr auto Hiroshima_bomb = 62_TJ; // (explosion energy of the Hiroshima bomb)
 		if (E >= Hiroshima_bomb)
 			return _fmt(E / Hiroshima_bomb, "Hiroshima bombs", fmtStr);
@@ -400,7 +401,7 @@ namespace si {
 	}
 
 	/// @brief Returns a data size equivalent as string.
-	FUNC std::string to_equivalent(data_size n, const char* fmtStr = to_equivalent_format) {
+	FUNC std::string to_equiv(data_size n, const char* fmtStr = to_equiv_format) {
 		if (n <= -1_PiB || n >= 1_PiB) return _fmt(n / 1_PiB, "PiB", fmtStr);
 		if (n <= -1_TiB || n >= 1_TiB) return _fmt(n / 1_TiB, "TiB", fmtStr);
 		if (n <= -1_GiB || n >= 1_GiB) return _fmt(n / 1_GiB, "GiB", fmtStr);
@@ -414,7 +415,7 @@ namespace si {
 	// to_pct() Template
 	// -----------------
 	template <typename T>
-	FUNC std::string to_pct(T part, T total, const char* fmtStr = to_percentage_format) {
+	FUNC std::string to_pct(T part, T total, const char* fmtStr = to_pct_format) {
 		return _fmt((part / total) * 100.0, "%", fmtStr);
 	}
 
@@ -445,10 +446,6 @@ namespace si {
 	inline std::ostream& operator<<(std::ostream& o, data_per_time n) { return o << to_string(n); }
 	inline std::ostream& operator<<(std::ostream& o, data_per_area n) { return o << to_string(n); }
 	inline std::ostream& operator<<(std::ostream& o, data_per_volume n) { return o << to_string(n); }
-
-	// References
-	// ----------
-	// 1. https://en.wikipedia.org/wiki/International_System_of_Units
 
 } // end of namespace
 

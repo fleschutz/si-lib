@@ -65,6 +65,6 @@ void cheat_sheet() {   using namespace si;
     auto e1 = meters(len);         // cast to number (=42)
     auto e2 = len / 1_m;           // divide to a number (=42)
     auto e3 = to_string(len);      // convert to a string (="42.0m")
-    auto e4 = to_equivalent(len);  // convert to an equivalent string (="45.93yd")
+    auto e4 = to_equiv(len);       // convert to an equivalent string (="45.93yd")
     auto e5 = to_pct(len, 420_m);  // convert to percentage string (="10%")
 }

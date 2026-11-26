@@ -11,10 +11,11 @@ extern void cheat_sheet(), speed_examples(), astronomy_examples(), various_examp
 
 int main() {
 #ifdef _WIN32
-    SetConsoleOutputCP(CP_UTF8);          // switches to UTF-8 console output
+    SetConsoleOutputCP(CP_UTF8);          // console output in UTF-8
 #endif
-    si::to_string_format = "%.1Lf %s";    // one decimal place and space between quantity and unit
-    si::to_equivalent_format = "%.1Lf %s";// one decimal place and space between quantity and unit
+    si::to_string_format = "%.1Lf %s";    // e.g. "1.2 m"
+    si::to_equiv_format  = "%.1Lf %s";    // e.g. "1.2 ft"
+    si::to_pct_format    = "%.0Lf%%";     // e.g. "100%"
 
     cheat_sheet();                        // in cheat_sheet.cpp
 

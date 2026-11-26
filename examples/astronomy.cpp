@@ -36,13 +36,13 @@ void astronomy_examples() {
     auto asteroid_volume   = volume_of_sphere_formula(asteroid_diameter / 2.0);
     auto asteroid_mass     = asteroid_volume * asteroid_density;
     auto impact_energy     = kinetic_energy_formula(asteroid_mass, asteroid_velocity);
-    cout << impact_energy << " or " << to_equivalent(impact_energy) << endl;
+    cout << impact_energy << " or " << to_equiv(impact_energy) << endl;
 
 
     cout << " 6. The wavelength of hydrogen (H2) in vacuum is... ";
     auto H2_frequency  = 1420.4057517682_MHz;
     auto H2_wavelength = wavelength_formula(constant::c, H2_frequency);
-    cout << H2_wavelength << " or " << to_equivalent(H2_wavelength) << endl;
+    cout << H2_wavelength << " or " << to_equiv(H2_wavelength) << endl;
 
 
     cout << " 7. Moons bigger than our Earth's moon are... ";
@@ -56,7 +56,7 @@ void astronomy_examples() {
     cout << " 8. The min speed required to escape from the planets are... ";
     for (auto& planet : planets) {
         auto speed = gravitational_escape_velocity_formula(planet.mass, planet.diameter / 2.0);
-        cout << planet.name << "=" << speed << " or " << to_equivalent(speed) << ", ";
+        cout << planet.name << "=" << speed << " or " << to_equiv(speed) << ", ";
     }
     cout << endl;
 
@@ -100,11 +100,11 @@ void astronomy_examples() {
         auto volume = volume_of_sphere_formula(moon.mean_radius);
         total_mass += volume * moon.mean_density;
     }
-    cout << total_mass << " or " << to_equivalent(total_mass) << endl;
+    cout << total_mass << " or " << to_equiv(total_mass) << endl;
 
 
     cout << "13. The event horizon of our galaxy's black hole (Sagittarius A*) is... ";
     auto Sagittarius_A_mass = 8.54e36_kg;
     auto radius             = Schwarzschild_radius_formula(Sagittarius_A_mass);
-    cout << radius << " or " << to_equivalent(radius) << " (Schwarzschild radius)" << endl << endl;
+    cout << radius << " or " << to_equiv(radius) << " (Schwarzschild radius)" << endl << endl;
 }
