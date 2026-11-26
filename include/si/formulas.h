@@ -14,25 +14,25 @@ namespace si {
 	/// @brief Calculates the hypotenuse of a right triangle, based on Pythagorean equation: a² + b² = c² 
 	FUNC length hypotenuse_formula(length a, length b)
 	{
-		return sqrt(a*a + b*b);
+		return si::sqrt(a*a + b*b);
 	}
 
 	/// @brief Calculates the angle in a right triangle from opposite (o) and hypotenuse (h).
 	FUNC angle angle1_in_triangle_formula(length o, length h)
 	{
-		return radians(asin(o / h));
+		return si::asin(o / h);
 	}
 
 	/// @brief Calculates the angle in a right triangle from adjacent (a) and hypotenuse (h).
 	FUNC angle angle2_in_triangle_formula(length a, length h)
 	{
-		return radians(acos(a / h));
+		return si::acos(a / h);
 	}
 
 	/// @brief Calculates the angle in a right triangle from adjacent (a) and opposite (o).
 	FUNC angle angle3_in_triangle_formula(length a, length o)
 	{
-		return radians(atan(o / a));
+		return si::atan(o / a);
 	}
 
 	/// @brief Calculates the area of a triangle from base (b) and height (h).
