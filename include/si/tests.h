@@ -49,7 +49,6 @@ namespace si {
 	TEST( 1_h   == 60_min );
 	TEST( 1_h   == hours(1) );
 	TEST( 1_min == 60_s );
-	TEST( 1_min == minutes(1) );
 	TEST( 1_s   == 1000_ms );
 	TEST( 1_s   == seconds(1) );
 	TEST( 1_ms  == 0.001_s );
@@ -293,15 +292,15 @@ namespace si {
   }
 
   inline void check_angles() {
-	TEST(0_rad == 0_mrad);
-	TEST(0_rad == 0_deg);
-	TEST(0_rad == 0_arcmin);
-	TEST(0_rad == 0_arcsec);
-	TEST(0_rad == radians(0));
-	TEST(1_rad == 1000_mrad);
-	NEARLY_EQUAL(180_deg, constant::pi);
-	NEARLY_EQUAL(180_deg, 10800_arcmin);
-	NEARLY_EQUAL(180_deg, 648000_arcsec);
+	TEST( 0_rad == 0_mrad );
+	TEST( 0_rad == 0_deg );
+	TEST( 0_rad == 0_arcmin );
+	TEST( 0_rad == 0_arcsec );
+	TEST( 0_rad == radians(0) );
+	TEST( 1_rad == 1000_mrad );
+	NEARLY_EQUAL( 180_deg, constant::pi );
+	NEARLY_EQUAL( 180_deg, 10800_arcmin );
+	NEARLY_EQUAL( 180_deg, 648000_arcsec );
   }
 
   inline void check_ratios() {
@@ -362,29 +361,29 @@ namespace si {
   }
 
   inline void check_SI_prefixes() {
-        TEST(quetta == 1000 * ronna);
-        TEST(ronna  == 1000 * yotta);
-        TEST(yotta  == 1000 * zetta);
-        TEST(zetta  == 1000 * exa);
-        TEST(exa    == 1000 * peta);
-        TEST(peta   == 1000 * tera);
-        TEST(tera   == 1000 * giga);
-        TEST(giga   == 1000 * mega);
-        TEST(mega   == 1000 * kilo);
-        TEST(kilo   ==   10 * hecto);
-        TEST(hecto  ==   10 * deca);
-        TEST(deca   ==  100 * deci);
-        TEST(deci   ==   10 * centi);
-        TEST(centi  ==   10 * milli);
-        TEST(milli  == 1000 * micro);
-        NEARLY_EQUAL(micro, 1000 * nano);
-        NEARLY_EQUAL(nano,  1000 * pico);
-        NEARLY_EQUAL(pico,  1000 * femto);
-        NEARLY_EQUAL(femto, 1000 * atto);
-        NEARLY_EQUAL(atto,  1000 * zepto);
-        NEARLY_EQUAL(zepto, 1000 * yocto);
-        NEARLY_EQUAL(yocto, 1000 * ronto);
-        NEARLY_EQUAL(ronto, 1000 * quecto);
+	TEST(quetta == 1000 * ronna);
+	TEST(ronna  == 1000 * yotta);
+	TEST(yotta  == 1000 * zetta);
+	TEST(zetta  == 1000 * exa);
+	TEST(exa    == 1000 * peta);
+	TEST(peta   == 1000 * tera);
+	TEST(tera   == 1000 * giga);
+	TEST(giga   == 1000 * mega);
+	TEST(mega   == 1000 * kilo);
+	TEST(kilo   ==   10 * hecto);
+	TEST(hecto  ==   10 * deca);
+	TEST(deca   ==  100 * deci);
+	TEST(deci   ==   10 * centi);
+	TEST(centi  ==   10 * milli);
+	TEST(milli  == 1000 * micro);
+	NEARLY_EQUAL(micro, 1000 * nano);
+	NEARLY_EQUAL(nano,  1000 * pico);
+	NEARLY_EQUAL(pico,  1000 * femto);
+	NEARLY_EQUAL(femto, 1000 * atto);
+	NEARLY_EQUAL(atto,  1000 * zepto);
+	NEARLY_EQUAL(zepto, 1000 * yocto);
+	NEARLY_EQUAL(yocto, 1000 * ronto);
+	NEARLY_EQUAL(ronto, 1000 * quecto);
   }
 } // end of namespace
 

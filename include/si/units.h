@@ -24,7 +24,6 @@ namespace si {
   UNIT centimeters    = unit<length, 1,100>();
   UNIT millimeters    = unit<length, 1,1000>();
   UNIT per_m          = unit<per_length>();
-  UNIT minutes        = unit<time, 60>();
   UNIT hours          = unit<time, 3600>();
   UNIT hertz          = unit<frequency>();
   // area in...
