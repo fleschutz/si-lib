@@ -20,19 +20,19 @@ namespace si {
 	/// @brief Calculates the angle in a right triangle from opposite (o) and hypotenuse (h).
 	FUNC angle angle1_in_triangle_formula(length o, length h)
 	{
-		return si::asin(o / h);
+		return arcsin(o / h);
 	}
 
 	/// @brief Calculates the angle in a right triangle from adjacent (a) and hypotenuse (h).
 	FUNC angle angle2_in_triangle_formula(length a, length h)
 	{
-		return si::acos(a / h);
+		return arccos(a / h);
 	}
 
 	/// @brief Calculates the angle in a right triangle from adjacent (a) and opposite (o).
 	FUNC angle angle3_in_triangle_formula(length a, length o)
 	{
-		return si::atan(o / a);
+		return arctan(o / a);
 	}
 
 	/// @brief Calculates the area of a triangle from base (b) and height (h).

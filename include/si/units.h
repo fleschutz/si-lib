@@ -139,14 +139,14 @@ namespace si {
   // -----------------------------
  
   /// @brief Calculates sin(), cos(), or tan() of an angle.
-  [[nodiscard]] inline angle sin(angle a) { return std::sinl(a); }
-  [[nodiscard]] inline angle cos(angle a) { return std::cosl(a); }
-  [[nodiscard]] inline angle tan(angle a) { return std::tanl(a); }
+  [[nodiscard]] inline dimensionless sin(angle a) { return std::sinl(a); }
+  [[nodiscard]] inline dimensionless cos(angle a) { return std::cosl(a); }
+  [[nodiscard]] inline dimensionless tan(angle a) { return std::tanl(a); }
 
-  /// @brief Calculates asin(), acos(), or atan() of an angle.
-  [[nodiscard]] inline angle asin(angle a) { return std::asinl(a); }
-  [[nodiscard]] inline angle acos(angle a) { return std::acosl(a); }
-  [[nodiscard]] inline angle atan(angle a) { return std::atanl(a); }
+  /// @brief Calculates arcsin(), arccos(), or arctan() to an angle.
+  [[nodiscard]] inline angle arcsin(dimensionless a) { return std::asinl(a); }
+  [[nodiscard]] inline angle arccos(dimensionless a) { return std::acosl(a); }
+  [[nodiscard]] inline angle arctan(dimensionless a) { return std::atanl(a); }
 
   /// @brief Calculates the atangens of two angles.
   [[nodiscard]] inline angle atan2(angle y, angle x) { return std::atan2l(y, x); }
