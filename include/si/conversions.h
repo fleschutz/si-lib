@@ -1,6 +1,6 @@
 /// @file     <si/conversions.h>
 /// @brief    Provides conversion functions, e.g. to_string()
-/// @details  Defines from_string(), to_string(), to_equiv(), to_pct(), and the operator <<.
+/// @details  Defines from_string(), to_string(), to_equiv(), to_scientific(), to_pct(), and the operator <<.
 
 #pragma once
 #include <iostream>
@@ -14,9 +14,10 @@ namespace si {
 
 	// Formatting of to_*() Functions (Configurable)
 	// ---------------------------------------------
-	inline auto to_string_format = "%.2Lf %s"; // SI standard formatting, e.g. "1.23 m"
-	inline auto to_equiv_format  = "%.2Lf %s"; // SI standard formatting, e.g. "1.23 ft"
-	inline auto to_pct_format    = "%.0Lf%%";  // e.g. "100%" 
+	inline auto to_string_format     = "%.2Lf %s";       // SI standard formatting, e.g. "1.23 m"
+	inline auto to_equiv_format      = "%.2Lf %s";       // SI standard formatting, e.g. "1.23 ft"
+	inline auto to_scientific_format = "%.2Lf×10^%d %s"; // scientific notation, e.g. "1.23×10^4 m" 
+	inline auto to_pct_format        = "%.0Lf%%";        // e.g. "100%" 
 
 
 	static bool _parse(const std::string& str, double& number, char* unit) {
@@ -418,6 +419,26 @@ namespace si {
 	FUNC std::string to_pct(T part, T total, const char* fmtStr = to_pct_format) {
 		return _fmt((part / total) * 100.0, "%", fmtStr);
 	}
+
+	// to_scientific()
+	// ---------------
+	FUNC std::string _exp(long double number, const char* unit, const char* formatString) {
+		int eToThe = 0;
+		for( ; number > 9.; ++eToThe)
+			number /= 10.;
+		
+		char buf[80] = "";
+		std::snprintf(buf, sizeof(buf), formatString, number, eToThe, unit);
+		return std::string(buf);
+	}
+
+	FUNC auto to_scientific(length n, const char* f=to_scientific_format) { return _exp(meters(n), "m", f); }
+	FUNC auto to_scientific(time n, const char* f=to_scientific_format) { return _exp(seconds(n),"s",f);}
+	FUNC auto to_scientific(mass n, const char* f=to_scientific_format) { return _exp(kilograms(n),"kg",f);}
+	FUNC auto to_scientific(temperature n, const char* f=to_scientific_format) {return _exp(kelvins(n),"K",f);}
+	FUNC auto to_scientific(current n, const char* f=to_scientific_format) {return _exp(amperes(n),"A",f);}
+	FUNC auto to_scientific(substance n, const char* f=to_scientific_format) {return _exp(moles(n),"mol",f);}
+	FUNC auto to_scientific(luminous_intensity n, const char* f=to_scientific_format) {return _exp(candelas(n),"cd",f);}
 
 	// The << Operator
 	// ---------------

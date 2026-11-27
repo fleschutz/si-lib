@@ -64,7 +64,8 @@ void cheat_sheet() {   using namespace si;
     length len = 42_m;
     auto e1 = meters(len);         // cast to number (=42)
     auto e2 = len / 1_m;           // divide to a number (=42)
-    auto e3 = to_string(len);      // convert to a string (="42.0m")
-    auto e4 = to_equiv(len);       // convert to an equivalent string (="45.93yd")
-    auto e5 = to_pct(len, 420_m);  // convert to percentage string (="10%")
+    auto e3 = to_string(len);      // convert to a string using SI units (="42.0m")
+    auto e4 = to_equiv(len);       // convert to a string using equivalent units (="45.93yd")
+    auto e5 = to_scientific(len);  // convert to scientific notation using SI units (="4.20×10^1 m)
+    auto e6 = to_pct(len, 420_m);  // convert to percentage string (="10%")
 }
