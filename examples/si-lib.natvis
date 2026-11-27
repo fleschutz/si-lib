@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AutoVisualizer xmlns="http://schemas.microsoft.com/vstudio/debugger/natvis/2010">
+
+	<Type Name="si::detail::quantity&lt;*&gt;;">
+		<DisplayString>= {m_value}</DisplayString>
+	</Type>
+	
+	<Type Name="si::detail::quantity&lt;si::detail::dimension&lt;1,0,0,0,0,0,0,0&gt;,*&gt;;">
+        	<DisplayString>= {m_value} m</DisplayString>
+		<Expand>
+			<Item Name="meter">m_value</Item>
+			<Item Name="feet">m_value / 0.3048</Item>
+			<Item Name="nautical miles">m_value / 1853.18</Item>
+		</Expand>
+	</Type>
+	
+	<Type Name="si::detail::quantity&lt;si::detail::dimension&lt;0,1,0,0,0,0,0,0&gt;,*&gt;;">
+        	<DisplayString>= {m_value} kg</DisplayString>
+	</Type>
+	
+	<Type Name="si::detail::quantity&lt;si::detail::dimension&lt;0,0,1,0,0,0,0,0&gt;,*&gt;;">
+        	<DisplayString>= {m_value} s</DisplayString>
+		<Expand>
+			<Item Name="days">m_value / (24 * 60 * 60)</Item>
+			<Item Name="hours">m_value / (60 * 60)</Item>
+			<Item Name="minutes">m_value / 60</Item>
+			<Item Name="seconds">m_value</Item>
+		</Expand>
+ 	</Type>
+	
+	<Type Name="si::detail::quantity&lt;si::detail::dimension&lt;0,0,0,1,0,0,0,0&gt;,*&gt;;">
+		<DisplayString>= {m_value} K</DisplayString>
+		<Expand>
+			<Item Name="Kelvin">m_value</Item>
+			<Item Name="C">m_value - 273.15</Item>
+			<Item Name="F">m_value * 1.8 - 459.67</Item>
+		</Expand>
+	</Type>
+	
+	<Type Name="si::detail::quantity&lt;si::detail::dimension&lt;1,0,-1,0,0,0,0,0&gt;,*&gt;;">
+		<DisplayString>= {m_value} m/s</DisplayString>
+		<Expand>
+			<Item Name="m/s">m_value</Item>
+			<Item Name="ft/min">m_value / 0.00508</Item>
+			<Item Name="knots">m_value / (1852. / 3600)</Item>
+			<Item Name="km/h">m_value / (1000. / 3600)</Item>
+		</Expand>
+	</Type>
+	
+	<Type Name="si::detail::quantity&lt;si::detail::dimension&lt;1,0,-2,0,0,0,0,0&gt;,*&gt;;">
+		<DisplayString>= {m_value} m/s2</DisplayString>
+		<Expand>
+			<Item Name="m/s2">m_value</Item>
+		</Expand>
+	</Type>
+	
+	<Type Name="si::detail::quantity&lt;si::detail::dimension&lt;-1,1,-2,0,0,0,0,0&gt;,*&gt;;">
+		<DisplayString>= {m_value} Pa</DisplayString>
+		<Expand>
+			<Item Name="Pa">m_value</Item>
+			<Item Name="hPa">m_value / 100.</Item>
+			<Item Name="inHg">m_value / 3386.389</Item>
+		</Expand>
+ 	</Type>
+	
+	<Type Name="si::detail::quantity&lt;si::detail::dimension&lt;1,1,-2,0,0,0,0&gt;,*&gt;;">
+		<DisplayString>= {m_value} N</DisplayString>
+	</Type>
+	
+	<Type Name="si::detail::quantity&lt;si::detail::dimension&lt;2,1,-2,0,0,0,0&gt;,*&gt;;">
+ 		<DisplayString>= {m_value} Nm</DisplayString>
+	</Type>
+
+  <Type Name="si::detail::quantity&lt;si::detail::dimension&lt;0,0,0,0,1&gt;,*&gt;;">
+    <DisplayString>{m_value} radians</DisplayString>
+    <Expand>
+      <Item Name="radians">m_value</Item>
+      <Item Name="degrees">m_value * 180 / 3.14159265359</Item>
+    </Expand>
+  </Type>
+  
+  <Type Name="si::detail::quantity&lt;si::detail::dimension&lt;0,0,-1,0,1&gt;,*&gt;;">
+    <DisplayString>{m_value} radians/s</DisplayString>
+    <Expand>
+      <Item Name="radians/s">m_value</Item>
+      <Item Name="degrees/s">m_value * 180 / 3.14159265359</Item>
+    </Expand>
+  </Type>
+
+</AutoVisualizer>
