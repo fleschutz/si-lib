@@ -3,20 +3,9 @@
 
 #pragma once
 #include <si/core.h> 
-
-// Basic
 #include "chemical_elements.h"
 #include "physics_particles.h"
 #include "material_properties.h"
-
-// Astronomy
-#include "Earth.h"
-#include "Moon.h"
-#include "planets.h"
-#include "moons.h"
-#include "exoplanets.h"
-#include "monthly_sunspots.h"
-
-// Various
+#include "astronomy.h"
 #include "airports.h"
 #include "musical_notes.h"

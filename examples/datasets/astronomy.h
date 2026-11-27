@@ -8,5 +8,4 @@
 #include "Moon.h"
 #include "planets.h"
 #include "moons.h"
-#include "exoplanets.h"
 #include "monthly_sunspots.h"

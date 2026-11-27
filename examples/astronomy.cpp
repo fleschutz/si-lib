@@ -61,19 +61,19 @@ void astronomy_examples() {
     cout << endl;
 
 
-    cout << " 9. Exoplanets that are life-friendly and quite near are... ";
-    for (auto& exoplanet : exoplanets) {
-        if (exoplanet.number_of_stars == 0)
-            continue;   // too cold without a star
-        if (exoplanet.equilibrium_temperature < -40_degC || exoplanet.equilibrium_temperature > 40_degC)
-            continue;   // too cold or too hot
-        if (exoplanet.eccentricity >= 0.02)
-            continue;   // orbit too elliptic or even parabolic 
-        if (exoplanet.distance > 3_pc || exoplanet.distance == 0_m)
-            continue;   // too far away or distance unknown yet
-        cout << "'" << exoplanet.name << "' @ " << exoplanet.hostname << " in " << exoplanet.distance << ", ";
-    }
-    cout << endl;
+//    cout << " 9. Exoplanets that are life-friendly and quite near are... ";
+//    for (auto& exoplanet : exoplanets) {
+//        if (exoplanet.number_of_stars == 0)
+//            continue;   // too cold without a star
+//        if (exoplanet.equilibrium_temperature < -40_degC || exoplanet.equilibrium_temperature > 40_degC)
+//            continue;   // too cold or too hot
+//        if (exoplanet.eccentricity >= 0.02)
+//            continue;   // orbit too elliptic or even parabolic 
+//        if (exoplanet.distance > 3_pc || exoplanet.distance == 0_m)
+//            continue;   // too far away or distance unknown yet
+//        cout << "'" << exoplanet.name << "' @ " << exoplanet.hostname << " in " << exoplanet.distance << ", ";
+//    }
+//    cout << endl;
 
 
     cout << "10. The estimated total distance the Earth has travelled is... ";
