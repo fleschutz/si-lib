@@ -1,4 +1,7 @@
 var searchData=
 [
-  ['kilo_0',['kilo',['../namespacesi.html#aa73706783a2401428a15b3628a266be9',1,'si']]]
+  ['inches_0',['inches',['../namespacesi.html#abaebd601a7997a760ab5b9366d2dba56',1,'si']]],
+  ['intensity_1',['intensity',['../structsi_1_1detail_1_1dimension.html#a32738d42b2c52f5cf3ec1cc3ed9f34f5',1,'si::detail::dimension']]],
+  ['is_5fdimensionless_5fv_2',['is_dimensionless_v',['../namespacesi_1_1detail.html#a8ec19affaeafa083c8949562cfd878fa',1,'si::detail']]],
+  ['is_5fsi_5fv_3',['is_si_v',['../namespacesi_1_1detail.html#aefc8693cc607db7cd2e3a7e2c82775b0',1,'si::detail::is_si_v'],['../namespacesi.html#aefc8693cc607db7cd2e3a7e2c82775b0',1,'si::is_si_v']]]
 ];

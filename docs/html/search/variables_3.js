@@ -1,5 +1,6 @@
 var searchData=
 [
-  ['element_5fcount_5fv_0',['element_count_v',['../namespacesi_1_1detail.html#a5524e17a932ed719b86206544905e6ce',1,'si::detail']]],
-  ['exa_1',['exa',['../namespacesi.html#a84b05c412099028a831f34c7b286924b',1,'si']]]
+  ['deca_0',['deca',['../namespacesi.html#afdccef55f2b52bc6839f1e77464854cf',1,'si']]],
+  ['deci_1',['deci',['../namespacesi.html#a23a141b1fdfc29ae3fc113277ad82809',1,'si']]],
+  ['digital_2',['digital',['../structsi_1_1detail_1_1dimension.html#aee90b76d74edabe37a5d75d496e76385',1,'si::detail::dimension']]]
 ];

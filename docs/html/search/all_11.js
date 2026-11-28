@@ -1,12 +1,8 @@
 var searchData=
 [
-  ['radians_0',['radians',['../namespacesi.html#a3a9016cb16bde662a899daea4dc60889',1,'si']]],
-  ['radius_5fof_5fcircumference_5fformula_1',['radius_of_circumference_formula',['../namespacesi.html#a7e22ca68d7f8960c3605130f7ad1c2de',1,'si']]],
-  ['ratio_2',['ratio',['../structsi_1_1detail_1_1ratio.html',1,'si::detail']]],
-  ['ratio_5fproduct_3',['ratio_product',['../structsi_1_1detail_1_1ratio__product.html',1,'si::detail']]],
-  ['ratio_5fquotient_4',['ratio_quotient',['../structsi_1_1detail_1_1ratio__quotient.html',1,'si::detail']]],
-  ['readme_2emd_5',['README.md',['../README_8md.html',1,'']]],
-  ['ronna_6',['ronna',['../namespacesi.html#ae3affcdab8e9fd1c7ce91754b87a6dfb',1,'si']]],
-  ['ronto_7',['ronto',['../namespacesi.html#a7167d70c1452e0ea7afc3b853afe75fe',1,'si']]],
-  ['root_8',['root',['../namespacesi_1_1detail.html#a960e3076ed61a95bb95f4f20e5daa9e0',1,'si::detail::root()'],['../namespacesi.html#a960e3076ed61a95bb95f4f20e5daa9e0',1,'si::root()']]]
+  ['q_20a_0',['💡 Q &amp;amp; A',['../index.html#autotoc_md2',1,'']]],
+  ['quantity_1',['quantity',['../structsi_1_1detail_1_1quantity.html',1,'si::detail::quantity&lt; Dimension, T &gt;'],['../structsi_1_1detail_1_1quantity.html#a0f12bf1476cc462ccd1c7a678051cc34',1,'si::detail::quantity::quantity(zero_t={})'],['../structsi_1_1detail_1_1quantity.html#a0de22999f779c9a4ff704a09b8da9305',1,'si::detail::quantity::quantity(Dimension, const T &amp;x)'],['../structsi_1_1detail_1_1quantity.html#a112e1981a2576f301f560046bc4eb242',1,'si::detail::quantity::quantity(const quantity&lt; Dimension, U &gt; &amp;q)']]],
+  ['quantity_5fstorage_2',['quantity_storage',['../classsi_1_1detail_1_1quantity__storage.html',1,'si::detail::quantity_storage&lt; Dimension, T &gt;'],['../classsi_1_1detail_1_1quantity__storage.html#a4d0b6e6401a81efca6b4c1549eac1b36',1,'si::detail::quantity_storage::quantity_storage()']]],
+  ['quecto_3',['quecto',['../namespacesi.html#a8aab04b56f97e5c3f035a5a6a603b878',1,'si']]],
+  ['quetta_4',['quetta',['../namespacesi.html#ac7e84639e01856d707f0ff690056d7a9',1,'si']]]
 ];

@@ -8,6 +8,7 @@ var searchData=
   ['volume_5fof_5fcone_5fformula_5',['volume_of_cone_formula',['../namespacesi.html#ab58e73ee35be1b8cdd22777912fc0ffd',1,'si']]],
   ['volume_5fof_5fcube_5fformula_6',['volume_of_cube_formula',['../namespacesi.html#abc34fcec942ab4a9f056d4eaad0bfbc7',1,'si']]],
   ['volume_5fof_5fcylinder_5fformula_7',['volume_of_cylinder_formula',['../namespacesi.html#abbfc0351c1d1f522da2cd00c2616085e',1,'si']]],
-  ['volume_5fof_5fprism_5fformula_8',['volume_of_prism_formula',['../namespacesi.html#a51c42e7ff5d14cb9f27673f4c1acfc43',1,'si']]],
-  ['volume_5fof_5fsphere_5fformula_9',['volume_of_sphere_formula',['../namespacesi.html#adb269b77130870d2e228ee89e4898414',1,'si']]]
+  ['volume_5fof_5fellipsoid_5fformula_8',['volume_of_ellipsoid_formula',['../namespacesi.html#a974eb909fb016d9538539d2810784f8f',1,'si']]],
+  ['volume_5fof_5fprism_5fformula_9',['volume_of_prism_formula',['../namespacesi.html#a51c42e7ff5d14cb9f27673f4c1acfc43',1,'si']]],
+  ['volume_5fof_5fsphere_5fformula_10',['volume_of_sphere_formula',['../namespacesi.html#adb269b77130870d2e228ee89e4898414',1,'si']]]
 ];

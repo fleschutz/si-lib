@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['_5ffmt_0',['_fmt',['../namespacesi.html#a142a9d1e8e311d857090cd95de38ec55',1,'si']]]
+  ['_5fexp_0',['_exp',['../namespacesi.html#a8d16b22c7fb1168f44d1fbc38aed4770',1,'si']]],
+  ['_5ffmt_1',['_fmt',['../namespacesi.html#a4db8ebff5636c468294fbf60b51db171',1,'si']]]
 ];

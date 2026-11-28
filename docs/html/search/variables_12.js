@@ -1,6 +1,10 @@
 var searchData=
 [
-  ['y_0',['y',['../structsi_1_1internal_1_1vec_3_012_00_01detail_1_1vec__trivally__constructible_3_01T_01_4_01_4.html#a4fe69ad2c9eefd3753bbee47c1b5bf51',1,'si::internal::vec&lt; 2, detail::vec_trivally_constructible&lt; T &gt; &gt;::y'],['../structsi_1_1internal_1_1vec_3_013_00_01detail_1_1vec__trivally__constructible_3_01T_01_4_01_4.html#af0323dc54fbc1291aa99b5bda3f67ed6',1,'si::internal::vec&lt; 3, detail::vec_trivally_constructible&lt; T &gt; &gt;::y']]],
-  ['yocto_1',['yocto',['../namespacesi.html#ace47cc5878da93b294b910d93af9e369',1,'si']]],
-  ['yotta_2',['yotta',['../namespacesi.html#a06cbe1143b1f4c844e486c9825f8ef76',1,'si']]]
+  ['seconds_0',['seconds',['../namespacesi.html#a9667f6567ac822f02ee441e6301c9772',1,'si']]],
+  ['siemens_1',['siemens',['../namespacesi.html#afa7fc9af8d511c6fcc6160699b334567',1,'si']]],
+  ['siemens_5fper_5fm_2',['siemens_per_m',['../namespacesi.html#a493c3deae528ffeef43833c9b2cd9b23',1,'si']]],
+  ['sieverts_3',['sieverts',['../namespacesi.html#a2ec4a7bb28c19e3411a70646e4f5f4e4',1,'si']]],
+  ['statute_5fmiles_4',['statute_miles',['../namespacesi.html#ae3778f82fc8b74d6dae365bbb97e0c50',1,'si']]],
+  ['steradians_5',['steradians',['../namespacesi.html#a2d3cb2e1736f742de9154600051875d9',1,'si']]],
+  ['substance_6',['substance',['../structsi_1_1detail_1_1dimension.html#aaf09f40342fe39517732573d2cd55bfa',1,'si::detail::dimension']]]
 ];

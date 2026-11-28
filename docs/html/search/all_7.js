@@ -5,5 +5,6 @@ var searchData=
   ['glide_5fratio_5fformula_2',['glide_ratio_formula',['../namespacesi.html#a4e2bf26f3e97bd1183af1de21135ee49',1,'si']]],
   ['gravitational_5fattractive_5fforce_5fformula_3',['gravitational_attractive_force_formula',['../namespacesi.html#a384131362a2fe92efea56897ef3b1013',1,'si']]],
   ['gravitational_5fescape_5fvelocity_5fformula_4',['gravitational_escape_velocity_formula',['../namespacesi.html#a2267e5d124987828221fc6979ff29f58',1,'si']]],
-  ['gravitational_5fpotential_5fenergy_5fformula_5',['gravitational_potential_energy_formula',['../namespacesi.html#a22e7dfdd2372b90450f79fd70b90ee8e',1,'si']]]
+  ['gravitational_5fpotential_5fenergy_5fformula_5',['gravitational_potential_energy_formula',['../namespacesi.html#a22e7dfdd2372b90450f79fd70b90ee8e',1,'si']]],
+  ['grays_6',['grays',['../namespacesi.html#a7ce5edf131b8ec34a57d5647f4d521ae',1,'si']]]
 ];

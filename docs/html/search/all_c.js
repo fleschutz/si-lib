@@ -1,14 +1,15 @@
 var searchData=
 [
-  ['mach_5fnumber_5fformula_0',['Mach_number_formula',['../namespacesi.html#a47e30042f7ed27df0b77c35e446f875d',1,'si']]],
-  ['mass_1',['mass',['../structsi_1_1detail_1_1dimension.html#a2774806b1775e97e787152a2b863a8f2',1,'si::detail::dimension']]],
-  ['mass_5fformula_2',['mass_formula',['../namespacesi.html#a638a8f773369b0bd6b5ffbb2bfae390b',1,'si']]],
-  ['max_3',['max',['../namespacesi_1_1internal.html#a556316a38a35041e2de141eb2f557c6c',1,'si::internal::max(T lhs, U rhs)'],['../namespacesi_1_1internal.html#aca5dfc04c92e360b4b81f91fafaeb384',1,'si::internal::max(const vec2&lt; T &gt; &amp;lhs, const vec2&lt; U &gt; &amp;rhs)'],['../namespacesi_1_1internal.html#aff517f4bd7d563bc80805eb8f3d9f036',1,'si::internal::max(const vec3&lt; T &gt; &amp;lhs, const vec3&lt; U &gt; &amp;rhs)']]],
-  ['max_5fof_5farray_4',['max_of_array',['../namespacesi.html#a9fc701196cd435a36a4de48b4e24fe9f',1,'si']]],
-  ['mega_5',['mega',['../namespacesi.html#a02debe39b0485c57ecd17f92d5a8457d',1,'si']]],
-  ['micro_6',['micro',['../namespacesi.html#a93c15e7987b1b007b44f7f9152f3f98c',1,'si']]],
-  ['milli_7',['milli',['../namespacesi.html#a9fe93e394ba3cd09bc3a5e5f50f459aa',1,'si']]],
-  ['min_8',['min',['../namespacesi_1_1internal.html#a03d26a654e62c1e2efbf00d06d709b61',1,'si::internal::min(T lhs, U rhs)'],['../namespacesi_1_1internal.html#a42aef7fed24a95401fc86e6f2acd5c29',1,'si::internal::min(const vec2&lt; T &gt; &amp;lhs, const vec2&lt; U &gt; &amp;rhs)'],['../namespacesi_1_1internal.html#afbbbd290c0785f4982d4866c47247457',1,'si::internal::min(const vec3&lt; T &gt; &amp;lhs, const vec3&lt; U &gt; &amp;rhs)']]],
-  ['min_5fof_5farray_9',['min_of_array',['../namespacesi.html#aa8d3633e8b48d7be62fb0413f02c6d2f',1,'si']]],
-  ['mix_10',['mix',['../namespacesi_1_1internal.html#a6dee7351f6d69e913da7e71e31314a8e',1,'si::internal::mix(T a, U b, V t)'],['../namespacesi_1_1internal.html#a492a4a37d8b4234aed2cd098021f83a4',1,'si::internal::mix(const vec2&lt; T &gt; &amp;a, const vec2&lt; U &gt; &amp;b, V t)'],['../namespacesi_1_1internal.html#a6997a420ac1328aca2017a1f4d72f5e1',1,'si::internal::mix(const vec3&lt; T &gt; &amp;a, const vec3&lt; U &gt; &amp;b, V t)']]]
+  ['latus_5frectum_5fof_5fellipse_5fformula_0',['latus_rectum_of_ellipse_formula',['../namespacesi.html#a836acd322daddc07ba09f8b987e7408b',1,'si']]],
+  ['length_1',['length',['../structsi_1_1detail_1_1dimension.html#a3680ebab73bd5bb83352588e670eb930',1,'si::detail::dimension::length'],['../namespacesi_1_1internal.html#abcc89a96d8a35f81961bc82664e93a13',1,'si::internal::length(const vec2&lt; T &gt; &amp;v)'],['../namespacesi_1_1internal.html#a38c3e3c7ed40a342693414a2da17fc31',1,'si::internal::length(const vec3&lt; T &gt; &amp;v)']]],
+  ['lib_20the_20physical_20units_20library_20for_20c_2',['📐si-lib - The Physical Units Library For C++',['../index.html',1,'']]],
+  ['library_20for_20c_3',['📐si-lib - The Physical Units Library For C++',['../index.html',1,'']]],
+  ['license_20copyright_4',['📜 License &amp;amp; Copyright',['../index.html#autotoc_md4',1,'']]],
+  ['lift_5fforce_5fof_5fwing_5fformula_5',['lift_force_of_wing_formula',['../namespacesi.html#ab3f07330f9ab0e8c316c9a8a90770f57',1,'si']]],
+  ['literals_2eh_6',['literals.h',['../literals_8h.html',1,'']]],
+  ['local_5fgravity_5fformula_7',['local_gravity_formula',['../namespacesi.html#a490bd48e011d0bd6b6f6b1d68b35ad10',1,'si']]],
+  ['lumens_8',['lumens',['../namespacesi.html#a9e93ce1802e06ed74737a26054c5baed',1,'si']]],
+  ['lumens_5fper_5fwatt_9',['lumens_per_watt',['../namespacesi.html#a79dde57672b4885dd464441a79480f57',1,'si']]],
+  ['lumenseconds_10',['lumenseconds',['../namespacesi.html#a515a53ccf7c14aaff3ad18f2d8facc42',1,'si']]],
+  ['lux_11',['lux',['../namespacesi.html#a18d12c62e685ad84e001f0733565d6d8',1,'si']]]
 ];
