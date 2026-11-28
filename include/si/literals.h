@@ -427,7 +427,7 @@ namespace si {
   UDL(_TB_per_s,                    1e12, bytes_per_s); // 1_TB_per_s (terabyte/sec)
   UDL(_GB_per_s,                     1e9, bytes_per_s); // 1_GB_per_s (gigabyte/sec)
   UDL(_MB_per_s,                     1e6, bytes_per_s); // 1_MB_per_s (megabyte/sec)
-  UDL(_KB_per_s,                     1e3, bytes_per_s); // 1_KB_per_s (kilobyte/sec)
+  UDL(_kB_per_s,                     1e3, bytes_per_s); // 1_kB_per_s (kilobyte/sec)
   UDL(_byte_per_s,                     1, bytes_per_s); // 1_byte_per_s
   // bytes per second with binary prefixes...
   UDL(_TiB_per_s,      1'099'511'627'776, bytes_per_s); // 1_TiB_per_s (tebibyte/sec)

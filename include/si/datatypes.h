@@ -54,7 +54,7 @@ namespace si {
   TYPE(per_area,              -2, 0, 0, 0, 0, 0, 0, 0); // per square meter (reciprocal)
   TYPE(frequency,              0, 0,-1, 0, 0, 0, 0, 0); // per second (reciprocal)
   TYPE(per_substance,          0, 0, 0, 0, 0,-1, 0, 0); // per mol (reciprocal)
-  TYPE(data_per_time,          0, 0,-1, 0, 0, 0, 0, 1); // in bits per second
+  TYPE(data_speed,             0, 0,-1, 0, 0, 0, 0, 1); // in bits per second
   TYPE(data_per_area,         -2, 0, 0, 0, 0, 0, 0, 1); // in bits per square meter
   TYPE(data_per_volume,       -3, 0, 0, 0, 0, 0, 0, 1); // in bits per cubic meter
 

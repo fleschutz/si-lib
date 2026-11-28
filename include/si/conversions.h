@@ -330,8 +330,12 @@ namespace si {
 		return _fmt(n / 1_bit, "bit", fmtStr);
 	}
 
-	FUNC std::string to_string(data_per_time n, const char* fmtStr = to_string_format) {
-		return _fmt(n / 1_MB_per_s, "MB/s", fmtStr);
+	FUNC std::string to_string(data_speed n, const char* fmtStr = to_string_format) {
+		if (n <= -1_PB_per_s || n >= 1_PB_per_s) return _fmt(n / 1_PB_per_s, "PB/s", fmtStr);
+		if (n <= -1_TB_per_s || n >= 1_TB_per_s) return _fmt(n / 1_TB_per_s, "TB/s", fmtStr);
+		if (n <= -1_GB_per_s || n >= 1_GB_per_s) return _fmt(n / 1_GB_per_s, "GB/s", fmtStr);
+		if (n <= -1_MB_per_s || n >= 1_MB_per_s) return _fmt(n / 1_MB_per_s, "MB/s", fmtStr);
+		return _fmt(n / 1_kB_per_s, "kB/s", fmtStr);
 	}
 
 	FUNC std::string to_string(data_per_area n, const char* fmtStr = to_string_format) {
@@ -464,7 +468,7 @@ namespace si {
 	inline std::ostream& operator<<(std::ostream& o, mass_per_power n) { return o << to_string(n); }
 	inline std::ostream& operator<<(std::ostream& o, density n) { return o << to_string(n); }
 	inline std::ostream& operator<<(std::ostream& o, data_size n) { return o << to_string(n); }
-	inline std::ostream& operator<<(std::ostream& o, data_per_time n) { return o << to_string(n); }
+	inline std::ostream& operator<<(std::ostream& o, data_speed n) { return o << to_string(n); }
 	inline std::ostream& operator<<(std::ostream& o, data_per_area n) { return o << to_string(n); }
 	inline std::ostream& operator<<(std::ostream& o, data_per_volume n) { return o << to_string(n); }
 

@@ -281,9 +281,9 @@ namespace si {
 	TEST(1_PB_per_s == 1000_TB_per_s);
 	TEST(1_TB_per_s == 1000_GB_per_s);
 	TEST(1_GB_per_s == 1000_MB_per_s);
-	TEST(1_MB_per_s == 1000_KB_per_s);
-	TEST(1_KB_per_s == 1000_byte_per_s);
-	TEST(1_KB_per_s == bytes_per_s(1000));
+	TEST(1_MB_per_s == 1000_kB_per_s);
+	TEST(1_kB_per_s == 1000_byte_per_s);
+	TEST(1_kB_per_s == bytes_per_s(1000));
 	// bytes per second with binary prefixes...
 	TEST(1_TiB_per_s == 1024_GiB_per_s);
 	TEST(1_GiB_per_s == 1024_MiB_per_s);
