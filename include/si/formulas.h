@@ -35,7 +35,7 @@ namespace si {
 		return arctan(o / a);
 	}
 
-	/// @brief Calculates the area of a triangle from base (b) and height (h).
+	/// @brief Calculates the area of a right triangle from base (b) and height (h).
 	FUNC area area_of_triangle_formula(length b, length h)
 	{
 		return 0.5 * b * h;
