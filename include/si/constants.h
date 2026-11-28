@@ -24,8 +24,8 @@ namespace si { namespace constant {                             // singular for 
   // Universal Constants
   // -------------------                                        // CODATA 2022 constants (source: https://codata.org)
   SET(G,                       6.67430e-11, m3_per_kg_per_s2);  // Newtonian constant of gravitation (symbol: G)
-  SET(Z_0,                 376.730'313'412, ohms);              // characteristic impedance of vacuum
-  SET(epsilon_0,        8.854'187'8188e-12, farads_per_m);      // vacuum electric permittivity, symbol: ε_0
+  SET(Z_0,                 376.730'313'412, ohms);              // characteristic impedance of vacuum (symbol: Z0)
+  SET(epsilon_0,        8.854'187'8188e-12, farads_per_m);      // vacuum electric permittivity (symbol: ε0)
   SET(l_P,                    1.616255e-35, meters);            // Planck length
   SET(m_P,                     2.176434e-8, kilograms);         // Planck mass
   SET(T_P,                     1.416784e32, kelvins);           // Planck temperature
