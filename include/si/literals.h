@@ -320,9 +320,12 @@ namespace si {
   UDL(_mil,0.00098174770424681, radians); // 1_mil (NATO)
   UDL(_grad, 0.01570796, radians);        // 1_grad (gradians)
   UDL(_tr,6.28318530717958647692,radians);// 1_tr (turn)
+  // solid angles in...
+  UDL(_sr,       1, steradians);          // 1_sr  (steradian)
+  UDL(_msr,   1e-3, steradians);          // 1_msr (millisteradian)
+  UDL(_usr,   1e-6, steradians);          // 1_usr (microsteradian)
   // other units in...
   UDL(_Nm,       1, newtonmeters);        // 1_Nm  (newtonmeter)
-  UDL(_sr,       1, steradians);          // 1_sr  (steradian)
   UDL(_km3_per_s2,1e9, m3_per_s2);        // 1_km3_per_s2 (km³/s²)
   UDL(_kg_per_mol,1, kg_per_mol);         // 1_kg_per_mol (kg/mol)
   UDL(_kg_per_W, 1, kg_per_watt);         // 1_kg_per_W (kg/W)
@@ -368,8 +371,8 @@ namespace si {
   UDL(_ft_per_min,               0.00508, m_per_s);  // 1_ft_per_min (feet/min)
   UDL(_in_per_s,                  0.0254, m_per_s);  // 1_in_per_s (inch/sec)
   UDL(_in_per_h,            0.0000070556, m_per_s);  // 1_in_per_h (inch/hour)
-  // absolute thermodynamic temperature in...
-  UDL(_degF,                           1, fahrenheit); // 1_degF (°Fahrenheit)
+  // thermodynamic temperature in...
+  UDL(_degF,                           1, fahrenheit); // 1_degF (°Fahrenheit absolute!)
 
   // Astronomical Units
   // ------------------       (IAU 2012, https://en.wikipedia.org/wiki/Astronomical_system_of_units)
@@ -451,14 +454,15 @@ namespace si {
   UDL(_atm,                      101'325, pascals);  // 1_atm  (atmosphere)
   UDL(_mmHg,           101'325.0 / 760.0, pascals);  // 1_mmHg (millimetre of mercury)
   UDL(_Torr,           101'325.0 / 760.0, pascals);  // 1_Torr (same as mmHg)
-  // absolute thermodynamic temperature in...
-  UDL(_degC,                           1, celsius);  // 1_degC (°Celsius)
-  UDL(_degR, 0.5555555555555555555555555, kelvins);  // 1_degR (°Rankine)
+  // thermodynamic temperature in...
+  UDL(_degC,                           1, celsius);  // 1_degC  (°Celsius absolute!)
+  UDL(_degRe,                       1.25, celsius);  // 1_degRe (°Réaumur absolute!)
+  UDL(_degR, 0.5555555555555555555555555, kelvins);  // 1_degR  (°Rankine)
   // concentration in...
   UDL(_ppt,                        1e-12, dimensionless); // 1_ppt (parts per trillion)
   UDL(_ppb,                         1e-9, dimensionless); // 1_ppb (parts per billion)
   UDL(_ppm,                         1e-6, dimensionless); // 1_ppm (parts per million)
-  UDL(_bp,                          1e-4, dimensionless); // 1_bp (parts per ten thousand)
+  UDL(_bp,                          1e-4, dimensionless); // 1_bp  (parts per ten thousand)
   UDL(_pct,                         1e-2, dimensionless); // 1_pct (%, parts per hundred)
   // misc
   UDL(_Mach,                         330, m_per_s);  // 1_Mach

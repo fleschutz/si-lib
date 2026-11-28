@@ -20,7 +20,7 @@ namespace si {
 
   // Derived SI Units
   // ----------------
-  UNIT kilometers     = unit<length,1000>();
+  UNIT kilometers     = unit<length, 1000>();
   UNIT centimeters    = unit<length, 1,100>();
   UNIT millimeters    = unit<length, 1,1000>();
   UNIT per_m          = unit<per_length>();
@@ -28,7 +28,6 @@ namespace si {
   UNIT hertz          = unit<frequency>();
   // area in...
   UNIT kilometers2    = kilometers * kilometers;
-  UNIT centimeters2   = centimeters * centimeters;
   UNIT meters2        = meters * meters;
   UNIT per_m2         = unit<per_area>();
   UNIT meter_kelvins  = meters * kelvins;
