@@ -131,6 +131,7 @@ namespace si {
   // acceleration in...
   UDL(_km_per_s2,1e3, m_per_s2);          // 1_km_per_s2 (km/s²)
   UDL(_m_per_s2, 1, m_per_s2);            // 1_m_per_s2  (m/s²)
+  UDL(_mm_per_s2,1e-3, m_per_s2);         // 1_mm_per_s2 (mm/s²)
   // frequency in...
   UDL(_PHz,   1e15, hertz);               // 1_PHz (petahertz)
   UDL(_THz,   1e12, hertz);               // 1_THz (terahertz)

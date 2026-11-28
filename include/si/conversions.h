@@ -79,17 +79,17 @@ namespace si {
 		return kilograms(std::nan("2")); // unknown unit
 	}
 
+	// to_string() Functions
+	// ---------------------
+
 	/// @brief Internal function to format a number and a unit into a string by using a format string.
 	FUNC std::string _fmt(long double number, const char* unit, const char* formatString) {
-		char buf[256] = "";
+		char buf[100] = "";
 		std::snprintf(buf, sizeof(buf), formatString, number, unit);
 		return std::string(buf);
 	}
 
-	// to_string() Function Overloading
-	// --------------------------------
-
-	/// @brief Returns the given length as string using SI units.
+	/// @brief Converts a length (d) into a string using SI units, e.g. "1.2 m".
 	FUNC std::string to_string(length d, const char* fmtStr = to_string_format) {
 		if (d <= -1_Gpc || d >= 1_Gpc)     return _fmt(d / 1_Gpc, "Gpc", fmtStr); // gigaparsec
 		if (d <= -1_Mpc || d >= 1_Mpc)     return _fmt(d / 1_Mpc, "Mpc", fmtStr); // megaparsec
@@ -106,7 +106,7 @@ namespace si {
 		return _fmt(d / 1_pm, "pm", fmtStr);
 	}
 
-	/// @brief Returns the given time as string using SI units.
+	/// @brief Converts a time (t) into a string using SI units, e.g. "1.2 h".
 	FUNC std::string to_string(time t, const char* fmtStr = to_string_format) {
 		if (t <= -365.25_d || t >= 365.25_d) return _fmt(t / 365.25_d, "y", fmtStr);
 		if (t <= -1_w || t >= 1_w)           return _fmt(t / 1_w, "w", fmtStr);
@@ -120,7 +120,7 @@ namespace si {
 		return _fmt(t / 1_ps, "ps", fmtStr);
 	}
 
-	/// @brief Returns the given mass as string using SI units.
+	/// @brief Converts a mass (m) into a string using SI units, e.g. "1.2 kg".
 	FUNC std::string to_string(mass m, const char* fmtStr = to_string_format) {
 		if (m <= -1_Pt || m >= 1_Pt)       return _fmt(m / 1_Pt, "Pt", fmtStr);
 		if (m <= -1_Tt || m >= 1_Tt)       return _fmt(m / 1_Tt, "Tt", fmtStr);
@@ -135,7 +135,7 @@ namespace si {
 		return _fmt(m / 1_ng, "ng", fmtStr);
 	}
 
-	/// @brief Returns the given temperature as string using SI units.
+	/// @brief Converts a temperature (T) into a string using SI units, e.g. "1.2 K".
 	FUNC std::string to_string(temperature T, const char* fmtStr = to_string_format) {
 		if (T <= -1_GK || T >= 1_GK)         return _fmt(T / 1_GK, "GK", fmtStr);
 		if (T <= -1_MK || T >= 1_MK)         return _fmt(T / 1_MK, "MK", fmtStr);
@@ -146,7 +146,7 @@ namespace si {
 		return _fmt(T / 1_nK, "nK", fmtStr);
 	}
 
-	/// @brief Returns the electric current as string using SI units.
+	/// @brief Converts an electric currrent (I) into a string using SI units, e.g. "1.2 A".
 	inline std::string to_string(current I, const char* fmtStr = to_string_format) {
 		if (I <= -1_GA || I >= 1_GA)      return _fmt(I / 1_GA, "GA", fmtStr);
 		if (I <= -1_MA || I >= 1_MA)      return _fmt(I / 1_MA, "MA", fmtStr);
@@ -158,10 +158,7 @@ namespace si {
 		return _fmt(I / 1_pA, "pA", fmtStr);
 	}
 
-	// Derived SI Units
-	// ----------------
-
-	/// @brief Returns the given area as string using SI units.
+	/// @brief Converts an area (a) into a string using SI units, e.g. "1.2 m²".
 	FUNC std::string to_string(area a, const char* fmtStr = to_string_format) {
 		if (a <= -1_km2 || a >= 1_km2)      return _fmt(a / 1_km2, "km²", fmtStr);
 		if (a <= -1_hm2 || a >= 1_hm2)      return _fmt(a / 1_hm2, "hm²", fmtStr);
@@ -181,7 +178,7 @@ namespace si {
 		return _fmt(a / 1_per_μm2, "/μm²", fmtStr);
 	}
 
-	/// @brief Returns the given volume as string using SI units.
+	/// @brief Converts a volume (v) into a string using SI units, e.g. "1.2 m³".
 	FUNC std::string to_string(volume v, const char* fmtStr = to_string_format) {
 		if (v <= -1_km3|| v >= 1_km3)     return _fmt(v / 1_km3, "km³", fmtStr);
 		if (v <= -1_m3 || v >= 1_m3)      return _fmt(v / 1_m3, "m³", fmtStr);
@@ -192,7 +189,7 @@ namespace si {
 		return _fmt(v / 1_pl, "pl", fmtStr);
 	}
 
-	/// @brief Returns velocity as string using SI units.
+	/// @brief Converts a velocity (v) into a string using SI units, e.g. "1.2 m/s".
 	FUNC std::string to_string(velocity v, const char* fmtStr = to_string_format) {
 		if (v <= -1_km_per_s || v >= 1_km_per_s)      return _fmt(v / 1_km_per_s, "km/s", fmtStr);
 		if (v <= -1_km_per_h || v >= 1_km_per_h)      return _fmt(v / 1_km_per_h, "km/h", fmtStr);
@@ -200,13 +197,14 @@ namespace si {
 		return _fmt(v / 1_mm_per_h, "mm/h", fmtStr);
 	}
 
-	/// @brief Returns the acceleration as string using SI units.
+	/// @brief Converts an acceleration (a) into a string using SI units, e.g. "1.2 m/s²".
 	FUNC std::string to_string(acceleration a, const char* fmtStr = to_string_format) {
 		if (a <= -1_km_per_s2 || a >= 1_km_per_s2) return _fmt(a / 1_km_per_s2, "km/s²", fmtStr);
-		return _fmt(a / 1_m_per_s2, "m/s²", fmtStr);
+		if (a <= -1_m_per_s2  || a >= 1_m_per_s2)  return _fmt(a / 1_m_per_s2, "m/s²", fmtStr);
+		return _fmt(a / 1_mm_per_s2, "mm/s²", fmtStr);
 	}
 
-	/// @brief Returns the frequency as string using SI units.
+	/// @brief Converts a frequency (f) into a string using SI units, e.g. "1.2 Hz".
 	FUNC std::string to_string(frequency f, const char* fmtStr = to_string_format) {
 		if (f <= -1_THz || f >= 1_THz)      return _fmt(f / 1_THz, "THz", fmtStr);
 		if (f <= -1_GHz || f >= 1_GHz)      return _fmt(f / 1_GHz, "GHz", fmtStr);
@@ -217,7 +215,7 @@ namespace si {
 		return _fmt(f / 1_uHz, "µHz", fmtStr);
 	}
 
-	/// @brief Returns the force as string using SI units.
+	/// @brief Converts a force (F) into a string using SI units, e.g. "1.2 N".
 	FUNC std::string to_string(force F, const char* fmtStr = to_string_format) {
 		if (F <= -1_ZN || F >= 1_ZN)      return _fmt(F / 1_ZN, "ZN", fmtStr);
 		if (F <= -1_EN || F >= 1_EN)      return _fmt(F / 1_EN, "EN", fmtStr);
@@ -233,7 +231,7 @@ namespace si {
 		return _fmt(F / 1_pN, "pN", fmtStr);
 	}
 
-	/// @brief Returns the energy as string using SI units.
+	/// @brief Converts an energy (E) into a string using SI units, e.g. "1.2 J".
 	FUNC std::string to_string(energy E, const char* fmtStr = to_string_format) {
 		if (E <= -1_PJ || E >= 1_PJ)      return _fmt(E / 1_PJ, "PJ", fmtStr);
 		if (E <= -1_TJ || E >= 1_TJ)      return _fmt(E / 1_TJ, "TJ", fmtStr);
@@ -244,7 +242,7 @@ namespace si {
 		return _fmt(E / 1_mJ, "mJ", fmtStr);
 	}
 
-	/// @brief Returns the power as string using SI units.
+	/// @brief Converts a power (P) into a string using SI units, e.g. "1.2 W".
 	FUNC std::string to_string(power P, const char* fmtStr = to_string_format) {
 		if (P <= -1_TW || P >= 1_TW)      return _fmt(P / 1_TW, "TW", fmtStr);
 		if (P <= -1_GW || P >= 1_GW)      return _fmt(P / 1_GW, "GW", fmtStr);
@@ -263,7 +261,7 @@ namespace si {
 		return _fmt(I / 1_mW_per_m2, "mW/m²", fmtStr);
 	}
 
-	/// @brief Returns the pressure as string using SI units.
+	/// @brief Converts a pressure (p) into a string using SI units, e.g. "1.2 Pa".
 	FUNC std::string to_string(pressure p, const char* fmtStr = to_string_format) {
 		if (p <= -1_MPa || p >= 1_MPa)      return _fmt(p / 1_MPa, "MPa", fmtStr);
 		if (p <= -1_kPa || p >= 1_kPa)      return _fmt(p / 1_kPa, "kPa", fmtStr);
@@ -273,7 +271,7 @@ namespace si {
 		return _fmt(p / 1_uPa, "µPa", fmtStr);
 	}
 
-	/// @brief Returns the electric potential as string using SI units.
+	/// @brief Converts an electric potential (V) into a string using SI units, e.g. "1.2 V".
 	FUNC std::string to_string(potential U, const char* fmtStr = to_string_format) {
 		if (U <= -1_TV || U >= 1_TV)      return _fmt(U / 1_TV, "TV", fmtStr);
 		if (U <= -1_GV || U >= 1_GV)      return _fmt(U / 1_GV, "GV", fmtStr);
@@ -286,7 +284,7 @@ namespace si {
 		return _fmt(U / 1_pV, "pV", fmtStr);
 	}
 
-	/// @brief Returns the electric charge as string using SI units.
+	/// @brief Converts an electric charge (Q) into a string using SI units, e.g. "1.2 Ah".
 	FUNC std::string to_string(charge Q, const char* fmtStr = to_string_format) {
 		if (Q <= -1_GAh || Q >= 1_GAh)      return _fmt(Q / 1_GAh, "GAh", fmtStr);
 		if (Q <= -1_MAh || Q >= 1_MAh)      return _fmt(Q / 1_MAh, "MAh", fmtStr);
@@ -308,13 +306,13 @@ namespace si {
 		return _fmt(m / 1_kg_per_W, "kg/W", fmtStr);
 	}
 
-	/// @brief Returns density as string using SI units.
+	/// @brief Converts a density (d) into a string using SI units, e.g. "1.2 kg/m³".
 	FUNC std::string to_string(density d, const char* fmtStr = to_string_format) {
 		if (d <= -1_t_per_m3 || d >= 1_t_per_m3) return _fmt(d / 1_t_per_m3, "t/m³", fmtStr);
 		return _fmt(d / 1_kg_per_m3, "kg/m³", fmtStr);
 	}
 
-	/// @brief Returns the digital size as string in bits and bytes.
+	/// @brief Converts a data size (n) into a string using SI units, e.g. "1.2 MB".
 	FUNC std::string to_string(data_size n, const char* fmtStr = to_string_format) {
 		if (n <= -1_QB || n >= 1_QB)        return _fmt(n / 1_QB, "QB", fmtStr);
 		if (n <= -1_RB || n >= 1_RB)        return _fmt(n / 1_RB, "RB", fmtStr);
@@ -330,6 +328,7 @@ namespace si {
 		return _fmt(n / 1_bit, "bit", fmtStr);
 	}
 
+	/// @brief Converts data speed (n) into a string using SI units, e.g. "1.2 MB/s".
 	FUNC std::string to_string(data_speed n, const char* fmtStr = to_string_format) {
 		if (n <= -1_PB_per_s || n >= 1_PB_per_s) return _fmt(n / 1_PB_per_s, "PB/s", fmtStr);
 		if (n <= -1_TB_per_s || n >= 1_TB_per_s) return _fmt(n / 1_TB_per_s, "TB/s", fmtStr);
@@ -338,21 +337,23 @@ namespace si {
 		return _fmt(n / 1_kB_per_s, "kB/s", fmtStr);
 	}
 
+	/// @brief Converts data per area (n) into a string using SI units, e.g. "1.2 MB/cm²".
 	FUNC std::string to_string(data_per_area n, const char* fmtStr = to_string_format) {
 		return _fmt(n / 1_MB_per_cm2, "MB/cm²", fmtStr);
 	}
 
+	/// @brief Converts data per volume (n) into a string using SI units, e.g. "1.2 MB/cm³".
 	FUNC std::string to_string(data_per_volume n, const char* fmtStr = to_string_format) {
 		return _fmt(n / 1_MB_per_cm3, "MB/cm³", fmtStr);
 	}
 
-	/// @brief Returns the angle as string in degree.
+	/// @brief Converts an angle (a) into a string using SI units, e.g. "1.2°".
 	FUNC std::string to_string(angle a, const char* fmtStr = to_string_format) {
 		return _fmt(a / 1_deg, "°", fmtStr);
 	}
 
-	// to_equiv() Function Overloading
-	// --------------------------------
+	// to_equiv() Functions
+	// --------------------
 
 	/// @brief Returns a length equivalent as string, e.g. in Imperial units.
 	FUNC std::string to_equiv(length d, const char* fmtStr = to_equiv_format) {
@@ -417,21 +418,14 @@ namespace si {
 		return _fmt(n / 1_bit, "bit", fmtStr);
 	}
 
-	// to_pct() Template
-	// -----------------
-	template <typename T>
-	FUNC std::string to_pct(T part, T total, const char* fmtStr = to_pct_format) {
-		return _fmt((part / total) * 100.0, "%", fmtStr);
-	}
-
-	// to_scientific()
-	// ---------------
+	// to_scientific() Functions
+	// -------------------------
 	FUNC std::string _exp(long double number, const char* unit, const char* formatString) {
 		int eToThe = 0;
 		for( ; number > 9.; ++eToThe)
 			number /= 10.;
 		
-		char buf[80] = "";
+		char buf[100] = "";
 		std::snprintf(buf, sizeof(buf), formatString, number, eToThe, unit);
 		return std::string(buf);
 	}
@@ -443,6 +437,13 @@ namespace si {
 	FUNC auto to_scientific(current n, const char* f=to_scientific_format) {return _exp(amperes(n),"A",f);}
 	FUNC auto to_scientific(substance n, const char* f=to_scientific_format) {return _exp(moles(n),"mol",f);}
 	FUNC auto to_scientific(luminous_intensity n, const char* f=to_scientific_format) {return _exp(candelas(n),"cd",f);}
+
+	// to_pct() Template
+	// -----------------
+	template <typename T>
+	FUNC std::string to_pct(T part, T total, const char* formatString = to_pct_format) {
+		return _fmt((part / total) * 100.0, "%", formatString);
+	}
 
 	// The << Operator
 	// ---------------
