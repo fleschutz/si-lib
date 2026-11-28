@@ -59,7 +59,7 @@ int main() {   using namespace si;
 
 **What's IAU?** It's the [International Astronomical Union](https://www.iau.org/), which defines the astronomical units.
 
-**What are numbers like 1.2e23?** It's the scientific notation in C/C++ for 1.2 x 10²³, the letter 'e' or 'E' represents the 'times 10 to the power of' part.
+**What are numbers like 1.2e3?** It's the scientific notation in C/C++ for 1.2 x 10³, the letter 'e' or 'E' represents the 'times 10 to the power of' part.
 
 **Where are the list of references?** References are always listed at the end of each source code file.
 
