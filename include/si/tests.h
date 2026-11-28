@@ -225,23 +225,32 @@ namespace si {
   }
 
   inline void check_astronomical_units() {
-	TEST(1_Gpc == 1000_Mpc);
-	TEST(1_Mpc == 1000_kpc);
-	TEST(1_kpc == 1000_pc);
+	// in parsec...
+	TEST( 1_Gpc == 1000_Mpc );
+	TEST( 1_Mpc == 1000_kpc );
+	TEST( 1_kpc == 1000_pc );
+	TEST( 1_pc  == 30'856'775'814'913'673_m );
+	// in light-years...
+	TEST( 1_ly  == 365.25_ld );
+	TEST( 1_ld  == 24_lh );
+	TEST( 1_lh  == 60_lmin );
+	TEST( 1_lmin== 60_ls );
+	TEST( 1_ls  == 299'792'458_m );
   }
 
   inline void check_Imperial_units() {
-	TEST(1_nmi == 10_cable);
-	TEST(1_nmi == 1852_m);
-	TEST(1_nmi == nautical_miles(1));
-	TEST(1_mi  == 1760_yd);
-	TEST(1_mi  == 80_ch);
-	TEST(1_mi  == statute_miles(1));
-	TEST(1_mi_per_h == miles_per_h(1));
-	TEST(1_ft  == feet(1));
-	TEST(1_in  == inches(1));
-	TEST(1_lb  == 16_oz);
-	TEST(1_degF== fahrenheit(1));
+	TEST( 1_nmi == 1852_m);
+	TEST( 1_nmi == 10_cable );
+	TEST( 1_nmi == nautical_miles(1) );
+	TEST( 1_mi  == 1760_yd );
+	TEST( 1_mi  == 80_ch );
+	TEST( 1_mi  == statute_miles(1) );
+	TEST( 1_mi_per_h == miles_per_h(1) );
+	TEST( 1_ft  == feet(1) );
+	NEARLY_EQUAL( 1_ft, 12_in );
+	TEST( 1_in  == inches(1) );
+	TEST( 1_lb  == 16_oz );
+	TEST( 1_degF== fahrenheit(1) );
   }
 
   inline void check_digital_data_units() {

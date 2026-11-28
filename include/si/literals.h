@@ -197,7 +197,7 @@ namespace si {
   // electric conductivity in...
   UDL(_MS_per_m,1e6, siemens_per_m);      // 1_MS_per_m (MS/m, megasiemens per meter)
   UDL(_kS_per_m,1e3, siemens_per_m);      // 1_kS_per_m (kS/m, kilosiemens per meter)
-  UDL( _S_per_m,  1, siemens_per_m);      // 1_S_per_m (S/m, siemens per meter)
+  UDL( _S_per_m,  1, siemens_per_m);      // 1_S_per_m  (S/m, siemens per meter)
   // electric charge in coulombs in...
   UDL(_GC,     1e9, coulombs);            // 1_GC (gigaoulomb)
   UDL(_MC,     1e6, coulombs);            // 1_MC (megaoulomb)
@@ -244,10 +244,11 @@ namespace si {
   UDL( _J,       1, joules);              // 1_J   (joule)
   UDL(_mJ,    1e-3, joules);              // 1_mJ  (millijoule)
   UDL(_kJ_per_mol,1e3,joules_per_mol);    // 1_kJ_per_mol (kJ/mol)
-  // energy in calories...
-  UDL(_Mcal,4186800,joules);              // 1_Mcal (megacalorie)
-  UDL(_kcal,4186.8, joules);              // 1_kcal (kilocalorie)
-  UDL( _cal, 4.1868,joules);              // 1_cal  (calorie)
+  // energy in thermochemical calories...
+  UDL(_Gcal,4184e6, joules);              // 1_Gcal (gigacalorie)
+  UDL(_Mcal,4184e3, joules);              // 1_Mcal (megacalorie)
+  UDL(_kcal,  4184, joules);              // 1_kcal (kilocalorie)
+  UDL( _cal, 4.184, joules);              // 1_cal  (calorie)
   // energy in watt-hours...
   UDL(_PWh, 3.6e18, joules);              // 1_PWh (petawatt-hour)
   UDL(_TWh, 3.6e15, joules);              // 1_TWh (terawatt-hour)
@@ -380,9 +381,11 @@ namespace si {
   UDL(_Mpc,     30'856'775'814'913'673e6, meters);   // 1_Mpc    (megaparsec)
   UDL(_kpc,     30'856'775'814'913'673e3, meters);   // 1_kpc    (kiloparsec)
   UDL(_pc,      30'856'775'814'913'673e0, meters);   // 1_pc     (parsec)
-  UDL(_ly,         9'460'730'472'580'800, meters);   // 1_ly     (light-year)
-  UDL(_ld,            25'902'068'356'000, meters);   // 1_ld     (light-day)
   UDL(_au,               149'597'870'700, meters);   // 1_au     (astronomical unit, Earth-Sun distance)
+  UDL(_ly,         9'460'730'472'580'800, meters);   // 1_ly     (light-year)
+  UDL(_ld,            25'902'068'371'200, meters);   // 1_ld     (light-day)
+  UDL(_lh,             1'079'252'848'800, meters);   // 1_lh     (light-hour)
+  UDL(_lmin,              17'987'547'480, meters);   // 1_lmin   (light-minute)
   UDL(_ls,                   299'792'458, meters);   // 1_ls     (light-second)
   UDL(_Msun,                   1.9885e30, kilograms);// 1_Msun   (solar mass, ~1 Sun mass)
   UDL(_Mjup,                    1.898e27, kilograms);// 1_Mjup   (Jupiter mass)
