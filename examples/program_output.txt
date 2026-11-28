@@ -19,7 +19,6 @@
  6. The wavelength of hydrogen (H2) in vacuum is... 21.1 cm or 8.3 in
  7. Moons bigger than our Earth's moon are... Jupiter's Io (ø=3643.2 km), Jupiter's Ganymede (ø=5262.4 km), Jupiter's Callisto (ø=4820.6 km), Saturn's Titan (ø=5149.5 km), 
  8. The min speed required to escape from the planets are... Mercury=4.3 km/s or 12.9 Mach, Venus=10.4 km/s or 31.4 Mach, Earth=11.2 km/s or 33.9 Mach, Mars=5.0 km/s or 15.2 Mach, Jupiter=59.5 km/s or 180.4 Mach, Saturn=35.5 km/s or 107.5 Mach, Uranus=2.1 km/s or 6.5 Mach, Neptune=23.5 km/s or 71.2 Mach, Pluto=1.3 km/s or 3.9 Mach, 
- 9. Exoplanets that are life-friendly and quite near are... 'Proxima Cen b' @ Proxima Cen in 1.3 pc, 'Proxima Cen b' @ Proxima Cen in 1.3 pc, 'Proxima Cen d' @ Proxima Cen in 1.3 pc, 
 10. The estimated total distance the Earth has travelled is... 137.1 Mpc
 11. The ballistic max height/range/flight time of a bullet fired 45° on Moon's surface is... 154.1 km, 616.5 km, 14.5 min
 12. The sum of the masses of all moons in the solar system is... 108103.9 Pt or 1.5 Moon masses

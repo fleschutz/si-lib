@@ -1,21 +1,21 @@
 /// @file     <si/datatypes.h>
 /// @brief    Defines the fundamental datatypes, e.g. si::length
-/// @details  Categories are: SI base, derived SI, digital data, and dimensionless.
+/// @details  Categories are: base datatypes, derived datatypes, and dimensionless.
 
 #pragma once
 #include <si/internal.h>
-#define TYPE(_name, _lengthExp, _massExp, _timeExp, _tempExp, _currentExp, _substanceExp, _intensityExp, _digitalExp) \
-  namespace detail { using _name ## _dimension = dimension<_lengthExp, _massExp, _timeExp, _tempExp,                  \
-                                                           _currentExp, _substanceExp, _intensityExp, _digitalExp>; } \
-  template <class T> using _name ## _t = detail::quantity<detail:: _name ## _dimension, T>;                           \
-  using _name = _name ## _t<SIdouble>;                                                                                \
-  using _name ## 2 = _name ## _t<detail::vec2<SIdouble>>;                                                             \
+#define TYPE(_name, _lenExp, _massExp, _timeExp, _tempExp, _currExp, _substExp, _lumExp, _dataExp)    \
+  namespace detail { using _name ## _dimension = dimension<_lenExp, _massExp, _timeExp, _tempExp,     \
+                                                           _currExp, _substExp, _lumExp, _dataExp>; } \
+  template <class T> using _name ## _t = detail::quantity<detail:: _name ## _dimension, T>;           \
+  using _name = _name ## _t<SIdouble>;                                                                \
+  using _name ## 2 = _name ## _t<detail::vec2<SIdouble>>;                                             \
   using _name ## 3 = _name ## _t<detail::vec3<SIdouble>>
 
 namespace si {
 
-  // SI Base Datatypes
-  // -----------------
+  // Base Datatypes
+  // --------------
   //       NAME                      EXPONENTS             BASE UNIT
   //                           l  m  t  T  c  s  i  d
   TYPE(length,                 1, 0, 0, 0, 0, 0, 0, 0); // in meters
@@ -25,9 +25,10 @@ namespace si {
   TYPE(current,                0, 0, 0, 0, 1, 0, 0, 0); // in amperes
   TYPE(substance,              0, 0, 0, 0, 0, 1, 0, 0); // in moles
   TYPE(luminous_intensity,     0, 0, 0, 0, 0, 0, 1, 0); // in candelas
+  TYPE(data_size,              0, 0, 0, 0, 0, 0, 0, 1); // in bits
 
-  // Derived SI Datatypes
-  // --------------------
+  // Derived Datatypes
+  // -----------------
   TYPE(area,                   2, 0, 0, 0, 0, 0, 0, 0); // in square meters
   TYPE(volume,                 3, 0, 0, 0, 0, 0, 0, 0); // in cubic meters
   TYPE(velocity,               1, 0,-1, 0, 0, 0, 0, 0); // in meters per second
@@ -53,18 +54,14 @@ namespace si {
   TYPE(per_area,              -2, 0, 0, 0, 0, 0, 0, 0); // per square meter (reciprocal)
   TYPE(frequency,              0, 0,-1, 0, 0, 0, 0, 0); // per second (reciprocal)
   TYPE(per_substance,          0, 0, 0, 0, 0,-1, 0, 0); // per mol (reciprocal)
-
-  // Digital Data Datatypes
-  // ----------------------
-  TYPE(data_size,              0, 0, 0, 0, 0, 0, 0, 1); // in bits
   TYPE(data_per_time,          0, 0,-1, 0, 0, 0, 0, 1); // in bits per second
   TYPE(data_per_area,         -2, 0, 0, 0, 0, 0, 0, 1); // in bits per square meter
   TYPE(data_per_volume,       -3, 0, 0, 0, 0, 0, 0, 1); // in bits per cubic meter
 
   // Dimensionless Datatypes
   // -----------------------
-  typedef long double angle;                            // in radians (high precision)
-  typedef double dimensionless;                         // any dimensionless number, e.g. 42
+  typedef long double angle;                            // in radians with high precision
+  typedef double dimensionless;                         // for dimensionless numbers
 
 } // end of namespace
 
